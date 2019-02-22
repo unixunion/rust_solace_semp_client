@@ -20,7 +20,7 @@ pub struct MsgVpnQueue {
   /// Enable or disable the propagation of Consumer ACKs received on the active replication Message VPN to the standby replication Message VPN. The default value is `true`.
   #[serde(rename = "consumerAckPropagationEnabled")]
   consumer_ack_propagation_enabled: Option<bool>,
-  /// The name of the Dead Message Queue (DMQ) used by the Queue. The default value is `\"#DEAD_MSG_QUEUE\"`.
+  /// The name of the Dead Message Queue (DMQ) used by the Queue. The default value is `\"#DEAD_MSG_QUEUE\"`. Available since 2.2.
   #[serde(rename = "deadMsgQueue")]
   dead_msg_queue: Option<String>,
   /// Enable or disable the egress flow of messages from the Queue. The default value is `false`.
@@ -71,7 +71,7 @@ pub struct MsgVpnQueue {
   /// The number of messages of any priority in the Queue above which low priority messages are not admitted but higher priority messages are allowed. The default value is `0`.
   #[serde(rename = "rejectLowPriorityMsgLimit")]
   reject_low_priority_msg_limit: Option<i64>,
-  /// Assign the message discard behavior, that is the circumstances under which a negative acknowledgement (NACK) is sent to the client on discards. Note that NACKs cause the message to not be delivered to any destination and transacted-session commits to fail. This attribute may only have a value of \"never\" if \"rejectLowPriorityMsgEnabled\" is disabled. The default value is `\"when-queue-enabled\"`. The allowed values and their meaning are:  <pre> \"always\" - Message discards always result in negative acknowledgments (NACKs) being returned to the sending client, even if the discard reason is that the Queue is disabled. \"when-queue-enabled\" - Message discards result in negative acknowledgments (NACKs) being returned to the sending client, except if the discard reason is that the Queue is disabled. \"never\" - Message discards never result in negative acknowledgments (NACKs) being returned to the sending client. </pre> 
+  /// Assign the message discard behavior, that is the circumstances under which a negative acknowledgement (NACK) is sent to the client on discards. Note that NACKs cause the message to not be delivered to any destination and transacted-session commits to fail. This attribute may only have a value of \"never\" if \"rejectLowPriorityMsgEnabled\" is disabled. The default value is `\"when-queue-enabled\"`. The allowed values and their meaning are:  <pre> \"always\" - Message discards always result in negative acknowledgments (NACKs) being returned to the sending client, even if the discard reason is that the Queue is disabled. \"when-queue-enabled\" - Message discards result in negative acknowledgments (NACKs) being returned to the sending client, except if the discard reason is that the Queue is disabled. \"never\" - Message discards never result in negative acknowledgments (NACKs) being returned to the sending client. </pre>  Available since 2.1.
   #[serde(rename = "rejectMsgToSenderOnDiscardBehavior")]
   reject_msg_to_sender_on_discard_behavior: Option<String>,
   /// Enable or disable the respecting of message priority. If enabled, messages contained in the Queue are delivered in priority order, from 9 (highest) to 0 (lowest). MQTT queues do not support enabling message priority. The default value is `false`. Available since 2.8.

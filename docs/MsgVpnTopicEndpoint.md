@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **access_type** | **String** | The Topic Endpoint access type of either \&quot;exclusive\&quot; or \&quot;non-exclusive\&quot;. The default value is &#x60;\&quot;exclusive\&quot;&#x60;. The allowed values and their meaning are:  &lt;pre&gt; \&quot;exclusive\&quot; - Exclusive delivery of messages to first bound client. \&quot;non-exclusive\&quot; - Non-exclusive delivery of messages to all bound clients. &lt;/pre&gt;  Available since 2.4. | [optional] [default to null]
 **consumer_ack_propagation_enabled** | **bool** | Enable or disable the propagation of Consumer ACKs received on the active replication Message VPN to the standby replication Message VPN. The default value is &#x60;true&#x60;. | [optional] [default to null]
-**dead_msg_queue** | **String** | The name of the Dead Message Queue (DMQ) used by the Topic Endpoint. The default value is &#x60;\&quot;#DEAD_MSG_QUEUE\&quot;&#x60;. | [optional] [default to null]
+**dead_msg_queue** | **String** | The name of the Dead Message Queue (DMQ) used by the Topic Endpoint. The default value is &#x60;\&quot;#DEAD_MSG_QUEUE\&quot;&#x60;. Available since 2.2. | [optional] [default to null]
 **egress_enabled** | **bool** | Enable or disable the egress flow of messages from the Topic Endpoint. The default value is &#x60;false&#x60;. | [optional] [default to null]
 **event_bind_count_threshold** | [***::models::EventThreshold**](EventThreshold.md) |  | [optional] [default to null]
 **event_reject_low_priority_msg_limit_threshold** | [***::models::EventThreshold**](EventThreshold.md) |  | [optional] [default to null]
