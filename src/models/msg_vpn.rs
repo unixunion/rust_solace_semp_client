@@ -195,7 +195,7 @@ pub struct MsgVpn {
   #[serde(rename = "replicationEnabled")]
   replication_enabled: Option<bool>,
   /// The behavior to take when enabling the Replication feature for the Message VPN, depending on the existence of the Replication Queue. The default value is `\"fail-on-existing-queue\"`. The allowed values and their meaning are:  <pre> \"fail-on-existing-queue\" - The data replication queue must not already exist. \"force-use-existing-queue\" - The data replication queue must already exist. Any data messages on the Queue will be forwarded to interested applications. IMPORTANT: Before using this mode be certain that the messages are not stale or otherwise unsuitable to be forwarded. This mode can only be specified when the existing queue is configured the same as is currently specified under replication configuration otherwise the enabling of replication will fail. \"force-recreate-queue\" - The data replication queue must already exist. Any data messages on the Queue will be discarded. IMPORTANT: Before using this mode be certain that the messages on the existing data replication queue are not needed by interested applications. </pre> 
-  #[serde(rename = "replicationEnabledQueueBehavior")]
+  #[serde(rename = "replicationEnabledQueueBehavior", skip_serializing)]
   replication_enabled_queue_behavior: Option<String>,
   /// The maximum Message Spool usage by the Replication Bridge Queue (quota), in megabytes. The default value is `60000`.
   #[serde(rename = "replicationQueueMaxMsgSpoolUsage")]

@@ -17,24 +17,16 @@ pub struct EventThreshold {
   /// The clear threshold for the value of this counter as percentage of its maximum value. Falling below this value will trigger a corresponding Event.
   #[serde(rename = "clearPercent")]
   clear_percent: Option<i64>,
-  /// The clear threshold for the absolute value of this counter. Falling below this value will trigger a corresponding Event.
-  #[serde(rename = "clearValue")]
-  clear_value: Option<i64>,
   /// The set threshold for the value of this counter as percentage of its maximum value. Exceeding this value will trigger a corresponding Event.
   #[serde(rename = "setPercent")]
-  set_percent: Option<i64>,
-  /// The set threshold for the absolute value of this counter. Exceeding this value will trigger a corresponding Event.
-  #[serde(rename = "setValue")]
-  set_value: Option<i64>
+  set_percent: Option<i64>
 }
 
 impl EventThreshold {
   pub fn new() -> EventThreshold {
     EventThreshold {
       clear_percent: None,
-      clear_value: None,
-      set_percent: None,
-      set_value: None
+      set_percent: None
     }
   }
 
@@ -55,22 +47,7 @@ impl EventThreshold {
     self.clear_percent = None;
   }
 
-  pub fn set_clear_value(&mut self, clear_value: i64) {
-    self.clear_value = Some(clear_value);
-  }
-
-  pub fn with_clear_value(mut self, clear_value: i64) -> EventThreshold {
-    self.clear_value = Some(clear_value);
-    self
-  }
-
-  pub fn clear_value(&self) -> Option<&i64> {
-    self.clear_value.as_ref()
-  }
-
-  pub fn reset_clear_value(&mut self) {
-    self.clear_value = None;
-  }
+  
 
   pub fn set_set_percent(&mut self, set_percent: i64) {
     self.set_percent = Some(set_percent);
@@ -89,22 +66,7 @@ impl EventThreshold {
     self.set_percent = None;
   }
 
-  pub fn set_set_value(&mut self, set_value: i64) {
-    self.set_value = Some(set_value);
-  }
-
-  pub fn with_set_value(mut self, set_value: i64) -> EventThreshold {
-    self.set_value = Some(set_value);
-    self
-  }
-
-  pub fn set_value(&self) -> Option<&i64> {
-    self.set_value.as_ref()
-  }
-
-  pub fn reset_set_value(&mut self) {
-    self.set_value = None;
-  }
+  
 
 }
 
