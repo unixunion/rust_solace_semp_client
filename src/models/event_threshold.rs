@@ -15,16 +15,16 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize)]
 pub struct EventThreshold {
   /// The clear threshold for the value of this counter as percentage of its maximum value. Falling below this value will trigger a corresponding Event.
-  #[serde(rename = "clearPercent")]
+  #[serde(rename = "clearPercent", default=None)]
   clear_percent: Option<i64>,
   /// The clear threshold for the absolute value of this counter. Falling below this value will trigger a corresponding Event.
-  #[serde(rename = "clearValue")]
+  #[serde(rename = "clearValue", default=None)]
   clear_value: Option<i64>,
   /// The set threshold for the value of this counter as percentage of its maximum value. Exceeding this value will trigger a corresponding Event.
-  #[serde(rename = "setPercent")]
+  #[serde(rename = "setPercent", default=None)]
   set_percent: Option<i64>,
   /// The set threshold for the absolute value of this counter. Exceeding this value will trigger a corresponding Event.
-  #[serde(rename = "setValue")]
+  #[serde(rename = "setValue", default=None)]
   set_value: Option<i64>
 }
 
