@@ -12,7 +12,7 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct EventThreshold {
   /// The clear threshold for the value of this counter as percentage of its maximum value. Falling below this value will trigger a corresponding Event.
   #[serde(rename = "clearPercent", skip_serializing_if="Option::is_none")]

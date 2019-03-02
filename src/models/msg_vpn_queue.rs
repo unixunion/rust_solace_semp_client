@@ -12,7 +12,7 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnQueue {
   /// The Queue access type of either \"exclusive\" or \"non-exclusive\". The default value is `\"exclusive\"`. The allowed values and their meaning are:  <pre> \"exclusive\" - Exclusive delivery of messages to first bound client. \"non-exclusive\" - Non-exclusive delivery of messages to all bound clients. </pre> 
   #[serde(rename = "accessType")]

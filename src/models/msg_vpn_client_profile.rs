@@ -12,7 +12,7 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnClientProfile {
   /// Allow or deny Bridge clients to connect. Changing this setting does not affect existing Bridge client connections. The default value is `false`.
   #[serde(rename = "allowBridgeConnectionsEnabled")]
