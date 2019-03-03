@@ -33,7 +33,7 @@ pub struct MsgVpnClientUsername {
   #[serde(rename = "msgVpnName")]
   msg_vpn_name: Option<String>,
   /// The password of this Client Username for internal Authentication. The default is to have no password. The default is to have no `password`.
-  #[serde(rename = "password")]
+  #[serde(rename = "password", skip_serializing_if="Option::is_none")]
   password: Option<String>,
   /// Enables or disables the subscription management capability of the Client Username. This is the ability to manage subscriptions on behalf of other Client Usernames. The default value is `false`.
   #[serde(rename = "subscriptionManagerEnabled")]
