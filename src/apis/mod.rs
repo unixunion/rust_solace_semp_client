@@ -72,8 +72,6 @@ mod msg_vpn_api;
 pub use self::msg_vpn_api::{ MsgVpnApi, MsgVpnApiClient };
 mod queue_api;
 pub use self::queue_api::{ QueueApi, QueueApiClient };
-mod replay_log_api;
-pub use self::replay_log_api::{ ReplayLogApi, ReplayLogApiClient };
 mod replicated_topic_api;
 pub use self::replicated_topic_api::{ ReplicatedTopicApi, ReplicatedTopicApiClient };
 mod rest_delivery_point_api;

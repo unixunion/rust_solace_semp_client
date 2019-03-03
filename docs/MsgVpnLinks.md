@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **jndi_topics_uri** | **String** | The URI of this MsgVpn&#39;s jndiTopics collection. Available since 2.2. | [optional] [default to null]
 **mqtt_sessions_uri** | **String** | The URI of this MsgVpn&#39;s mqttSessions collection. Available since 2.1. | [optional] [default to null]
 **queues_uri** | **String** | The URI of this MsgVpn&#39;s queues collection. | [optional] [default to null]
-**replay_logs_uri** | **String** | The URI of this MsgVpn&#39;s replayLogs collection. Available since 2.10. | [optional] [default to null]
 **replicated_topics_uri** | **String** | The URI of this MsgVpn&#39;s replicatedTopics collection. Available since 2.9. | [optional] [default to null]
 **rest_delivery_points_uri** | **String** | The URI of this MsgVpn&#39;s restDeliveryPoints collection. | [optional] [default to null]
 **sequenced_topics_uri** | **String** | The URI of this MsgVpn&#39;s sequencedTopics collection. | [optional] [default to null]

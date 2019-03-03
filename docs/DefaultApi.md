@@ -23,7 +23,6 @@ Method | HTTP request | Description
 [**create_msg_vpn_mqtt_session_subscription**](DefaultApi.md#create_msg_vpn_mqtt_session_subscription) | **Post** /msgVpns/{msgVpnName}/mqttSessions/{mqttSessionClientId},{mqttSessionVirtualRouter}/subscriptions | Creates an MQTT Session Subscription object.
 [**create_msg_vpn_queue**](DefaultApi.md#create_msg_vpn_queue) | **Post** /msgVpns/{msgVpnName}/queues | Creates a Queue object.
 [**create_msg_vpn_queue_subscription**](DefaultApi.md#create_msg_vpn_queue_subscription) | **Post** /msgVpns/{msgVpnName}/queues/{queueName}/subscriptions | Creates a Queue Subscription object.
-[**create_msg_vpn_replay_log**](DefaultApi.md#create_msg_vpn_replay_log) | **Post** /msgVpns/{msgVpnName}/replayLogs | Creates a ReplayLog object.
 [**create_msg_vpn_replicated_topic**](DefaultApi.md#create_msg_vpn_replicated_topic) | **Post** /msgVpns/{msgVpnName}/replicatedTopics | Creates a Replicated Topic object.
 [**create_msg_vpn_rest_delivery_point**](DefaultApi.md#create_msg_vpn_rest_delivery_point) | **Post** /msgVpns/{msgVpnName}/restDeliveryPoints | Creates a REST Delivery Point object.
 [**create_msg_vpn_rest_delivery_point_queue_binding**](DefaultApi.md#create_msg_vpn_rest_delivery_point_queue_binding) | **Post** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName}/queueBindings | Creates a Queue Binding object.
@@ -50,7 +49,6 @@ Method | HTTP request | Description
 [**delete_msg_vpn_mqtt_session_subscription**](DefaultApi.md#delete_msg_vpn_mqtt_session_subscription) | **Delete** /msgVpns/{msgVpnName}/mqttSessions/{mqttSessionClientId},{mqttSessionVirtualRouter}/subscriptions/{subscriptionTopic} | Deletes an MQTT Session Subscription object.
 [**delete_msg_vpn_queue**](DefaultApi.md#delete_msg_vpn_queue) | **Delete** /msgVpns/{msgVpnName}/queues/{queueName} | Deletes a Queue object.
 [**delete_msg_vpn_queue_subscription**](DefaultApi.md#delete_msg_vpn_queue_subscription) | **Delete** /msgVpns/{msgVpnName}/queues/{queueName}/subscriptions/{subscriptionTopic} | Deletes a Queue Subscription object.
-[**delete_msg_vpn_replay_log**](DefaultApi.md#delete_msg_vpn_replay_log) | **Delete** /msgVpns/{msgVpnName}/replayLogs/{replayLogName} | Deletes a ReplayLog object.
 [**delete_msg_vpn_replicated_topic**](DefaultApi.md#delete_msg_vpn_replicated_topic) | **Delete** /msgVpns/{msgVpnName}/replicatedTopics/{replicatedTopic} | Deletes a Replicated Topic object.
 [**delete_msg_vpn_rest_delivery_point**](DefaultApi.md#delete_msg_vpn_rest_delivery_point) | **Delete** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName} | Deletes a REST Delivery Point object.
 [**delete_msg_vpn_rest_delivery_point_queue_binding**](DefaultApi.md#delete_msg_vpn_rest_delivery_point_queue_binding) | **Delete** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName}/queueBindings/{queueBindingName} | Deletes a Queue Binding object.
@@ -87,7 +85,6 @@ Method | HTTP request | Description
 [**get_msg_vpn_queue**](DefaultApi.md#get_msg_vpn_queue) | **Get** /msgVpns/{msgVpnName}/queues/{queueName} | Gets a Queue object.
 [**get_msg_vpn_queue_subscription**](DefaultApi.md#get_msg_vpn_queue_subscription) | **Get** /msgVpns/{msgVpnName}/queues/{queueName}/subscriptions/{subscriptionTopic} | Gets a Queue Subscription object.
 [**get_msg_vpn_queue_subscriptions**](DefaultApi.md#get_msg_vpn_queue_subscriptions) | **Get** /msgVpns/{msgVpnName}/queues/{queueName}/subscriptions | Gets a list of Queue Subscription objects.
-[**get_msg_vpn_replay_log**](DefaultApi.md#get_msg_vpn_replay_log) | **Get** /msgVpns/{msgVpnName}/replayLogs/{replayLogName} | Gets a ReplayLog object.
 [**get_msg_vpn_replicated_topic**](DefaultApi.md#get_msg_vpn_replicated_topic) | **Get** /msgVpns/{msgVpnName}/replicatedTopics/{replicatedTopic} | Gets a Replicated Topic object.
 [**get_msg_vpn_rest_delivery_point**](DefaultApi.md#get_msg_vpn_rest_delivery_point) | **Get** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName} | Gets a REST Delivery Point object.
 [**get_msg_vpn_rest_delivery_point_queue_binding**](DefaultApi.md#get_msg_vpn_rest_delivery_point_queue_binding) | **Get** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName}/queueBindings/{queueBindingName} | Gets a Queue Binding object.
@@ -112,7 +109,6 @@ Method | HTTP request | Description
 [**replace_msg_vpn_mqtt_session**](DefaultApi.md#replace_msg_vpn_mqtt_session) | **Put** /msgVpns/{msgVpnName}/mqttSessions/{mqttSessionClientId},{mqttSessionVirtualRouter} | Replaces an MQTT Session object.
 [**replace_msg_vpn_mqtt_session_subscription**](DefaultApi.md#replace_msg_vpn_mqtt_session_subscription) | **Put** /msgVpns/{msgVpnName}/mqttSessions/{mqttSessionClientId},{mqttSessionVirtualRouter}/subscriptions/{subscriptionTopic} | Replaces an MQTT Session Subscription object.
 [**replace_msg_vpn_queue**](DefaultApi.md#replace_msg_vpn_queue) | **Put** /msgVpns/{msgVpnName}/queues/{queueName} | Replaces a Queue object.
-[**replace_msg_vpn_replay_log**](DefaultApi.md#replace_msg_vpn_replay_log) | **Put** /msgVpns/{msgVpnName}/replayLogs/{replayLogName} | Replaces a ReplayLog object.
 [**replace_msg_vpn_replicated_topic**](DefaultApi.md#replace_msg_vpn_replicated_topic) | **Put** /msgVpns/{msgVpnName}/replicatedTopics/{replicatedTopic} | Replaces a Replicated Topic object.
 [**replace_msg_vpn_rest_delivery_point**](DefaultApi.md#replace_msg_vpn_rest_delivery_point) | **Put** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName} | Replaces a REST Delivery Point object.
 [**replace_msg_vpn_rest_delivery_point_queue_binding**](DefaultApi.md#replace_msg_vpn_rest_delivery_point_queue_binding) | **Put** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName}/queueBindings/{queueBindingName} | Replaces a Queue Binding object.
@@ -131,7 +127,6 @@ Method | HTTP request | Description
 [**update_msg_vpn_mqtt_session**](DefaultApi.md#update_msg_vpn_mqtt_session) | **Patch** /msgVpns/{msgVpnName}/mqttSessions/{mqttSessionClientId},{mqttSessionVirtualRouter} | Updates an MQTT Session object.
 [**update_msg_vpn_mqtt_session_subscription**](DefaultApi.md#update_msg_vpn_mqtt_session_subscription) | **Patch** /msgVpns/{msgVpnName}/mqttSessions/{mqttSessionClientId},{mqttSessionVirtualRouter}/subscriptions/{subscriptionTopic} | Updates an MQTT Session Subscription object.
 [**update_msg_vpn_queue**](DefaultApi.md#update_msg_vpn_queue) | **Patch** /msgVpns/{msgVpnName}/queues/{queueName} | Updates a Queue object.
-[**update_msg_vpn_replay_log**](DefaultApi.md#update_msg_vpn_replay_log) | **Patch** /msgVpns/{msgVpnName}/replayLogs/{replayLogName} | Updates a ReplayLog object.
 [**update_msg_vpn_replicated_topic**](DefaultApi.md#update_msg_vpn_replicated_topic) | **Patch** /msgVpns/{msgVpnName}/replicatedTopics/{replicatedTopic} | Updates a Replicated Topic object.
 [**update_msg_vpn_rest_delivery_point**](DefaultApi.md#update_msg_vpn_rest_delivery_point) | **Patch** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName} | Updates a REST Delivery Point object.
 [**update_msg_vpn_rest_delivery_point_queue_binding**](DefaultApi.md#update_msg_vpn_rest_delivery_point_queue_binding) | **Patch** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName}/queueBindings/{queueBindingName} | Updates a Queue Binding object.
@@ -890,45 +885,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**::models::MsgVpnQueueSubscriptionResponse**](MsgVpnQueueSubscriptionResponse.md)
-
-### Authorization
-
-[basicAuth](../README.md#basicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_msg_vpn_replay_log**
-> ::models::MsgVpnReplayLogResponse create_msg_vpn_replay_log(ctx, msg_vpn_name, body, optional)
-Creates a ReplayLog object.
-
-Creates a ReplayLog object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| replayLogName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.10.
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **body** | [**MsgVpnReplayLog**](MsgVpnReplayLog.md)| The ReplayLog object&#39;s attributes. | 
- **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a map[string]interface{}.
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **body** | [**MsgVpnReplayLog**](MsgVpnReplayLog.md)| The ReplayLog object&#39;s attributes. | 
- **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See [Select](#select \&quot;Description of the syntax of the &#x60;select&#x60; parameter\&quot;). | 
-
-### Return type
-
-[**::models::MsgVpnReplayLogResponse**](MsgVpnReplayLogResponse.md)
 
 ### Authorization
 
@@ -1774,35 +1730,6 @@ Name | Type | Description  | Notes
   **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
   **queue_name** | **String**| The queueName of the Queue. | 
   **subscription_topic** | **String**| The subscriptionTopic of the Queue Subscription. | 
-
-### Return type
-
-[**::models::SempMetaOnlyResponse**](SempMetaOnlyResponse.md)
-
-### Authorization
-
-[basicAuth](../README.md#basicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_msg_vpn_replay_log**
-> ::models::SempMetaOnlyResponse delete_msg_vpn_replay_log(ctx, msg_vpn_name, replay_log_name)
-Deletes a ReplayLog object.
-
-Deletes a ReplayLog object.  A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.10.
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **replay_log_name** | **String**| The replayLogName of the ReplayLog. | 
 
 ### Return type
 
@@ -3216,45 +3143,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_msg_vpn_replay_log**
-> ::models::MsgVpnReplayLogResponse get_msg_vpn_replay_log(ctx, msg_vpn_name, replay_log_name, optional)
-Gets a ReplayLog object.
-
-Gets a ReplayLog object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| replayLogName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.10.
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **replay_log_name** | **String**| The replayLogName of the ReplayLog. | 
- **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a map[string]interface{}.
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **replay_log_name** | **String**| The replayLogName of the ReplayLog. | 
- **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See [Select](#select \&quot;Description of the syntax of the &#x60;select&#x60; parameter\&quot;). | 
-
-### Return type
-
-[**::models::MsgVpnReplayLogResponse**](MsgVpnReplayLogResponse.md)
-
-### Authorization
-
-[basicAuth](../README.md#basicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **get_msg_vpn_replicated_topic**
 > ::models::MsgVpnReplicatedTopicResponse get_msg_vpn_replicated_topic(ctx, msg_vpn_name, replicated_topic, optional)
 Gets a Replicated Topic object.
@@ -4249,47 +4137,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **replace_msg_vpn_replay_log**
-> ::models::MsgVpnReplayLogResponse replace_msg_vpn_replay_log(ctx, msg_vpn_name, replay_log_name, body, optional)
-Replaces a ReplayLog object.
-
-Replaces a ReplayLog object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replayLogName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.10.
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **replay_log_name** | **String**| The replayLogName of the ReplayLog. | 
-  **body** | [**MsgVpnReplayLog**](MsgVpnReplayLog.md)| The ReplayLog object&#39;s attributes. | 
- **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a map[string]interface{}.
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **replay_log_name** | **String**| The replayLogName of the ReplayLog. | 
- **body** | [**MsgVpnReplayLog**](MsgVpnReplayLog.md)| The ReplayLog object&#39;s attributes. | 
- **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See [Select](#select \&quot;Description of the syntax of the &#x60;select&#x60; parameter\&quot;). | 
-
-### Return type
-
-[**::models::MsgVpnReplayLogResponse**](MsgVpnReplayLogResponse.md)
-
-### Authorization
-
-[basicAuth](../README.md#basicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **replace_msg_vpn_replicated_topic**
 > ::models::MsgVpnReplicatedTopicResponse replace_msg_vpn_replicated_topic(ctx, msg_vpn_name, replicated_topic, body, optional)
 Replaces a Replicated Topic object.
@@ -5034,47 +4881,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**::models::MsgVpnQueueResponse**](MsgVpnQueueResponse.md)
-
-### Authorization
-
-[basicAuth](../README.md#basicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_msg_vpn_replay_log**
-> ::models::MsgVpnReplayLogResponse update_msg_vpn_replay_log(ctx, msg_vpn_name, replay_log_name, body, optional)
-Updates a ReplayLog object.
-
-Updates a ReplayLog object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replayLogName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.10.
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **replay_log_name** | **String**| The replayLogName of the ReplayLog. | 
-  **body** | [**MsgVpnReplayLog**](MsgVpnReplayLog.md)| The ReplayLog object&#39;s attributes. | 
- **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a map[string]interface{}.
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **replay_log_name** | **String**| The replayLogName of the ReplayLog. | 
- **body** | [**MsgVpnReplayLog**](MsgVpnReplayLog.md)| The ReplayLog object&#39;s attributes. | 
- **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See [Select](#select \&quot;Description of the syntax of the &#x60;select&#x60; parameter\&quot;). | 
-
-### Return type
-
-[**::models::MsgVpnReplayLogResponse**](MsgVpnReplayLogResponse.md)
 
 ### Authorization
 

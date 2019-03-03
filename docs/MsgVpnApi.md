@@ -14,7 +14,6 @@ Method | HTTP request | Description
 [**get_msg_vpn_jndi_topics**](MsgVpnApi.md#get_msg_vpn_jndi_topics) | **Get** /msgVpns/{msgVpnName}/jndiTopics | Gets a list of JNDI Topic objects.
 [**get_msg_vpn_mqtt_sessions**](MsgVpnApi.md#get_msg_vpn_mqtt_sessions) | **Get** /msgVpns/{msgVpnName}/mqttSessions | Gets a list of MQTT Session objects.
 [**get_msg_vpn_queues**](MsgVpnApi.md#get_msg_vpn_queues) | **Get** /msgVpns/{msgVpnName}/queues | Gets a list of Queue objects.
-[**get_msg_vpn_replay_logs**](MsgVpnApi.md#get_msg_vpn_replay_logs) | **Get** /msgVpns/{msgVpnName}/replayLogs | Gets a list of ReplayLog objects.
 [**get_msg_vpn_replicated_topics**](MsgVpnApi.md#get_msg_vpn_replicated_topics) | **Get** /msgVpns/{msgVpnName}/replicatedTopics | Gets a list of Replicated Topic objects.
 [**get_msg_vpn_rest_delivery_points**](MsgVpnApi.md#get_msg_vpn_rest_delivery_points) | **Get** /msgVpns/{msgVpnName}/restDeliveryPoints | Gets a list of REST Delivery Point objects.
 [**get_msg_vpn_topic_endpoints**](MsgVpnApi.md#get_msg_vpn_topic_endpoints) | **Get** /msgVpns/{msgVpnName}/topicEndpoints | Gets a list of Topic Endpoint objects.
@@ -407,46 +406,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**::models::MsgVpnQueuesResponse**](MsgVpnQueuesResponse.md)
-
-### Authorization
-
-[basicAuth](../README.md#basicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_msg_vpn_replay_logs**
-> ::models::MsgVpnReplayLogsResponse get_msg_vpn_replay_logs(ctx, msg_vpn_name, optional)
-Gets a list of ReplayLog objects.
-
-Gets a list of ReplayLog objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| replayLogName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.10.
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a map[string]interface{}.
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **count** | **i32**| Limit the count of objects in the response. See [Count](#count \&quot;Description of the syntax of the &#x60;count&#x60; parameter\&quot;). | [default to 10]
- **cursor** | **String**| The cursor, or position, for the next page of objects. See [Cursor](#cursor \&quot;Description of the syntax of the &#x60;cursor&#x60; parameter\&quot;). | 
- **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See [Where](#where \&quot;Description of the syntax of the &#x60;where&#x60; parameter\&quot;). | 
- **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See [Select](#select \&quot;Description of the syntax of the &#x60;select&#x60; parameter\&quot;). | 
-
-### Return type
-
-[**::models::MsgVpnReplayLogsResponse**](MsgVpnReplayLogsResponse.md)
 
 ### Authorization
 
