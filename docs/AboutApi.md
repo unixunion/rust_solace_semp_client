@@ -12,7 +12,7 @@ Method | HTTP request | Description
 > ::models::AboutApiResponse get_about_api(ctx, )
 Gets an API Description object.
 
-Gets an API Description object.  A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been available since 2.2.
+Gets an API Description object.  A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been available since 2.2.0.
 
 ### Required Parameters
 This endpoint does not need any parameter.
@@ -36,7 +36,7 @@ This endpoint does not need any parameter.
 > ::models::AboutUserResponse get_about_user(ctx, optional)
 Gets a Current User object.
 
-Gets a Current User object.    A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been available since 2.2.
+Gets a Current User object.    A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been available since 2.2.0.
 
 ### Required Parameters
 
@@ -50,7 +50,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See [Select](#select \&quot;Description of the syntax of the &#x60;select&#x60; parameter\&quot;). | 
+ **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object. See [Select](#select \&quot;Description of the syntax of the &#x60;select&#x60; parameter\&quot;). | 
 
 ### Return type
 

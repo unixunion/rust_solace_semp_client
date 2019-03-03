@@ -16,7 +16,6 @@ pub struct APIClient<C: hyper::client::Connect> {
   mqtt_session_api: Box<::apis::MqttSessionApi>,
   msg_vpn_api: Box<::apis::MsgVpnApi>,
   queue_api: Box<::apis::QueueApi>,
-  replay_log_api: Box<::apis::ReplayLogApi>,
   replicated_topic_api: Box<::apis::ReplicatedTopicApi>,
   rest_delivery_point_api: Box<::apis::RestDeliveryPointApi>,
   system_information_api: Box<::apis::SystemInformationApi>,
@@ -40,7 +39,6 @@ impl<C: hyper::client::Connect> APIClient<C> {
       mqtt_session_api: Box::new(::apis::MqttSessionApiClient::new(rc.clone())),
       msg_vpn_api: Box::new(::apis::MsgVpnApiClient::new(rc.clone())),
       queue_api: Box::new(::apis::QueueApiClient::new(rc.clone())),
-      replay_log_api: Box::new(::apis::ReplayLogApiClient::new(rc.clone())),
       replicated_topic_api: Box::new(::apis::ReplicatedTopicApiClient::new(rc.clone())),
       rest_delivery_point_api: Box::new(::apis::RestDeliveryPointApiClient::new(rc.clone())),
       system_information_api: Box::new(::apis::SystemInformationApiClient::new(rc.clone())),
@@ -90,10 +88,6 @@ impl<C: hyper::client::Connect> APIClient<C> {
 
   pub fn queue_api(&self) -> &::apis::QueueApi{
     self.queue_api.as_ref()
-  }
-
-  pub fn replay_log_api(&self) -> &::apis::ReplayLogApi{
-    self.replay_log_api.as_ref()
   }
 
   pub fn replicated_topic_api(&self) -> &::apis::ReplicatedTopicApi{

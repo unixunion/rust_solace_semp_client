@@ -1,6 +1,6 @@
 [package]
 name = "solace_semp_client"
-version = "9.0.1-7"
+version = "8.3.0-17"
 authors = ["Swagger Codegen team and contributors"]
 
 [dependencies]
