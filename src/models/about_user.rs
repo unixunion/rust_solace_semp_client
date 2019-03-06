@@ -15,7 +15,7 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct AboutUser {
   /// Global access level of the Current User. The allowed values and their meaning are:  <pre> \"admin\" - Administrative access allowed. \"none\" - No access allowed. \"read-only\" - Read only. \"read-write\" - Read and Write. </pre> 
-      #[serde(rename = "globalAccessLevel", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "globalAccessLevel", skip_serializing_if="Option::is_none")]
   global_access_level: Option<String>
 }
 

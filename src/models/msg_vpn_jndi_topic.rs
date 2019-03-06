@@ -15,13 +15,13 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnJndiTopic {
   /// The name of the Message VPN.
-      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The physical name of the JMS Topic. The default value is `\"\"`.
-      #[serde(rename = "physicalName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "physicalName", skip_serializing_if="Option::is_none")]
   physical_name: Option<String>,
   /// The JNDI name of the JMS Topic.
-      #[serde(rename = "topicName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "topicName", skip_serializing_if="Option::is_none")]
   topic_name: Option<String>
 }
 

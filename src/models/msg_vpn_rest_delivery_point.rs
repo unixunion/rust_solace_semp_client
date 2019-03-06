@@ -15,16 +15,16 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnRestDeliveryPoint {
   /// The Client Profile of the REST Delivery Point. It must exist in the local Message VPN. Its TCP parameters are used for all REST Consumers in this RDP. Its queue properties are used by the RDP client. The Client Profile is used inside the auto-generated Client Username for this RDP. The default value is `\"default\"`.
-      #[serde(rename = "clientProfileName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "clientProfileName", skip_serializing_if="Option::is_none")]
   client_profile_name: Option<String>,
   /// Enable or disable the REST Delivery Point. When disabled, no connections are initiated or messages delivered to any of the contained REST Consumers. The default value is `false`.
-      #[serde(rename = "enabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "enabled", skip_serializing_if="Option::is_none")]
   enabled: Option<bool>,
   /// The name of the Message VPN.
-      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The name of the REST Delivery Point.
-      #[serde(rename = "restDeliveryPointName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "restDeliveryPointName", skip_serializing_if="Option::is_none")]
   rest_delivery_point_name: Option<String>
 }
 

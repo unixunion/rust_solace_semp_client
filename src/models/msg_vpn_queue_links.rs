@@ -15,10 +15,10 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnQueueLinks {
   /// The URI of this MsgVpnQueue's subscriptions collection.
-      #[serde(rename = "subscriptionsUri", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "subscriptionsUri", skip_serializing_if="Option::is_none")]
   subscriptions_uri: Option<String>,
   /// The URI of this MsgVpnQueue object.
-      #[serde(rename = "uri", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "uri", skip_serializing_if="Option::is_none")]
   uri: Option<String>
 }
 

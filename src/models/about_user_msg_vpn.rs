@@ -15,10 +15,10 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct AboutUserMsgVpn {
   /// Message VPN access level of the Current User. The allowed values and their meaning are:  <pre> \"none\" - No access allowed. \"read-only\" - Read only. \"read-write\" - Read and Write. </pre> 
-      #[serde(rename = "accessLevel", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "accessLevel", skip_serializing_if="Option::is_none")]
   access_level: Option<String>,
   /// The name of the Message VPN.
-      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>
 }
 

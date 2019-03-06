@@ -15,46 +15,46 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnBridge {
   /// The name of the Bridge.
-      #[serde(rename = "bridgeName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "bridgeName", skip_serializing_if="Option::is_none")]
   bridge_name: Option<String>,
   /// Specify whether the Bridge is configured for the primary or backup Virtual Router or auto configured. The allowed values and their meaning are:  <pre> \"primary\" - The Bridge is used for the primary Virtual Router. \"backup\" - The Bridge is used for the backup Virtual Router. \"auto\" - The Bridge is automatically assigned a Router. </pre> 
-      #[serde(rename = "bridgeVirtualRouter", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "bridgeVirtualRouter", skip_serializing_if="Option::is_none")]
   bridge_virtual_router: Option<String>,
   /// Enable or disable the Bridge. The default value is `false`.
-      #[serde(rename = "enabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "enabled", skip_serializing_if="Option::is_none")]
   enabled: Option<bool>,
   /// The maximum number of hops (intermediate routers through which data must pass between source and destination) that can occur before the message is discarded. When the Bridge sends a message to the remote router, the message TTL value is assigned to the lower of the message current TTL or this value. The default value is `8`.
-      #[serde(rename = "maxTtl", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "maxTtl", skip_serializing_if="Option::is_none")]
   max_ttl: Option<i64>,
   /// The name of the Message VPN.
-      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The Client Username that the Bridge uses to login to the Remote Message VPN. The default value is `\"\"`.
-      #[serde(rename = "remoteAuthenticationBasicClientUsername", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "remoteAuthenticationBasicClientUsername", skip_serializing_if="Option::is_none")]
   remote_authentication_basic_client_username: Option<String>,
   /// The password the Message VPN Bridge uses to login to the Remote Message VPN. The default is to have no `remoteAuthenticationBasicPassword`.
-      #[serde(rename = "remoteAuthenticationBasicPassword", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "remoteAuthenticationBasicPassword", skip_serializing_if="Option::is_none")]
   remote_authentication_basic_password: Option<String>,
   /// The PEM formatted content for the client certificate used by this bridge to login to the Remote Message VPN. It must consist of a private key and between one and three certificates comprising the certificate trust chain. The default value is `\"\"`. Available since 2.9.
-      #[serde(rename = "remoteAuthenticationClientCertContent", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "remoteAuthenticationClientCertContent", skip_serializing_if="Option::is_none")]
   remote_authentication_client_cert_content: Option<String>,
   /// The password for the client certificate used by this bridge to login to the Remote Message VPN. The default value is `\"\"`. Available since 2.9.
-      #[serde(rename = "remoteAuthenticationClientCertPassword", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "remoteAuthenticationClientCertPassword", skip_serializing_if="Option::is_none")]
   remote_authentication_client_cert_password: Option<String>,
   /// The authentication scheme for the Remote Message VPN. The default value is `\"basic\"`. The allowed values and their meaning are:  <pre> \"basic\" - Basic Authentication Scheme (via username and password). \"client-certificate\" - Client Certificate Authentication Scheme (via certificate file or content). </pre> 
-      #[serde(rename = "remoteAuthenticationScheme", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "remoteAuthenticationScheme", skip_serializing_if="Option::is_none")]
   remote_authentication_scheme: Option<String>,
   /// The maximum number of attempts to establish a connection to the Remote Message VPN. The default value is `0`.
-      #[serde(rename = "remoteConnectionRetryCount", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "remoteConnectionRetryCount", skip_serializing_if="Option::is_none")]
   remote_connection_retry_count: Option<i64>,
   /// The amount of time before making another attempt to connect to the Remote Message VPN after a failed one, in seconds. The default value is `3`.
-      #[serde(rename = "remoteConnectionRetryDelay", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "remoteConnectionRetryDelay", skip_serializing_if="Option::is_none")]
   remote_connection_retry_delay: Option<i64>,
   /// The priority for deliver-to-one (DTO) messages sent from the Remote Message VPN to the Message VPN Bridge. The default value is `\"p1\"`. The allowed values and their meaning are:  <pre> \"p1\" - Priority 1 (highest). \"p2\" - Priority 2. \"p3\" - Priority 3. \"p4\" - Priority 4 (lowest). \"da\" - Deliver Always. </pre> 
-      #[serde(rename = "remoteDeliverToOnePriority", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "remoteDeliverToOnePriority", skip_serializing_if="Option::is_none")]
   remote_deliver_to_one_priority: Option<String>,
   /// The list of cipher suites supported for TLS connections to the Remote Message VPN. The default value is `\"default\"`.
-      #[serde(rename = "tlsCipherSuiteList", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "tlsCipherSuiteList", skip_serializing_if="Option::is_none")]
   tls_cipher_suite_list: Option<String>
 }
 

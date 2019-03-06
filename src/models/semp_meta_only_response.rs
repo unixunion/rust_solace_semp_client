@@ -14,7 +14,7 @@ use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct SempMetaOnlyResponse {
-      #[serde(rename = "meta")]
+  #[serde(rename = "meta")]
   meta: ::models::SempMeta
 }
 

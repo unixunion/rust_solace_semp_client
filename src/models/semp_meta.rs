@@ -14,14 +14,14 @@ use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct SempMeta {
-      #[serde(rename = "error", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "error", skip_serializing_if="Option::is_none")]
   error: Option<::models::SempError>,
-      #[serde(rename = "paging", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "paging", skip_serializing_if="Option::is_none")]
   paging: Option<::models::SempPaging>,
-      #[serde(rename = "request")]
+  #[serde(rename = "request")]
   request: ::models::SempRequest,
   /// The HTTP response code, one of 200 (success), 4xx (client error), or 5xx (server error).
-      #[serde(rename = "responseCode")]
+  #[serde(rename = "responseCode")]
   response_code: i32
 }
 

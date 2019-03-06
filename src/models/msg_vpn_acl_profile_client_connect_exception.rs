@@ -15,13 +15,13 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnAclProfileClientConnectException {
   /// The name of the ACL Profile.
-      #[serde(rename = "aclProfileName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "aclProfileName", skip_serializing_if="Option::is_none")]
   acl_profile_name: Option<String>,
   /// The IP Address/Netmask of the Client Connect Exception in the Classless Inter-Domain Routing (CIDR) form.
-      #[serde(rename = "clientConnectExceptionAddress", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "clientConnectExceptionAddress", skip_serializing_if="Option::is_none")]
   client_connect_exception_address: Option<String>,
   /// The name of the Message VPN.
-      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>
 }
 

@@ -15,19 +15,19 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnAclProfile {
   /// The name of the ACL Profile.
-      #[serde(rename = "aclProfileName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "aclProfileName", skip_serializing_if="Option::is_none")]
   acl_profile_name: Option<String>,
   /// The default action when a Client connects to the Message VPN. The default value is `\"disallow\"`. The allowed values and their meaning are:  <pre> \"allow\" - Allow client connection unless an exception is found for it. \"disallow\" - Disallow client connection unless an exception is found for it. </pre> 
-      #[serde(rename = "clientConnectDefaultAction", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "clientConnectDefaultAction", skip_serializing_if="Option::is_none")]
   client_connect_default_action: Option<String>,
   /// The name of the Message VPN.
-      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The default action to take when a Client publishes to a Topic in the Message VPN. The default value is `\"disallow\"`. The allowed values and their meaning are:  <pre> \"allow\" - Allow topic unless an exception is found for it. \"disallow\" - Disallow topic unless an exception is found for it. </pre> 
-      #[serde(rename = "publishTopicDefaultAction", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "publishTopicDefaultAction", skip_serializing_if="Option::is_none")]
   publish_topic_default_action: Option<String>,
   /// The default action to take when a Client subscribes to a Topic. The default value is `\"disallow\"`. The allowed values and their meaning are:  <pre> \"allow\" - Allow topic unless an exception is found for it. \"disallow\" - Disallow topic unless an exception is found for it. </pre> 
-      #[serde(rename = "subscribeTopicDefaultAction", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "subscribeTopicDefaultAction", skip_serializing_if="Option::is_none")]
   subscribe_topic_default_action: Option<String>
 }
 

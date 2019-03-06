@@ -15,19 +15,19 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnReplayLog {
   /// Enable or disable the egress flow of messages from the Replay Log. The default value is `false`.
-      #[serde(rename = "egressEnabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "egressEnabled", skip_serializing_if="Option::is_none")]
   egress_enabled: Option<bool>,
   /// Enable or disable the ingress flow of messages to the Replay Log. The default value is `false`.
-      #[serde(rename = "ingressEnabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "ingressEnabled", skip_serializing_if="Option::is_none")]
   ingress_enabled: Option<bool>,
   /// The maximum spool usage in megabytes (MB) allowed by the Replay Log. If this limit is exceeded, old messages will be trimmed. The default value is `0`.
-      #[serde(rename = "maxSpoolUsage", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "maxSpoolUsage", skip_serializing_if="Option::is_none")]
   max_spool_usage: Option<i64>,
   /// The name of the Message VPN.
-      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The name of the Replay Log.
-      #[serde(rename = "replayLogName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "replayLogName", skip_serializing_if="Option::is_none")]
   replay_log_name: Option<String>
 }
 

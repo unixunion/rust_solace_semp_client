@@ -15,70 +15,70 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnQueue {
   /// The Queue access type of either \"exclusive\" or \"non-exclusive\". The default value is `\"exclusive\"`. The allowed values and their meaning are:  <pre> \"exclusive\" - Exclusive delivery of messages to first bound client. \"non-exclusive\" - Non-exclusive delivery of messages to all bound clients. </pre> 
-      #[serde(rename = "accessType", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "accessType", skip_serializing_if="Option::is_none")]
   access_type: Option<String>,
   /// Enable or disable the propagation of Consumer ACKs received on the active replication Message VPN to the standby replication Message VPN. The default value is `true`.
-      #[serde(rename = "consumerAckPropagationEnabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "consumerAckPropagationEnabled", skip_serializing_if="Option::is_none")]
   consumer_ack_propagation_enabled: Option<bool>,
   /// The name of the Dead Message Queue (DMQ) used by the Queue. The default value is `\"#DEAD_MSG_QUEUE\"`. Available since 2.2.
-      #[serde(rename = "deadMsgQueue", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "deadMsgQueue", skip_serializing_if="Option::is_none")]
   dead_msg_queue: Option<String>,
   /// Enable or disable the egress flow of messages from the Queue. The default value is `false`.
-      #[serde(rename = "egressEnabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "egressEnabled", skip_serializing_if="Option::is_none")]
   egress_enabled: Option<bool>,
-      #[serde(rename = "eventBindCountThreshold", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "eventBindCountThreshold", skip_serializing_if="Option::is_none")]
   event_bind_count_threshold: Option<::models::EventThreshold>,
-      #[serde(rename = "eventMsgSpoolUsageThreshold", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "eventMsgSpoolUsageThreshold", skip_serializing_if="Option::is_none")]
   event_msg_spool_usage_threshold: Option<::models::EventThreshold>,
-      #[serde(rename = "eventRejectLowPriorityMsgLimitThreshold", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "eventRejectLowPriorityMsgLimitThreshold", skip_serializing_if="Option::is_none")]
   event_reject_low_priority_msg_limit_threshold: Option<::models::EventThreshold>,
   /// Enable or disable the ingress flow of messages to the Queue. The default value is `false`.
-      #[serde(rename = "ingressEnabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "ingressEnabled", skip_serializing_if="Option::is_none")]
   ingress_enabled: Option<bool>,
   /// The maximum number of simultaneous clients that can bind to the Queue. The default value is `1000`.
-      #[serde(rename = "maxBindCount", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "maxBindCount", skip_serializing_if="Option::is_none")]
   max_bind_count: Option<i64>,
   /// The maximum allowed number of messages delivered but not acknowledged per flow for the Queue. The default is the maximum value supported by the hardware. The default is the max value supported by the hardware.
-      #[serde(rename = "maxDeliveredUnackedMsgsPerFlow", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "maxDeliveredUnackedMsgsPerFlow", skip_serializing_if="Option::is_none")]
   max_delivered_unacked_msgs_per_flow: Option<i64>,
   /// The maximum message size allowed in the Queue, in bytes. The default value is `10000000`.
-      #[serde(rename = "maxMsgSize", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "maxMsgSize", skip_serializing_if="Option::is_none")]
   max_msg_size: Option<i32>,
   /// The maximum Message Spool usage by the Queue (quota), in megabytes. Setting the value to zero enables the \"last-value-queue\" feature and disables quota checking. The default varies by platform. The default varies by platform.
-      #[serde(rename = "maxMsgSpoolUsage", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "maxMsgSpoolUsage", skip_serializing_if="Option::is_none")]
   max_msg_spool_usage: Option<i64>,
   /// The maximum number of times the Queue will attempt redelivery of a given message prior to it being discarded or moved to the #DEAD_MSG_QUEUE. A value of 0 means to retry forever. The default value is `0`.
-      #[serde(rename = "maxRedeliveryCount", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "maxRedeliveryCount", skip_serializing_if="Option::is_none")]
   max_redelivery_count: Option<i64>,
   /// The maximum number of seconds that a message can stay in the Queue when \"respectTtlEnabled\" is \"true\". A message will expire according to the lesser of the TTL in the message (assigned by the Publisher) and the \"maxTtl\" configured in the Queue. \"maxTtl\" is a 32-bit integer value from 1 to 4294967295 representing the expiry time in seconds. A \"maxTtl\" of \"0\" disables this feature. The default value is `0`.
-      #[serde(rename = "maxTtl", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "maxTtl", skip_serializing_if="Option::is_none")]
   max_ttl: Option<i64>,
   /// The name of the Message VPN.
-      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The Client Username which owns the Queue. The default value is `\"\"`.
-      #[serde(rename = "owner", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "owner", skip_serializing_if="Option::is_none")]
   owner: Option<String>,
   /// Permission level for users of the Queue, excluding the owner. The default value is `\"no-access\"`. The allowed values and their meaning are:  <pre> \"no-access\" - Disallows all access. \"read-only\" - Read-only access to the messages in the Queue. \"consume\" - Consume (read and remove) messages in the Queue. \"modify-topic\" - Consume messages or modify the topic/selector of the Queue. \"delete\" - Consume messages, modify the topic/selector or delete the Queue altogether. </pre> 
-      #[serde(rename = "permission", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "permission", skip_serializing_if="Option::is_none")]
   permission: Option<String>,
   /// The name of the Queue.
-      #[serde(rename = "queueName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "queueName", skip_serializing_if="Option::is_none")]
   queue_name: Option<String>,
   /// Enable or disable if low priority messages are subject to \"rejectLowPriorityMsgLimit\" checking. This may only be enabled if \"rejectMsgToSenderOnDiscardBehavior\" does not have a value of \"never\". The default value is `false`.
-      #[serde(rename = "rejectLowPriorityMsgEnabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "rejectLowPriorityMsgEnabled", skip_serializing_if="Option::is_none")]
   reject_low_priority_msg_enabled: Option<bool>,
   /// The number of messages of any priority in the Queue above which low priority messages are not admitted but higher priority messages are allowed. The default value is `0`.
-      #[serde(rename = "rejectLowPriorityMsgLimit", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "rejectLowPriorityMsgLimit", skip_serializing_if="Option::is_none")]
   reject_low_priority_msg_limit: Option<i64>,
   /// Assign the message discard behavior, that is the circumstances under which a negative acknowledgement (NACK) is sent to the client on discards. Note that NACKs cause the message to not be delivered to any destination and transacted-session commits to fail. This attribute may only have a value of \"never\" if \"rejectLowPriorityMsgEnabled\" is disabled. The default value is `\"when-queue-enabled\"`. The allowed values and their meaning are:  <pre> \"always\" - Message discards always result in negative acknowledgments (NACKs) being returned to the sending client, even if the discard reason is that the Queue is disabled. \"when-queue-enabled\" - Message discards result in negative acknowledgments (NACKs) being returned to the sending client, except if the discard reason is that the Queue is disabled. \"never\" - Message discards never result in negative acknowledgments (NACKs) being returned to the sending client. </pre>  Available since 2.1.
-      #[serde(rename = "rejectMsgToSenderOnDiscardBehavior", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "rejectMsgToSenderOnDiscardBehavior", skip_serializing_if="Option::is_none")]
   reject_msg_to_sender_on_discard_behavior: Option<String>,
   /// Enable or disable the respecting of message priority. If enabled, messages contained in the Queue are delivered in priority order, from 9 (highest) to 0 (lowest). MQTT queues do not support enabling message priority. The default value is `false`. Available since 2.8.
-      #[serde(rename = "respectMsgPriorityEnabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "respectMsgPriorityEnabled", skip_serializing_if="Option::is_none")]
   respect_msg_priority_enabled: Option<bool>,
   /// Enable or disable the respecting of the \"time to live\" (TTL). If enabled, then messages contained in the Queue are checked for expiry. If expired, the message is removed from the Queue and either discarded or a copy of the message placed in the #DEAD_MSG_QUEUE. The default value is `false`.
-      #[serde(rename = "respectTtlEnabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "respectTtlEnabled", skip_serializing_if="Option::is_none")]
   respect_ttl_enabled: Option<bool>
 }
 

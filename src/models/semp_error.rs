@@ -15,13 +15,13 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct SempError {
   /// The error code which uniquely identifies the error that has occurred.
-      #[serde(rename = "code")]
+  #[serde(rename = "code")]
   code: i32,
   /// The verbose description of the problem.
-      #[serde(rename = "description")]
+  #[serde(rename = "description")]
   description: String,
   /// The terse status string associated with `code`.
-      #[serde(rename = "status")]
+  #[serde(rename = "status")]
   status: String
 }
 

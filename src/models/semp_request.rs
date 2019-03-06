@@ -15,10 +15,10 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct SempRequest {
   /// The HTTP method of the request which resulted in this response.
-      #[serde(rename = "method")]
+  #[serde(rename = "method")]
   method: String,
   /// The URI of the request which resulted in this response.
-      #[serde(rename = "uri")]
+  #[serde(rename = "uri")]
   uri: String
 }
 

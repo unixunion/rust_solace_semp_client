@@ -14,11 +14,11 @@ use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnMqttSessionsResponse {
-      #[serde(rename = "data", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "data", skip_serializing_if="Option::is_none")]
   data: Option<Vec<::models::MsgVpnMqttSession>>,
-      #[serde(rename = "links", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "links", skip_serializing_if="Option::is_none")]
   links: Option<Vec<::models::MsgVpnMqttSessionLinks>>,
-      #[serde(rename = "meta")]
+  #[serde(rename = "meta")]
   meta: ::models::SempMeta
 }
 

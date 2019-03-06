@@ -15,16 +15,16 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnAclProfilePublishException {
   /// The name of the ACL Profile.
-      #[serde(rename = "aclProfileName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "aclProfileName", skip_serializing_if="Option::is_none")]
   acl_profile_name: Option<String>,
   /// The name of the Message VPN.
-      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The name of the Topic for the Exception to the default action taken. May include wildcard characters.
-      #[serde(rename = "publishExceptionTopic", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "publishExceptionTopic", skip_serializing_if="Option::is_none")]
   publish_exception_topic: Option<String>,
   /// The syntax of the Topic for the Exception to the default action taken. The allowed values and their meaning are:  <pre> \"smf\" - Topic uses SMF syntax. \"mqtt\" - Topic uses MQTT syntax. </pre> 
-      #[serde(rename = "topicSyntax", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "topicSyntax", skip_serializing_if="Option::is_none")]
   topic_syntax: Option<String>
 }
 

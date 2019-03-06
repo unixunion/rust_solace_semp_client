@@ -15,49 +15,49 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnBridgeRemoteMsgVpn {
   /// The name of the Bridge.
-      #[serde(rename = "bridgeName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "bridgeName", skip_serializing_if="Option::is_none")]
   bridge_name: Option<String>,
   /// Specify whether the Bridge is configured for the primary or backup Virtual Router or auto configured. The allowed values and their meaning are:  <pre> \"primary\" - The Bridge is used for the primary Virtual Router. \"backup\" - The Bridge is used for the backup Virtual Router. \"auto\" - The Bridge is automatically assigned a Router. </pre> 
-      #[serde(rename = "bridgeVirtualRouter", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "bridgeVirtualRouter", skip_serializing_if="Option::is_none")]
   bridge_virtual_router: Option<String>,
   /// The Client Username the Bridge uses to login to the Remote Message VPN. This per Remote Message VPN value overrides the value provided for the bridge overall. The default value is `\"\"`.
-      #[serde(rename = "clientUsername", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "clientUsername", skip_serializing_if="Option::is_none")]
   client_username: Option<String>,
   /// Enable or disable data compression for the Remote Message VPN. The default value is `false`.
-      #[serde(rename = "compressedDataEnabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "compressedDataEnabled", skip_serializing_if="Option::is_none")]
   compressed_data_enabled: Option<bool>,
   /// The order in which attempts to connect to different Message VPN hosts are attempted, or the preference given to incoming connections from remote routers, from 1 (highest priority) to 4 (lowest priority). The default value is `4`.
-      #[serde(rename = "connectOrder", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "connectOrder", skip_serializing_if="Option::is_none")]
   connect_order: Option<i32>,
   /// Indicates how many outstanding guaranteed messages can be sent over the Remote Message VPN connection before acknowledgement is received by the sender. The default value is `255`.
-      #[serde(rename = "egressFlowWindowSize", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "egressFlowWindowSize", skip_serializing_if="Option::is_none")]
   egress_flow_window_size: Option<i64>,
   /// Enable or disable the Remote Message VPN. The default value is `false`.
-      #[serde(rename = "enabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "enabled", skip_serializing_if="Option::is_none")]
   enabled: Option<bool>,
   /// The name of the Message VPN.
-      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The password for the Client Username that the Bridge uses to login to the Remote Message VPN. The default is to have no `password`.
-      #[serde(rename = "password", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "password", skip_serializing_if="Option::is_none")]
   password: Option<String>,
   /// The queue binding of the Bridge for the Remote Message VPN. The Bridge attempts to bind to that queue over the Bridge link once the link has been established, or immediately if it already is established. The queue must be configured on the remote router when the Bridge connection is established. If the bind fails an event log is generated which includes the reason for the failure. The default value is `\"\"`.
-      #[serde(rename = "queueBinding", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "queueBinding", skip_serializing_if="Option::is_none")]
   queue_binding: Option<String>,
   /// The interface on the local router through which to access the Remote Message VPN. If not provided (recommended) then an interface will be chosen automatically based on routing tables. If an interface is provided, \"remoteMsgVpnLocation\" must be either a hostname or IP Address, not a virtual router-name.
-      #[serde(rename = "remoteMsgVpnInterface", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "remoteMsgVpnInterface", skip_serializing_if="Option::is_none")]
   remote_msg_vpn_interface: Option<String>,
   /// The location of the Remote Message VPN. This may be given as either an FQDN (resolvable via DNS), IP Address, or virtual router-name (starts with 'v:'). If specified as a FQDN or IP Address, a port must be specified as well.
-      #[serde(rename = "remoteMsgVpnLocation", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "remoteMsgVpnLocation", skip_serializing_if="Option::is_none")]
   remote_msg_vpn_location: Option<String>,
   /// The name of the Remote Message VPN.
-      #[serde(rename = "remoteMsgVpnName", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "remoteMsgVpnName", skip_serializing_if="Option::is_none")]
   remote_msg_vpn_name: Option<String>,
   /// Enable or disable TLS for the Remote Message VPN. The default value is `false`.
-      #[serde(rename = "tlsEnabled", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "tlsEnabled", skip_serializing_if="Option::is_none")]
   tls_enabled: Option<bool>,
   /// The Client Profile for the unidirectional Bridge for the Remote Message VPN. The Client Profile must exist in the local Message VPN, and it is used only for the TCP parameters. The default value is `\"#client-profile\"`.
-      #[serde(rename = "unidirectionalClientProfile", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "unidirectionalClientProfile", skip_serializing_if="Option::is_none")]
   unidirectional_client_profile: Option<String>
 }
 

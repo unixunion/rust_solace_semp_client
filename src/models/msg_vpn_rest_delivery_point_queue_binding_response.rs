@@ -14,11 +14,11 @@ use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnRestDeliveryPointQueueBindingResponse {
-      #[serde(rename = "data", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "data", skip_serializing_if="Option::is_none")]
   data: Option<::models::MsgVpnRestDeliveryPointQueueBinding>,
-      #[serde(rename = "links", skip_serializing_if="Option::is_none")]
+  #[serde(rename = "links", skip_serializing_if="Option::is_none")]
   links: Option<::models::MsgVpnRestDeliveryPointQueueBindingLinks>,
-      #[serde(rename = "meta")]
+  #[serde(rename = "meta")]
   meta: ::models::SempMeta
 }
 
