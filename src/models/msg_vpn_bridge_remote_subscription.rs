@@ -12,22 +12,22 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnBridgeRemoteSubscription {
   /// The name of the Bridge.
-  #[serde(rename = "bridgeName")]
+      #[serde(rename = "bridgeName", skip_serializing_if="Option::is_none")]
   bridge_name: Option<String>,
   /// Specify whether the Bridge is configured for the primary or backup Virtual Router or auto configured. The allowed values and their meaning are:  <pre> \"primary\" - The Bridge is used for the primary Virtual Router. \"backup\" - The Bridge is used for the backup Virtual Router. \"auto\" - The Bridge is automatically assigned a Router. </pre> 
-  #[serde(rename = "bridgeVirtualRouter")]
+      #[serde(rename = "bridgeVirtualRouter", skip_serializing_if="Option::is_none")]
   bridge_virtual_router: Option<String>,
   /// Flag the Subscription Topic as deliver always instead of with the deliver-to-one remote priority value for the Bridge given by \"remoteDeliverToOnePriority\". A given topic may be deliver-to-one or deliver always but not both.
-  #[serde(rename = "deliverAlwaysEnabled")]
+      #[serde(rename = "deliverAlwaysEnabled", skip_serializing_if="Option::is_none")]
   deliver_always_enabled: Option<bool>,
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The Topic of the Remote Subscription.
-  #[serde(rename = "remoteSubscriptionTopic")]
+      #[serde(rename = "remoteSubscriptionTopic", skip_serializing_if="Option::is_none")]
   remote_subscription_topic: Option<String>
 }
 

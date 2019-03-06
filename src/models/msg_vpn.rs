@@ -15,310 +15,310 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpn {
   /// Enable or disable Basic Authentication for clients connecting to the Message VPN. The default value is `true`.
-  #[serde(rename = "authenticationBasicEnabled")]
+      #[serde(rename = "authenticationBasicEnabled", skip_serializing_if="Option::is_none")]
   authentication_basic_enabled: Option<bool>,
   /// The name of the RADIUS or LDAP Profile to use when \"authenticationBasicType\" is \"radius\" or \"ldap\" respectively. The default value is `\"default\"`.
-  #[serde(rename = "authenticationBasicProfileName")]
+      #[serde(rename = "authenticationBasicProfileName", skip_serializing_if="Option::is_none")]
   authentication_basic_profile_name: Option<String>,
   /// The RADIUS domain string to use when \"authenticationBasicType\" is \"radius\". The default value is `\"\"`.
-  #[serde(rename = "authenticationBasicRadiusDomain")]
+      #[serde(rename = "authenticationBasicRadiusDomain", skip_serializing_if="Option::is_none")]
   authentication_basic_radius_domain: Option<String>,
   /// Authentication mechanism to be used for Basic Authentication of clients connecting to the Message VPN. The default value is `\"radius\"`. The allowed values and their meaning are:  <pre> \"internal\" - Internal database. Authentication is against Client Usernames. \"ldap\" - LDAP authentication. An LDAP profile name must be provided. \"radius\" - RADIUS authentication. A RADIUS profile name must be provided. \"none\" - No authentication. Anonymous login allowed. </pre> 
-  #[serde(rename = "authenticationBasicType")]
+      #[serde(rename = "authenticationBasicType", skip_serializing_if="Option::is_none")]
   authentication_basic_type: Option<String>,
   /// When enabled, if the client specifies a Client Username via the API connect method, the client provided Username is used instead of the CN (Common Name) field of the certificate\"s subject. When disabled, the certificate CN is always used as the Client Username. The default value is `false`.
-  #[serde(rename = "authenticationClientCertAllowApiProvidedUsernameEnabled")]
+      #[serde(rename = "authenticationClientCertAllowApiProvidedUsernameEnabled", skip_serializing_if="Option::is_none")]
   authentication_client_cert_allow_api_provided_username_enabled: Option<bool>,
   /// Enable or disable the Client Certificate client Authentication for the Message VPN. The default value is `false`.
-  #[serde(rename = "authenticationClientCertEnabled")]
+      #[serde(rename = "authenticationClientCertEnabled", skip_serializing_if="Option::is_none")]
   authentication_client_cert_enabled: Option<bool>,
   /// The maximum depth for the client certificate chain. The depth of the chain is defined as the number of signing CA certificates that are present in the chain back to the trusted self-signed root CA certificate. The default value is `3`.
-  #[serde(rename = "authenticationClientCertMaxChainDepth")]
+      #[serde(rename = "authenticationClientCertMaxChainDepth", skip_serializing_if="Option::is_none")]
   authentication_client_cert_max_chain_depth: Option<i64>,
   /// Define overrides for certificate revocation checking. For \"allow-all\" setting, the result of the client certificate revocation check is ignored. For \"allow-unknown\" setting, the client is authenticated even if the revocation status of his certificate cannot be determined. For \"allow-valid\" setting, the client is only authenticated if the revocation check returned an explicit positive response. The default value is `\"allow-valid\"`. The allowed values and their meaning are:  <pre> \"allow-all\" - Allow the client to authenticate, the result of client certificate revocation check is ingored. \"allow-unknown\" - Allow the client to authenticate even if the revocation status of his certificate cannot be determined. \"allow-valid\" - Allow the client to authenticate only when the revocation check returned an explicit positive response. </pre>  Available since 2.6.
-  #[serde(rename = "authenticationClientCertRevocationCheckMode")]
+      #[serde(rename = "authenticationClientCertRevocationCheckMode", skip_serializing_if="Option::is_none")]
   authentication_client_cert_revocation_check_mode: Option<String>,
   /// The field from the client certificate to use as the client username. The default value is `\"common-name\"`. The allowed values and their meaning are:  <pre> \"common-name\" - the username is extracted from the certificate's Common Name. \"subject-alternate-name-msupn\" - the username is extracted from the certificate's Other Name type of the Subject Alternative Name and must have the msUPN signature. </pre>  Available since 2.5.
-  #[serde(rename = "authenticationClientCertUsernameSource")]
+      #[serde(rename = "authenticationClientCertUsernameSource", skip_serializing_if="Option::is_none")]
   authentication_client_cert_username_source: Option<String>,
   /// Enable or disable validation of the \"Not Before\" and \"Not After\" validity dates in the client certificate. When disabled, a certificate will be accepted even if the certificate is not valid according to the \"Not Before\" and \"Not After\" validity dates in the certificate. The default value is `true`.
-  #[serde(rename = "authenticationClientCertValidateDateEnabled")]
+      #[serde(rename = "authenticationClientCertValidateDateEnabled", skip_serializing_if="Option::is_none")]
   authentication_client_cert_validate_date_enabled: Option<bool>,
   /// When enabled, if the client specifies a Client Username via the API connect method, the client provided Username is used instead of the Kerberos Principal name in Kerberos token. When disabled, the Kerberos Principal name is always used as the Client Username. The default value is `false`.
-  #[serde(rename = "authenticationKerberosAllowApiProvidedUsernameEnabled")]
+      #[serde(rename = "authenticationKerberosAllowApiProvidedUsernameEnabled", skip_serializing_if="Option::is_none")]
   authentication_kerberos_allow_api_provided_username_enabled: Option<bool>,
   /// Enable or disable Kerberos Authentication for clients in the Message VPN. If a user provides credentials for a different authentication scheme, this setting is not applicable. The default value is `false`.
-  #[serde(rename = "authenticationKerberosEnabled")]
+      #[serde(rename = "authenticationKerberosEnabled", skip_serializing_if="Option::is_none")]
   authentication_kerberos_enabled: Option<bool>,
   /// The name of the attribute that should be retrieved from the LDAP server as part of the LDAP search when authorizing a client. It indicates that the client belongs to a particular group (i.e. the value associated with this attribute). The default value is `\"memberOf\"`.
-  #[serde(rename = "authorizationLdapGroupMembershipAttributeName")]
+      #[serde(rename = "authorizationLdapGroupMembershipAttributeName", skip_serializing_if="Option::is_none")]
   authorization_ldap_group_membership_attribute_name: Option<String>,
   /// The LDAP Profile name to be used when \"authorizationType\" is \"ldap\". The default value is `\"\"`.
-  #[serde(rename = "authorizationProfileName")]
+      #[serde(rename = "authorizationProfileName", skip_serializing_if="Option::is_none")]
   authorization_profile_name: Option<String>,
   /// Authorization mechanism to be used for clients connecting to the Message VPN. The default value is `\"internal\"`. The allowed values and their meaning are:  <pre> \"ldap\" - LDAP authorization. \"internal\" - Internal authorization. </pre> 
-  #[serde(rename = "authorizationType")]
+      #[serde(rename = "authorizationType", skip_serializing_if="Option::is_none")]
   authorization_type: Option<String>,
   /// Enable or disable validation of the Common Name (CN) in the server certificate from the Remote Router. If enabled, the Common Name is checked against the list of Trusted Common Names configured for the Bridge. The default value is `true`.
-  #[serde(rename = "bridgingTlsServerCertEnforceTrustedCommonNameEnabled")]
+      #[serde(rename = "bridgingTlsServerCertEnforceTrustedCommonNameEnabled", skip_serializing_if="Option::is_none")]
   bridging_tls_server_cert_enforce_trusted_common_name_enabled: Option<bool>,
   /// The maximum depth for the server certificate chain. The depth of the chain is defined as the number of signing CA certificates that are present in the chain back to the trusted self-signed root CA certificate. The default value is `3`.
-  #[serde(rename = "bridgingTlsServerCertMaxChainDepth")]
+      #[serde(rename = "bridgingTlsServerCertMaxChainDepth", skip_serializing_if="Option::is_none")]
   bridging_tls_server_cert_max_chain_depth: Option<i64>,
   /// Enable or disable validation of the \"Not Before\" and \"Not After\" validity dates in the server certificate. When disabled, a certificate will be accepted even if the certificate is not valid according to the \"Not Before\" and \"Not After\" validity dates in the certificate. The default value is `true`.
-  #[serde(rename = "bridgingTlsServerCertValidateDateEnabled")]
+      #[serde(rename = "bridgingTlsServerCertValidateDateEnabled", skip_serializing_if="Option::is_none")]
   bridging_tls_server_cert_validate_date_enabled: Option<bool>,
   /// Enable or disable managing of cache instances over the message bus. The default value is `true`.
-  #[serde(rename = "distributedCacheManagementEnabled")]
+      #[serde(rename = "distributedCacheManagementEnabled", skip_serializing_if="Option::is_none")]
   distributed_cache_management_enabled: Option<bool>,
   /// Enable or disable the Message VPN. The default value is `false`.
-  #[serde(rename = "enabled")]
+      #[serde(rename = "enabled", skip_serializing_if="Option::is_none")]
   enabled: Option<bool>,
-  #[serde(rename = "eventConnectionCountThreshold")]
+      #[serde(rename = "eventConnectionCountThreshold", skip_serializing_if="Option::is_none")]
   event_connection_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventEgressFlowCountThreshold")]
+      #[serde(rename = "eventEgressFlowCountThreshold", skip_serializing_if="Option::is_none")]
   event_egress_flow_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventEgressMsgRateThreshold")]
+      #[serde(rename = "eventEgressMsgRateThreshold", skip_serializing_if="Option::is_none")]
   event_egress_msg_rate_threshold: Option<::models::EventThresholdByValue>,
-  #[serde(rename = "eventEndpointCountThreshold")]
+      #[serde(rename = "eventEndpointCountThreshold", skip_serializing_if="Option::is_none")]
   event_endpoint_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventIngressFlowCountThreshold")]
+      #[serde(rename = "eventIngressFlowCountThreshold", skip_serializing_if="Option::is_none")]
   event_ingress_flow_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventIngressMsgRateThreshold")]
+      #[serde(rename = "eventIngressMsgRateThreshold", skip_serializing_if="Option::is_none")]
   event_ingress_msg_rate_threshold: Option<::models::EventThresholdByValue>,
   /// Size in KB for what is being considered a large message for the Message VPN. The default value is `1024`.
-  #[serde(rename = "eventLargeMsgThreshold")]
+      #[serde(rename = "eventLargeMsgThreshold", skip_serializing_if="Option::is_none")]
   event_large_msg_threshold: Option<i64>,
   /// A prefix applied to all published Events in the Message VPN. The default value is `\"\"`.
-  #[serde(rename = "eventLogTag")]
+      #[serde(rename = "eventLogTag", skip_serializing_if="Option::is_none")]
   event_log_tag: Option<String>,
-  #[serde(rename = "eventMsgSpoolUsageThreshold")]
+      #[serde(rename = "eventMsgSpoolUsageThreshold", skip_serializing_if="Option::is_none")]
   event_msg_spool_usage_threshold: Option<::models::EventThreshold>,
   /// Enable or disable Client level Event message publishing. The default value is `false`.
-  #[serde(rename = "eventPublishClientEnabled")]
+      #[serde(rename = "eventPublishClientEnabled", skip_serializing_if="Option::is_none")]
   event_publish_client_enabled: Option<bool>,
   /// Enable or disable Message VPN level Event message publishing. The default value is `false`.
-  #[serde(rename = "eventPublishMsgVpnEnabled")]
+      #[serde(rename = "eventPublishMsgVpnEnabled", skip_serializing_if="Option::is_none")]
   event_publish_msg_vpn_enabled: Option<bool>,
   /// Subscription level Event message publishing mode. The default value is `\"off\"`. The allowed values and their meaning are:  <pre> \"off\" - Disable client level event message publishing. \"on-with-format-v1\" - Enable client level event message publishing with format v1. \"on-with-no-unsubscribe-events-on-disconnect-format-v1\" - As \"on-with-format-v1\", but unsubscribe events are not generated when a client disconnects. Unsubscribe events are still raised when a client explicitly unsubscribes from its subscriptions. \"on-with-format-v2\" - Enable client level event message publishing with format v2. \"on-with-no-unsubscribe-events-on-disconnect-format-v2\" - As \"on-with-format-v2\", but unsubscribe events are not generated when a client disconnects. Unsubscribe events are still raised when a client explicitly unsubscribes from its subscriptions. </pre> 
-  #[serde(rename = "eventPublishSubscriptionMode")]
+      #[serde(rename = "eventPublishSubscriptionMode", skip_serializing_if="Option::is_none")]
   event_publish_subscription_mode: Option<String>,
   /// Enable or disable Event publish topics in MQTT format. The default value is `false`.
-  #[serde(rename = "eventPublishTopicFormatMqttEnabled")]
+      #[serde(rename = "eventPublishTopicFormatMqttEnabled", skip_serializing_if="Option::is_none")]
   event_publish_topic_format_mqtt_enabled: Option<bool>,
   /// Enable or disable Event publish topics in SMF format. The default value is `true`.
-  #[serde(rename = "eventPublishTopicFormatSmfEnabled")]
+      #[serde(rename = "eventPublishTopicFormatSmfEnabled", skip_serializing_if="Option::is_none")]
   event_publish_topic_format_smf_enabled: Option<bool>,
-  #[serde(rename = "eventServiceAmqpConnectionCountThreshold")]
+      #[serde(rename = "eventServiceAmqpConnectionCountThreshold", skip_serializing_if="Option::is_none")]
   event_service_amqp_connection_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventServiceMqttConnectionCountThreshold")]
+      #[serde(rename = "eventServiceMqttConnectionCountThreshold", skip_serializing_if="Option::is_none")]
   event_service_mqtt_connection_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventServiceRestIncomingConnectionCountThreshold")]
+      #[serde(rename = "eventServiceRestIncomingConnectionCountThreshold", skip_serializing_if="Option::is_none")]
   event_service_rest_incoming_connection_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventServiceSmfConnectionCountThreshold")]
+      #[serde(rename = "eventServiceSmfConnectionCountThreshold", skip_serializing_if="Option::is_none")]
   event_service_smf_connection_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventServiceWebConnectionCountThreshold")]
+      #[serde(rename = "eventServiceWebConnectionCountThreshold", skip_serializing_if="Option::is_none")]
   event_service_web_connection_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventSubscriptionCountThreshold")]
+      #[serde(rename = "eventSubscriptionCountThreshold", skip_serializing_if="Option::is_none")]
   event_subscription_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventTransactedSessionCountThreshold")]
+      #[serde(rename = "eventTransactedSessionCountThreshold", skip_serializing_if="Option::is_none")]
   event_transacted_session_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventTransactionCountThreshold")]
+      #[serde(rename = "eventTransactionCountThreshold", skip_serializing_if="Option::is_none")]
   event_transaction_count_threshold: Option<::models::EventThreshold>,
   /// Enable or disable the export of subscriptions in the Message VPN to other routers in the network over Neighbor links. The default value is `false`.
-  #[serde(rename = "exportSubscriptionsEnabled")]
+      #[serde(rename = "exportSubscriptionsEnabled", skip_serializing_if="Option::is_none")]
   export_subscriptions_enabled: Option<bool>,
   /// Enable or disable JNDI access for clients in the Message VPN. The default value is `false`. Available since 2.2.
-  #[serde(rename = "jndiEnabled")]
+      #[serde(rename = "jndiEnabled", skip_serializing_if="Option::is_none")]
   jndi_enabled: Option<bool>,
   /// The maximum number of client connections that can be simultaneously connected to the Message VPN. This value may be higher than supported by the hardware. The default is the maximum value supported by the hardware. The default is the max value supported by the hardware.
-  #[serde(rename = "maxConnectionCount")]
+      #[serde(rename = "maxConnectionCount", skip_serializing_if="Option::is_none")]
   max_connection_count: Option<i64>,
   /// The maximum number of egress flows that can be created in the Message VPN. The default value is `16000`.
-  #[serde(rename = "maxEgressFlowCount")]
+      #[serde(rename = "maxEgressFlowCount", skip_serializing_if="Option::is_none")]
   max_egress_flow_count: Option<i64>,
   /// The maximum number of Queues and Topic Endpoints that can be created in the Message VPN. The default value is `16000`.
-  #[serde(rename = "maxEndpointCount")]
+      #[serde(rename = "maxEndpointCount", skip_serializing_if="Option::is_none")]
   max_endpoint_count: Option<i64>,
   /// The maximum number of ingress flows that can be created in the Message VPN. The default value is `16000`.
-  #[serde(rename = "maxIngressFlowCount")]
+      #[serde(rename = "maxIngressFlowCount", skip_serializing_if="Option::is_none")]
   max_ingress_flow_count: Option<i64>,
   /// The maximum Message Spool usage by the Message VPN, in megabytes. The default value is `0`.
-  #[serde(rename = "maxMsgSpoolUsage")]
+      #[serde(rename = "maxMsgSpoolUsage", skip_serializing_if="Option::is_none")]
   max_msg_spool_usage: Option<i64>,
   /// The maximum number of local client subscriptions (both primary and backup) that can be added to the Message VPN. The default varies by platform. The default varies by platform.
-  #[serde(rename = "maxSubscriptionCount")]
+      #[serde(rename = "maxSubscriptionCount", skip_serializing_if="Option::is_none")]
   max_subscription_count: Option<i64>,
   /// The maximum number of transacted sessions for the Message VPN. The default varies by platform. The default varies by platform.
-  #[serde(rename = "maxTransactedSessionCount")]
+      #[serde(rename = "maxTransactedSessionCount", skip_serializing_if="Option::is_none")]
   max_transacted_session_count: Option<i64>,
   /// The maximum number of transactions for the Message VPN. The default varies by platform. The default varies by platform.
-  #[serde(rename = "maxTransactionCount")]
+      #[serde(rename = "maxTransactionCount", skip_serializing_if="Option::is_none")]
   max_transaction_count: Option<i64>,
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The acknowledgement (ACK) propagation interval for the Replication Bridge, in number of replicated messages. The default value is `20`.
-  #[serde(rename = "replicationAckPropagationIntervalMsgCount")]
+      #[serde(rename = "replicationAckPropagationIntervalMsgCount", skip_serializing_if="Option::is_none")]
   replication_ack_propagation_interval_msg_count: Option<i64>,
   /// The Client Username the Replication Bridge uses to login to the Remote Message VPN on the Replication mate. The default value is `\"\"`.
-  #[serde(rename = "replicationBridgeAuthenticationBasicClientUsername")]
+      #[serde(rename = "replicationBridgeAuthenticationBasicClientUsername", skip_serializing_if="Option::is_none")]
   replication_bridge_authentication_basic_client_username: Option<String>,
   /// The password the Replication Bridge uses to login to the Remote Message VPN on the Replication mate. The default is to have no password. The default is to have no `replicationBridgeAuthenticationBasicPassword`.
-  #[serde(rename = "replicationBridgeAuthenticationBasicPassword", skip_serializing_if="Option::is_none")]
+      #[serde(rename = "replicationBridgeAuthenticationBasicPassword", skip_serializing_if="Option::is_none")]
   replication_bridge_authentication_basic_password: Option<String>,
   /// The PEM formatted content for the client certificate used by this bridge to login to the Remote Message VPN. It must consist of a private key and between one and three certificates comprising the certificate trust chain. The default value is `\"\"`. Available since 2.9.
-  #[serde(rename = "replicationBridgeAuthenticationClientCertContent", skip_serializing_if="Option::is_none")]
+      #[serde(rename = "replicationBridgeAuthenticationClientCertContent", skip_serializing_if="Option::is_none")]
   replication_bridge_authentication_client_cert_content: Option<String>,
   /// The password for the client certificate used by this bridge to login to the Remote Message VPN. The default value is `\"\"`. Available since 2.9.
-  #[serde(rename = "replicationBridgeAuthenticationClientCertPassword", skip_serializing_if="Option::is_none")]
+      #[serde(rename = "replicationBridgeAuthenticationClientCertPassword", skip_serializing_if="Option::is_none")]
   replication_bridge_authentication_client_cert_password: Option<String>,
   /// The Authentication Scheme for the Replication Bridge in the Message VPN. The default value is `\"basic\"`. The allowed values and their meaning are:  <pre> \"basic\" - Basic Authentication Scheme (via username and password). \"client-certificate\" - Client Certificate Authentication Scheme (via certificate file or content). </pre> 
-  #[serde(rename = "replicationBridgeAuthenticationScheme")]
+      #[serde(rename = "replicationBridgeAuthenticationScheme", skip_serializing_if="Option::is_none")]
   replication_bridge_authentication_scheme: Option<String>,
   /// Whether compression is used for the Replication Bridge. The default value is `false`.
-  #[serde(rename = "replicationBridgeCompressedDataEnabled")]
+      #[serde(rename = "replicationBridgeCompressedDataEnabled", skip_serializing_if="Option::is_none")]
   replication_bridge_compressed_data_enabled: Option<bool>,
   /// The size of the window used for guaranteed messages published to the Replication Bridge, in messages. The default value is `255`.
-  #[serde(rename = "replicationBridgeEgressFlowWindowSize")]
+      #[serde(rename = "replicationBridgeEgressFlowWindowSize", skip_serializing_if="Option::is_none")]
   replication_bridge_egress_flow_window_size: Option<i64>,
   /// Number of seconds that must pass before retrying the Replication Bridge connection. The default value is `3`.
-  #[serde(rename = "replicationBridgeRetryDelay")]
+      #[serde(rename = "replicationBridgeRetryDelay", skip_serializing_if="Option::is_none")]
   replication_bridge_retry_delay: Option<i64>,
   /// Enable or disable use of TLS for the Replication Bridge connection. The default value is `false`.
-  #[serde(rename = "replicationBridgeTlsEnabled")]
+      #[serde(rename = "replicationBridgeTlsEnabled", skip_serializing_if="Option::is_none")]
   replication_bridge_tls_enabled: Option<bool>,
   /// The Client Profile for the Unidirectional Replication Bridge. The Client Profile must exist in the local Message VPN, and it is used only for the TCP parameters. The default value is `\"#client-profile\"`.
-  #[serde(rename = "replicationBridgeUnidirectionalClientProfileName")]
+      #[serde(rename = "replicationBridgeUnidirectionalClientProfileName", skip_serializing_if="Option::is_none")]
   replication_bridge_unidirectional_client_profile_name: Option<String>,
   /// Enable or disable the Replication feature for the Message VPN. The default value is `false`.
-  #[serde(rename = "replicationEnabled", skip_serializing_if="Option::is_none")]
+      #[serde(rename = "replicationEnabled", skip_serializing_if="Option::is_none")]
   replication_enabled: Option<bool>,
   /// The behavior to take when enabling the Replication feature for the Message VPN, depending on the existence of the Replication Queue. The default value is `\"fail-on-existing-queue\"`. The allowed values and their meaning are:  <pre> \"fail-on-existing-queue\" - The data replication queue must not already exist. \"force-use-existing-queue\" - The data replication queue must already exist. Any data messages on the Queue will be forwarded to interested applications. IMPORTANT: Before using this mode be certain that the messages are not stale or otherwise unsuitable to be forwarded. This mode can only be specified when the existing queue is configured the same as is currently specified under replication configuration otherwise the enabling of replication will fail. \"force-recreate-queue\" - The data replication queue must already exist. Any data messages on the Queue will be discarded. IMPORTANT: Before using this mode be certain that the messages on the existing data replication queue are not needed by interested applications. </pre> 
-  #[serde(rename = "replicationEnabledQueueBehavior", skip_serializing_if="Option::is_none")]
+      #[serde(rename = "replicationEnabledQueueBehavior", skip_serializing_if="Option::is_none")]
   replication_enabled_queue_behavior: Option<String>,
   /// The maximum Message Spool usage by the Replication Bridge Queue (quota), in megabytes. The default value is `60000`.
-  #[serde(rename = "replicationQueueMaxMsgSpoolUsage")]
+      #[serde(rename = "replicationQueueMaxMsgSpoolUsage", skip_serializing_if="Option::is_none")]
   replication_queue_max_msg_spool_usage: Option<i64>,
   /// Assign the message discard behavior, that is the circumstances under which a negative acknowledgement (NACK) is sent to the Client on the Replication Bridge Queue discards. The default value is `true`.
-  #[serde(rename = "replicationQueueRejectMsgToSenderOnDiscardEnabled")]
+      #[serde(rename = "replicationQueueRejectMsgToSenderOnDiscardEnabled", skip_serializing_if="Option::is_none")]
   replication_queue_reject_msg_to_sender_on_discard_enabled: Option<bool>,
   /// Enable or disable the synchronously replicated topics ineligible behavior of the Replication Bridge. If enabled and the synchronous replication becomes ineligible, guaranteed messages published to synchronously replicated topics will be rejected back to the sender as a negative acknowledgement (NACK). If disabled, the synchronous replication will revert to the asynchronous one. The default value is `false`.
-  #[serde(rename = "replicationRejectMsgWhenSyncIneligibleEnabled")]
+      #[serde(rename = "replicationRejectMsgWhenSyncIneligibleEnabled", skip_serializing_if="Option::is_none")]
   replication_reject_msg_when_sync_ineligible_enabled: Option<bool>,
   /// The replication role for the Message VPN. The default value is `\"standby\"`. The allowed values and their meaning are:  <pre> \"active\" - Assume the Active role in Replication for the Message VPN. \"standby\" - Assume the Standby role in Replication for the Message VPN. </pre> 
-  #[serde(rename = "replicationRole")]
+      #[serde(rename = "replicationRole", skip_serializing_if="Option::is_none")]
   replication_role: Option<String>,
   /// The transaction replication mode for all transactions within the Message VPN. When mode is asynchronous, all transactions originated by clients are replicated to the standby site using the asynchronous replication. When mode is synchronous, all transactions originated by clients are replicated to the standby site using the synchronous replication. Changing this value during operation will not affect existing transactions, it is only used upon starting a transaction. The default value is `\"async\"`. The allowed values and their meaning are:  <pre> \"sync\" - Synchronous replication-mode. Published messages are acknowledged when they are spooled on the standby site. \"async\" - Asynchronous replication-mode. Published messages are acknowledged when they are spooled locally. </pre> 
-  #[serde(rename = "replicationTransactionMode")]
+      #[serde(rename = "replicationTransactionMode", skip_serializing_if="Option::is_none")]
   replication_transaction_mode: Option<String>,
   /// Enable or disable validation of the Common Name (CN) in the server certificate from the remote REST Consumer. If enabled, the Common Name is checked against the list of Trusted Common Names configured for the REST Consumer. The default value is `true`.
-  #[serde(rename = "restTlsServerCertEnforceTrustedCommonNameEnabled")]
+      #[serde(rename = "restTlsServerCertEnforceTrustedCommonNameEnabled", skip_serializing_if="Option::is_none")]
   rest_tls_server_cert_enforce_trusted_common_name_enabled: Option<bool>,
   /// The maximum depth for the server certificate from the remote REST Consumer chain. The depth of the chain is defined as the number of signing CA certificates that are present in the chain back to the trusted self-signed root CA certificate. The default value is `3`.
-  #[serde(rename = "restTlsServerCertMaxChainDepth")]
+      #[serde(rename = "restTlsServerCertMaxChainDepth", skip_serializing_if="Option::is_none")]
   rest_tls_server_cert_max_chain_depth: Option<i64>,
   /// Enable or disable validation of the \"Not Before\" and \"Not After\" validity dates in the server certificate from the remote REST Consumer. When disabled, a certificate will be accepted even if the certificate is not valid according to the \"Not Before\" and \"Not After\" validity dates in the certificate. The default value is `true`.
-  #[serde(rename = "restTlsServerCertValidateDateEnabled")]
+      #[serde(rename = "restTlsServerCertValidateDateEnabled", skip_serializing_if="Option::is_none")]
   rest_tls_server_cert_validate_date_enabled: Option<bool>,
   /// Enable or disable \"admin client\" SEMP over the message bus commands for the current Message VPN. The default value is `false`.
-  #[serde(rename = "sempOverMsgBusAdminClientEnabled")]
+      #[serde(rename = "sempOverMsgBusAdminClientEnabled", skip_serializing_if="Option::is_none")]
   semp_over_msg_bus_admin_client_enabled: Option<bool>,
   /// Enable or disable \"admin distributed-cache\" SEMP over the message bus commands for the current Message VPN. The default value is `false`.
-  #[serde(rename = "sempOverMsgBusAdminDistributedCacheEnabled")]
+      #[serde(rename = "sempOverMsgBusAdminDistributedCacheEnabled", skip_serializing_if="Option::is_none")]
   semp_over_msg_bus_admin_distributed_cache_enabled: Option<bool>,
   /// Enable or disable \"admin\" SEMP over the message bus commands for the current Message VPN. The default value is `false`.
-  #[serde(rename = "sempOverMsgBusAdminEnabled")]
+      #[serde(rename = "sempOverMsgBusAdminEnabled", skip_serializing_if="Option::is_none")]
   semp_over_msg_bus_admin_enabled: Option<bool>,
   /// Enable or disable SEMP over the message bus for the current Message VPN. The default value is `true`.
-  #[serde(rename = "sempOverMsgBusEnabled")]
+      #[serde(rename = "sempOverMsgBusEnabled", skip_serializing_if="Option::is_none")]
   semp_over_msg_bus_enabled: Option<bool>,
   /// Enable or disable \"show\" SEMP over the message bus commands for the current Message VPN. The default value is `false`.
-  #[serde(rename = "sempOverMsgBusShowEnabled")]
+      #[serde(rename = "sempOverMsgBusShowEnabled", skip_serializing_if="Option::is_none")]
   semp_over_msg_bus_show_enabled: Option<bool>,
   /// The maximum number of AMQP client connections that can be simultaneously connected to the Message VPN. The default is the max value supported by the hardware. Available since 2.2.
-  #[serde(rename = "serviceAmqpMaxConnectionCount")]
+      #[serde(rename = "serviceAmqpMaxConnectionCount", skip_serializing_if="Option::is_none")]
   service_amqp_max_connection_count: Option<i64>,
   /// Enable or disable the plain-text AMQP service in the Message VPN. Disabling causes clients connected to the corresponding listen-port to be disconnected. The default value is `false`. Available since 2.2.
-  #[serde(rename = "serviceAmqpPlainTextEnabled")]
+      #[serde(rename = "serviceAmqpPlainTextEnabled", skip_serializing_if="Option::is_none")]
   service_amqp_plain_text_enabled: Option<bool>,
   /// The port number for plain-text AMQP clients that connect to the Message VPN. The default is to have no `serviceAmqpPlainTextListenPort`. Available since 2.2.
-  #[serde(rename = "serviceAmqpPlainTextListenPort", skip_serializing_if="Option::is_none")]
+      #[serde(rename = "serviceAmqpPlainTextListenPort", skip_serializing_if="Option::is_none")]
   service_amqp_plain_text_listen_port: Option<i64>,
   /// Enable or disable the use of TLS for the AMQP service in the Message VPN. Disabling causes clients currently connected over TLS to be disconnected. The default value is `false`. Available since 2.2.
-  #[serde(rename = "serviceAmqpTlsEnabled")]
+      #[serde(rename = "serviceAmqpTlsEnabled", skip_serializing_if="Option::is_none")]
   service_amqp_tls_enabled: Option<bool>,
   /// The port number for AMQP clients that connect to the Message VPN over TLS. The default is to have no `serviceAmqpTlsListenPort`. Available since 2.2.
-  #[serde(rename = "serviceAmqpTlsListenPort", skip_serializing_if="Option::is_none")]
+      #[serde(rename = "serviceAmqpTlsListenPort", skip_serializing_if="Option::is_none")]
   service_amqp_tls_listen_port: Option<i64>,
   /// The maximum number of MQTT client connections that can be simultaneously connected to the Message VPN. The default is the max value supported by the hardware. Available since 2.1.
-  #[serde(rename = "serviceMqttMaxConnectionCount")]
+      #[serde(rename = "serviceMqttMaxConnectionCount", skip_serializing_if="Option::is_none")]
   service_mqtt_max_connection_count: Option<i64>,
   /// Enable or disable the plain-text MQTT service in the Message VPN. Disabling causes clients currently connected to be disconnected. The default value is `false`. Available since 2.1.
-  #[serde(rename = "serviceMqttPlainTextEnabled")]
+      #[serde(rename = "serviceMqttPlainTextEnabled", skip_serializing_if="Option::is_none")]
   service_mqtt_plain_text_enabled: Option<bool>,
   /// The port number for plain-text MQTT clients that connect to the Message VPN. The default value is `0`. Available since 2.1.
-  #[serde(rename = "serviceMqttPlainTextListenPort")]
+      #[serde(rename = "serviceMqttPlainTextListenPort", skip_serializing_if="Option::is_none")]
   service_mqtt_plain_text_listen_port: Option<i64>,
   /// Enable or disable the use of TLS for the MQTT service in the Message VPN. Disabling causes clients currently connected over TLS to be disconnected. The default value is `false`. Available since 2.1.
-  #[serde(rename = "serviceMqttTlsEnabled")]
+      #[serde(rename = "serviceMqttTlsEnabled", skip_serializing_if="Option::is_none")]
   service_mqtt_tls_enabled: Option<bool>,
   /// The port number for MQTT clients that connect to the Message VPN over TLS. The default value is `0`. Available since 2.1.
-  #[serde(rename = "serviceMqttTlsListenPort")]
+      #[serde(rename = "serviceMqttTlsListenPort", skip_serializing_if="Option::is_none")]
   service_mqtt_tls_listen_port: Option<i64>,
   /// Enable or disable the use of WebSocket over TLS for the MQTT service in the Message VPN. Disabling causes clients currently connected by WebSocket over TLS to be disconnected. The default value is `false`. Available since 2.1.
-  #[serde(rename = "serviceMqttTlsWebSocketEnabled")]
+      #[serde(rename = "serviceMqttTlsWebSocketEnabled", skip_serializing_if="Option::is_none")]
   service_mqtt_tls_web_socket_enabled: Option<bool>,
   /// The port number for MQTT clients that connect to the Message VPN using WebSocket over TLS. The default value is `0`. Available since 2.1.
-  #[serde(rename = "serviceMqttTlsWebSocketListenPort")]
+      #[serde(rename = "serviceMqttTlsWebSocketListenPort", skip_serializing_if="Option::is_none")]
   service_mqtt_tls_web_socket_listen_port: Option<i64>,
   /// Enable or disable the use of WebSocket for the MQTT service in the Message VPN. Disabling causes clients currently connected by WebSocket to be disconnected. The default value is `false`. Available since 2.1.
-  #[serde(rename = "serviceMqttWebSocketEnabled")]
+      #[serde(rename = "serviceMqttWebSocketEnabled", skip_serializing_if="Option::is_none")]
   service_mqtt_web_socket_enabled: Option<bool>,
   /// The port number for plain-text MQTT clients that connect to the Message VPN using WebSocket. The default value is `0`. Available since 2.1.
-  #[serde(rename = "serviceMqttWebSocketListenPort")]
+      #[serde(rename = "serviceMqttWebSocketListenPort", skip_serializing_if="Option::is_none")]
   service_mqtt_web_socket_listen_port: Option<i64>,
   /// The maximum number of REST incoming client connections that can be simultaneously connected to the Message VPN. The default is the max value supported by the hardware.
-  #[serde(rename = "serviceRestIncomingMaxConnectionCount")]
+      #[serde(rename = "serviceRestIncomingMaxConnectionCount", skip_serializing_if="Option::is_none")]
   service_rest_incoming_max_connection_count: Option<i64>,
   /// Enable or disable the plain-text REST service for incoming clients in the Message VPN. Disabling causes clients currently connected to be disconnected. The default value is `false`.
-  #[serde(rename = "serviceRestIncomingPlainTextEnabled")]
+      #[serde(rename = "serviceRestIncomingPlainTextEnabled", skip_serializing_if="Option::is_none")]
   service_rest_incoming_plain_text_enabled: Option<bool>,
   /// The port number for incoming plain-text REST clients that connect to the Message VPN. The default value is `0`.
-  #[serde(rename = "serviceRestIncomingPlainTextListenPort")]
+      #[serde(rename = "serviceRestIncomingPlainTextListenPort", skip_serializing_if="Option::is_none")]
   service_rest_incoming_plain_text_listen_port: Option<i64>,
   /// Enable or disable the use of TLS for the REST service for incoming clients in the Message VPN. Disabling causes clients currently connected over TLS to be disconnected. The default value is `false`.
-  #[serde(rename = "serviceRestIncomingTlsEnabled")]
+      #[serde(rename = "serviceRestIncomingTlsEnabled", skip_serializing_if="Option::is_none")]
   service_rest_incoming_tls_enabled: Option<bool>,
   /// The port number for incoming REST clients that connect to the Message VPN over TLS. The default value is `0`.
-  #[serde(rename = "serviceRestIncomingTlsListenPort")]
+      #[serde(rename = "serviceRestIncomingTlsListenPort", skip_serializing_if="Option::is_none")]
   service_rest_incoming_tls_listen_port: Option<i64>,
   /// The REST service mode for incoming REST clients that connect to the Message VPN. The default value is `\"messaging\"`. The allowed values and their meaning are:  <pre> \"gateway\" - Act as a message gateway through which REST messages are propagated. \"messaging\" - Act as a message router on which REST messages are queued. </pre>  Available since 2.6.
-  #[serde(rename = "serviceRestMode")]
+      #[serde(rename = "serviceRestMode", skip_serializing_if="Option::is_none")]
   service_rest_mode: Option<String>,
   /// The maximum number of REST Consumer (outgoing) client connections that can be simultaneously connected to the Message VPN. The default varies by platform.
-  #[serde(rename = "serviceRestOutgoingMaxConnectionCount")]
+      #[serde(rename = "serviceRestOutgoingMaxConnectionCount", skip_serializing_if="Option::is_none")]
   service_rest_outgoing_max_connection_count: Option<i64>,
   /// The maximum number of SMF client connections that can be simultaneously connected to the Message VPN. The default is the max value supported by the hardware.
-  #[serde(rename = "serviceSmfMaxConnectionCount")]
+      #[serde(rename = "serviceSmfMaxConnectionCount", skip_serializing_if="Option::is_none")]
   service_smf_max_connection_count: Option<i64>,
   /// Enable or disable the plain-text SMF service in the Message VPN. Disabling causes clients currently connected to be disconnected. The default value is `true`.
-  #[serde(rename = "serviceSmfPlainTextEnabled")]
+      #[serde(rename = "serviceSmfPlainTextEnabled", skip_serializing_if="Option::is_none")]
   service_smf_plain_text_enabled: Option<bool>,
   /// Enable or disable the use of TLS for the SMF service in the Message VPN. Disabling causes clients currently connected over TLS to be disconnected. The default value is `true`.
-  #[serde(rename = "serviceSmfTlsEnabled")]
+      #[serde(rename = "serviceSmfTlsEnabled", skip_serializing_if="Option::is_none")]
   service_smf_tls_enabled: Option<bool>,
   /// The maximum number of Web Transport client connections that can be simultaneously connected to the Message VPN. The default is the max value supported by the hardware.
-  #[serde(rename = "serviceWebMaxConnectionCount")]
+      #[serde(rename = "serviceWebMaxConnectionCount", skip_serializing_if="Option::is_none")]
   service_web_max_connection_count: Option<i64>,
   /// Enable or disable the plain-text Web Transport service in the Message VPN. Disabling causes clients currently connected to be disconnected. The default value is `true`.
-  #[serde(rename = "serviceWebPlainTextEnabled")]
+      #[serde(rename = "serviceWebPlainTextEnabled", skip_serializing_if="Option::is_none")]
   service_web_plain_text_enabled: Option<bool>,
   /// Enable or disable the use of TLS for the Web Transport service in the Message VPN. Disabling causes clients currently connected over TLS to be disconnected. The default value is `true`.
-  #[serde(rename = "serviceWebTlsEnabled")]
+      #[serde(rename = "serviceWebTlsEnabled", skip_serializing_if="Option::is_none")]
   service_web_tls_enabled: Option<bool>,
   /// Enable or disable the allowing of TLS SMF clients to downgrade their connections to plain-text connections. Changing this will not affect existing connections. The default value is `false`.
-  #[serde(rename = "tlsAllowDowngradeToPlainTextEnabled")]
+      #[serde(rename = "tlsAllowDowngradeToPlainTextEnabled", skip_serializing_if="Option::is_none")]
   tls_allow_downgrade_to_plain_text_enabled: Option<bool>
 }
 

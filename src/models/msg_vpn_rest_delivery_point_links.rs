@@ -12,16 +12,16 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnRestDeliveryPointLinks {
   /// The URI of this MsgVpnRestDeliveryPoint's queueBindings collection.
-  #[serde(rename = "queueBindingsUri")]
+      #[serde(rename = "queueBindingsUri", skip_serializing_if="Option::is_none")]
   queue_bindings_uri: Option<String>,
   /// The URI of this MsgVpnRestDeliveryPoint's restConsumers collection.
-  #[serde(rename = "restConsumersUri")]
+      #[serde(rename = "restConsumersUri", skip_serializing_if="Option::is_none")]
   rest_consumers_uri: Option<String>,
   /// The URI of this MsgVpnRestDeliveryPoint object.
-  #[serde(rename = "uri")]
+      #[serde(rename = "uri", skip_serializing_if="Option::is_none")]
   uri: Option<String>
 }
 

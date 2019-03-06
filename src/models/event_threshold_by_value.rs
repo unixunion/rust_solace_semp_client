@@ -15,10 +15,10 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct EventThresholdByValue {
   /// Threshold clear value.
-  #[serde(rename = "clearValue")]
+      #[serde(rename = "clearValue", skip_serializing_if="Option::is_none")]
   clear_value: Option<i64>,
   /// Threshold set value.
-  #[serde(rename = "setValue")]
+      #[serde(rename = "setValue", skip_serializing_if="Option::is_none")]
   set_value: Option<i64>
 }
 

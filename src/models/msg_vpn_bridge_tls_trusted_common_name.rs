@@ -12,19 +12,19 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnBridgeTlsTrustedCommonName {
   /// The name of the Bridge.
-  #[serde(rename = "bridgeName")]
+      #[serde(rename = "bridgeName", skip_serializing_if="Option::is_none")]
   bridge_name: Option<String>,
   /// Specify whether the Bridge is configured for the primary or backup Virtual Router or auto configured. The allowed values and their meaning are:  <pre> \"primary\" - The Bridge is used for the primary Virtual Router. \"backup\" - The Bridge is used for the backup Virtual Router. \"auto\" - The Bridge is automatically assigned a Router. </pre> 
-  #[serde(rename = "bridgeVirtualRouter")]
+      #[serde(rename = "bridgeVirtualRouter", skip_serializing_if="Option::is_none")]
   bridge_virtual_router: Option<String>,
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The expected trusted common name of the remote certificate.
-  #[serde(rename = "tlsTrustedCommonName")]
+      #[serde(rename = "tlsTrustedCommonName", skip_serializing_if="Option::is_none")]
   tls_trusted_common_name: Option<String>
 }
 

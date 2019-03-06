@@ -12,19 +12,19 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnBridgeLinks {
   /// The URI of this MsgVpnBridge's remoteMsgVpns collection.
-  #[serde(rename = "remoteMsgVpnsUri")]
+      #[serde(rename = "remoteMsgVpnsUri", skip_serializing_if="Option::is_none")]
   remote_msg_vpns_uri: Option<String>,
   /// The URI of this MsgVpnBridge's remoteSubscriptions collection.
-  #[serde(rename = "remoteSubscriptionsUri")]
+      #[serde(rename = "remoteSubscriptionsUri", skip_serializing_if="Option::is_none")]
   remote_subscriptions_uri: Option<String>,
   /// The URI of this MsgVpnBridge's tlsTrustedCommonNames collection.
-  #[serde(rename = "tlsTrustedCommonNamesUri")]
+      #[serde(rename = "tlsTrustedCommonNamesUri", skip_serializing_if="Option::is_none")]
   tls_trusted_common_names_uri: Option<String>,
   /// The URI of this MsgVpnBridge object.
-  #[serde(rename = "uri")]
+      #[serde(rename = "uri", skip_serializing_if="Option::is_none")]
   uri: Option<String>
 }
 

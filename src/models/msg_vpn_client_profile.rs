@@ -15,156 +15,156 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnClientProfile {
   /// Allow or deny Bridge clients to connect. Changing this setting does not affect existing Bridge client connections. The default value is `false`.
-  #[serde(rename = "allowBridgeConnectionsEnabled")]
+      #[serde(rename = "allowBridgeConnectionsEnabled", skip_serializing_if="Option::is_none")]
   allow_bridge_connections_enabled: Option<bool>,
   /// Allow or deny clients to bind to topic endpoints or queues with the cut-through delivery mode. Changing this setting does not affect existing client connections. The default value is `false`.
-  #[serde(rename = "allowCutThroughForwardingEnabled")]
+      #[serde(rename = "allowCutThroughForwardingEnabled", skip_serializing_if="Option::is_none")]
   allow_cut_through_forwarding_enabled: Option<bool>,
   /// Allow or deny clients to create topic endponts or queues. Changing this setting does not affect existing client connections. The default value is `false`.
-  #[serde(rename = "allowGuaranteedEndpointCreateEnabled")]
+      #[serde(rename = "allowGuaranteedEndpointCreateEnabled", skip_serializing_if="Option::is_none")]
   allow_guaranteed_endpoint_create_enabled: Option<bool>,
   /// Allow or deny clients to receive guaranteed messages. Changing this setting does not affect existing client connections. The default value is `false`.
-  #[serde(rename = "allowGuaranteedMsgReceiveEnabled")]
+      #[serde(rename = "allowGuaranteedMsgReceiveEnabled", skip_serializing_if="Option::is_none")]
   allow_guaranteed_msg_receive_enabled: Option<bool>,
   /// Allow or deny clients to send guaranteed messages. Changing this setting does not affect existing client connections. The default value is `false`.
-  #[serde(rename = "allowGuaranteedMsgSendEnabled")]
+      #[serde(rename = "allowGuaranteedMsgSendEnabled", skip_serializing_if="Option::is_none")]
   allow_guaranteed_msg_send_enabled: Option<bool>,
   /// Allow or deny clients to establish transacted sessions. Changing this setting does not affect existing client connections. The default value is `false`.
-  #[serde(rename = "allowTransactedSessionsEnabled")]
+      #[serde(rename = "allowTransactedSessionsEnabled", skip_serializing_if="Option::is_none")]
   allow_transacted_sessions_enabled: Option<bool>,
   /// The name of a Queue to copy settings from when a new Queue is created by an API. The referenced Queue must exist on the Message VPN. The default value is `\"\"`.
-  #[serde(rename = "apiQueueManagementCopyFromOnCreateName")]
+      #[serde(rename = "apiQueueManagementCopyFromOnCreateName", skip_serializing_if="Option::is_none")]
   api_queue_management_copy_from_on_create_name: Option<String>,
   /// The name of a Topic Endpoint to copy settings from when a new Topic Endpoint is created by an API. The referenced Topic Endpoint must exist on the Message VPN. The default value is `\"\"`.
-  #[serde(rename = "apiTopicEndpointManagementCopyFromOnCreateName")]
+      #[serde(rename = "apiTopicEndpointManagementCopyFromOnCreateName", skip_serializing_if="Option::is_none")]
   api_topic_endpoint_management_copy_from_on_create_name: Option<String>,
   /// The Client Profile name.
-  #[serde(rename = "clientProfileName")]
+      #[serde(rename = "clientProfileName", skip_serializing_if="Option::is_none")]
   client_profile_name: Option<String>,
   /// Enable or disable whether connected clients are allowed to use compression. The default value is `true`. Available since 2.10.
-  #[serde(rename = "compressionEnabled")]
+      #[serde(rename = "compressionEnabled", skip_serializing_if="Option::is_none")]
   compression_enabled: Option<bool>,
   /// The amount of time to delay the delivery of messages to clients after the initial message has been delivered (the eliding delay interval), in milliseconds. Zero value means there is no delay in delivering messages to clients. The default value is `0`.
-  #[serde(rename = "elidingDelay")]
+      #[serde(rename = "elidingDelay", skip_serializing_if="Option::is_none")]
   eliding_delay: Option<i64>,
   /// Enable or disable the Message Eliding. The default value is `false`.
-  #[serde(rename = "elidingEnabled")]
+      #[serde(rename = "elidingEnabled", skip_serializing_if="Option::is_none")]
   eliding_enabled: Option<bool>,
   /// The maximum number of topics tracked for Message Eliding per one Client connection. The default value is `256`.
-  #[serde(rename = "elidingMaxTopicCount")]
+      #[serde(rename = "elidingMaxTopicCount", skip_serializing_if="Option::is_none")]
   eliding_max_topic_count: Option<i64>,
-  #[serde(rename = "eventClientProvisionedEndpointSpoolUsageThreshold")]
+      #[serde(rename = "eventClientProvisionedEndpointSpoolUsageThreshold", skip_serializing_if="Option::is_none")]
   event_client_provisioned_endpoint_spool_usage_threshold: Option<::models::EventThresholdByPercent>,
-  #[serde(rename = "eventConnectionCountPerClientUsernameThreshold")]
+      #[serde(rename = "eventConnectionCountPerClientUsernameThreshold", skip_serializing_if="Option::is_none")]
   event_connection_count_per_client_username_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventEgressFlowCountThreshold")]
+      #[serde(rename = "eventEgressFlowCountThreshold", skip_serializing_if="Option::is_none")]
   event_egress_flow_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventEndpointCountPerClientUsernameThreshold")]
+      #[serde(rename = "eventEndpointCountPerClientUsernameThreshold", skip_serializing_if="Option::is_none")]
   event_endpoint_count_per_client_username_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventIngressFlowCountThreshold")]
+      #[serde(rename = "eventIngressFlowCountThreshold", skip_serializing_if="Option::is_none")]
   event_ingress_flow_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventServiceSmfConnectionCountPerClientUsernameThreshold")]
+      #[serde(rename = "eventServiceSmfConnectionCountPerClientUsernameThreshold", skip_serializing_if="Option::is_none")]
   event_service_smf_connection_count_per_client_username_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventServiceWebConnectionCountPerClientUsernameThreshold")]
+      #[serde(rename = "eventServiceWebConnectionCountPerClientUsernameThreshold", skip_serializing_if="Option::is_none")]
   event_service_web_connection_count_per_client_username_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventSubscriptionCountThreshold")]
+      #[serde(rename = "eventSubscriptionCountThreshold", skip_serializing_if="Option::is_none")]
   event_subscription_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventTransactedSessionCountThreshold")]
+      #[serde(rename = "eventTransactedSessionCountThreshold", skip_serializing_if="Option::is_none")]
   event_transacted_session_count_threshold: Option<::models::EventThreshold>,
-  #[serde(rename = "eventTransactionCountThreshold")]
+      #[serde(rename = "eventTransactionCountThreshold", skip_serializing_if="Option::is_none")]
   event_transaction_count_threshold: Option<::models::EventThreshold>,
   /// The maximum number of client connections that can be simultaneously connected with the same Client Username. The default is the max value supported by the hardware.
-  #[serde(rename = "maxConnectionCountPerClientUsername")]
+      #[serde(rename = "maxConnectionCountPerClientUsername", skip_serializing_if="Option::is_none")]
   max_connection_count_per_client_username: Option<i64>,
   /// The maximum number of egress flows that can be created by one client. The default is the max value supported by the hardware.
-  #[serde(rename = "maxEgressFlowCount")]
+      #[serde(rename = "maxEgressFlowCount", skip_serializing_if="Option::is_none")]
   max_egress_flow_count: Option<i64>,
   /// The maximum number of queues and topic endpoints that can be created by clients with the same Client Username. The default is the max value supported by the hardware.
-  #[serde(rename = "maxEndpointCountPerClientUsername")]
+      #[serde(rename = "maxEndpointCountPerClientUsername", skip_serializing_if="Option::is_none")]
   max_endpoint_count_per_client_username: Option<i64>,
   /// The maximum number of ingress flows that can be created by one client. The default is the max value supported by the hardware.
-  #[serde(rename = "maxIngressFlowCount")]
+      #[serde(rename = "maxIngressFlowCount", skip_serializing_if="Option::is_none")]
   max_ingress_flow_count: Option<i64>,
   /// The maximum number of subscriptions that can be created by one client. The default varies by platform.
-  #[serde(rename = "maxSubscriptionCount")]
+      #[serde(rename = "maxSubscriptionCount", skip_serializing_if="Option::is_none")]
   max_subscription_count: Option<i64>,
   /// The maximum number of transacted sessions that can be created by one client. The default value is `10`.
-  #[serde(rename = "maxTransactedSessionCount")]
+      #[serde(rename = "maxTransactedSessionCount", skip_serializing_if="Option::is_none")]
   max_transacted_session_count: Option<i64>,
   /// The maximum number of transactions that can be created by one client. The default varies by platform.
-  #[serde(rename = "maxTransactionCount")]
+      #[serde(rename = "maxTransactionCount", skip_serializing_if="Option::is_none")]
   max_transaction_count: Option<i64>,
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The maximum depth of the \"Control 1\" (C-1) priority queue, in work units. Each work unit is 2048 bytes of message data. The default value is `20000`.
-  #[serde(rename = "queueControl1MaxDepth")]
+      #[serde(rename = "queueControl1MaxDepth", skip_serializing_if="Option::is_none")]
   queue_control1_max_depth: Option<i32>,
   /// The number of messages that are always allowed entry into the \"Control 1\" (C-1) priority queue, regardless of the \"queueControl1MaxDepth\" value. The default value is `4`.
-  #[serde(rename = "queueControl1MinMsgBurst")]
+      #[serde(rename = "queueControl1MinMsgBurst", skip_serializing_if="Option::is_none")]
   queue_control1_min_msg_burst: Option<i32>,
   /// The maximum depth of the \"Direct 1\" (D-1) priority queue, in work units. Each work unit is 2048 bytes of message data. The default value is `20000`.
-  #[serde(rename = "queueDirect1MaxDepth")]
+      #[serde(rename = "queueDirect1MaxDepth", skip_serializing_if="Option::is_none")]
   queue_direct1_max_depth: Option<i32>,
   /// The number of messages that are always allowed entry into the \"Direct 1\" (D-1) priority queue, regardless of the \"queueDirect1MaxDepth\" value. The default value is `4`.
-  #[serde(rename = "queueDirect1MinMsgBurst")]
+      #[serde(rename = "queueDirect1MinMsgBurst", skip_serializing_if="Option::is_none")]
   queue_direct1_min_msg_burst: Option<i32>,
   /// The maximum depth of the \"Direct 2\" (D-2) priority queue, in work units. Each work unit is 2048 bytes of message data. The default value is `20000`.
-  #[serde(rename = "queueDirect2MaxDepth")]
+      #[serde(rename = "queueDirect2MaxDepth", skip_serializing_if="Option::is_none")]
   queue_direct2_max_depth: Option<i32>,
   /// The number of messages that are always allowed entry into the \"Direct 2\" (D-2) priority queue, regardless of the \"queueDirect2MaxDepth\" value. The default value is `4`.
-  #[serde(rename = "queueDirect2MinMsgBurst")]
+      #[serde(rename = "queueDirect2MinMsgBurst", skip_serializing_if="Option::is_none")]
   queue_direct2_min_msg_burst: Option<i32>,
   /// The maximum depth of the \"Direct 3\" (D-3) priority queue, in work units. Each work unit is 2048 bytes of message data. The default value is `20000`.
-  #[serde(rename = "queueDirect3MaxDepth")]
+      #[serde(rename = "queueDirect3MaxDepth", skip_serializing_if="Option::is_none")]
   queue_direct3_max_depth: Option<i32>,
   /// The number of messages that are always allowed entry into the \"Direct 3\" (D-3) priority queue, regardless of the \"queueDirect3MaxDepth\" value. The default value is `4`.
-  #[serde(rename = "queueDirect3MinMsgBurst")]
+      #[serde(rename = "queueDirect3MinMsgBurst", skip_serializing_if="Option::is_none")]
   queue_direct3_min_msg_burst: Option<i32>,
   /// The maximum depth of the \"Guaranteed 1\" (G-1) priority queue, in work units. Each work unit is 2048 bytes of message data. The default value is `20000`.
-  #[serde(rename = "queueGuaranteed1MaxDepth")]
+      #[serde(rename = "queueGuaranteed1MaxDepth", skip_serializing_if="Option::is_none")]
   queue_guaranteed1_max_depth: Option<i32>,
   /// The number of messages that are always allowed entry into the \"Guaranteed 1\" (G-3) priority queue, regardless of the \"queueGuaranteed1MaxDepth\" value. The default value is `255`.
-  #[serde(rename = "queueGuaranteed1MinMsgBurst")]
+      #[serde(rename = "queueGuaranteed1MinMsgBurst", skip_serializing_if="Option::is_none")]
   queue_guaranteed1_min_msg_burst: Option<i32>,
   /// Enable or disable sending of a negative acknowledgement (NACK) on the discard of a message because of a message subscription was not found. The default value is `false`. Available since 2.2.
-  #[serde(rename = "rejectMsgToSenderOnNoSubscriptionMatchEnabled")]
+      #[serde(rename = "rejectMsgToSenderOnNoSubscriptionMatchEnabled", skip_serializing_if="Option::is_none")]
   reject_msg_to_sender_on_no_subscription_match_enabled: Option<bool>,
   /// Allow or deny clients to connect to the Message VPN if its Replication state is standby. The default value is `false`.
-  #[serde(rename = "replicationAllowClientConnectWhenStandbyEnabled")]
+      #[serde(rename = "replicationAllowClientConnectWhenStandbyEnabled", skip_serializing_if="Option::is_none")]
   replication_allow_client_connect_when_standby_enabled: Option<bool>,
   /// The maximum number of SMF client connections that can be simultaneously connected with the same Client Username. The default is the max value supported by the hardware.
-  #[serde(rename = "serviceSmfMaxConnectionCountPerClientUsername")]
+      #[serde(rename = "serviceSmfMaxConnectionCountPerClientUsername", skip_serializing_if="Option::is_none")]
   service_smf_max_connection_count_per_client_username: Option<i64>,
   /// The timeout for inactive Web Transport client sessions, in seconds. The default value is `30`.
-  #[serde(rename = "serviceWebInactiveTimeout")]
+      #[serde(rename = "serviceWebInactiveTimeout", skip_serializing_if="Option::is_none")]
   service_web_inactive_timeout: Option<i64>,
   /// The maximum number of Web Transport client connections that can be simultaneously connected with the same Client Username. The default is the max value supported by the hardware.
-  #[serde(rename = "serviceWebMaxConnectionCountPerClientUsername")]
+      #[serde(rename = "serviceWebMaxConnectionCountPerClientUsername", skip_serializing_if="Option::is_none")]
   service_web_max_connection_count_per_client_username: Option<i64>,
   /// The maximum Web Transport payload size before its fragmentation occurs, in bytes. The size of the header is not included. The default value is `1000000`.
-  #[serde(rename = "serviceWebMaxPayload")]
+      #[serde(rename = "serviceWebMaxPayload", skip_serializing_if="Option::is_none")]
   service_web_max_payload: Option<i64>,
   /// The TCP initial congestion window size, in multiple of the TCP Maximum Segment Size (MSS). Changing the value from its default of 2 results in non-compliance with RFC 2581. Contact Solace Support before changing this value. The default value is `2`.
-  #[serde(rename = "tcpCongestionWindowSize")]
+      #[serde(rename = "tcpCongestionWindowSize", skip_serializing_if="Option::is_none")]
   tcp_congestion_window_size: Option<i64>,
   /// The number of TCP keepalive retransmissions to be carried out before declaring that the remote end is not available. The default value is `5`.
-  #[serde(rename = "tcpKeepaliveCount")]
+      #[serde(rename = "tcpKeepaliveCount", skip_serializing_if="Option::is_none")]
   tcp_keepalive_count: Option<i64>,
   /// The amount of time a connection must remain idle before TCP begins sending keepalive probes, in seconds. The default value is `3`.
-  #[serde(rename = "tcpKeepaliveIdleTime")]
+      #[serde(rename = "tcpKeepaliveIdleTime", skip_serializing_if="Option::is_none")]
   tcp_keepalive_idle_time: Option<i64>,
   /// The amount of time between TCP keepalive retransmissions when no acknowledgement is received, in seconds. The default value is `1`.
-  #[serde(rename = "tcpKeepaliveInterval")]
+      #[serde(rename = "tcpKeepaliveInterval", skip_serializing_if="Option::is_none")]
   tcp_keepalive_interval: Option<i64>,
   /// The TCP maximum segment size, in kilobytes. Changes are applied to all existing connections. The default value is `1460`.
-  #[serde(rename = "tcpMaxSegmentSize")]
+      #[serde(rename = "tcpMaxSegmentSize", skip_serializing_if="Option::is_none")]
   tcp_max_segment_size: Option<i64>,
   /// The TCP maximum window size, in kilobytes. Changes are applied to all existing connections. The default value is `256`.
-  #[serde(rename = "tcpMaxWindowSize")]
+      #[serde(rename = "tcpMaxWindowSize", skip_serializing_if="Option::is_none")]
   tcp_max_window_size: Option<i64>,
   /// Enable or disable allowing a client to downgrade an encrypted connection to plain text. The default value is `true`. Available since 2.8.
-  #[serde(rename = "tlsAllowDowngradeToPlainTextEnabled")]
+      #[serde(rename = "tlsAllowDowngradeToPlainTextEnabled", skip_serializing_if="Option::is_none")]
   tls_allow_downgrade_to_plain_text_enabled: Option<bool>
 }
 

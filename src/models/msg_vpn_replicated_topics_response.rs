@@ -12,13 +12,13 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnReplicatedTopicsResponse {
-  #[serde(rename = "data")]
+      #[serde(rename = "data", skip_serializing_if="Option::is_none")]
   data: Option<Vec<::models::MsgVpnReplicatedTopic>>,
-  #[serde(rename = "links")]
+      #[serde(rename = "links", skip_serializing_if="Option::is_none")]
   links: Option<Vec<::models::MsgVpnReplicatedTopicLinks>>,
-  #[serde(rename = "meta")]
+      #[serde(rename = "meta")]
   meta: ::models::SempMeta
 }
 

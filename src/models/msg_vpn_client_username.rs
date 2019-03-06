@@ -15,28 +15,28 @@ use serde_json::Value;
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnClientUsername {
   /// The ACL Profile of the Client Username. The default value is `\"default\"`.
-  #[serde(rename = "aclProfileName")]
+      #[serde(rename = "aclProfileName", skip_serializing_if="Option::is_none")]
   acl_profile_name: Option<String>,
   /// The Client Profile of the Client Username. The default value is `\"default\"`.
-  #[serde(rename = "clientProfileName")]
+      #[serde(rename = "clientProfileName", skip_serializing_if="Option::is_none")]
   client_profile_name: Option<String>,
   /// The value of the Client Username.
-  #[serde(rename = "clientUsername")]
+      #[serde(rename = "clientUsername", skip_serializing_if="Option::is_none")]
   client_username: Option<String>,
   /// Enables or disables the Client Username. When disabled all clients currently connected as the Client Username are disconnected. The default value is `false`.
-  #[serde(rename = "enabled")]
+      #[serde(rename = "enabled", skip_serializing_if="Option::is_none")]
   enabled: Option<bool>,
   /// Enables or disables guaranteed endpoint permission override for the Client Username. When enabled all guaranteed endpoints may be accessed, modified or deleted with the same permission as the owner. The default value is `false`.
-  #[serde(rename = "guaranteedEndpointPermissionOverrideEnabled")]
+      #[serde(rename = "guaranteedEndpointPermissionOverrideEnabled", skip_serializing_if="Option::is_none")]
   guaranteed_endpoint_permission_override_enabled: Option<bool>,
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The password of this Client Username for internal Authentication. The default is to have no password. The default is to have no `password`.
-  #[serde(rename = "password", skip_serializing_if="Option::is_none")]
+      #[serde(rename = "password", skip_serializing_if="Option::is_none")]
   password: Option<String>,
   /// Enables or disables the subscription management capability of the Client Username. This is the ability to manage subscriptions on behalf of other Client Usernames. The default value is `false`.
-  #[serde(rename = "subscriptionManagerEnabled")]
+      #[serde(rename = "subscriptionManagerEnabled", skip_serializing_if="Option::is_none")]
   subscription_manager_enabled: Option<bool>
 }
 

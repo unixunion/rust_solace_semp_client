@@ -12,124 +12,124 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnJndiConnectionFactory {
   /// Enable or disable whether new JMS connections can use the same Client identifier (ID) as an existing connection. The default value is `false`. Available since 2.3.
-  #[serde(rename = "allowDuplicateClientIdEnabled")]
+      #[serde(rename = "allowDuplicateClientIdEnabled", skip_serializing_if="Option::is_none")]
   allow_duplicate_client_id_enabled: Option<bool>,
   /// The description of the Client. The default value is `\"\"`.
-  #[serde(rename = "clientDescription")]
+      #[serde(rename = "clientDescription", skip_serializing_if="Option::is_none")]
   client_description: Option<String>,
   /// The Client identifier (ID). If not specified, a unique value for it will be generated. The default value is `\"\"`.
-  #[serde(rename = "clientId")]
+      #[serde(rename = "clientId", skip_serializing_if="Option::is_none")]
   client_id: Option<String>,
   /// The name of the JMS Connection Factory.
-  #[serde(rename = "connectionFactoryName")]
+      #[serde(rename = "connectionFactoryName", skip_serializing_if="Option::is_none")]
   connection_factory_name: Option<String>,
   /// Enable or disable overriding by the Subscriber (Consumer) of the deliver-to-one (DTO) property on messages. When enabled, the Subscriber can receive all DTO tagged messages. The default value is `true`.
-  #[serde(rename = "dtoReceiveOverrideEnabled")]
+      #[serde(rename = "dtoReceiveOverrideEnabled", skip_serializing_if="Option::is_none")]
   dto_receive_override_enabled: Option<bool>,
   /// The priority for receiving deliver-to-one (DTO) messages by the Subscriber (Consumer) if the messages are published on the local Router that the Subscriber is directly connected to. The default value is `1`.
-  #[serde(rename = "dtoReceiveSubscriberLocalPriority")]
+      #[serde(rename = "dtoReceiveSubscriberLocalPriority", skip_serializing_if="Option::is_none")]
   dto_receive_subscriber_local_priority: Option<i32>,
   /// The priority for receiving deliver-to-one (DTO) messages by the Subscriber (Consumer) if the messages are published on a remote Router. The default value is `1`.
-  #[serde(rename = "dtoReceiveSubscriberNetworkPriority")]
+      #[serde(rename = "dtoReceiveSubscriberNetworkPriority", skip_serializing_if="Option::is_none")]
   dto_receive_subscriber_network_priority: Option<i32>,
   /// Enable or disable the deliver-to-one (DTO) property on messages sent by the Publisher (Producer). The default value is `false`.
-  #[serde(rename = "dtoSendEnabled")]
+      #[serde(rename = "dtoSendEnabled", skip_serializing_if="Option::is_none")]
   dto_send_enabled: Option<bool>,
   /// Enable or disable whether a durable endpoint will be dynamically created on the Router when the client calls \"Session.createDurableSubscriber()\" or \"Session.createQueue()\". The created endpoint respects the message time-to-live (TTL) according to the \"dynamicEndpointRespectTtlEnabled\" property. The default value is `false`.
-  #[serde(rename = "dynamicEndpointCreateDurableEnabled")]
+      #[serde(rename = "dynamicEndpointCreateDurableEnabled", skip_serializing_if="Option::is_none")]
   dynamic_endpoint_create_durable_enabled: Option<bool>,
   /// Enable or disable whether dynamically created durable and non-durable endpoints respect the message time-to-live (TTL) property. The default value is `true`.
-  #[serde(rename = "dynamicEndpointRespectTtlEnabled")]
+      #[serde(rename = "dynamicEndpointRespectTtlEnabled", skip_serializing_if="Option::is_none")]
   dynamic_endpoint_respect_ttl_enabled: Option<bool>,
   /// The timeout for sending the acknowledgement (ACK) for guaranteed messages received by the Subscriber (Consumer), in milliseconds. The default value is `1000`.
-  #[serde(rename = "guaranteedReceiveAckTimeout")]
+      #[serde(rename = "guaranteedReceiveAckTimeout", skip_serializing_if="Option::is_none")]
   guaranteed_receive_ack_timeout: Option<i32>,
   /// The size of the window for guaranteed messages received by the Subscriber (Consumer), in messages. The default value is `18`.
-  #[serde(rename = "guaranteedReceiveWindowSize")]
+      #[serde(rename = "guaranteedReceiveWindowSize", skip_serializing_if="Option::is_none")]
   guaranteed_receive_window_size: Option<i32>,
   /// The threshold for sending the acknowledgement (ACK) for guaranteed messages received by the Subscriber (Consumer) as a percentage of the \"guaranteedReceiveWindowSize\" value. The default value is `60`.
-  #[serde(rename = "guaranteedReceiveWindowSizeAckThreshold")]
+      #[serde(rename = "guaranteedReceiveWindowSizeAckThreshold", skip_serializing_if="Option::is_none")]
   guaranteed_receive_window_size_ack_threshold: Option<i32>,
   /// The timeout for receiving the acknowledgement (ACK) for guaranteed messages sent by the Publisher (Producer), in milliseconds. The default value is `2000`.
-  #[serde(rename = "guaranteedSendAckTimeout")]
+      #[serde(rename = "guaranteedSendAckTimeout", skip_serializing_if="Option::is_none")]
   guaranteed_send_ack_timeout: Option<i32>,
   /// The size of the window for non-persistent guaranteed messages sent by the Publisher (Producer), in messages. For persistent messages the window size is fixed at 1. The default value is `255`.
-  #[serde(rename = "guaranteedSendWindowSize")]
+      #[serde(rename = "guaranteedSendWindowSize", skip_serializing_if="Option::is_none")]
   guaranteed_send_window_size: Option<i32>,
   /// The default delivery mode for messages sent by the Publisher (Producer). The default value is `\"persistent\"`. The allowed values and their meaning are:  <pre> \"persistent\" - Router spools messages (persists in the Message Spool) as part of the send operation. \"non-persistent\" - Router does not spool messages (does not persist in the Message Spool) as part of the send operation. </pre> 
-  #[serde(rename = "messagingDefaultDeliveryMode")]
+      #[serde(rename = "messagingDefaultDeliveryMode", skip_serializing_if="Option::is_none")]
   messaging_default_delivery_mode: Option<String>,
   /// Enable or disable whether messages sent by the Publisher (Producer) are Dead Message Queue (DMQ) eligible by default. The default value is `false`.
-  #[serde(rename = "messagingDefaultDmqEligibleEnabled")]
+      #[serde(rename = "messagingDefaultDmqEligibleEnabled", skip_serializing_if="Option::is_none")]
   messaging_default_dmq_eligible_enabled: Option<bool>,
   /// Enable or disable whether messages sent by the Publisher (Producer) are Eliding eligible by default. The default value is `false`.
-  #[serde(rename = "messagingDefaultElidingEligibleEnabled")]
+      #[serde(rename = "messagingDefaultElidingEligibleEnabled", skip_serializing_if="Option::is_none")]
   messaging_default_eliding_eligible_enabled: Option<bool>,
   /// Enable or disable inclusion (adding or replacing) of the JMSXUserID property in messages sent by the Publisher (Producer). The default value is `false`.
-  #[serde(rename = "messagingJmsxUserIdEnabled")]
+      #[serde(rename = "messagingJmsxUserIdEnabled", skip_serializing_if="Option::is_none")]
   messaging_jmsx_user_id_enabled: Option<bool>,
   /// Enable or disable encoding of JMS text messages in Publisher (Producer) messages as XML payload. When disabled, JMS text messages are encoded as a binary attachment. The default value is `true`.
-  #[serde(rename = "messagingTextInXmlPayloadEnabled")]
+      #[serde(rename = "messagingTextInXmlPayloadEnabled", skip_serializing_if="Option::is_none")]
   messaging_text_in_xml_payload_enabled: Option<bool>,
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The ZLIB compression level for the connection to the Router. The value \"0\" means no compression, and the value \"-1\" means the compression level is specified in the JNDI Properties file. The default value is `-1`.
-  #[serde(rename = "transportCompressionLevel")]
+      #[serde(rename = "transportCompressionLevel", skip_serializing_if="Option::is_none")]
   transport_compression_level: Option<i32>,
   /// The maximum number of retry attempts to establish an initial connection to the host (Router) or list of hosts (Routers). The value \"0\" means a single attempt (no retries), and the value \"-1\" means to retry forever. The default value is `0`.
-  #[serde(rename = "transportConnectRetryCount")]
+      #[serde(rename = "transportConnectRetryCount", skip_serializing_if="Option::is_none")]
   transport_connect_retry_count: Option<i32>,
   /// The maximum number of retry attempts to establish an initial connection to each host (Router) on the list of hosts (Routers). The value \"0\" means a single attempt (no retries), and the value \"-1\" means to retry forever. The default value is `0`.
-  #[serde(rename = "transportConnectRetryPerHostCount")]
+      #[serde(rename = "transportConnectRetryPerHostCount", skip_serializing_if="Option::is_none")]
   transport_connect_retry_per_host_count: Option<i32>,
   /// The timeout for establishing an initial connection to the Router, in milliseconds. The default value is `30000`.
-  #[serde(rename = "transportConnectTimeout")]
+      #[serde(rename = "transportConnectTimeout", skip_serializing_if="Option::is_none")]
   transport_connect_timeout: Option<i32>,
   /// Enable or disable usage of the Direct Transport mode for sending non-persistent messages. When disabled, the Guaranteed Transport mode is used. The default value is `true`.
-  #[serde(rename = "transportDirectTransportEnabled")]
+      #[serde(rename = "transportDirectTransportEnabled", skip_serializing_if="Option::is_none")]
   transport_direct_transport_enabled: Option<bool>,
   /// The maximum number of consecutive application-level keepalive messages sent without the Router response before the connection to the Router is closed. The default value is `3`.
-  #[serde(rename = "transportKeepaliveCount")]
+      #[serde(rename = "transportKeepaliveCount", skip_serializing_if="Option::is_none")]
   transport_keepalive_count: Option<i32>,
   /// Enable or disable usage of application-level keepalive messages to maintain a connection with the Router. The default value is `true`.
-  #[serde(rename = "transportKeepaliveEnabled")]
+      #[serde(rename = "transportKeepaliveEnabled", skip_serializing_if="Option::is_none")]
   transport_keepalive_enabled: Option<bool>,
   /// The interval between application-level keepalive messages, in milliseconds. The default value is `3000`.
-  #[serde(rename = "transportKeepaliveInterval")]
+      #[serde(rename = "transportKeepaliveInterval", skip_serializing_if="Option::is_none")]
   transport_keepalive_interval: Option<i32>,
   /// Enable or disable delivery of asynchronous messages directly from the I/O thread. Contact Solace Support before enabling this property. The default value is `false`.
-  #[serde(rename = "transportMsgCallbackOnIoThreadEnabled")]
+      #[serde(rename = "transportMsgCallbackOnIoThreadEnabled", skip_serializing_if="Option::is_none")]
   transport_msg_callback_on_io_thread_enabled: Option<bool>,
   /// Enable or disable optimization for the Direct Transport delivery mode. If enabled, the client application is limited to one Publisher (Producer) and one non-durable Subscriber (Consumer). The default value is `false`.
-  #[serde(rename = "transportOptimizeDirectEnabled")]
+      #[serde(rename = "transportOptimizeDirectEnabled", skip_serializing_if="Option::is_none")]
   transport_optimize_direct_enabled: Option<bool>,
   /// The connection port number on the Router for SMF clients. The value \"-1\" means the port is specified in the JNDI Properties file. The default value is `-1`.
-  #[serde(rename = "transportPort")]
+      #[serde(rename = "transportPort", skip_serializing_if="Option::is_none")]
   transport_port: Option<i32>,
   /// The timeout for reading a reply from the Router, in milliseconds. The default value is `10000`.
-  #[serde(rename = "transportReadTimeout")]
+      #[serde(rename = "transportReadTimeout", skip_serializing_if="Option::is_none")]
   transport_read_timeout: Option<i32>,
   /// The size of the receive socket buffer, in bytes. It corresponds to the SO_RCVBUF socket option. The default value is `65536`.
-  #[serde(rename = "transportReceiveBufferSize")]
+      #[serde(rename = "transportReceiveBufferSize", skip_serializing_if="Option::is_none")]
   transport_receive_buffer_size: Option<i32>,
   /// The maximum number of attempts to reconnect to the host (Router) or list of hosts (Routers) after the connection has been lost. The value \"-1\" means to retry forever. The default value is `3`.
-  #[serde(rename = "transportReconnectRetryCount")]
+      #[serde(rename = "transportReconnectRetryCount", skip_serializing_if="Option::is_none")]
   transport_reconnect_retry_count: Option<i32>,
   /// The amount of time before making another attempt to connect or reconnect to the host (Router) after the connection has been lost, in milliseconds. The default value is `3000`.
-  #[serde(rename = "transportReconnectRetryWait")]
+      #[serde(rename = "transportReconnectRetryWait", skip_serializing_if="Option::is_none")]
   transport_reconnect_retry_wait: Option<i32>,
   /// The size of the send socket buffer, in bytes. It corresponds to the SO_SNDBUF socket option. The default value is `65536`.
-  #[serde(rename = "transportSendBufferSize")]
+      #[serde(rename = "transportSendBufferSize", skip_serializing_if="Option::is_none")]
   transport_send_buffer_size: Option<i32>,
   /// Enable or disable the TCP_NODELAY option. When enabled, Nagle's algorithm for TCP/IP congestion control (RFC 896) is disabled. The default value is `true`.
-  #[serde(rename = "transportTcpNoDelayEnabled")]
+      #[serde(rename = "transportTcpNoDelayEnabled", skip_serializing_if="Option::is_none")]
   transport_tcp_no_delay_enabled: Option<bool>,
   /// Enable or disable this as an XA Connection Factory. When enabled, the Connection Factory can be cast to \"XAConnectionFactory\", \"XAQueueConnectionFactory\" or \"XATopicConnectionFactory\". The default value is `false`.
-  #[serde(rename = "xaEnabled")]
+      #[serde(rename = "xaEnabled", skip_serializing_if="Option::is_none")]
   xa_enabled: Option<bool>
 }
 

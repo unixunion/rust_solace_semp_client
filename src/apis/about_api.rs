@@ -12,6 +12,7 @@ use std::rc::Rc;
 use std::borrow::Borrow;
 use std::borrow::Cow;
 use std::collections::HashMap;
+use std::unimplemented;
 
 use hyper;
 use serde_json;
@@ -126,7 +127,12 @@ impl<C: hyper::client::Connect>AboutApi for AboutApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &select) != "\"\"" {
+                    println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }

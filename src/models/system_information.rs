@@ -12,13 +12,13 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct SystemInformation {
   /// The platform that is running the API.
-  #[serde(rename = "platform")]
+      #[serde(rename = "platform")]
   platform: String,
   /// The SEMP API version.
-  #[serde(rename = "sempVersion")]
+      #[serde(rename = "sempVersion")]
   semp_version: String
 }
 

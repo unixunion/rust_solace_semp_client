@@ -12,13 +12,13 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnSequencedTopic {
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// Topic for applying sequence numbers.
-  #[serde(rename = "sequencedTopic")]
+      #[serde(rename = "sequencedTopic", skip_serializing_if="Option::is_none")]
   sequenced_topic: Option<String>
 }
 

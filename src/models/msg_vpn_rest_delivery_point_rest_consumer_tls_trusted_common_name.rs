@@ -12,19 +12,19 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnRestDeliveryPointRestConsumerTlsTrustedCommonName {
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The name of the REST Consumer.
-  #[serde(rename = "restConsumerName")]
+      #[serde(rename = "restConsumerName", skip_serializing_if="Option::is_none")]
   rest_consumer_name: Option<String>,
   /// The name of the REST Delivery Point.
-  #[serde(rename = "restDeliveryPointName")]
+      #[serde(rename = "restDeliveryPointName", skip_serializing_if="Option::is_none")]
   rest_delivery_point_name: Option<String>,
   /// The expected trusted common name of the remote certificate.
-  #[serde(rename = "tlsTrustedCommonName")]
+      #[serde(rename = "tlsTrustedCommonName", skip_serializing_if="Option::is_none")]
   tls_trusted_common_name: Option<String>
 }
 

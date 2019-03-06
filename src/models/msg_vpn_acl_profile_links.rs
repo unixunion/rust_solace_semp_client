@@ -12,19 +12,19 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnAclProfileLinks {
   /// The URI of this MsgVpnAclProfile's clientConnectExceptions collection.
-  #[serde(rename = "clientConnectExceptionsUri")]
+      #[serde(rename = "clientConnectExceptionsUri", skip_serializing_if="Option::is_none")]
   client_connect_exceptions_uri: Option<String>,
   /// The URI of this MsgVpnAclProfile's publishExceptions collection.
-  #[serde(rename = "publishExceptionsUri")]
+      #[serde(rename = "publishExceptionsUri", skip_serializing_if="Option::is_none")]
   publish_exceptions_uri: Option<String>,
   /// The URI of this MsgVpnAclProfile's subscribeExceptions collection.
-  #[serde(rename = "subscribeExceptionsUri")]
+      #[serde(rename = "subscribeExceptionsUri", skip_serializing_if="Option::is_none")]
   subscribe_exceptions_uri: Option<String>,
   /// The URI of this MsgVpnAclProfile object.
-  #[serde(rename = "uri")]
+      #[serde(rename = "uri", skip_serializing_if="Option::is_none")]
   uri: Option<String>
 }
 

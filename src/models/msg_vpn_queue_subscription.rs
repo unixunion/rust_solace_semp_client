@@ -12,16 +12,16 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnQueueSubscription {
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+      #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The name of the Queue.
-  #[serde(rename = "queueName")]
+      #[serde(rename = "queueName", skip_serializing_if="Option::is_none")]
   queue_name: Option<String>,
   /// The Topic of the Subscription.
-  #[serde(rename = "subscriptionTopic")]
+      #[serde(rename = "subscriptionTopic", skip_serializing_if="Option::is_none")]
   subscription_topic: Option<String>
 }
 
