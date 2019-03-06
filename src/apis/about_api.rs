@@ -129,7 +129,7 @@ impl<C: hyper::client::Connect>AboutApi for AboutApiClient<C> {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
 
                 if format!("{:?}", &select) != "\"\"" {
-                    println!("select is: {}", format!("{:?}", &select));
+                    // println!("select is: {}", format!("{:?}", &select));
                     query.append_pair("select", &select.join(",").to_string());
                 }
 

@@ -63,25 +63,25 @@ impl<C: hyper::client::Connect>JndiApi for JndiApiClient<C> {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
 
                 if format!("{:?}", &count) != "\"\"" {
-                    println!("count is: {}", format!("{:?}", &count));
+                    // println!("count is: {}", format!("{:?}", &count));
                     query.append_pair("count", &count.to_string());
                 }
 
 
                 if format!("{:?}", &cursor) != "\"\"" {
-                    println!("cursor is: {}", format!("{:?}", &cursor));
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
                     query.append_pair("cursor", &cursor.to_string());
                 }
 
 
                 if format!("{:?}", &_where) != "\"\"" {
-                    println!("_where is: {}", format!("{:?}", &_where));
+                    // println!("_where is: {}", format!("{:?}", &_where));
                     query.append_pair("where", &_where.join(",").to_string());
                 }
 
 
                 if format!("{:?}", &select) != "\"\"" {
-                    println!("select is: {}", format!("{:?}", &select));
+                    // println!("select is: {}", format!("{:?}", &select));
                     query.append_pair("select", &select.join(",").to_string());
                 }
 
@@ -154,13 +154,13 @@ impl<C: hyper::client::Connect>JndiApi for JndiApiClient<C> {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
 
                 if format!("{:?}", &_where) != "\"\"" {
-                    println!("_where is: {}", format!("{:?}", &_where));
+                    // println!("_where is: {}", format!("{:?}", &_where));
                     query.append_pair("where", &_where.join(",").to_string());
                 }
 
 
                 if format!("{:?}", &select) != "\"\"" {
-                    println!("select is: {}", format!("{:?}", &select));
+                    // println!("select is: {}", format!("{:?}", &select));
                     query.append_pair("select", &select.join(",").to_string());
                 }
 
@@ -233,25 +233,25 @@ impl<C: hyper::client::Connect>JndiApi for JndiApiClient<C> {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
 
                 if format!("{:?}", &count) != "\"\"" {
-                    println!("count is: {}", format!("{:?}", &count));
+                    // println!("count is: {}", format!("{:?}", &count));
                     query.append_pair("count", &count.to_string());
                 }
 
 
                 if format!("{:?}", &cursor) != "\"\"" {
-                    println!("cursor is: {}", format!("{:?}", &cursor));
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
                     query.append_pair("cursor", &cursor.to_string());
                 }
 
 
                 if format!("{:?}", &_where) != "\"\"" {
-                    println!("_where is: {}", format!("{:?}", &_where));
+                    // println!("_where is: {}", format!("{:?}", &_where));
                     query.append_pair("where", &_where.join(",").to_string());
                 }
 
 
                 if format!("{:?}", &select) != "\"\"" {
-                    println!("select is: {}", format!("{:?}", &select));
+                    // println!("select is: {}", format!("{:?}", &select));
                     query.append_pair("select", &select.join(",").to_string());
                 }
 
