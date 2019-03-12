@@ -127,7 +127,7 @@ pub struct MsgVpnClientProfile {
   /// The number of messages that are always allowed entry into the \"Guaranteed 1\" (G-3) priority queue, regardless of the \"queueGuaranteed1MaxDepth\" value. The default value is `255`.
   #[serde(rename = "queueGuaranteed1MinMsgBurst", skip_serializing_if="Option::is_none")]
   queue_guaranteed1_min_msg_burst: Option<i32>,
-  /// Enable or disable sending of a negative acknowledgement (NACK) on the discard of a message because of a message subscription was not found. The default value is `false`. Available since 2.2.
+  /// Enable or disable sending of a negative acknowledgement (NACK) on the discard of a message because of a message subscription was not found. The default value is `false`.
   #[serde(rename = "rejectMsgToSenderOnNoSubscriptionMatchEnabled", skip_serializing_if="Option::is_none")]
   reject_msg_to_sender_on_no_subscription_match_enabled: Option<bool>,
   /// Allow or deny clients to connect to the Message VPN if its Replication state is standby. The default value is `false`.

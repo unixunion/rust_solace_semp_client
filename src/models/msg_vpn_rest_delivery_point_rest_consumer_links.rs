@@ -14,7 +14,7 @@ use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnRestDeliveryPointRestConsumerLinks {
-  /// The URI of this MsgVpnRestDeliveryPointRestConsumer's tlsTrustedCommonNames collection. Available since 2.7.
+  /// The URI of this MsgVpnRestDeliveryPointRestConsumer's tlsTrustedCommonNames collection.
   #[serde(rename = "tlsTrustedCommonNamesUri", skip_serializing_if="Option::is_none")]
   tls_trusted_common_names_uri: Option<String>,
   /// The URI of this MsgVpnRestDeliveryPointRestConsumer object.

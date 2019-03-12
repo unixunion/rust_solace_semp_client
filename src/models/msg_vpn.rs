@@ -158,6 +158,9 @@ pub struct MsgVpn {
   /// The name of the Message VPN.
   #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
+  /// IP version to use if DNS lookup contains both an IPv4 and IPv6 address. The default value is `\"ipv6\"`. The allowed values and their meaning are:  <pre> \"ipv4\" - Use IPv4 address when DNS lookup contains both an IPv4 and IPv6 address. \"ipv6\" - Use IPv6 address when DNS lookup contains both an IPv4 and IPv6 address. </pre>  Available since 2.9.
+  #[serde(rename = "preferIpVersion", skip_serializing_if="Option::is_none")]
+  prefer_ip_version: Option<String>,
   /// The acknowledgement (ACK) propagation interval for the Replication Bridge, in number of replicated messages. The default value is `20`.
   #[serde(rename = "replicationAckPropagationIntervalMsgCount", skip_serializing_if="Option::is_none")]
   replication_ack_propagation_interval_msg_count: Option<i64>,
@@ -233,6 +236,9 @@ pub struct MsgVpn {
   /// Enable or disable SEMP over the message bus for the current Message VPN. The default value is `true`.
   #[serde(rename = "sempOverMsgBusEnabled", skip_serializing_if="Option::is_none")]
   semp_over_msg_bus_enabled: Option<bool>,
+  /// Enable or disable \"legacy-show-clear\" SEMP over the message bus commands for the current Message VPN. The default value is `false`.
+  #[serde(rename = "sempOverMsgBusLegacyShowClearEnabled", skip_serializing_if="Option::is_none")]
+  semp_over_msg_bus_legacy_show_clear_enabled: Option<bool>,
   /// Enable or disable \"show\" SEMP over the message bus commands for the current Message VPN. The default value is `false`.
   #[serde(rename = "sempOverMsgBusShowEnabled", skip_serializing_if="Option::is_none")]
   semp_over_msg_bus_show_enabled: Option<bool>,
@@ -378,6 +384,7 @@ impl MsgVpn {
       max_transacted_session_count: None,
       max_transaction_count: None,
       msg_vpn_name: None,
+      prefer_ip_version: None,
       replication_ack_propagation_interval_msg_count: None,
       replication_bridge_authentication_basic_client_username: None,
       replication_bridge_authentication_basic_password: None,
@@ -403,6 +410,7 @@ impl MsgVpn {
       semp_over_msg_bus_admin_distributed_cache_enabled: None,
       semp_over_msg_bus_admin_enabled: None,
       semp_over_msg_bus_enabled: None,
+      semp_over_msg_bus_legacy_show_clear_enabled: None,
       semp_over_msg_bus_show_enabled: None,
       service_amqp_max_connection_count: None,
       service_amqp_plain_text_enabled: None,
@@ -1336,6 +1344,23 @@ impl MsgVpn {
     self.msg_vpn_name = None;
   }
 
+  pub fn set_prefer_ip_version(&mut self, prefer_ip_version: String) {
+    self.prefer_ip_version = Some(prefer_ip_version);
+  }
+
+  pub fn with_prefer_ip_version(mut self, prefer_ip_version: String) -> MsgVpn {
+    self.prefer_ip_version = Some(prefer_ip_version);
+    self
+  }
+
+  pub fn prefer_ip_version(&self) -> Option<&String> {
+    self.prefer_ip_version.as_ref()
+  }
+
+  pub fn reset_prefer_ip_version(&mut self) {
+    self.prefer_ip_version = None;
+  }
+
   pub fn set_replication_ack_propagation_interval_msg_count(&mut self, replication_ack_propagation_interval_msg_count: i64) {
     self.replication_ack_propagation_interval_msg_count = Some(replication_ack_propagation_interval_msg_count);
   }
@@ -1759,6 +1784,23 @@ impl MsgVpn {
 
   pub fn reset_semp_over_msg_bus_enabled(&mut self) {
     self.semp_over_msg_bus_enabled = None;
+  }
+
+  pub fn set_semp_over_msg_bus_legacy_show_clear_enabled(&mut self, semp_over_msg_bus_legacy_show_clear_enabled: bool) {
+    self.semp_over_msg_bus_legacy_show_clear_enabled = Some(semp_over_msg_bus_legacy_show_clear_enabled);
+  }
+
+  pub fn with_semp_over_msg_bus_legacy_show_clear_enabled(mut self, semp_over_msg_bus_legacy_show_clear_enabled: bool) -> MsgVpn {
+    self.semp_over_msg_bus_legacy_show_clear_enabled = Some(semp_over_msg_bus_legacy_show_clear_enabled);
+    self
+  }
+
+  pub fn semp_over_msg_bus_legacy_show_clear_enabled(&self) -> Option<&bool> {
+    self.semp_over_msg_bus_legacy_show_clear_enabled.as_ref()
+  }
+
+  pub fn reset_semp_over_msg_bus_legacy_show_clear_enabled(&mut self) {
+    self.semp_over_msg_bus_legacy_show_clear_enabled = None;
   }
 
   pub fn set_semp_over_msg_bus_show_enabled(&mut self, semp_over_msg_bus_show_enabled: bool) {

@@ -20,7 +20,7 @@ pub struct MsgVpnTopicEndpoint {
   /// Enable or disable the propagation of Consumer ACKs received on the active replication Message VPN to the standby replication Message VPN. The default value is `true`.
   #[serde(rename = "consumerAckPropagationEnabled", skip_serializing_if="Option::is_none")]
   consumer_ack_propagation_enabled: Option<bool>,
-  /// The name of the Dead Message Queue (DMQ) used by the Topic Endpoint. The default value is `\"#DEAD_MSG_QUEUE\"`. Available since 2.2.
+  /// The name of the Dead Message Queue (DMQ) used by the Topic Endpoint. The default value is `\"#DEAD_MSG_QUEUE\"`.
   #[serde(rename = "deadMsgQueue", skip_serializing_if="Option::is_none")]
   dead_msg_queue: Option<String>,
   /// Enable or disable the egress flow of messages from the Topic Endpoint. The default value is `false`.
