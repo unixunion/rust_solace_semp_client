@@ -12,28 +12,28 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnAuthorizationGroup {
   /// The ACL Profile of the LDAP Authorization Group. The default value is `\"default\"`.
-  #[serde(rename = "aclProfileName")]
+  #[serde(rename = "aclProfileName", skip_serializing_if="Option::is_none")]
   acl_profile_name: Option<String>,
   /// The name of the LDAP Authorization Group.
-  #[serde(rename = "authorizationGroupName")]
+  #[serde(rename = "authorizationGroupName", skip_serializing_if="Option::is_none")]
   authorization_group_name: Option<String>,
   /// The Client Profile of the LDAP Authorization Group. The default value is `\"default\"`.
-  #[serde(rename = "clientProfileName")]
+  #[serde(rename = "clientProfileName", skip_serializing_if="Option::is_none")]
   client_profile_name: Option<String>,
   /// Enable or disable the LDAP Authorization Group in the Message VPN. The default value is `false`.
-  #[serde(rename = "enabled")]
+  #[serde(rename = "enabled", skip_serializing_if="Option::is_none")]
   enabled: Option<bool>,
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// Lower the priority to be less than this group. The default is not applicable. The default is not applicable.
-  #[serde(rename = "orderAfterAuthorizationGroupName")]
+  #[serde(rename = "orderAfterAuthorizationGroupName", skip_serializing_if="Option::is_none")]
   order_after_authorization_group_name: Option<String>,
   /// Raise the priority to be greater than this group. The default is not applicable. The default is not applicable.
-  #[serde(rename = "orderBeforeAuthorizationGroupName")]
+  #[serde(rename = "orderBeforeAuthorizationGroupName", skip_serializing_if="Option::is_none")]
   order_before_authorization_group_name: Option<String>
 }
 

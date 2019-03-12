@@ -12,11 +12,11 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct SempMeta {
-  #[serde(rename = "error")]
+  #[serde(rename = "error", skip_serializing_if="Option::is_none")]
   error: Option<::models::SempError>,
-  #[serde(rename = "paging")]
+  #[serde(rename = "paging", skip_serializing_if="Option::is_none")]
   paging: Option<::models::SempPaging>,
   #[serde(rename = "request")]
   request: ::models::SempRequest,

@@ -12,22 +12,22 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnMqttSessionSubscription {
   /// The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet.
-  #[serde(rename = "mqttSessionClientId")]
+  #[serde(rename = "mqttSessionClientId", skip_serializing_if="Option::is_none")]
   mqtt_session_client_id: Option<String>,
   /// The Virtual Router of the MQTT Session. The allowed values and their meaning are:  <pre> \"primary\" - The MQTT Session belongs to the primary Virtual Router. \"backup\" - The MQTT Session belongs to the backup Virtual Router. </pre> 
-  #[serde(rename = "mqttSessionVirtualRouter")]
+  #[serde(rename = "mqttSessionVirtualRouter", skip_serializing_if="Option::is_none")]
   mqtt_session_virtual_router: Option<String>,
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The quality of service (QoS) for the subscription as either 0 (deliver at most once) or 1 (deliver at least once). QoS 2 is not supported, but QoS 2 messages attracted by QoS 0 or QoS 1 subscriptions are accepted and delivered accordingly. The default value is `0`.
-  #[serde(rename = "subscriptionQos")]
+  #[serde(rename = "subscriptionQos", skip_serializing_if="Option::is_none")]
   subscription_qos: Option<i64>,
   /// The MQTT subscription topic.
-  #[serde(rename = "subscriptionTopic")]
+  #[serde(rename = "subscriptionTopic", skip_serializing_if="Option::is_none")]
   subscription_topic: Option<String>
 }
 

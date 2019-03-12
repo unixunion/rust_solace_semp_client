@@ -12,58 +12,58 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnRestDeliveryPointRestConsumer {
   /// The PEM formatted content for the client certificate that the REST Consumer will present to the REST host. It must consist of a private key and between one and three certificates comprising the certificate trust chain. The default value is `\"\"`. Available since 2.9.
-  #[serde(rename = "authenticationClientCertContent")]
+  #[serde(rename = "authenticationClientCertContent", skip_serializing_if="Option::is_none")]
   authentication_client_cert_content: Option<String>,
   /// The password for the client certificate that the REST Consumer will present to the REST host. The default value is `\"\"`. Available since 2.9.
-  #[serde(rename = "authenticationClientCertPassword")]
+  #[serde(rename = "authenticationClientCertPassword", skip_serializing_if="Option::is_none")]
   authentication_client_cert_password: Option<String>,
   /// The password that the REST Consumer will use to login to the REST host. The default value is `\"\"`.
-  #[serde(rename = "authenticationHttpBasicPassword")]
+  #[serde(rename = "authenticationHttpBasicPassword", skip_serializing_if="Option::is_none")]
   authentication_http_basic_password: Option<String>,
   /// The username that the REST Consumer will use to login to the REST host. Normally a username is only configured when basic authentication is selected for the REST Consumer. The default value is `\"\"`.
-  #[serde(rename = "authenticationHttpBasicUsername")]
+  #[serde(rename = "authenticationHttpBasicUsername", skip_serializing_if="Option::is_none")]
   authentication_http_basic_username: Option<String>,
   /// The authentication scheme used by the REST Consumer to login to the REST host. The default value is `\"none\"`. The allowed values and their meaning are:  <pre> \"none\" - Login with no authentication. This may be useful for anonymous connections or when a REST Consumer does not require authentication. \"http-basic\" - Login with a username and optional password according to HTTP Basic authentication as per RFC2616. \"client-certificate\" - Login with a client TLS certificate as per RFC5246. Client certificate authentication is only available on TLS connections. </pre> 
-  #[serde(rename = "authenticationScheme")]
+  #[serde(rename = "authenticationScheme", skip_serializing_if="Option::is_none")]
   authentication_scheme: Option<String>,
   /// Enable or disable the REST Consumer. When disabled, no connections are initiated or messages delivered to this particular REST Consumer. The default value is `false`.
-  #[serde(rename = "enabled")]
+  #[serde(rename = "enabled", skip_serializing_if="Option::is_none")]
   enabled: Option<bool>,
   /// The interface that will be used for all outgoing connections associated with the REST Consumer. When unspecified, an interface is automatically chosen. The default value is `\"\"`.
-  #[serde(rename = "localInterface")]
+  #[serde(rename = "localInterface", skip_serializing_if="Option::is_none")]
   local_interface: Option<String>,
   /// The maximum amount of time (in seconds) to wait for an HTTP POST response from the REST Consumer. Once this time is exceeded, the TCP connection is reset. If the POST request is for a direct message, then the message is discarded. If for a persistent message, then message redelivery is attempted on another available outgoing connection for the REST Delivery Point. The default value is `30`.
-  #[serde(rename = "maxPostWaitTime")]
+  #[serde(rename = "maxPostWaitTime", skip_serializing_if="Option::is_none")]
   max_post_wait_time: Option<i32>,
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The total number of concurrent TCP connections open to the REST Consumer. Multiple connections to a single REST Consumer increase throughput via concurrency. The default value is `3`.
-  #[serde(rename = "outgoingConnectionCount")]
+  #[serde(rename = "outgoingConnectionCount", skip_serializing_if="Option::is_none")]
   outgoing_connection_count: Option<i32>,
   /// The IP address or DNS name to which the router is to connect to deliver messages for this REST Consumer. If the REST Consumer is enabled while the host value is not configured then the REST Consumer has an operational Down state due to the empty host configuration until a usable host value is configured. The default value is `\"\"`.
-  #[serde(rename = "remoteHost")]
+  #[serde(rename = "remoteHost", skip_serializing_if="Option::is_none")]
   remote_host: Option<String>,
   /// The port associated with the host of the REST Consumer. The port can only be changed when the REST Consumer is disabled. The default value is `8080`.
-  #[serde(rename = "remotePort")]
+  #[serde(rename = "remotePort", skip_serializing_if="Option::is_none")]
   remote_port: Option<i64>,
   /// The name of the REST Consumer.
-  #[serde(rename = "restConsumerName")]
+  #[serde(rename = "restConsumerName", skip_serializing_if="Option::is_none")]
   rest_consumer_name: Option<String>,
   /// The name of the REST Delivery Point.
-  #[serde(rename = "restDeliveryPointName")]
+  #[serde(rename = "restDeliveryPointName", skip_serializing_if="Option::is_none")]
   rest_delivery_point_name: Option<String>,
   /// The number of seconds that must pass before retrying the remote REST Consumer connection. The default value is `3`.
-  #[serde(rename = "retryDelay")]
+  #[serde(rename = "retryDelay", skip_serializing_if="Option::is_none")]
   retry_delay: Option<i32>,
   /// The colon-separated list of cipher-suites the REST Consumer uses in its encrypted connection. All supported suites are included by default, from most-secure to least-secure. The REST Consumer should choose the first suite from this list that it supports. The cipher-suite list can only be changed when the REST Consumer is disabled. The default value is `\"default\"`.
-  #[serde(rename = "tlsCipherSuiteList")]
+  #[serde(rename = "tlsCipherSuiteList", skip_serializing_if="Option::is_none")]
   tls_cipher_suite_list: Option<String>,
   /// Enable or disable TLS for the REST Consumer. This may only be done when the REST Consumer is disabled. The default value is `false`.
-  #[serde(rename = "tlsEnabled")]
+  #[serde(rename = "tlsEnabled", skip_serializing_if="Option::is_none")]
   tls_enabled: Option<bool>
 }
 

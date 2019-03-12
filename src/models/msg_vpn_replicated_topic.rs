@@ -12,16 +12,16 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnReplicatedTopic {
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// Topic for applying replication. Published messages matching this topic will be replicated to the standby site.
-  #[serde(rename = "replicatedTopic")]
+  #[serde(rename = "replicatedTopic", skip_serializing_if="Option::is_none")]
   replicated_topic: Option<String>,
   /// Choose the replication-mode for the Replicated Topic. The default value is `\"async\"`. The allowed values and their meaning are:  <pre> \"sync\" - Synchronous replication-mode. Published messages are acknowledged when they are spooled on the standby site. \"async\" - Asynchronous replication-mode. Published messages are acknowledged when they are spooled locally. </pre>  Available since 2.1.
-  #[serde(rename = "replicationMode")]
+  #[serde(rename = "replicationMode", skip_serializing_if="Option::is_none")]
   replication_mode: Option<String>
 }
 

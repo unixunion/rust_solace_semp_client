@@ -12,6 +12,7 @@ use std::rc::Rc;
 use std::borrow::Borrow;
 use std::borrow::Cow;
 use std::collections::HashMap;
+use std::unimplemented;
 
 use hyper;
 use serde_json;
@@ -72,10 +73,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -143,10 +164,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -214,10 +255,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -285,10 +346,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -356,10 +437,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -427,10 +528,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -498,8 +619,18 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -567,10 +698,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -638,10 +789,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -709,10 +880,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -780,10 +971,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -851,10 +1062,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -922,10 +1153,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -993,10 +1244,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }
@@ -1064,10 +1335,30 @@ impl<C: hyper::client::Connect>MsgVpnApi for MsgVpnApiClient<C> {
 
         let query_string = {
             let mut query = ::url::form_urlencoded::Serializer::new(String::new());
-            query.append_pair("count", &count.to_string());
-            query.append_pair("cursor", &cursor.to_string());
-            query.append_pair("where", &_where.join(",").to_string());
-            query.append_pair("select", &select.join(",").to_string());
+
+                if format!("{:?}", &count) != "\"\"" {
+                    // println!("count is: {}", format!("{:?}", &count));
+                    query.append_pair("count", &count.to_string());
+                }
+
+
+                if format!("{:?}", &cursor) != "\"\"" {
+                    // println!("cursor is: {}", format!("{:?}", &cursor));
+                    query.append_pair("cursor", &cursor.to_string());
+                }
+
+
+                if format!("{:?}", &_where) != "\"\"" {
+                    // println!("_where is: {}", format!("{:?}", &_where));
+                    query.append_pair("where", &_where.join(",").to_string());
+                }
+
+
+                if format!("{:?}", &select) != "\"\"" {
+                    // println!("select is: {}", format!("{:?}", &select));
+                    query.append_pair("select", &select.join(",").to_string());
+                }
+
             for (key, val) in &auth_query {
                 query.append_pair(key, val);
             }

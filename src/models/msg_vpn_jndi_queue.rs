@@ -12,16 +12,16 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnJndiQueue {
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The physical name of the JMS Queue. The default value is `\"\"`.
-  #[serde(rename = "physicalName")]
+  #[serde(rename = "physicalName", skip_serializing_if="Option::is_none")]
   physical_name: Option<String>,
   /// The JNDI name of the JMS Queue.
-  #[serde(rename = "queueName")]
+  #[serde(rename = "queueName", skip_serializing_if="Option::is_none")]
   queue_name: Option<String>
 }
 

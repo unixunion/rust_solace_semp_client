@@ -12,7 +12,7 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct SempPaging {
   /// The cursor, or position, for the next page of objects. Use this as the `cursor` query parameter of the next request.
   #[serde(rename = "cursorQuery")]

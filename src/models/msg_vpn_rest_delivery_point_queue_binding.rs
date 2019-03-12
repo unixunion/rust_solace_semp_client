@@ -12,22 +12,22 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnRestDeliveryPointQueueBinding {
   /// Enable or disable whether the authority for the request-target is replaced with that configured for the REST Consumer remote. When enabled, the router sends HTTP requests in absolute-form, with the request-target's authority taken from the REST Consumer's remote host and port configuration. When disabled, the router sends HTTP requests whose request-target matches that of the original request message, including whether to use absolute-form or origin-form. This configuration is applicable only when the Message VPN is in REST gateway mode. The default value is `false`. Available since 2.6.
-  #[serde(rename = "gatewayReplaceTargetAuthorityEnabled")]
+  #[serde(rename = "gatewayReplaceTargetAuthorityEnabled", skip_serializing_if="Option::is_none")]
   gateway_replace_target_authority_enabled: Option<bool>,
   /// The name of the Message VPN.
-  #[serde(rename = "msgVpnName")]
+  #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// The POST request-target string to use when sending requests. It identifies the target resource on the far-end REST Consumer upon which to apply the POST request. There are generally two common forms for the request-target. The origin-form is most often used in practice and contains the path and query components of the target URI. If the path component is empty then the client must generally send a \"/\" as the path. When making a request to a proxy, most often the absolute-form is required. This configuration is only applicable when the Message VPN is in REST messaging mode. The default value is `\"\"`.
-  #[serde(rename = "postRequestTarget")]
+  #[serde(rename = "postRequestTarget", skip_serializing_if="Option::is_none")]
   post_request_target: Option<String>,
   /// The name of a queue within this Message VPN.
-  #[serde(rename = "queueBindingName")]
+  #[serde(rename = "queueBindingName", skip_serializing_if="Option::is_none")]
   queue_binding_name: Option<String>,
   /// The name of the REST Delivery Point.
-  #[serde(rename = "restDeliveryPointName")]
+  #[serde(rename = "restDeliveryPointName", skip_serializing_if="Option::is_none")]
   rest_delivery_point_name: Option<String>
 }
 

@@ -12,13 +12,13 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnMqttSessionLinks {
   /// The URI of this MsgVpnMqttSession's subscriptions collection.
-  #[serde(rename = "subscriptionsUri")]
+  #[serde(rename = "subscriptionsUri", skip_serializing_if="Option::is_none")]
   subscriptions_uri: Option<String>,
   /// The URI of this MsgVpnMqttSession object.
-  #[serde(rename = "uri")]
+  #[serde(rename = "uri", skip_serializing_if="Option::is_none")]
   uri: Option<String>
 }
 

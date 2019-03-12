@@ -12,55 +12,55 @@
 #[allow(unused_imports)]
 use serde_json::Value;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpnLinks {
   /// The URI of this MsgVpn's aclProfiles collection.
-  #[serde(rename = "aclProfilesUri")]
+  #[serde(rename = "aclProfilesUri", skip_serializing_if="Option::is_none")]
   acl_profiles_uri: Option<String>,
   /// The URI of this MsgVpn's authorizationGroups collection.
-  #[serde(rename = "authorizationGroupsUri")]
+  #[serde(rename = "authorizationGroupsUri", skip_serializing_if="Option::is_none")]
   authorization_groups_uri: Option<String>,
   /// The URI of this MsgVpn's bridges collection.
-  #[serde(rename = "bridgesUri")]
+  #[serde(rename = "bridgesUri", skip_serializing_if="Option::is_none")]
   bridges_uri: Option<String>,
   /// The URI of this MsgVpn's clientProfiles collection.
-  #[serde(rename = "clientProfilesUri")]
+  #[serde(rename = "clientProfilesUri", skip_serializing_if="Option::is_none")]
   client_profiles_uri: Option<String>,
   /// The URI of this MsgVpn's clientUsernames collection.
-  #[serde(rename = "clientUsernamesUri")]
+  #[serde(rename = "clientUsernamesUri", skip_serializing_if="Option::is_none")]
   client_usernames_uri: Option<String>,
   /// The URI of this MsgVpn's jndiConnectionFactories collection. Available since 2.2.
-  #[serde(rename = "jndiConnectionFactoriesUri")]
+  #[serde(rename = "jndiConnectionFactoriesUri", skip_serializing_if="Option::is_none")]
   jndi_connection_factories_uri: Option<String>,
   /// The URI of this MsgVpn's jndiQueues collection. Available since 2.2.
-  #[serde(rename = "jndiQueuesUri")]
+  #[serde(rename = "jndiQueuesUri", skip_serializing_if="Option::is_none")]
   jndi_queues_uri: Option<String>,
   /// The URI of this MsgVpn's jndiTopics collection. Available since 2.2.
-  #[serde(rename = "jndiTopicsUri")]
+  #[serde(rename = "jndiTopicsUri", skip_serializing_if="Option::is_none")]
   jndi_topics_uri: Option<String>,
   /// The URI of this MsgVpn's mqttSessions collection. Available since 2.1.
-  #[serde(rename = "mqttSessionsUri")]
+  #[serde(rename = "mqttSessionsUri", skip_serializing_if="Option::is_none")]
   mqtt_sessions_uri: Option<String>,
   /// The URI of this MsgVpn's queues collection.
-  #[serde(rename = "queuesUri")]
+  #[serde(rename = "queuesUri", skip_serializing_if="Option::is_none")]
   queues_uri: Option<String>,
   /// The URI of this MsgVpn's replayLogs collection. Available since 2.10.
-  #[serde(rename = "replayLogsUri")]
+  #[serde(rename = "replayLogsUri", skip_serializing_if="Option::is_none")]
   replay_logs_uri: Option<String>,
   /// The URI of this MsgVpn's replicatedTopics collection. Available since 2.9.
-  #[serde(rename = "replicatedTopicsUri")]
+  #[serde(rename = "replicatedTopicsUri", skip_serializing_if="Option::is_none")]
   replicated_topics_uri: Option<String>,
   /// The URI of this MsgVpn's restDeliveryPoints collection.
-  #[serde(rename = "restDeliveryPointsUri")]
+  #[serde(rename = "restDeliveryPointsUri", skip_serializing_if="Option::is_none")]
   rest_delivery_points_uri: Option<String>,
   /// The URI of this MsgVpn's sequencedTopics collection.
-  #[serde(rename = "sequencedTopicsUri")]
+  #[serde(rename = "sequencedTopicsUri", skip_serializing_if="Option::is_none")]
   sequenced_topics_uri: Option<String>,
   /// The URI of this MsgVpn's topicEndpoints collection. Available since 2.1.
-  #[serde(rename = "topicEndpointsUri")]
+  #[serde(rename = "topicEndpointsUri", skip_serializing_if="Option::is_none")]
   topic_endpoints_uri: Option<String>,
   /// The URI of this MsgVpn object.
-  #[serde(rename = "uri")]
+  #[serde(rename = "uri", skip_serializing_if="Option::is_none")]
   uri: Option<String>
 }
 
