@@ -4,15 +4,15 @@ All URIs are relative to *http://www.solace.com/SEMP/v2/config*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_about_api**](AboutApi.md#get_about_api) | **Get** /about/api | Get an API Description object.
-[**get_about_user**](AboutApi.md#get_about_user) | **Get** /about/user | Get a User object.
+[**get_about_api**](AboutApi.md#get_about_api) | **Get** /about/api | Gets an API Description object.
+[**get_about_user**](AboutApi.md#get_about_user) | **Get** /about/user | Gets a Current User object.
 
 
 # **get_about_api**
 > ::models::AboutApiResponse get_about_api(ctx, )
-Get an API Description object.
+Gets an API Description object.
 
-Get an API Description object.  A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been available since 2.2.
+Gets an API Description object.  A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 This endpoint does not need any parameter.
@@ -34,9 +34,9 @@ This endpoint does not need any parameter.
 
 # **get_about_user**
 > ::models::AboutUserResponse get_about_user(ctx, optional)
-Get a User object.
+Gets a Current User object.
 
-Get a User object.    A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been available since 2.2.
+Gets a Current User object.    A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
@@ -50,7 +50,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
+ **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See [Select](#select \&quot;Description of the syntax of the &#x60;select&#x60; parameter\&quot;). | 
 
 ### Return type
 

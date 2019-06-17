@@ -12,11 +12,7 @@ pub struct APIClient<C: hyper::client::Connect> {
   client_profile_api: Box<::apis::ClientProfileApi>,
   client_username_api: Box<::apis::ClientUsernameApi>,
   default_api: Box<::apis::DefaultApi>,
-  distributed_cache_api: Box<::apis::DistributedCacheApi>,
-  dmr_bridge_api: Box<::apis::DmrBridgeApi>,
-  dmr_cluster_api: Box<::apis::DmrClusterApi>,
   jndi_api: Box<::apis::JndiApi>,
-  mqtt_retain_cache_api: Box<::apis::MqttRetainCacheApi>,
   mqtt_session_api: Box<::apis::MqttSessionApi>,
   msg_vpn_api: Box<::apis::MsgVpnApi>,
   queue_api: Box<::apis::QueueApi>,
@@ -40,11 +36,7 @@ impl<C: hyper::client::Connect> APIClient<C> {
       client_profile_api: Box::new(::apis::ClientProfileApiClient::new(rc.clone())),
       client_username_api: Box::new(::apis::ClientUsernameApiClient::new(rc.clone())),
       default_api: Box::new(::apis::DefaultApiClient::new(rc.clone())),
-      distributed_cache_api: Box::new(::apis::DistributedCacheApiClient::new(rc.clone())),
-      dmr_bridge_api: Box::new(::apis::DmrBridgeApiClient::new(rc.clone())),
-      dmr_cluster_api: Box::new(::apis::DmrClusterApiClient::new(rc.clone())),
       jndi_api: Box::new(::apis::JndiApiClient::new(rc.clone())),
-      mqtt_retain_cache_api: Box::new(::apis::MqttRetainCacheApiClient::new(rc.clone())),
       mqtt_session_api: Box::new(::apis::MqttSessionApiClient::new(rc.clone())),
       msg_vpn_api: Box::new(::apis::MsgVpnApiClient::new(rc.clone())),
       queue_api: Box::new(::apis::QueueApiClient::new(rc.clone())),
@@ -84,24 +76,8 @@ impl<C: hyper::client::Connect> APIClient<C> {
     self.default_api.as_ref()
   }
 
-  pub fn distributed_cache_api(&self) -> &::apis::DistributedCacheApi{
-    self.distributed_cache_api.as_ref()
-  }
-
-  pub fn dmr_bridge_api(&self) -> &::apis::DmrBridgeApi{
-    self.dmr_bridge_api.as_ref()
-  }
-
-  pub fn dmr_cluster_api(&self) -> &::apis::DmrClusterApi{
-    self.dmr_cluster_api.as_ref()
-  }
-
   pub fn jndi_api(&self) -> &::apis::JndiApi{
     self.jndi_api.as_ref()
-  }
-
-  pub fn mqtt_retain_cache_api(&self) -> &::apis::MqttRetainCacheApi{
-    self.mqtt_retain_cache_api.as_ref()
   }
 
   pub fn mqtt_session_api(&self) -> &::apis::MqttSessionApi{
