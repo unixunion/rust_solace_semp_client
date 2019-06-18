@@ -1,9 +1,9 @@
 /* 
  * SEMP (Solace Element Management Protocol)
  *
- * SEMP (starting in `v2`, see [note 1](#notes)) is a RESTful API for configuring, monitoring, and administering a Solace PubSub+ broker.  SEMP uses URIs to address manageable **resources** of the Solace PubSub+  broker. Resources are either individual **objects**, or **collections** of  objects. This document applies to the following API:   API|Base Path|Purpose|Comments :---|:---|:---|:--- Configuration|/SEMP/v2/config|Reading and writing config state|See [note 2](#notes)    Resources are always nouns, with individual objects being singular and  collections being plural. Objects within a collection are identified by an  `obj-id`, which follows the collection name with the form  `collection-name/obj-id`. Some examples:  <pre> /SEMP/v2/config/msgVpns                       ; MsgVpn collection /SEMP/v2/config/msgVpns/finance               ; MsgVpn object named \"finance\" /SEMP/v2/config/msgVpns/finance/queues        ; Queue collection within MsgVpn \"finance\" /SEMP/v2/config/msgVpns/finance/queues/orderQ ; Queue object named \"orderQ\" within MsgVpn \"finance\" </pre>  ## Collection Resources  Collections are unordered lists of objects (unless described as otherwise), and  are described by JSON arrays. Each item in the array represents an object in  the same manner as the individual object would normally be represented. The creation of a new object is done through its collection  resource.   ## Object Resources  Objects are composed of attributes and collections, and are described by JSON  content as name/value pairs. The collections of an object are not contained  directly in the object's JSON content, rather the content includes a URI  attribute which points to the collection. This contained collection resource  must be managed as a separate resource through this URI.  At a minimum, every object has 1 or more identifying attributes, and its own  `uri` attribute which contains the URI to itself. Attributes may have any  (non-exclusively) of the following properties:   Property|Meaning|Comments :---|:---|:--- Identifying|Attribute is involved in unique identification of the object, and appears in its URI| Required|Attribute must be provided in the request| Read-Only|Attribute can only be read, not written|See [note 3](#notes) Write-Only|Attribute can only be written, not read| Requires-Disable|Attribute can only be changed when object is disabled| Deprecated|Attribute is deprecated, and will disappear in the next SEMP version|    In some requests, certain attributes may only be provided in  certain combinations with other attributes:   Relationship|Meaning :---|:--- Requires|Attribute may only be changed by a request if a particular attribute or combination of attributes is also provided in the request Conflicts|Attribute may only be provided in a request if a particular attribute or combination of attributes is not also provided in the request     ## HTTP Methods  The following HTTP methods manipulate resources in accordance with these  general principles:   Method|Resource|Meaning|Request Body|Response Body|Missing Request Attributes :---|:---|:---|:---|:---|:--- POST|Collection|Create object|Initial attribute values|Object attributes and metadata|Set to default PUT|Object|Create or replace object|New attribute values|Object attributes and metadata|Set to default (but see [note 4](#notes)) PATCH|Object|Update object|New attribute values|Object attributes and metadata|unchanged DELETE|Object|Delete object|Empty|Object metadata|N/A GET|Object|Get object|Empty|Object attributes and metadata|N/A GET|Collection|Get collection|Empty|Object attributes and collection metadata|N/A    ## Common Query Parameters  The following are some common query parameters that are supported by many  method/URI combinations. Individual URIs may document additional parameters.  Note that multiple query parameters can be used together in a single URI,  separated by the ampersand character. For example:  <pre> ; Request for the MsgVpns collection using two hypothetical query parameters ; \"q1\" and \"q2\" with values \"val1\" and \"val2\" respectively /SEMP/v2/config/msgVpns?q1=val1&q2=val2 </pre>  ### select  Include in the response only selected attributes of the object, or exclude  from the response selected attributes of the object. Use this query parameter  to limit the size of the returned data for each returned object, return only  those fields that are desired, or exclude fields that are not desired.  The value of `select` is a comma-separated list of attribute names. If the  list contains attribute names that are not prefaced by `-`, only those  attributes are included in the response. If the list contains attribute names  that are prefaced by `-`, those attributes are excluded from the response. If  the list contains both types, then the difference of the first set of  attributes and the second set of attributes is returned. If the list is  empty (i.e. `select=`), no attributes are returned  All attributes that are prefaced by `-` must follow all attributes that are  not prefaced by `-`. In addition, each attribute name in the list must match  at least one attribute in the object.  Names may include the `*` wildcard (zero or more characters). Nested attribute  names are supported using periods (e.g. `parentName.childName`).  Some examples:  <pre> ; List of all MsgVpn names /SEMP/v2/config/msgVpns?select=msgVpnName  ; List of all MsgVpn and their attributes except for their names /SEMP/v2/config/msgVpns?select=-msgVpnName  ; Authentication attributes of MsgVpn \"finance\" /SEMP/v2/config/msgVpns/finance?select=authentication*  ; All attributes of MsgVpn \"finance\" except for authentication attributes /SEMP/v2/config/msgVpns/finance?select=-authentication*  ; Access related attributes of Queue \"orderQ\" of MsgVpn \"finance\" /SEMP/v2/config/msgVpns/finance/queues/orderQ?select=owner,permission </pre>  ### where  Include in the response only objects where certain conditions are true. Use  this query parameter to limit which objects are returned to those whose  attribute values meet the given conditions.  The value of `where` is a comma-separated list of expressions. All expressions  must be true for the object to be included in the response. Each expression  takes the form:  <pre> expression  = attribute-name OP value OP          = '==' | '!=' | '&lt;' | '&gt;' | '&lt;=' | '&gt;=' </pre>  `value` may be a number, string, `true`, or `false`, as appropriate for the  type of `attribute-name`. Greater-than and less-than comparisons only work for  numbers. A `*` in a string `value` is interpreted as a wildcard (zero or more  characters). Some examples:  <pre> ; Only enabled MsgVpns /SEMP/v2/config/msgVpns?where=enabled==true  ; Only MsgVpns using basic non-LDAP authentication /SEMP/v2/config/msgVpns?where=authenticationBasicEnabled==true,authenticationBasicType!=ldap  ; Only MsgVpns that allow more than 100 client connections /SEMP/v2/config/msgVpns?where=maxConnectionCount>100  ; Only MsgVpns with msgVpnName starting with \"B\": /SEMP/v2/config/msgVpns?where=msgVpnName==B* </pre>  ### count  Limit the count of objects in the response. This can be useful to limit the  size of the response for large collections. The minimum value for `count` is  `1` and the default is `10`. There is a hidden maximum  as to prevent overloading the system. For example:  <pre> ; Up to 25 MsgVpns /SEMP/v2/config/msgVpns?count=25 </pre>  ### cursor  The cursor, or position, for the next page of objects. Cursors are opaque data  that should not be created or interpreted by SEMP clients, and should only be  used as described below.  When a request is made for a collection and there may be additional objects  available for retrieval that are not included in the initial response, the  response will include a `cursorQuery` field containing a cursor. The value  of this field can be specified in the `cursor` query parameter of a  subsequent request to retrieve the next page of objects. For convenience,  an appropriate URI is constructed automatically by the broker and included  in the `nextPageUri` field of the response. This URI can be used directly  to retrieve the next page of objects.  ## Notes  Note|Description :---:|:--- 1|This specification defines SEMP starting in \"v2\", and not the original SEMP \"v1\" interface. Request and response formats between \"v1\" and \"v2\" are entirely incompatible, although both protocols share a common port configuration on the Solace PubSub+ broker. They are differentiated by the initial portion of the URI path, one of either \"/SEMP/\" or \"/SEMP/v2/\" 2|This API is partially implemented. Only a subset of all objects are available. 3|Read-only attributes may appear in POST and PUT/PATCH requests. However, if a read-only attribute is not marked as identifying, it will be ignored during a PUT/PATCH. 4|For PUT, if the SEMP user is not authorized to modify the attribute, its value is left unchanged rather than set to default. In addition, the values of write-only attributes are not set to their defaults on a PUT. If the object does not exist, it is created first. 5|For DELETE, the body of the request currently serves no purpose and will cause an error if not empty.    
+ * SEMP (starting in `v2`, see note 1) is a RESTful API for configuring, monitoring, and administering a Solace PubSub+ broker.  SEMP uses URIs to address manageable **resources** of the Solace PubSub+ broker. Resources are individual **objects**, **collections** of objects, or (exclusively in the action API) **actions**. This document applies to the following API:   API|Base Path|Purpose|Comments :---|:---|:---|:--- Configuration|/SEMP/v2/config|Reading and writing config state|See note 2    The following APIs are also available:   API|Base Path|Purpose|Comments :---|:---|:---|:--- Action|/SEMP/v2/action|Performing actions|See note 2 Monitoring|/SEMP/v2/monitor|Querying operational parameters|See note 2    Resources are always nouns, with individual objects being singular and collections being plural.  Objects within a collection are identified by an `obj-id`, which follows the collection name with the form `collection-name/obj-id`.  Actions within an object are identified by an `action-id`, which follows the object name with the form `obj-id/action-id`.  Some examples:  ``` /SEMP/v2/config/msgVpns                        ; MsgVpn collection /SEMP/v2/config/msgVpns/a                      ; MsgVpn object named \"a\" /SEMP/v2/config/msgVpns/a/queues               ; Queue collection in MsgVpn \"a\" /SEMP/v2/config/msgVpns/a/queues/b             ; Queue object named \"b\" in MsgVpn \"a\" /SEMP/v2/action/msgVpns/a/queues/b/startReplay ; Action that starts a replay on Queue \"b\" in MsgVpn \"a\" /SEMP/v2/monitor/msgVpns/a/clients             ; Client collection in MsgVpn \"a\" /SEMP/v2/monitor/msgVpns/a/clients/c           ; Client object named \"c\" in MsgVpn \"a\" ```  ## Collection Resources  Collections are unordered lists of objects (unless described as otherwise), and are described by JSON arrays. Each item in the array represents an object in the same manner as the individual object would normally be represented. In the configuration API, the creation of a new object is done through its collection resource.  ## Object and Action Resources  Objects are composed of attributes, actions, collections, and other objects. They are described by JSON objects as name/value pairs. The collections and actions of an object are not contained directly in the object's JSON content; rather the content includes an attribute containing a URI which points to the collections and actions. These contained resources must be managed through this URI. At a minimum, every object has one or more identifying attributes, and its own `uri` attribute which contains the URI pointing to itself.  Actions are also composed of attributes, and are described by JSON objects as name/value pairs. Unlike objects, however, they are not members of a collection and cannot be retrieved, only performed. Actions only exist in the  action API.  Attributes in an object or action may have any (non-exclusively) of the following properties:   Property|Meaning|Comments :---|:---|:--- Identifying|Attribute is involved in unique identification of the object, and appears in its URI| Required|Attribute must be provided in the request| Read-Only|Attribute can only be read, not written|See note 3 Write-Only|Attribute can only be written, not read| Requires-Disable|Attribute can only be changed when object is disabled| Deprecated|Attribute is deprecated, and will disappear in the next SEMP version|    In some requests, certain attributes may only be provided in certain combinations with other attributes:   Relationship|Meaning :---|:--- Requires|Attribute may only be changed by a request if a particular attribute or combination of attributes is also provided in the request Conflicts|Attribute may only be provided in a request if a particular attribute or combination of attributes is not also provided in the request    ## HTTP Methods  The following HTTP methods manipulate resources in accordance with these general principles. Note that some methods are only used in certain APIs:   Method|Resource|Meaning|Request Body|Response Body|Missing Request Attributes :---|:---|:---|:---|:---|:--- POST|Collection|Create object|Initial attribute values|Object attributes and metadata|Set to default PUT|Object|Create or replace object|New attribute values|Object attributes and metadata|Set to default (but see note 4) PUT|Action|Performs action|Action arguments|Action metadata|N/A PATCH|Object|Update object|New attribute values|Object attributes and metadata|unchanged DELETE|Object|Delete object|Empty|Object metadata|N/A GET|Object|Get object|Empty|Object attributes and metadata|N/A GET|Collection|Get collection|Empty|Object attributes and collection metadata|N/A    ## Common Query Parameters  The following are some common query parameters that are supported by many method/URI combinations. Individual URIs may document additional parameters. Note that multiple query parameters can be used together in a single URI, separated by the ampersand character. For example:  ``` ; Request for the MsgVpns collection using two hypothetical query parameters \"q1\" and \"q2\" ; with values \"val1\" and \"val2\" respectively /SEMP/v2/config/msgVpns?q1=val1&q2=val2 ```  ### select  Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. Use this query parameter to limit the size of the returned data for each returned object, return only those fields that are desired, or exclude fields that are not desired.  The value of `select` is a comma-separated list of attribute names. If the list contains attribute names that are not prefaced by `-`, only those attributes are included in the response. If the list contains attribute names that are prefaced by `-`, those attributes are excluded from the response. If the list contains both types, then the difference of the first set of attributes and the second set of attributes is returned. If the list is empty (i.e. `select=`), no attributes are returned.  All attributes that are prefaced by `-` must follow all attributes that are not prefaced by `-`. In addition, each attribute name in the list must match at least one attribute in the object.  Names may include the `*` wildcard (zero or more characters). Nested attribute names are supported using periods (e.g. `parentName.childName`).  Some examples:  ``` ; List of all MsgVpn names /SEMP/v2/config/msgVpns?select=msgVpnName ; List of all MsgVpn and their attributes except for their names /SEMP/v2/config/msgVpns?select=-msgVpnName ; Authentication attributes of MsgVpn \"finance\" /SEMP/v2/config/msgVpns/finance?select=authentication* ; All attributes of MsgVpn \"finance\" except for authentication attributes /SEMP/v2/config/msgVpns/finance?select=-authentication* ; Access related attributes of Queue \"orderQ\" of MsgVpn \"finance\" /SEMP/v2/config/msgVpns/finance/queues/orderQ?select=owner,permission ```  ### where  Include in the response only objects where certain conditions are true. Use this query parameter to limit which objects are returned to those whose attribute values meet the given conditions.  The value of `where` is a comma-separated list of expressions. All expressions must be true for the object to be included in the response. Each expression takes the form:  ``` expression  = attribute-name OP value OP          = '==' | '!=' | '&lt;' | '&gt;' | '&lt;=' | '&gt;=' ```  `value` may be a number, string, `true`, or `false`, as appropriate for the type of `attribute-name`. Greater-than and less-than comparisons only work for numbers. A `*` in a string `value` is interpreted as a wildcard (zero or more characters). Some examples:  ``` ; Only enabled MsgVpns /SEMP/v2/config/msgVpns?where=enabled==true ; Only MsgVpns using basic non-LDAP authentication /SEMP/v2/config/msgVpns?where=authenticationBasicEnabled==true,authenticationBasicType!=ldap ; Only MsgVpns that allow more than 100 client connections /SEMP/v2/config/msgVpns?where=maxConnectionCount>100 ; Only MsgVpns with msgVpnName starting with \"B\": /SEMP/v2/config/msgVpns?where=msgVpnName==B* ```  ### count  Limit the count of objects in the response. This can be useful to limit the size of the response for large collections. The minimum value for `count` is `1` and the default is `10`. There is a hidden maximum as to prevent overloading the system. For example:  ``` ; Up to 25 MsgVpns /SEMP/v2/config/msgVpns?count=25 ```  ### cursor  The cursor, or position, for the next page of objects. Cursors are opaque data that should not be created or interpreted by SEMP clients, and should only be used as described below.  When a request is made for a collection and there may be additional objects available for retrieval that are not included in the initial response, the response will include a `cursorQuery` field containing a cursor. The value of this field can be specified in the `cursor` query parameter of a subsequent request to retrieve the next page of objects. For convenience, an appropriate URI is constructed automatically by the broker and included in the `nextPageUri` field of the response. This URI can be used directly to retrieve the next page of objects.  ## Notes  Note|Description :---:|:--- 1|This specification defines SEMP starting in \"v2\", and not the original SEMP \"v1\" interface. Request and response formats between \"v1\" and \"v2\" are entirely incompatible, although both protocols share a common port configuration on the Solace PubSub+ broker. They are differentiated by the initial portion of the URI path, one of either \"/SEMP/\" or \"/SEMP/v2/\" 2|This API is partially implemented. Only a subset of all objects are available. 3|Read-only attributes may appear in POST and PUT/PATCH requests. However, if a read-only attribute is not marked as identifying, it will be ignored during a PUT/PATCH. 4|For PUT, if the SEMP user is not authorized to modify the attribute, its value is left unchanged rather than set to default. In addition, the values of write-only attributes are not set to their defaults on a PUT. If the object does not exist, it is created first.    
  *
- * OpenAPI spec version: 2.10
+ * OpenAPI spec version: 2.11.00901000201
  * Contact: support@solace.com
  * Generated by: https://github.com/swagger-api/swagger-codegen.git
  */
@@ -14,63 +14,66 @@ use serde_json::Value;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MsgVpn {
-  /// Enable or disable Basic Authentication for clients connecting to the Message VPN. The default value is `true`.
+  /// Enable or disable basic authentication for clients connecting to the Message VPN. The default value is `true`.
   #[serde(rename = "authenticationBasicEnabled", skip_serializing_if="Option::is_none")]
   authentication_basic_enabled: Option<bool>,
-  /// The name of the RADIUS or LDAP Profile to use when \"authenticationBasicType\" is \"radius\" or \"ldap\" respectively. The default value is `\"default\"`.
+  /// The name of the RADIUS or LDAP Profile to use for basic authentication. The default value is `\"default\"`.
   #[serde(rename = "authenticationBasicProfileName", skip_serializing_if="Option::is_none")]
   authentication_basic_profile_name: Option<String>,
-  /// The RADIUS domain string to use when \"authenticationBasicType\" is \"radius\". The default value is `\"\"`.
+  /// The RADIUS domain to use for basic authentication. The default value is `\"\"`.
   #[serde(rename = "authenticationBasicRadiusDomain", skip_serializing_if="Option::is_none")]
   authentication_basic_radius_domain: Option<String>,
-  /// Authentication mechanism to be used for Basic Authentication of clients connecting to the Message VPN. The default value is `\"radius\"`. The allowed values and their meaning are:  <pre> \"internal\" - Internal database. Authentication is against Client Usernames. \"ldap\" - LDAP authentication. An LDAP profile name must be provided. \"radius\" - RADIUS authentication. A RADIUS profile name must be provided. \"none\" - No authentication. Anonymous login allowed. </pre> 
+  /// The type of basic authentication to use for clients connecting to the Message VPN. The default value is `\"radius\"`. The allowed values and their meaning are:  <pre> \"internal\" - Internal database. Authentication is against Client Usernames. \"ldap\" - LDAP authentication. An LDAP profile name must be provided. \"radius\" - RADIUS authentication. A RADIUS profile name must be provided. \"none\" - No authentication. Anonymous login allowed. </pre> 
   #[serde(rename = "authenticationBasicType", skip_serializing_if="Option::is_none")]
   authentication_basic_type: Option<String>,
-  /// When enabled, if the client specifies a Client Username via the API connect method, the client provided Username is used instead of the CN (Common Name) field of the certificate\"s subject. When disabled, the certificate CN is always used as the Client Username. The default value is `false`.
+  /// Enable or disable allowing a client to specify a Client Username via the API connect method. When disabled, the certificate CN (Common Name) is always used. The default value is `false`.
   #[serde(rename = "authenticationClientCertAllowApiProvidedUsernameEnabled", skip_serializing_if="Option::is_none")]
   authentication_client_cert_allow_api_provided_username_enabled: Option<bool>,
-  /// Enable or disable the Client Certificate client Authentication for the Message VPN. The default value is `false`.
+  /// Enable or disable client certificate authentication in the Message VPN. The default value is `false`.
   #[serde(rename = "authenticationClientCertEnabled", skip_serializing_if="Option::is_none")]
   authentication_client_cert_enabled: Option<bool>,
-  /// The maximum depth for the client certificate chain. The depth of the chain is defined as the number of signing CA certificates that are present in the chain back to the trusted self-signed root CA certificate. The default value is `3`.
+  /// The maximum depth for a client certificate chain. The depth of a chain is defined as the number of signing CA certificates that are present in the chain back to a trusted self-signed root CA certificate. The default value is `3`.
   #[serde(rename = "authenticationClientCertMaxChainDepth", skip_serializing_if="Option::is_none")]
   authentication_client_cert_max_chain_depth: Option<i64>,
-  /// Define overrides for certificate revocation checking. For \"allow-all\" setting, the result of the client certificate revocation check is ignored. For \"allow-unknown\" setting, the client is authenticated even if the revocation status of his certificate cannot be determined. For \"allow-valid\" setting, the client is only authenticated if the revocation check returned an explicit positive response. The default value is `\"allow-valid\"`. The allowed values and their meaning are:  <pre> \"allow-all\" - Allow the client to authenticate, the result of client certificate revocation check is ingored. \"allow-unknown\" - Allow the client to authenticate even if the revocation status of his certificate cannot be determined. \"allow-valid\" - Allow the client to authenticate only when the revocation check returned an explicit positive response. </pre>  Available since 2.6.
+  /// The desired behavior for client certificate revocation checking. The default value is `\"allow-valid\"`. The allowed values and their meaning are:  <pre> \"allow-all\" - Allow the client to authenticate, the result of client certificate revocation check is ignored. \"allow-unknown\" - Allow the client to authenticate even if the revocation status of his certificate cannot be determined. \"allow-valid\" - Allow the client to authenticate only when the revocation check returned an explicit positive response. </pre>  Available since 2.6.
   #[serde(rename = "authenticationClientCertRevocationCheckMode", skip_serializing_if="Option::is_none")]
   authentication_client_cert_revocation_check_mode: Option<String>,
   /// The field from the client certificate to use as the client username. The default value is `\"common-name\"`. The allowed values and their meaning are:  <pre> \"common-name\" - the username is extracted from the certificate's Common Name. \"subject-alternate-name-msupn\" - the username is extracted from the certificate's Other Name type of the Subject Alternative Name and must have the msUPN signature. </pre>  Available since 2.5.
   #[serde(rename = "authenticationClientCertUsernameSource", skip_serializing_if="Option::is_none")]
   authentication_client_cert_username_source: Option<String>,
-  /// Enable or disable validation of the \"Not Before\" and \"Not After\" validity dates in the client certificate. When disabled, a certificate will be accepted even if the certificate is not valid according to the \"Not Before\" and \"Not After\" validity dates in the certificate. The default value is `true`.
+  /// Enable or disable validation of the \"Not Before\" and \"Not After\" validity dates in the client certificate. The default value is `true`.
   #[serde(rename = "authenticationClientCertValidateDateEnabled", skip_serializing_if="Option::is_none")]
   authentication_client_cert_validate_date_enabled: Option<bool>,
-  /// When enabled, if the client specifies a Client Username via the API connect method, the client provided Username is used instead of the Kerberos Principal name in Kerberos token. When disabled, the Kerberos Principal name is always used as the Client Username. The default value is `false`.
+  /// Enable or disable allowing a client to specify a Client Username via the API connect method. When disabled, the Kerberos Principal name is always used. The default value is `false`.
   #[serde(rename = "authenticationKerberosAllowApiProvidedUsernameEnabled", skip_serializing_if="Option::is_none")]
   authentication_kerberos_allow_api_provided_username_enabled: Option<bool>,
-  /// Enable or disable Kerberos Authentication for clients in the Message VPN. If a user provides credentials for a different authentication scheme, this setting is not applicable. The default value is `false`.
+  /// Enable or disable Kerberos authentication in the Message VPN. The default value is `false`.
   #[serde(rename = "authenticationKerberosEnabled", skip_serializing_if="Option::is_none")]
   authentication_kerberos_enabled: Option<bool>,
-  /// The name of the attribute that should be retrieved from the LDAP server as part of the LDAP search when authorizing a client. It indicates that the client belongs to a particular group (i.e. the value associated with this attribute). The default value is `\"memberOf\"`.
+  /// The name of the attribute that is retrieved from the LDAP server as part of the LDAP search when authorizing a client connecting to the Message VPN. The default value is `\"memberOf\"`.
   #[serde(rename = "authorizationLdapGroupMembershipAttributeName", skip_serializing_if="Option::is_none")]
   authorization_ldap_group_membership_attribute_name: Option<String>,
-  /// The LDAP Profile name to be used when \"authorizationType\" is \"ldap\". The default value is `\"\"`.
+  /// The name of the LDAP Profile to use for client authorization. The default value is `\"\"`.
   #[serde(rename = "authorizationProfileName", skip_serializing_if="Option::is_none")]
   authorization_profile_name: Option<String>,
-  /// Authorization mechanism to be used for clients connecting to the Message VPN. The default value is `\"internal\"`. The allowed values and their meaning are:  <pre> \"ldap\" - LDAP authorization. \"internal\" - Internal authorization. </pre> 
+  /// The type of authorization to use for clients connecting to the Message VPN. The default value is `\"internal\"`. The allowed values and their meaning are:  <pre> \"ldap\" - LDAP authorization. \"internal\" - Internal authorization. </pre> 
   #[serde(rename = "authorizationType", skip_serializing_if="Option::is_none")]
   authorization_type: Option<String>,
-  /// Enable or disable validation of the Common Name (CN) in the server certificate from the Remote Router. If enabled, the Common Name is checked against the list of Trusted Common Names configured for the Bridge. The default value is `true`.
+  /// Enable or disable validation of the Common Name (CN) in the server certificate from the remote broker. If enabled, the Common Name is checked against the list of Trusted Common Names configured for the Bridge. The default value is `true`.
   #[serde(rename = "bridgingTlsServerCertEnforceTrustedCommonNameEnabled", skip_serializing_if="Option::is_none")]
   bridging_tls_server_cert_enforce_trusted_common_name_enabled: Option<bool>,
-  /// The maximum depth for the server certificate chain. The depth of the chain is defined as the number of signing CA certificates that are present in the chain back to the trusted self-signed root CA certificate. The default value is `3`.
+  /// The maximum depth for a server certificate chain. The depth of a chain is defined as the number of signing CA certificates that are present in the chain back to a trusted self-signed root CA certificate. The default value is `3`.
   #[serde(rename = "bridgingTlsServerCertMaxChainDepth", skip_serializing_if="Option::is_none")]
   bridging_tls_server_cert_max_chain_depth: Option<i64>,
-  /// Enable or disable validation of the \"Not Before\" and \"Not After\" validity dates in the server certificate. When disabled, a certificate will be accepted even if the certificate is not valid according to the \"Not Before\" and \"Not After\" validity dates in the certificate. The default value is `true`.
+  /// Enable or disable validation of the \"Not Before\" and \"Not After\" validity dates in the server certificate. When disabled, a certificate will be accepted even if the certificate is not valid based on these dates. The default value is `true`.
   #[serde(rename = "bridgingTlsServerCertValidateDateEnabled", skip_serializing_if="Option::is_none")]
   bridging_tls_server_cert_validate_date_enabled: Option<bool>,
   /// Enable or disable managing of cache instances over the message bus. The default value is `true`.
   #[serde(rename = "distributedCacheManagementEnabled", skip_serializing_if="Option::is_none")]
   distributed_cache_management_enabled: Option<bool>,
+  /// Enable or disable Dynamic Message Routing (DMR) for the Message VPN. The default value is `false`. Available since 2.11.
+  #[serde(rename = "dmrEnabled", skip_serializing_if="Option::is_none")]
+  dmr_enabled: Option<bool>,
   /// Enable or disable the Message VPN. The default value is `false`.
   #[serde(rename = "enabled", skip_serializing_if="Option::is_none")]
   enabled: Option<bool>,
@@ -131,85 +134,88 @@ pub struct MsgVpn {
   /// Enable or disable JNDI access for clients in the Message VPN. The default value is `false`. Available since 2.2.
   #[serde(rename = "jndiEnabled", skip_serializing_if="Option::is_none")]
   jndi_enabled: Option<bool>,
-  /// The maximum number of client connections that can be simultaneously connected to the Message VPN. This value may be higher than supported by the hardware. The default is the maximum value supported by the hardware. The default is the max value supported by the hardware.
+  /// The maximum number of client connections to the Message VPN. The default is the max value supported by the platform.
   #[serde(rename = "maxConnectionCount", skip_serializing_if="Option::is_none")]
   max_connection_count: Option<i64>,
-  /// The maximum number of egress flows that can be created in the Message VPN. The default value is `16000`.
+  /// The maximum number of transmit flows that can be created in the Message VPN. The default value is `16000`.
   #[serde(rename = "maxEgressFlowCount", skip_serializing_if="Option::is_none")]
   max_egress_flow_count: Option<i64>,
   /// The maximum number of Queues and Topic Endpoints that can be created in the Message VPN. The default value is `16000`.
   #[serde(rename = "maxEndpointCount", skip_serializing_if="Option::is_none")]
   max_endpoint_count: Option<i64>,
-  /// The maximum number of ingress flows that can be created in the Message VPN. The default value is `16000`.
+  /// The maximum number of receive flows that can be created in the Message VPN. The default value is `16000`.
   #[serde(rename = "maxIngressFlowCount", skip_serializing_if="Option::is_none")]
   max_ingress_flow_count: Option<i64>,
-  /// The maximum Message Spool usage by the Message VPN, in megabytes. The default value is `0`.
+  /// The maximum message spool usage by the Message VPN, in megabytes. The default value is `0`.
   #[serde(rename = "maxMsgSpoolUsage", skip_serializing_if="Option::is_none")]
   max_msg_spool_usage: Option<i64>,
-  /// The maximum number of local client subscriptions (both primary and backup) that can be added to the Message VPN. The default varies by platform. The default varies by platform.
+  /// The maximum number of local client subscriptions (both primary and backup) that can be added to the Message VPN. The default varies by platform.
   #[serde(rename = "maxSubscriptionCount", skip_serializing_if="Option::is_none")]
   max_subscription_count: Option<i64>,
-  /// The maximum number of transacted sessions for the Message VPN. The default varies by platform. The default varies by platform.
+  /// The maximum number of transacted sessions that can be created in the Message VPN. The default varies by platform.
   #[serde(rename = "maxTransactedSessionCount", skip_serializing_if="Option::is_none")]
   max_transacted_session_count: Option<i64>,
-  /// The maximum number of transactions for the Message VPN. The default varies by platform. The default varies by platform.
+  /// The maximum number of transactions that can be created in the Message VPN. The default varies by platform.
   #[serde(rename = "maxTransactionCount", skip_serializing_if="Option::is_none")]
   max_transaction_count: Option<i64>,
+  /// The maximum total memory usage of the MQTT Retain feature for this Message VPN, in MB. If the maximum memory is reached, any arriving retain messages that require more memory are discarded.  A value of -1 indicates that the memory is bounded only by the global max memory limit. A value of 0 prevents MQTT Retain from becoming operational. The default value is `-1`. Available since 2.11.
+  #[serde(rename = "mqttRetainMaxMemory", skip_serializing_if="Option::is_none")]
+  mqtt_retain_max_memory: Option<i32>,
   /// The name of the Message VPN.
   #[serde(rename = "msgVpnName", skip_serializing_if="Option::is_none")]
   msg_vpn_name: Option<String>,
   /// IP version to use if DNS lookup contains both an IPv4 and IPv6 address. The default value is `\"ipv6\"`. The allowed values and their meaning are:  <pre> \"ipv4\" - Use IPv4 address when DNS lookup contains both an IPv4 and IPv6 address. \"ipv6\" - Use IPv6 address when DNS lookup contains both an IPv4 and IPv6 address. </pre>  Available since 2.9.
   #[serde(rename = "preferIpVersion", skip_serializing_if="Option::is_none")]
   prefer_ip_version: Option<String>,
-  /// The acknowledgement (ACK) propagation interval for the Replication Bridge, in number of replicated messages. The default value is `20`.
+  /// The acknowledgement (ACK) propagation interval for the replication Bridge, in number of replicated messages. The default value is `20`.
   #[serde(rename = "replicationAckPropagationIntervalMsgCount", skip_serializing_if="Option::is_none")]
   replication_ack_propagation_interval_msg_count: Option<i64>,
-  /// The Client Username the Replication Bridge uses to login to the Remote Message VPN on the Replication mate. The default value is `\"\"`.
+  /// The Client Username the replication Bridge uses to login to the remote Message VPN. The default value is `\"\"`.
   #[serde(rename = "replicationBridgeAuthenticationBasicClientUsername", skip_serializing_if="Option::is_none")]
   replication_bridge_authentication_basic_client_username: Option<String>,
-  /// The password the Replication Bridge uses to login to the Remote Message VPN on the Replication mate. The default is to have no password. The default is to have no `replicationBridgeAuthenticationBasicPassword`.
+  /// The password for the Client Username. The default is to have no `replicationBridgeAuthenticationBasicPassword`.
   #[serde(rename = "replicationBridgeAuthenticationBasicPassword", skip_serializing_if="Option::is_none")]
   replication_bridge_authentication_basic_password: Option<String>,
   /// The PEM formatted content for the client certificate used by this bridge to login to the Remote Message VPN. It must consist of a private key and between one and three certificates comprising the certificate trust chain. The default value is `\"\"`. Available since 2.9.
   #[serde(rename = "replicationBridgeAuthenticationClientCertContent", skip_serializing_if="Option::is_none")]
   replication_bridge_authentication_client_cert_content: Option<String>,
-  /// The password for the client certificate used by this bridge to login to the Remote Message VPN. The default value is `\"\"`. Available since 2.9.
+  /// The password for the client certificate. The default value is `\"\"`. Available since 2.9.
   #[serde(rename = "replicationBridgeAuthenticationClientCertPassword", skip_serializing_if="Option::is_none")]
   replication_bridge_authentication_client_cert_password: Option<String>,
-  /// The Authentication Scheme for the Replication Bridge in the Message VPN. The default value is `\"basic\"`. The allowed values and their meaning are:  <pre> \"basic\" - Basic Authentication Scheme (via username and password). \"client-certificate\" - Client Certificate Authentication Scheme (via certificate file or content). </pre> 
+  /// The authentication scheme for the replication Bridge in the Message VPN. The default value is `\"basic\"`. The allowed values and their meaning are:  <pre> \"basic\" - Basic Authentication Scheme (via username and password). \"client-certificate\" - Client Certificate Authentication Scheme (via certificate file or content). </pre> 
   #[serde(rename = "replicationBridgeAuthenticationScheme", skip_serializing_if="Option::is_none")]
   replication_bridge_authentication_scheme: Option<String>,
-  /// Whether compression is used for the Replication Bridge. The default value is `false`.
+  /// Enable or disable use of compression for the replication Bridge. The default value is `false`.
   #[serde(rename = "replicationBridgeCompressedDataEnabled", skip_serializing_if="Option::is_none")]
   replication_bridge_compressed_data_enabled: Option<bool>,
-  /// The size of the window used for guaranteed messages published to the Replication Bridge, in messages. The default value is `255`.
+  /// The size of the window used for guaranteed messages published to the replication Bridge, in messages. The default value is `255`.
   #[serde(rename = "replicationBridgeEgressFlowWindowSize", skip_serializing_if="Option::is_none")]
   replication_bridge_egress_flow_window_size: Option<i64>,
-  /// Number of seconds that must pass before retrying the Replication Bridge connection. The default value is `3`.
+  /// The number of seconds that must pass before retrying the replication Bridge connection. The default value is `3`.
   #[serde(rename = "replicationBridgeRetryDelay", skip_serializing_if="Option::is_none")]
   replication_bridge_retry_delay: Option<i64>,
-  /// Enable or disable use of TLS for the Replication Bridge connection. The default value is `false`.
+  /// Enable or disable use of TLS for the replication Bridge connection. The default value is `false`.
   #[serde(rename = "replicationBridgeTlsEnabled", skip_serializing_if="Option::is_none")]
   replication_bridge_tls_enabled: Option<bool>,
-  /// The Client Profile for the Unidirectional Replication Bridge. The Client Profile must exist in the local Message VPN, and it is used only for the TCP parameters. The default value is `\"#client-profile\"`.
+  /// The Client Profile for the unidirectional replication Bridge in the Message VPN. It is used only for the TCP parameters. The default value is `\"#client-profile\"`.
   #[serde(rename = "replicationBridgeUnidirectionalClientProfileName", skip_serializing_if="Option::is_none")]
   replication_bridge_unidirectional_client_profile_name: Option<String>,
-  /// Enable or disable the Replication feature for the Message VPN. The default value is `false`.
+  /// Enable or disable replication for the Message VPN. The default value is `false`.
   #[serde(rename = "replicationEnabled", skip_serializing_if="Option::is_none")]
   replication_enabled: Option<bool>,
-  /// The behavior to take when enabling the Replication feature for the Message VPN, depending on the existence of the Replication Queue. The default value is `\"fail-on-existing-queue\"`. The allowed values and their meaning are:  <pre> \"fail-on-existing-queue\" - The data replication queue must not already exist. \"force-use-existing-queue\" - The data replication queue must already exist. Any data messages on the Queue will be forwarded to interested applications. IMPORTANT: Before using this mode be certain that the messages are not stale or otherwise unsuitable to be forwarded. This mode can only be specified when the existing queue is configured the same as is currently specified under replication configuration otherwise the enabling of replication will fail. \"force-recreate-queue\" - The data replication queue must already exist. Any data messages on the Queue will be discarded. IMPORTANT: Before using this mode be certain that the messages on the existing data replication queue are not needed by interested applications. </pre> 
+  /// The behavior to take when enabling replication for the Message VPN, depending on the existence of the replication Queue. The default value is `\"fail-on-existing-queue\"`. The allowed values and their meaning are:  <pre> \"fail-on-existing-queue\" - The data replication queue must not already exist. \"force-use-existing-queue\" - The data replication queue must already exist. Any data messages on the Queue will be forwarded to interested applications. IMPORTANT: Before using this mode be certain that the messages are not stale or otherwise unsuitable to be forwarded. This mode can only be specified when the existing queue is configured the same as is currently specified under replication configuration otherwise the enabling of replication will fail. \"force-recreate-queue\" - The data replication queue must already exist. Any data messages on the Queue will be discarded. IMPORTANT: Before using this mode be certain that the messages on the existing data replication queue are not needed by interested applications. </pre> 
   #[serde(rename = "replicationEnabledQueueBehavior", skip_serializing_if="Option::is_none")]
   replication_enabled_queue_behavior: Option<String>,
-  /// The maximum Message Spool usage by the Replication Bridge Queue (quota), in megabytes. The default value is `60000`.
+  /// The maximum message spool usage by the replication Bridge Queue (quota), in megabytes. The default value is `60000`.
   #[serde(rename = "replicationQueueMaxMsgSpoolUsage", skip_serializing_if="Option::is_none")]
   replication_queue_max_msg_spool_usage: Option<i64>,
-  /// Assign the message discard behavior, that is the circumstances under which a negative acknowledgement (NACK) is sent to the Client on the Replication Bridge Queue discards. The default value is `true`.
+  /// Enable or disable whether messages discarded on this replication Bridge Queue are rejected back to the sender. The default value is `true`.
   #[serde(rename = "replicationQueueRejectMsgToSenderOnDiscardEnabled", skip_serializing_if="Option::is_none")]
   replication_queue_reject_msg_to_sender_on_discard_enabled: Option<bool>,
-  /// Enable or disable the synchronously replicated topics ineligible behavior of the Replication Bridge. If enabled and the synchronous replication becomes ineligible, guaranteed messages published to synchronously replicated topics will be rejected back to the sender as a negative acknowledgement (NACK). If disabled, the synchronous replication will revert to the asynchronous one. The default value is `false`.
+  /// Enable or disable whether guaranteed messages published to synchronously replicated Topics are rejected back to the sender when synchronous replication becomes ineligible. The default value is `false`.
   #[serde(rename = "replicationRejectMsgWhenSyncIneligibleEnabled", skip_serializing_if="Option::is_none")]
   replication_reject_msg_when_sync_ineligible_enabled: Option<bool>,
-  /// The replication role for the Message VPN. The default value is `\"standby\"`. The allowed values and their meaning are:  <pre> \"active\" - Assume the Active role in Replication for the Message VPN. \"standby\" - Assume the Standby role in Replication for the Message VPN. </pre> 
+  /// The replication role for the Message VPN. The default value is `\"standby\"`. The allowed values and their meaning are:  <pre> \"active\" - Assume the Active role in replication for the Message VPN. \"standby\" - Assume the Standby role in replication for the Message VPN. </pre> 
   #[serde(rename = "replicationRole", skip_serializing_if="Option::is_none")]
   replication_role: Option<String>,
   /// The transaction replication mode for all transactions within the Message VPN. When mode is asynchronous, all transactions originated by clients are replicated to the standby site using the asynchronous replication. When mode is synchronous, all transactions originated by clients are replicated to the standby site using the synchronous replication. Changing this value during operation will not affect existing transactions, it is only used upon starting a transaction. The default value is `\"async\"`. The allowed values and their meaning are:  <pre> \"sync\" - Synchronous replication-mode. Published messages are acknowledged when they are spooled on the standby site. \"async\" - Asynchronous replication-mode. Published messages are acknowledged when they are spooled locally. </pre> 
@@ -218,10 +224,10 @@ pub struct MsgVpn {
   /// Enable or disable validation of the Common Name (CN) in the server certificate from the remote REST Consumer. If enabled, the Common Name is checked against the list of Trusted Common Names configured for the REST Consumer. The default value is `true`.
   #[serde(rename = "restTlsServerCertEnforceTrustedCommonNameEnabled", skip_serializing_if="Option::is_none")]
   rest_tls_server_cert_enforce_trusted_common_name_enabled: Option<bool>,
-  /// The maximum depth for the server certificate from the remote REST Consumer chain. The depth of the chain is defined as the number of signing CA certificates that are present in the chain back to the trusted self-signed root CA certificate. The default value is `3`.
+  /// The maximum depth for a REST Consumer server certificate chain. The depth of a chain is defined as the number of signing CA certificates that are present in the chain back to a trusted self-signed root CA certificate. The default value is `3`.
   #[serde(rename = "restTlsServerCertMaxChainDepth", skip_serializing_if="Option::is_none")]
   rest_tls_server_cert_max_chain_depth: Option<i64>,
-  /// Enable or disable validation of the \"Not Before\" and \"Not After\" validity dates in the server certificate from the remote REST Consumer. When disabled, a certificate will be accepted even if the certificate is not valid according to the \"Not Before\" and \"Not After\" validity dates in the certificate. The default value is `true`.
+  /// Enable or disable validation of the \"Not Before\" and \"Not After\" validity dates in the REST Consumer server certificate. The default value is `true`.
   #[serde(rename = "restTlsServerCertValidateDateEnabled", skip_serializing_if="Option::is_none")]
   rest_tls_server_cert_validate_date_enabled: Option<bool>,
   /// Enable or disable \"admin client\" SEMP over the message bus commands for the current Message VPN. The default value is `false`.
@@ -242,7 +248,7 @@ pub struct MsgVpn {
   /// Enable or disable \"show\" SEMP over the message bus commands for the current Message VPN. The default value is `false`.
   #[serde(rename = "sempOverMsgBusShowEnabled", skip_serializing_if="Option::is_none")]
   semp_over_msg_bus_show_enabled: Option<bool>,
-  /// The maximum number of AMQP client connections that can be simultaneously connected to the Message VPN. The default is the max value supported by the hardware. Available since 2.2.
+  /// The maximum number of AMQP client connections that can be simultaneously connected to the Message VPN. This value may be higher than supported by the platform. The default is the max value supported by the platform. Available since 2.2.
   #[serde(rename = "serviceAmqpMaxConnectionCount", skip_serializing_if="Option::is_none")]
   service_amqp_max_connection_count: Option<i64>,
   /// Enable or disable the plain-text AMQP service in the Message VPN. Disabling causes clients connected to the corresponding listen-port to be disconnected. The default value is `false`. Available since 2.2.
@@ -257,7 +263,7 @@ pub struct MsgVpn {
   /// The port number for AMQP clients that connect to the Message VPN over TLS. The default is to have no `serviceAmqpTlsListenPort`. Available since 2.2.
   #[serde(rename = "serviceAmqpTlsListenPort", skip_serializing_if="Option::is_none")]
   service_amqp_tls_listen_port: Option<i64>,
-  /// The maximum number of MQTT client connections that can be simultaneously connected to the Message VPN. The default is the max value supported by the hardware. Available since 2.1.
+  /// The maximum number of MQTT client connections that can be simultaneously connected to the Message VPN. The default is the max value supported by the platform. Available since 2.1.
   #[serde(rename = "serviceMqttMaxConnectionCount", skip_serializing_if="Option::is_none")]
   service_mqtt_max_connection_count: Option<i64>,
   /// Enable or disable the plain-text MQTT service in the Message VPN. Disabling causes clients currently connected to be disconnected. The default value is `false`. Available since 2.1.
@@ -284,7 +290,7 @@ pub struct MsgVpn {
   /// The port number for plain-text MQTT clients that connect to the Message VPN using WebSocket. The default value is `0`. Available since 2.1.
   #[serde(rename = "serviceMqttWebSocketListenPort", skip_serializing_if="Option::is_none")]
   service_mqtt_web_socket_listen_port: Option<i64>,
-  /// The maximum number of REST incoming client connections that can be simultaneously connected to the Message VPN. The default is the max value supported by the hardware.
+  /// The maximum number of REST incoming client connections that can be simultaneously connected to the Message VPN. This value may be higher than supported by the platform. The default is the max value supported by the platform.
   #[serde(rename = "serviceRestIncomingMaxConnectionCount", skip_serializing_if="Option::is_none")]
   service_rest_incoming_max_connection_count: Option<i64>,
   /// Enable or disable the plain-text REST service for incoming clients in the Message VPN. Disabling causes clients currently connected to be disconnected. The default value is `false`.
@@ -305,7 +311,7 @@ pub struct MsgVpn {
   /// The maximum number of REST Consumer (outgoing) client connections that can be simultaneously connected to the Message VPN. The default varies by platform.
   #[serde(rename = "serviceRestOutgoingMaxConnectionCount", skip_serializing_if="Option::is_none")]
   service_rest_outgoing_max_connection_count: Option<i64>,
-  /// The maximum number of SMF client connections that can be simultaneously connected to the Message VPN. The default is the max value supported by the hardware.
+  /// The maximum number of SMF client connections that can be simultaneously connected to the Message VPN. This value may be higher than supported by the platform. The default is the max value supported by the platform.
   #[serde(rename = "serviceSmfMaxConnectionCount", skip_serializing_if="Option::is_none")]
   service_smf_max_connection_count: Option<i64>,
   /// Enable or disable the plain-text SMF service in the Message VPN. Disabling causes clients currently connected to be disconnected. The default value is `true`.
@@ -314,7 +320,7 @@ pub struct MsgVpn {
   /// Enable or disable the use of TLS for the SMF service in the Message VPN. Disabling causes clients currently connected over TLS to be disconnected. The default value is `true`.
   #[serde(rename = "serviceSmfTlsEnabled", skip_serializing_if="Option::is_none")]
   service_smf_tls_enabled: Option<bool>,
-  /// The maximum number of Web Transport client connections that can be simultaneously connected to the Message VPN. The default is the max value supported by the hardware.
+  /// The maximum number of Web Transport client connections that can be simultaneously connected to the Message VPN. This value may be higher than supported by the platform. The default is the max value supported by the platform.
   #[serde(rename = "serviceWebMaxConnectionCount", skip_serializing_if="Option::is_none")]
   service_web_max_connection_count: Option<i64>,
   /// Enable or disable the plain-text Web Transport service in the Message VPN. Disabling causes clients currently connected to be disconnected. The default value is `true`.
@@ -350,6 +356,7 @@ impl MsgVpn {
       bridging_tls_server_cert_max_chain_depth: None,
       bridging_tls_server_cert_validate_date_enabled: None,
       distributed_cache_management_enabled: None,
+      dmr_enabled: None,
       enabled: None,
       event_connection_count_threshold: None,
       event_egress_flow_count_threshold: None,
@@ -383,6 +390,7 @@ impl MsgVpn {
       max_subscription_count: None,
       max_transacted_session_count: None,
       max_transaction_count: None,
+      mqtt_retain_max_memory: None,
       msg_vpn_name: None,
       prefer_ip_version: None,
       replication_ack_propagation_interval_msg_count: None,
@@ -764,6 +772,23 @@ impl MsgVpn {
 
   pub fn reset_distributed_cache_management_enabled(&mut self) {
     self.distributed_cache_management_enabled = None;
+  }
+
+  pub fn set_dmr_enabled(&mut self, dmr_enabled: bool) {
+    self.dmr_enabled = Some(dmr_enabled);
+  }
+
+  pub fn with_dmr_enabled(mut self, dmr_enabled: bool) -> MsgVpn {
+    self.dmr_enabled = Some(dmr_enabled);
+    self
+  }
+
+  pub fn dmr_enabled(&self) -> Option<&bool> {
+    self.dmr_enabled.as_ref()
+  }
+
+  pub fn reset_dmr_enabled(&mut self) {
+    self.dmr_enabled = None;
   }
 
   pub fn set_enabled(&mut self, enabled: bool) {
@@ -1325,6 +1350,23 @@ impl MsgVpn {
 
   pub fn reset_max_transaction_count(&mut self) {
     self.max_transaction_count = None;
+  }
+
+  pub fn set_mqtt_retain_max_memory(&mut self, mqtt_retain_max_memory: i32) {
+    self.mqtt_retain_max_memory = Some(mqtt_retain_max_memory);
+  }
+
+  pub fn with_mqtt_retain_max_memory(mut self, mqtt_retain_max_memory: i32) -> MsgVpn {
+    self.mqtt_retain_max_memory = Some(mqtt_retain_max_memory);
+    self
+  }
+
+  pub fn mqtt_retain_max_memory(&self) -> Option<&i32> {
+    self.mqtt_retain_max_memory.as_ref()
+  }
+
+  pub fn reset_mqtt_retain_max_memory(&mut self) {
+    self.mqtt_retain_max_memory = None;
   }
 
   pub fn set_msg_vpn_name(&mut self, msg_vpn_name: String) {
