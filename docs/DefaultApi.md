@@ -34,7 +34,7 @@ Method | HTTP request | Description
 [**create_msg_vpn_mqtt_session**](DefaultApi.md#create_msg_vpn_mqtt_session) | **Post** /msgVpns/{msgVpnName}/mqttSessions | Create an MQTT Session object.
 [**create_msg_vpn_mqtt_session_subscription**](DefaultApi.md#create_msg_vpn_mqtt_session_subscription) | **Post** /msgVpns/{msgVpnName}/mqttSessions/{mqttSessionClientId},{mqttSessionVirtualRouter}/subscriptions | Create a Subscription object.
 [**create_msg_vpn_queue**](DefaultApi.md#create_msg_vpn_queue) | **Post** /msgVpns/{msgVpnName}/queues | Create a Queue object.
-[**create_msg_vpn_queue_subscription**](DefaultApi.md#create_msg_vpn_queue_subscription) | **Post** /msgVpns/{msgVpnName}/queues/{queueName}/subscriptions | Create a Subscription object.
+[**create_msg_vpn_queue_subscription**](DefaultApi.md#create_msg_vpn_queue_subscription) | **Post** /msgVpns/{msgVpnName}/queues/{queueName}/subscriptions | Create a Queue Subscription object.
 [**create_msg_vpn_replay_log**](DefaultApi.md#create_msg_vpn_replay_log) | **Post** /msgVpns/{msgVpnName}/replayLogs | Create a Replay Log object.
 [**create_msg_vpn_replicated_topic**](DefaultApi.md#create_msg_vpn_replicated_topic) | **Post** /msgVpns/{msgVpnName}/replicatedTopics | Create a Replicated Topic object.
 [**create_msg_vpn_rest_delivery_point**](DefaultApi.md#create_msg_vpn_rest_delivery_point) | **Post** /msgVpns/{msgVpnName}/restDeliveryPoints | Create a REST Delivery Point object.
@@ -43,6 +43,8 @@ Method | HTTP request | Description
 [**create_msg_vpn_rest_delivery_point_rest_consumer_tls_trusted_common_name**](DefaultApi.md#create_msg_vpn_rest_delivery_point_rest_consumer_tls_trusted_common_name) | **Post** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName}/restConsumers/{restConsumerName}/tlsTrustedCommonNames | Create a Trusted Common Name object.
 [**create_msg_vpn_sequenced_topic**](DefaultApi.md#create_msg_vpn_sequenced_topic) | **Post** /msgVpns/{msgVpnName}/sequencedTopics | Create a Sequenced Topic object.
 [**create_msg_vpn_topic_endpoint**](DefaultApi.md#create_msg_vpn_topic_endpoint) | **Post** /msgVpns/{msgVpnName}/topicEndpoints | Create a Topic Endpoint object.
+[**create_username**](DefaultApi.md#create_username) | **Post** /usernames | Create a Username object.
+[**create_username_msg_vpn_access_level_exception**](DefaultApi.md#create_username_msg_vpn_access_level_exception) | **Post** /usernames/{userName}/msgVpnAccessLevelExceptions | Create a Message VPN Access Level Exception object.
 [**delete_dmr_cluster**](DefaultApi.md#delete_dmr_cluster) | **Delete** /dmrClusters/{dmrClusterName} | Delete a Cluster object.
 [**delete_dmr_cluster_link**](DefaultApi.md#delete_dmr_cluster_link) | **Delete** /dmrClusters/{dmrClusterName}/links/{remoteNodeName} | Delete a Link object.
 [**delete_dmr_cluster_link_remote_address**](DefaultApi.md#delete_dmr_cluster_link_remote_address) | **Delete** /dmrClusters/{dmrClusterName}/links/{remoteNodeName}/remoteAddresses/{remoteAddress} | Delete a Remote Address object.
@@ -73,7 +75,7 @@ Method | HTTP request | Description
 [**delete_msg_vpn_mqtt_session**](DefaultApi.md#delete_msg_vpn_mqtt_session) | **Delete** /msgVpns/{msgVpnName}/mqttSessions/{mqttSessionClientId},{mqttSessionVirtualRouter} | Delete an MQTT Session object.
 [**delete_msg_vpn_mqtt_session_subscription**](DefaultApi.md#delete_msg_vpn_mqtt_session_subscription) | **Delete** /msgVpns/{msgVpnName}/mqttSessions/{mqttSessionClientId},{mqttSessionVirtualRouter}/subscriptions/{subscriptionTopic} | Delete a Subscription object.
 [**delete_msg_vpn_queue**](DefaultApi.md#delete_msg_vpn_queue) | **Delete** /msgVpns/{msgVpnName}/queues/{queueName} | Delete a Queue object.
-[**delete_msg_vpn_queue_subscription**](DefaultApi.md#delete_msg_vpn_queue_subscription) | **Delete** /msgVpns/{msgVpnName}/queues/{queueName}/subscriptions/{subscriptionTopic} | Delete a Subscription object.
+[**delete_msg_vpn_queue_subscription**](DefaultApi.md#delete_msg_vpn_queue_subscription) | **Delete** /msgVpns/{msgVpnName}/queues/{queueName}/subscriptions/{subscriptionTopic} | Delete a Queue Subscription object.
 [**delete_msg_vpn_replay_log**](DefaultApi.md#delete_msg_vpn_replay_log) | **Delete** /msgVpns/{msgVpnName}/replayLogs/{replayLogName} | Delete a Replay Log object.
 [**delete_msg_vpn_replicated_topic**](DefaultApi.md#delete_msg_vpn_replicated_topic) | **Delete** /msgVpns/{msgVpnName}/replicatedTopics/{replicatedTopic} | Delete a Replicated Topic object.
 [**delete_msg_vpn_rest_delivery_point**](DefaultApi.md#delete_msg_vpn_rest_delivery_point) | **Delete** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName} | Delete a REST Delivery Point object.
@@ -82,6 +84,8 @@ Method | HTTP request | Description
 [**delete_msg_vpn_rest_delivery_point_rest_consumer_tls_trusted_common_name**](DefaultApi.md#delete_msg_vpn_rest_delivery_point_rest_consumer_tls_trusted_common_name) | **Delete** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName}/restConsumers/{restConsumerName}/tlsTrustedCommonNames/{tlsTrustedCommonName} | Delete a Trusted Common Name object.
 [**delete_msg_vpn_sequenced_topic**](DefaultApi.md#delete_msg_vpn_sequenced_topic) | **Delete** /msgVpns/{msgVpnName}/sequencedTopics/{sequencedTopic} | Delete a Sequenced Topic object.
 [**delete_msg_vpn_topic_endpoint**](DefaultApi.md#delete_msg_vpn_topic_endpoint) | **Delete** /msgVpns/{msgVpnName}/topicEndpoints/{topicEndpointName} | Delete a Topic Endpoint object.
+[**delete_username**](DefaultApi.md#delete_username) | **Delete** /usernames/{userName} | Delete a Username object.
+[**delete_username_msg_vpn_access_level_exception**](DefaultApi.md#delete_username_msg_vpn_access_level_exception) | **Delete** /usernames/{userName}/msgVpnAccessLevelExceptions/{msgVpnName} | Delete a Message VPN Access Level Exception object.
 [**get_about_user_msg_vpn**](DefaultApi.md#get_about_user_msg_vpn) | **Get** /about/user/msgVpns/{msgVpnName} | Get a User Message VPN object.
 [**get_about_user_msg_vpns**](DefaultApi.md#get_about_user_msg_vpns) | **Get** /about/user/msgVpns | Get a list of User Message VPN objects.
 [**get_dmr_cluster**](DefaultApi.md#get_dmr_cluster) | **Get** /dmrClusters/{dmrClusterName} | Get a Cluster object.
@@ -129,8 +133,8 @@ Method | HTTP request | Description
 [**get_msg_vpn_mqtt_session_subscription**](DefaultApi.md#get_msg_vpn_mqtt_session_subscription) | **Get** /msgVpns/{msgVpnName}/mqttSessions/{mqttSessionClientId},{mqttSessionVirtualRouter}/subscriptions/{subscriptionTopic} | Get a Subscription object.
 [**get_msg_vpn_mqtt_session_subscriptions**](DefaultApi.md#get_msg_vpn_mqtt_session_subscriptions) | **Get** /msgVpns/{msgVpnName}/mqttSessions/{mqttSessionClientId},{mqttSessionVirtualRouter}/subscriptions | Get a list of Subscription objects.
 [**get_msg_vpn_queue**](DefaultApi.md#get_msg_vpn_queue) | **Get** /msgVpns/{msgVpnName}/queues/{queueName} | Get a Queue object.
-[**get_msg_vpn_queue_subscription**](DefaultApi.md#get_msg_vpn_queue_subscription) | **Get** /msgVpns/{msgVpnName}/queues/{queueName}/subscriptions/{subscriptionTopic} | Get a Subscription object.
-[**get_msg_vpn_queue_subscriptions**](DefaultApi.md#get_msg_vpn_queue_subscriptions) | **Get** /msgVpns/{msgVpnName}/queues/{queueName}/subscriptions | Get a list of Subscription objects.
+[**get_msg_vpn_queue_subscription**](DefaultApi.md#get_msg_vpn_queue_subscription) | **Get** /msgVpns/{msgVpnName}/queues/{queueName}/subscriptions/{subscriptionTopic} | Get a Queue Subscription object.
+[**get_msg_vpn_queue_subscriptions**](DefaultApi.md#get_msg_vpn_queue_subscriptions) | **Get** /msgVpns/{msgVpnName}/queues/{queueName}/subscriptions | Get a list of Queue Subscription objects.
 [**get_msg_vpn_replay_log**](DefaultApi.md#get_msg_vpn_replay_log) | **Get** /msgVpns/{msgVpnName}/replayLogs/{replayLogName} | Get a Replay Log object.
 [**get_msg_vpn_replicated_topic**](DefaultApi.md#get_msg_vpn_replicated_topic) | **Get** /msgVpns/{msgVpnName}/replicatedTopics/{replicatedTopic} | Get a Replicated Topic object.
 [**get_msg_vpn_rest_delivery_point**](DefaultApi.md#get_msg_vpn_rest_delivery_point) | **Get** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName} | Get a REST Delivery Point object.
@@ -143,6 +147,9 @@ Method | HTTP request | Description
 [**get_msg_vpn_sequenced_topic**](DefaultApi.md#get_msg_vpn_sequenced_topic) | **Get** /msgVpns/{msgVpnName}/sequencedTopics/{sequencedTopic} | Get a Sequenced Topic object.
 [**get_msg_vpn_sequenced_topics**](DefaultApi.md#get_msg_vpn_sequenced_topics) | **Get** /msgVpns/{msgVpnName}/sequencedTopics | Get a list of Sequenced Topic objects.
 [**get_msg_vpn_topic_endpoint**](DefaultApi.md#get_msg_vpn_topic_endpoint) | **Get** /msgVpns/{msgVpnName}/topicEndpoints/{topicEndpointName} | Get a Topic Endpoint object.
+[**get_username**](DefaultApi.md#get_username) | **Get** /usernames/{userName} | Get a Username object.
+[**get_username_msg_vpn_access_level_exception**](DefaultApi.md#get_username_msg_vpn_access_level_exception) | **Get** /usernames/{userName}/msgVpnAccessLevelExceptions/{msgVpnName} | Get a Message VPN Access Level Exception object.
+[**get_username_msg_vpn_access_level_exceptions**](DefaultApi.md#get_username_msg_vpn_access_level_exceptions) | **Get** /usernames/{userName}/msgVpnAccessLevelExceptions | Get a list of Message VPN Access Level Exception objects.
 [**replace_dmr_cluster**](DefaultApi.md#replace_dmr_cluster) | **Put** /dmrClusters/{dmrClusterName} | Replace a Cluster object.
 [**replace_dmr_cluster_link**](DefaultApi.md#replace_dmr_cluster_link) | **Put** /dmrClusters/{dmrClusterName}/links/{remoteNodeName} | Replace a Link object.
 [**replace_msg_vpn**](DefaultApi.md#replace_msg_vpn) | **Put** /msgVpns/{msgVpnName} | Replace a Message VPN object.
@@ -169,6 +176,8 @@ Method | HTTP request | Description
 [**replace_msg_vpn_rest_delivery_point_queue_binding**](DefaultApi.md#replace_msg_vpn_rest_delivery_point_queue_binding) | **Put** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName}/queueBindings/{queueBindingName} | Replace a Queue Binding object.
 [**replace_msg_vpn_rest_delivery_point_rest_consumer**](DefaultApi.md#replace_msg_vpn_rest_delivery_point_rest_consumer) | **Put** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName}/restConsumers/{restConsumerName} | Replace a REST Consumer object.
 [**replace_msg_vpn_topic_endpoint**](DefaultApi.md#replace_msg_vpn_topic_endpoint) | **Put** /msgVpns/{msgVpnName}/topicEndpoints/{topicEndpointName} | Replace a Topic Endpoint object.
+[**replace_username**](DefaultApi.md#replace_username) | **Put** /usernames/{userName} | Replace a Username object.
+[**replace_username_msg_vpn_access_level_exception**](DefaultApi.md#replace_username_msg_vpn_access_level_exception) | **Put** /usernames/{userName}/msgVpnAccessLevelExceptions/{msgVpnName} | Replace a Message VPN Access Level Exception object.
 [**update_dmr_cluster**](DefaultApi.md#update_dmr_cluster) | **Patch** /dmrClusters/{dmrClusterName} | Update a Cluster object.
 [**update_dmr_cluster_link**](DefaultApi.md#update_dmr_cluster_link) | **Patch** /dmrClusters/{dmrClusterName}/links/{remoteNodeName} | Update a Link object.
 [**update_msg_vpn**](DefaultApi.md#update_msg_vpn) | **Patch** /msgVpns/{msgVpnName} | Update a Message VPN object.
@@ -195,13 +204,15 @@ Method | HTTP request | Description
 [**update_msg_vpn_rest_delivery_point_queue_binding**](DefaultApi.md#update_msg_vpn_rest_delivery_point_queue_binding) | **Patch** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName}/queueBindings/{queueBindingName} | Update a Queue Binding object.
 [**update_msg_vpn_rest_delivery_point_rest_consumer**](DefaultApi.md#update_msg_vpn_rest_delivery_point_rest_consumer) | **Patch** /msgVpns/{msgVpnName}/restDeliveryPoints/{restDeliveryPointName}/restConsumers/{restConsumerName} | Update a REST Consumer object.
 [**update_msg_vpn_topic_endpoint**](DefaultApi.md#update_msg_vpn_topic_endpoint) | **Patch** /msgVpns/{msgVpnName}/topicEndpoints/{topicEndpointName} | Update a Topic Endpoint object.
+[**update_username**](DefaultApi.md#update_username) | **Patch** /usernames/{userName} | Update a Username object.
+[**update_username_msg_vpn_access_level_exception**](DefaultApi.md#update_username_msg_vpn_access_level_exception) | **Patch** /usernames/{userName}/msgVpnAccessLevelExceptions/{msgVpnName} | Update a Message VPN Access Level Exception object.
 
 
 # **create_dmr_cluster**
 > ::models::DmrClusterResponse create_dmr_cluster(ctx, body, optional)
 Create a Cluster object.
 
-Create a Cluster object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationBasicPassword||||x| authenticationClientCertContent||||x| authenticationClientCertPassword||||x| dmrClusterName|x|x||| nodeName|||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- DmrCluster|authenticationClientCertPassword|authenticationClientCertContent|    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create a Cluster object. Any attribute missing from the request will be set to its default value.  A Cluster is a provisioned object on a message broker that contains global DMR configuration parameters.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationBasicPassword||||x| authenticationClientCertContent||||x| authenticationClientCertPassword||||x| dmrClusterName|x|x||| nodeName|||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- DmrCluster|authenticationClientCertPassword|authenticationClientCertContent|    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
@@ -238,14 +249,14 @@ Name | Type | Description  | Notes
 > ::models::DmrClusterLinkResponse create_dmr_cluster_link(ctx, dmr_cluster_name, body, optional)
 Create a Link object.
 
-Create a Link object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationBasicPassword||||x| dmrClusterName|x||x|| remoteNodeName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create a Link object. Any attribute missing from the request will be set to its default value.  A Link connects nodes (either within a Cluster or between two different Clusters) and allows them to exchange topology information, subscriptions and data.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationBasicPassword||||x| dmrClusterName|x||x|| remoteNodeName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
   **body** | [**DmrClusterLink**](DmrClusterLink.md)| The Link object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -254,7 +265,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
  **body** | [**DmrClusterLink**](DmrClusterLink.md)| The Link object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -277,15 +288,15 @@ Name | Type | Description  | Notes
 > ::models::DmrClusterLinkRemoteAddressResponse create_dmr_cluster_link_remote_address(ctx, dmr_cluster_name, remote_node_name, body, optional)
 Create a Remote Address object.
 
-Create a Remote Address object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: dmrClusterName|x||x|| remoteAddress|x|x||| remoteNodeName|x||x||    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create a Remote Address object. Any attribute missing from the request will be set to its default value.  Each Remote Address, consisting of a FQDN or IP address and optional port, is used to connect to the remote node for this Link. Up to 4 addresses may be provided for each Link, and will be tried on a round-robin basis.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: dmrClusterName|x||x|| remoteAddress|x|x||| remoteNodeName|x||x||    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
-  **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
   **body** | [**DmrClusterLinkRemoteAddress**](DmrClusterLinkRemoteAddress.md)| The Remote Address object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -294,8 +305,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
- **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
+ **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
  **body** | [**DmrClusterLinkRemoteAddress**](DmrClusterLinkRemoteAddress.md)| The Remote Address object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -318,15 +329,15 @@ Name | Type | Description  | Notes
 > ::models::DmrClusterLinkTlsTrustedCommonNameResponse create_dmr_cluster_link_tls_trusted_common_name(ctx, dmr_cluster_name, remote_node_name, body, optional)
 Create a Trusted Common Name object.
 
-Create a Trusted Common Name object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: dmrClusterName|x||x|| remoteNodeName|x||x|| tlsTrustedCommonName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create a Trusted Common Name object. Any attribute missing from the request will be set to its default value.  The Trusted Common Names for the Link are used by encrypted transports to verify the name in the certificate presented by the remote node. They must include the common name of the remote node's server certificate or client certificate, depending upon the initiator of the connection.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: dmrClusterName|x||x|| remoteNodeName|x||x|| tlsTrustedCommonName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
-  **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
   **body** | [**DmrClusterLinkTlsTrustedCommonName**](DmrClusterLinkTlsTrustedCommonName.md)| The Trusted Common Name object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -335,8 +346,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
- **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
+ **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
  **body** | [**DmrClusterLinkTlsTrustedCommonName**](DmrClusterLinkTlsTrustedCommonName.md)| The Trusted Common Name object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -359,7 +370,7 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnResponse create_msg_vpn(ctx, body, optional)
 Create a Message VPN object.
 
-Create a Message VPN object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replicationBridgeAuthenticationBasicPassword||||x| replicationBridgeAuthenticationClientCertContent||||x| replicationBridgeAuthenticationClientCertPassword||||x| replicationEnabledQueueBehavior||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent EventThresholdByValue|clearValue|setValue| EventThresholdByValue|setValue|clearValue| MsgVpn|authenticationBasicProfileName|authenticationBasicType| MsgVpn|authorizationProfileName|authorizationType| MsgVpn|eventPublishTopicFormatMqttEnabled|eventPublishTopicFormatSmfEnabled| MsgVpn|eventPublishTopicFormatSmfEnabled|eventPublishTopicFormatMqttEnabled| MsgVpn|replicationBridgeAuthenticationBasicClientUsername|replicationBridgeAuthenticationBasicPassword| MsgVpn|replicationBridgeAuthenticationBasicPassword|replicationBridgeAuthenticationBasicClientUsername| MsgVpn|replicationBridgeAuthenticationClientCertPassword|replicationBridgeAuthenticationClientCertContent| MsgVpn|replicationEnabledQueueBehavior|replicationEnabled|    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Message VPN object. Any attribute missing from the request will be set to its default value.  Message VPNs (Virtual Private Networks) allow for the segregation of topic space and clients. They also group clients connecting to a network of message brokers, such that messages published within a particular group are only visible to that group's clients.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replicationBridgeAuthenticationBasicPassword||||x| replicationBridgeAuthenticationClientCertContent||||x| replicationBridgeAuthenticationClientCertPassword||||x| replicationEnabledQueueBehavior||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent EventThresholdByValue|clearValue|setValue| EventThresholdByValue|setValue|clearValue| MsgVpn|authenticationBasicProfileName|authenticationBasicType| MsgVpn|authorizationProfileName|authorizationType| MsgVpn|eventPublishTopicFormatMqttEnabled|eventPublishTopicFormatSmfEnabled| MsgVpn|eventPublishTopicFormatSmfEnabled|eventPublishTopicFormatMqttEnabled| MsgVpn|replicationBridgeAuthenticationBasicClientUsername|replicationBridgeAuthenticationBasicPassword| MsgVpn|replicationBridgeAuthenticationBasicPassword|replicationBridgeAuthenticationBasicClientUsername| MsgVpn|replicationBridgeAuthenticationClientCertPassword|replicationBridgeAuthenticationClientCertContent| MsgVpn|replicationEnabledQueueBehavior|replicationEnabled|    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
@@ -396,14 +407,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfileResponse create_msg_vpn_acl_profile(ctx, msg_vpn_name, body, optional)
 Create an ACL Profile object.
 
-Create an ACL Profile object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create an ACL Profile object. Any attribute missing from the request will be set to its default value.  An ACL Profile controls whether an authenticated client is permitted to establish a connection with the message broker or permitted to publish and subscribe to specific topics.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnAclProfile**](MsgVpnAclProfile.md)| The ACL Profile object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -412,7 +423,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnAclProfile**](MsgVpnAclProfile.md)| The ACL Profile object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -435,15 +446,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfileClientConnectExceptionResponse create_msg_vpn_acl_profile_client_connect_exception(ctx, msg_vpn_name, acl_profile_name, body, optional)
 Create a Client Connect Exception object.
 
-Create a Client Connect Exception object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName|x||x|| clientConnectExceptionAddress|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Client Connect Exception object. Any attribute missing from the request will be set to its default value.  A Client Connect Exception is an exception to the default action to take when a client using the ACL Profile connects to the Message VPN. Exceptions must be expressed as an IP address/netmask in CIDR form.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName|x||x|| clientConnectExceptionAddress|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
   **body** | [**MsgVpnAclProfileClientConnectException**](MsgVpnAclProfileClientConnectException.md)| The Client Connect Exception object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -452,8 +463,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **body** | [**MsgVpnAclProfileClientConnectException**](MsgVpnAclProfileClientConnectException.md)| The Client Connect Exception object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -476,15 +487,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfilePublishExceptionResponse create_msg_vpn_acl_profile_publish_exception(ctx, msg_vpn_name, acl_profile_name, body, optional)
 Create a Publish Topic Exception object.
 
-Create a Publish Topic Exception object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName|x||x|| msgVpnName|x||x|| publishExceptionTopic|x|x||| topicSyntax|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Publish Topic Exception object. Any attribute missing from the request will be set to its default value.  A Publish Topic Exception is an exception to the default action to take when a client using the ACL Profile publishes to a topic in the Message VPN. Exceptions must be expressed as a topic.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName|x||x|| msgVpnName|x||x|| publishExceptionTopic|x|x||| topicSyntax|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
   **body** | [**MsgVpnAclProfilePublishException**](MsgVpnAclProfilePublishException.md)| The Publish Topic Exception object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -493,8 +504,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **body** | [**MsgVpnAclProfilePublishException**](MsgVpnAclProfilePublishException.md)| The Publish Topic Exception object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -517,15 +528,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfileSubscribeExceptionResponse create_msg_vpn_acl_profile_subscribe_exception(ctx, msg_vpn_name, acl_profile_name, body, optional)
 Create a Subscribe Topic Exception object.
 
-Create a Subscribe Topic Exception object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName|x||x|| msgVpnName|x||x|| subscribeExceptionTopic|x|x||| topicSyntax|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Subscribe Topic Exception object. Any attribute missing from the request will be set to its default value.  A Subscribe Topic Exception is an exception to the default action to take when a client using the ACL Profile subscribes to a topic in the Message VPN. Exceptions must be expressed as a topic.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName|x||x|| msgVpnName|x||x|| subscribeExceptionTopic|x|x||| topicSyntax|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
   **body** | [**MsgVpnAclProfileSubscribeException**](MsgVpnAclProfileSubscribeException.md)| The Subscribe Topic Exception object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -534,8 +545,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **body** | [**MsgVpnAclProfileSubscribeException**](MsgVpnAclProfileSubscribeException.md)| The Subscribe Topic Exception object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -558,14 +569,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAuthorizationGroupResponse create_msg_vpn_authorization_group(ctx, msg_vpn_name, body, optional)
 Create an LDAP Authorization Group object.
 
-Create an LDAP Authorization Group object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: authorizationGroupName|x|x||| msgVpnName|x||x|| orderAfterAuthorizationGroupName||||x| orderBeforeAuthorizationGroupName||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnAuthorizationGroup|orderAfterAuthorizationGroupName||orderBeforeAuthorizationGroupName MsgVpnAuthorizationGroup|orderBeforeAuthorizationGroupName||orderAfterAuthorizationGroupName    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create an LDAP Authorization Group object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: authorizationGroupName|x|x||| msgVpnName|x||x|| orderAfterAuthorizationGroupName||||x| orderBeforeAuthorizationGroupName||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnAuthorizationGroup|orderAfterAuthorizationGroupName||orderBeforeAuthorizationGroupName MsgVpnAuthorizationGroup|orderBeforeAuthorizationGroupName||orderAfterAuthorizationGroupName    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnAuthorizationGroup**](MsgVpnAuthorizationGroup.md)| The LDAP Authorization Group object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -574,7 +585,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnAuthorizationGroup**](MsgVpnAuthorizationGroup.md)| The LDAP Authorization Group object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -597,14 +608,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeResponse create_msg_vpn_bridge(ctx, msg_vpn_name, body, optional)
 Create a Bridge object.
 
-Create a Bridge object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x|x||| bridgeVirtualRouter|x|x||| msgVpnName|x||x|| remoteAuthenticationBasicPassword||||x| remoteAuthenticationClientCertContent||||x| remoteAuthenticationClientCertPassword||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnBridge|remoteAuthenticationBasicClientUsername|remoteAuthenticationBasicPassword| MsgVpnBridge|remoteAuthenticationBasicPassword|remoteAuthenticationBasicClientUsername| MsgVpnBridge|remoteAuthenticationClientCertPassword|remoteAuthenticationClientCertContent|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Bridge object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x|x||| bridgeVirtualRouter|x|x||| msgVpnName|x||x|| remoteAuthenticationBasicPassword||||x| remoteAuthenticationClientCertContent||||x| remoteAuthenticationClientCertPassword||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnBridge|remoteAuthenticationBasicClientUsername|remoteAuthenticationBasicPassword| MsgVpnBridge|remoteAuthenticationBasicPassword|remoteAuthenticationBasicClientUsername| MsgVpnBridge|remoteAuthenticationClientCertPassword|remoteAuthenticationClientCertContent|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnBridge**](MsgVpnBridge.md)| The Bridge object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -613,7 +624,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnBridge**](MsgVpnBridge.md)| The Bridge object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -636,16 +647,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeRemoteMsgVpnResponse create_msg_vpn_bridge_remote_msg_vpn(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, body, optional)
 Create a Remote Message VPN object.
 
-Create a Remote Message VPN object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x||x|| bridgeVirtualRouter|x||x|| msgVpnName|x||x|| password||||x| remoteMsgVpnInterface|x|||| remoteMsgVpnLocation|x|x||| remoteMsgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnBridgeRemoteMsgVpn|clientUsername|password| MsgVpnBridgeRemoteMsgVpn|password|clientUsername|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Remote Message VPN object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x||x|| bridgeVirtualRouter|x||x|| msgVpnName|x||x|| password||||x| remoteMsgVpnInterface|x|||| remoteMsgVpnLocation|x|x||| remoteMsgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnBridgeRemoteMsgVpn|clientUsername|password| MsgVpnBridgeRemoteMsgVpn|password|clientUsername|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
   **body** | [**MsgVpnBridgeRemoteMsgVpn**](MsgVpnBridgeRemoteMsgVpn.md)| The Remote Message VPN object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -654,9 +665,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **body** | [**MsgVpnBridgeRemoteMsgVpn**](MsgVpnBridgeRemoteMsgVpn.md)| The Remote Message VPN object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -679,16 +690,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeRemoteSubscriptionResponse create_msg_vpn_bridge_remote_subscription(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, body, optional)
 Create a Remote Subscription object.
 
-Create a Remote Subscription object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x||x|| bridgeVirtualRouter|x||x|| deliverAlwaysEnabled||x||| msgVpnName|x||x|| remoteSubscriptionTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Remote Subscription object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x||x|| bridgeVirtualRouter|x||x|| deliverAlwaysEnabled||x||| msgVpnName|x||x|| remoteSubscriptionTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
   **body** | [**MsgVpnBridgeRemoteSubscription**](MsgVpnBridgeRemoteSubscription.md)| The Remote Subscription object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -697,9 +708,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **body** | [**MsgVpnBridgeRemoteSubscription**](MsgVpnBridgeRemoteSubscription.md)| The Remote Subscription object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -722,16 +733,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeTlsTrustedCommonNameResponse create_msg_vpn_bridge_tls_trusted_common_name(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, body, optional)
 Create a Trusted Common Name object.
 
-Create a Trusted Common Name object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x||x|| bridgeVirtualRouter|x||x|| msgVpnName|x||x|| tlsTrustedCommonName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Trusted Common Name object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x||x|| bridgeVirtualRouter|x||x|| msgVpnName|x||x|| tlsTrustedCommonName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
   **body** | [**MsgVpnBridgeTlsTrustedCommonName**](MsgVpnBridgeTlsTrustedCommonName.md)| The Trusted Common Name object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -740,9 +751,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **body** | [**MsgVpnBridgeTlsTrustedCommonName**](MsgVpnBridgeTlsTrustedCommonName.md)| The Trusted Common Name object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -765,14 +776,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnClientProfileResponse create_msg_vpn_client_profile(ctx, msg_vpn_name, body, optional)
 Create a Client Profile object.
 
-Create a Client Profile object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: clientProfileName|x|x||| msgVpnName|x||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent EventThresholdByPercent|clearPercent|setPercent| EventThresholdByPercent|setPercent|clearPercent|    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Client Profile object. Any attribute missing from the request will be set to its default value.  Client Profiles are used to assign common configuration properties to clients that have been successfully authorized.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: clientProfileName|x|x||| msgVpnName|x||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent EventThresholdByPercent|clearPercent|setPercent| EventThresholdByPercent|setPercent|clearPercent|    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnClientProfile**](MsgVpnClientProfile.md)| The Client Profile object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -781,7 +792,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnClientProfile**](MsgVpnClientProfile.md)| The Client Profile object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -804,14 +815,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnClientUsernameResponse create_msg_vpn_client_username(ctx, msg_vpn_name, body, optional)
 Create a Client Username object.
 
-Create a Client Username object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: clientUsername|x|x||| msgVpnName|x||x|| password||||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Client Username object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: clientUsername|x|x||| msgVpnName|x||x|| password||||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnClientUsername**](MsgVpnClientUsername.md)| The Client Username object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -820,7 +831,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnClientUsername**](MsgVpnClientUsername.md)| The Client Username object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -843,14 +854,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheResponse create_msg_vpn_distributed_cache(ctx, msg_vpn_name, body, optional)
 Create a Distributed Cache object.
 
-Create a Distributed Cache object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| msgVpnName|x||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnDistributedCache|scheduledDeleteMsgDayList|scheduledDeleteMsgTimeList| MsgVpnDistributedCache|scheduledDeleteMsgTimeList|scheduledDeleteMsgDayList|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create a Distributed Cache object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| msgVpnName|x||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnDistributedCache|scheduledDeleteMsgDayList|scheduledDeleteMsgTimeList| MsgVpnDistributedCache|scheduledDeleteMsgTimeList|scheduledDeleteMsgDayList|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnDistributedCache**](MsgVpnDistributedCache.md)| The Distributed Cache object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -859,7 +870,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnDistributedCache**](MsgVpnDistributedCache.md)| The Distributed Cache object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -882,15 +893,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterResponse create_msg_vpn_distributed_cache_cluster(ctx, msg_vpn_name, cache_name, body, optional)
 Create a Cache Cluster object.
 
-Create a Cache Cluster object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x||x|| clusterName|x|x||| msgVpnName|x||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThresholdByPercent|clearPercent|setPercent| EventThresholdByPercent|setPercent|clearPercent| EventThresholdByValue|clearValue|setValue| EventThresholdByValue|setValue|clearValue|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create a Cache Cluster object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x||x|| clusterName|x|x||| msgVpnName|x||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThresholdByPercent|clearPercent|setPercent| EventThresholdByPercent|setPercent|clearPercent| EventThresholdByValue|clearValue|setValue| EventThresholdByValue|setValue|clearValue|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
   **body** | [**MsgVpnDistributedCacheCluster**](MsgVpnDistributedCacheCluster.md)| The Cache Cluster object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -899,8 +910,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
  **body** | [**MsgVpnDistributedCacheCluster**](MsgVpnDistributedCacheCluster.md)| The Cache Cluster object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -923,16 +934,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterGlobalCachingHomeClusterResponse create_msg_vpn_distributed_cache_cluster_global_caching_home_cluster(ctx, msg_vpn_name, cache_name, cluster_name, body, optional)
 Create a Home Cache Cluster object.
 
-Create a Home Cache Cluster object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x||x|| clusterName|x||x|| homeClusterName|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create a Home Cache Cluster object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x||x|| clusterName|x||x|| homeClusterName|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
   **body** | [**MsgVpnDistributedCacheClusterGlobalCachingHomeCluster**](MsgVpnDistributedCacheClusterGlobalCachingHomeCluster.md)| The Home Cache Cluster object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -941,9 +952,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
  **body** | [**MsgVpnDistributedCacheClusterGlobalCachingHomeCluster**](MsgVpnDistributedCacheClusterGlobalCachingHomeCluster.md)| The Home Cache Cluster object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -966,17 +977,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterGlobalCachingHomeClusterTopicPrefixResponse create_msg_vpn_distributed_cache_cluster_global_caching_home_cluster_topic_prefix(ctx, msg_vpn_name, cache_name, cluster_name, home_cluster_name, body, optional)
 Create a Topic Prefix object.
 
-Create a Topic Prefix object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x||x|| clusterName|x||x|| homeClusterName|x||x|| msgVpnName|x||x|| topicPrefix|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create a Topic Prefix object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x||x|| clusterName|x||x|| homeClusterName|x||x|| msgVpnName|x||x|| topicPrefix|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
-  **home_cluster_name** | **String**| The homeClusterName of the Home Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
+  **home_cluster_name** | **String**| The name of the remote Home Cache Cluster. | 
   **body** | [**MsgVpnDistributedCacheClusterGlobalCachingHomeClusterTopicPrefix**](MsgVpnDistributedCacheClusterGlobalCachingHomeClusterTopicPrefix.md)| The Topic Prefix object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -985,10 +996,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
- **home_cluster_name** | **String**| The homeClusterName of the Home Cache Cluster. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
+ **home_cluster_name** | **String**| The name of the remote Home Cache Cluster. | 
  **body** | [**MsgVpnDistributedCacheClusterGlobalCachingHomeClusterTopicPrefix**](MsgVpnDistributedCacheClusterGlobalCachingHomeClusterTopicPrefix.md)| The Topic Prefix object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1011,16 +1022,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterInstanceResponse create_msg_vpn_distributed_cache_cluster_instance(ctx, msg_vpn_name, cache_name, cluster_name, body, optional)
 Create a Cache Instance object.
 
-Create a Cache Instance object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x||x|| clusterName|x||x|| instanceName|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create a Cache Instance object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x||x|| clusterName|x||x|| instanceName|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
   **body** | [**MsgVpnDistributedCacheClusterInstance**](MsgVpnDistributedCacheClusterInstance.md)| The Cache Instance object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1029,9 +1040,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
  **body** | [**MsgVpnDistributedCacheClusterInstance**](MsgVpnDistributedCacheClusterInstance.md)| The Cache Instance object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1054,16 +1065,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterTopicResponse create_msg_vpn_distributed_cache_cluster_topic(ctx, msg_vpn_name, cache_name, cluster_name, body, optional)
 Create a Topic object.
 
-Create a Topic object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x||x|| clusterName|x||x|| msgVpnName|x||x|| topic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create a Topic object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x||x|| clusterName|x||x|| msgVpnName|x||x|| topic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
   **body** | [**MsgVpnDistributedCacheClusterTopic**](MsgVpnDistributedCacheClusterTopic.md)| The Topic object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1072,9 +1083,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
  **body** | [**MsgVpnDistributedCacheClusterTopic**](MsgVpnDistributedCacheClusterTopic.md)| The Topic object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1097,14 +1108,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDmrBridgeResponse create_msg_vpn_dmr_bridge(ctx, msg_vpn_name, body, optional)
 Create a DMR Bridge object.
 
-Create a DMR Bridge object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| remoteNodeName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create a DMR Bridge object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| remoteNodeName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnDmrBridge**](MsgVpnDmrBridge.md)| The DMR Bridge object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1113,7 +1124,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnDmrBridge**](MsgVpnDmrBridge.md)| The DMR Bridge object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1136,14 +1147,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnJndiConnectionFactoryResponse create_msg_vpn_jndi_connection_factory(ctx, msg_vpn_name, body, optional)
 Create a JNDI Connection Factory object.
 
-Create a JNDI Connection Factory object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: connectionFactoryName|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.2.
+Create a JNDI Connection Factory object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: connectionFactoryName|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnJndiConnectionFactory**](MsgVpnJndiConnectionFactory.md)| The JNDI Connection Factory object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1152,7 +1163,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnJndiConnectionFactory**](MsgVpnJndiConnectionFactory.md)| The JNDI Connection Factory object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1175,14 +1186,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnJndiQueueResponse create_msg_vpn_jndi_queue(ctx, msg_vpn_name, body, optional)
 Create a JNDI Queue object.
 
-Create a JNDI Queue object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| queueName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.2.
+Create a JNDI Queue object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| queueName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnJndiQueue**](MsgVpnJndiQueue.md)| The JNDI Queue object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1191,7 +1202,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnJndiQueue**](MsgVpnJndiQueue.md)| The JNDI Queue object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1214,14 +1225,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnJndiTopicResponse create_msg_vpn_jndi_topic(ctx, msg_vpn_name, body, optional)
 Create a JNDI Topic object.
 
-Create a JNDI Topic object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| topicName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.2.
+Create a JNDI Topic object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| topicName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnJndiTopic**](MsgVpnJndiTopic.md)| The JNDI Topic object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1230,7 +1241,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnJndiTopic**](MsgVpnJndiTopic.md)| The JNDI Topic object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1253,14 +1264,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttRetainCacheResponse create_msg_vpn_mqtt_retain_cache(ctx, msg_vpn_name, body, optional)
 Create an MQTT Retain Cache object.
 
-Create an MQTT Retain Cache object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create an MQTT Retain Cache object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnMqttRetainCache**](MsgVpnMqttRetainCache.md)| The MQTT Retain Cache object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1269,7 +1280,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnMqttRetainCache**](MsgVpnMqttRetainCache.md)| The MQTT Retain Cache object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1292,14 +1303,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttSessionResponse create_msg_vpn_mqtt_session(ctx, msg_vpn_name, body, optional)
 Create an MQTT Session object.
 
-Create an MQTT Session object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: mqttSessionClientId|x|x||| mqttSessionVirtualRouter|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.1.
+Create an MQTT Session object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: mqttSessionClientId|x|x||| mqttSessionVirtualRouter|x|x||| msgVpnName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnMqttSession**](MsgVpnMqttSession.md)| The MQTT Session object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1308,7 +1319,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnMqttSession**](MsgVpnMqttSession.md)| The MQTT Session object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1331,16 +1342,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttSessionSubscriptionResponse create_msg_vpn_mqtt_session_subscription(ctx, msg_vpn_name, mqtt_session_client_id, mqtt_session_virtual_router, body, optional)
 Create a Subscription object.
 
-Create a Subscription object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: mqttSessionClientId|x||x|| mqttSessionVirtualRouter|x||x|| msgVpnName|x||x|| subscriptionTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.1.
+Create a Subscription object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: mqttSessionClientId|x||x|| mqttSessionVirtualRouter|x||x|| msgVpnName|x||x|| subscriptionTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
-  **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+  **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
   **body** | [**MsgVpnMqttSessionSubscription**](MsgVpnMqttSessionSubscription.md)| The Subscription object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1349,9 +1360,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
- **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+ **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
  **body** | [**MsgVpnMqttSessionSubscription**](MsgVpnMqttSessionSubscription.md)| The Subscription object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1374,14 +1385,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnQueueResponse create_msg_vpn_queue(ctx, msg_vpn_name, body, optional)
 Create a Queue object.
 
-Create a Queue object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| queueName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Queue object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| queueName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnQueue**](MsgVpnQueue.md)| The Queue object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1390,7 +1401,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnQueue**](MsgVpnQueue.md)| The Queue object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1411,18 +1422,18 @@ Name | Type | Description  | Notes
 
 # **create_msg_vpn_queue_subscription**
 > ::models::MsgVpnQueueSubscriptionResponse create_msg_vpn_queue_subscription(ctx, msg_vpn_name, queue_name, body, optional)
-Create a Subscription object.
+Create a Queue Subscription object.
 
-Create a Subscription object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| queueName|x||x|| subscriptionTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Queue Subscription object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| queueName|x||x|| subscriptionTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **queue_name** | **String**| The queueName of the Queue. | 
-  **body** | [**MsgVpnQueueSubscription**](MsgVpnQueueSubscription.md)| The Subscription object&#39;s attributes. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **queue_name** | **String**| The name of the Queue. | 
+  **body** | [**MsgVpnQueueSubscription**](MsgVpnQueueSubscription.md)| The Queue Subscription object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -1430,9 +1441,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **queue_name** | **String**| The queueName of the Queue. | 
- **body** | [**MsgVpnQueueSubscription**](MsgVpnQueueSubscription.md)| The Subscription object&#39;s attributes. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **queue_name** | **String**| The name of the Queue. | 
+ **body** | [**MsgVpnQueueSubscription**](MsgVpnQueueSubscription.md)| The Queue Subscription object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -1454,14 +1465,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnReplayLogResponse create_msg_vpn_replay_log(ctx, msg_vpn_name, body, optional)
 Create a Replay Log object.
 
-Create a Replay Log object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| replayLogName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.10.
+Create a Replay Log object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| replayLogName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.10.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnReplayLog**](MsgVpnReplayLog.md)| The Replay Log object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1470,7 +1481,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnReplayLog**](MsgVpnReplayLog.md)| The Replay Log object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1493,14 +1504,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnReplicatedTopicResponse create_msg_vpn_replicated_topic(ctx, msg_vpn_name, body, optional)
 Create a Replicated Topic object.
 
-Create a Replicated Topic object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| replicatedTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.9.
+Create a Replicated Topic object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| replicatedTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.9.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnReplicatedTopic**](MsgVpnReplicatedTopic.md)| The Replicated Topic object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1509,7 +1520,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnReplicatedTopic**](MsgVpnReplicatedTopic.md)| The Replicated Topic object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1532,14 +1543,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointResponse create_msg_vpn_rest_delivery_point(ctx, msg_vpn_name, body, optional)
 Create a REST Delivery Point object.
 
-Create a REST Delivery Point object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| restDeliveryPointName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a REST Delivery Point object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| restDeliveryPointName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnRestDeliveryPoint**](MsgVpnRestDeliveryPoint.md)| The REST Delivery Point object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1548,7 +1559,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnRestDeliveryPoint**](MsgVpnRestDeliveryPoint.md)| The REST Delivery Point object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1571,15 +1582,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointQueueBindingResponse create_msg_vpn_rest_delivery_point_queue_binding(ctx, msg_vpn_name, rest_delivery_point_name, body, optional)
 Create a Queue Binding object.
 
-Create a Queue Binding object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| queueBindingName|x|x||| restDeliveryPointName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Queue Binding object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| queueBindingName|x|x||| restDeliveryPointName|x||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
   **body** | [**MsgVpnRestDeliveryPointQueueBinding**](MsgVpnRestDeliveryPointQueueBinding.md)| The Queue Binding object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1588,8 +1599,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
  **body** | [**MsgVpnRestDeliveryPointQueueBinding**](MsgVpnRestDeliveryPointQueueBinding.md)| The Queue Binding object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1612,15 +1623,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointRestConsumerResponse create_msg_vpn_rest_delivery_point_rest_consumer(ctx, msg_vpn_name, rest_delivery_point_name, body, optional)
 Create a REST Consumer object.
 
-Create a REST Consumer object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationClientCertContent||||x| authenticationClientCertPassword||||x| authenticationHttpBasicPassword||||x| msgVpnName|x||x|| restConsumerName|x|x||| restDeliveryPointName|x||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnRestDeliveryPointRestConsumer|authenticationClientCertPassword|authenticationClientCertContent| MsgVpnRestDeliveryPointRestConsumer|authenticationHttpBasicPassword|authenticationHttpBasicUsername| MsgVpnRestDeliveryPointRestConsumer|authenticationHttpBasicUsername|authenticationHttpBasicPassword| MsgVpnRestDeliveryPointRestConsumer|remotePort|tlsEnabled| MsgVpnRestDeliveryPointRestConsumer|tlsEnabled|remotePort|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a REST Consumer object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationClientCertContent||||x| authenticationClientCertPassword||||x| authenticationHttpBasicPassword||||x| msgVpnName|x||x|| restConsumerName|x|x||| restDeliveryPointName|x||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnRestDeliveryPointRestConsumer|authenticationClientCertPassword|authenticationClientCertContent| MsgVpnRestDeliveryPointRestConsumer|authenticationHttpBasicPassword|authenticationHttpBasicUsername| MsgVpnRestDeliveryPointRestConsumer|authenticationHttpBasicUsername|authenticationHttpBasicPassword| MsgVpnRestDeliveryPointRestConsumer|remotePort|tlsEnabled| MsgVpnRestDeliveryPointRestConsumer|tlsEnabled|remotePort|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
   **body** | [**MsgVpnRestDeliveryPointRestConsumer**](MsgVpnRestDeliveryPointRestConsumer.md)| The REST Consumer object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1629,8 +1640,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
  **body** | [**MsgVpnRestDeliveryPointRestConsumer**](MsgVpnRestDeliveryPointRestConsumer.md)| The REST Consumer object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1653,16 +1664,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointRestConsumerTlsTrustedCommonNameResponse create_msg_vpn_rest_delivery_point_rest_consumer_tls_trusted_common_name(ctx, msg_vpn_name, rest_delivery_point_name, rest_consumer_name, body, optional)
 Create a Trusted Common Name object.
 
-Create a Trusted Common Name object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| restConsumerName|x||x|| restDeliveryPointName|x||x|| tlsTrustedCommonName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Trusted Common Name object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| restConsumerName|x||x|| restDeliveryPointName|x||x|| tlsTrustedCommonName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
-  **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+  **rest_consumer_name** | **String**| The name of the REST Consumer. | 
   **body** | [**MsgVpnRestDeliveryPointRestConsumerTlsTrustedCommonName**](MsgVpnRestDeliveryPointRestConsumerTlsTrustedCommonName.md)| The Trusted Common Name object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1671,9 +1682,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
- **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+ **rest_consumer_name** | **String**| The name of the REST Consumer. | 
  **body** | [**MsgVpnRestDeliveryPointRestConsumerTlsTrustedCommonName**](MsgVpnRestDeliveryPointRestConsumerTlsTrustedCommonName.md)| The Trusted Common Name object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1696,14 +1707,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnSequencedTopicResponse create_msg_vpn_sequenced_topic(ctx, msg_vpn_name, body, optional)
 Create a Sequenced Topic object.
 
-Create a Sequenced Topic object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| sequencedTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Create a Sequenced Topic object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| sequencedTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnSequencedTopic**](MsgVpnSequencedTopic.md)| The Sequenced Topic object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1712,7 +1723,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnSequencedTopic**](MsgVpnSequencedTopic.md)| The Sequenced Topic object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1735,14 +1746,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnTopicEndpointResponse create_msg_vpn_topic_endpoint(ctx, msg_vpn_name, body, optional)
 Create a Topic Endpoint object.
 
-Create a Topic Endpoint object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| topicEndpointName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.1.
+Create a Topic Endpoint object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x||x|| topicEndpointName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpnTopicEndpoint**](MsgVpnTopicEndpoint.md)| The Topic Endpoint object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -1751,7 +1762,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpnTopicEndpoint**](MsgVpnTopicEndpoint.md)| The Topic Endpoint object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -1770,18 +1781,94 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_dmr_cluster**
-> ::models::SempMetaOnlyResponse delete_dmr_cluster(ctx, dmr_cluster_name)
-Delete a Cluster object.
+# **create_username**
+> ::models::UsernameResponse create_username(ctx, body, optional)
+Create a Username object.
 
-Delete a Cluster object.  A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Create a Username object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: password||||x| userName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation. Requests which include the following attributes require greater access scope/level:   Attribute|Access Scope/Level :---|:---: globalAccessLevel|global/admin msgVpnDefaultAccessLevel|global/read-write    This has been available since 2.12.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
+  **body** | [**Username**](Username.md)| The Username object&#39;s attributes. | 
+ **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a map[string]interface{}.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Username**](Username.md)| The Username object&#39;s attributes. | 
+ **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
+
+### Return type
+
+[**::models::UsernameResponse**](UsernameResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_username_msg_vpn_access_level_exception**
+> ::models::UsernameMsgVpnAccessLevelExceptionResponse create_username_msg_vpn_access_level_exception(ctx, user_name, body, optional)
+Create a Message VPN Access Level Exception object.
+
+Create a Message VPN Access Level Exception object. Any attribute missing from the request will be set to its default value.   Attribute|Identifying|Required|Read-Only|Write-Only|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| userName|x||x||    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.12.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **user_name** | **String**| Username. | 
+  **body** | [**UsernameMsgVpnAccessLevelException**](UsernameMsgVpnAccessLevelException.md)| The Message VPN Access Level Exception object&#39;s attributes. | 
+ **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a map[string]interface{}.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_name** | **String**| Username. | 
+ **body** | [**UsernameMsgVpnAccessLevelException**](UsernameMsgVpnAccessLevelException.md)| The Message VPN Access Level Exception object&#39;s attributes. | 
+ **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
+
+### Return type
+
+[**::models::UsernameMsgVpnAccessLevelExceptionResponse**](UsernameMsgVpnAccessLevelExceptionResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_dmr_cluster**
+> ::models::SempMetaOnlyResponse delete_dmr_cluster(ctx, dmr_cluster_name)
+Delete a Cluster object.
+
+Delete a Cluster object.  A Cluster is a provisioned object on a message broker that contains global DMR configuration parameters.  A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
 
 ### Return type
 
@@ -1802,15 +1889,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_dmr_cluster_link(ctx, dmr_cluster_name, remote_node_name)
 Delete a Link object.
 
-Delete a Link object.  A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Delete a Link object.  A Link connects nodes (either within a Cluster or between two different Clusters) and allows them to exchange topology information, subscriptions and data.  A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
-  **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
 
 ### Return type
 
@@ -1831,16 +1918,16 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_dmr_cluster_link_remote_address(ctx, dmr_cluster_name, remote_node_name, remote_address)
 Delete a Remote Address object.
 
-Delete a Remote Address object.  A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Delete a Remote Address object.  Each Remote Address, consisting of a FQDN or IP address and optional port, is used to connect to the remote node for this Link. Up to 4 addresses may be provided for each Link, and will be tried on a round-robin basis.  A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
-  **remote_node_name** | **String**| The remoteNodeName of the Link. | 
-  **remote_address** | **String**| The remoteAddress of the Remote Address. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
+  **remote_address** | **String**| The FQDN or IP address (and optional port) of the remote node. If a port is not provided, it will vary based on the transport encoding: 55555 (plain-text), 55443 (encrypted), or 55003 (compressed). | 
 
 ### Return type
 
@@ -1861,16 +1948,16 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_dmr_cluster_link_tls_trusted_common_name(ctx, dmr_cluster_name, remote_node_name, tls_trusted_common_name)
 Delete a Trusted Common Name object.
 
-Delete a Trusted Common Name object.  A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Delete a Trusted Common Name object.  The Trusted Common Names for the Link are used by encrypted transports to verify the name in the certificate presented by the remote node. They must include the common name of the remote node's server certificate or client certificate, depending upon the initiator of the connection.  A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
-  **remote_node_name** | **String**| The remoteNodeName of the Link. | 
-  **tls_trusted_common_name** | **String**| The tlsTrustedCommonName of the Trusted Common Name. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
+  **tls_trusted_common_name** | **String**| The expected trusted common name of the remote certificate. | 
 
 ### Return type
 
@@ -1891,14 +1978,14 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn(ctx, msg_vpn_name)
 Delete a Message VPN object.
 
-Delete a Message VPN object.  A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Message VPN object.  Message VPNs (Virtual Private Networks) allow for the segregation of topic space and clients. They also group clients connecting to a network of message brokers, such that messages published within a particular group are only visible to that group's clients.  A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
 
 ### Return type
 
@@ -1919,15 +2006,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_acl_profile(ctx, msg_vpn_name, acl_profile_name)
 Delete an ACL Profile object.
 
-Delete an ACL Profile object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete an ACL Profile object.  An ACL Profile controls whether an authenticated client is permitted to establish a connection with the message broker or permitted to publish and subscribe to specific topics.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
 
 ### Return type
 
@@ -1948,16 +2035,16 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_acl_profile_client_connect_exception(ctx, msg_vpn_name, acl_profile_name, client_connect_exception_address)
 Delete a Client Connect Exception object.
 
-Delete a Client Connect Exception object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Client Connect Exception object.  A Client Connect Exception is an exception to the default action to take when a client using the ACL Profile connects to the Message VPN. Exceptions must be expressed as an IP address/netmask in CIDR form.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
-  **client_connect_exception_address** | **String**| The clientConnectExceptionAddress of the Client Connect Exception. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
+  **client_connect_exception_address** | **String**| The IP address/netmask of the client connect exception in CIDR form. | 
 
 ### Return type
 
@@ -1978,17 +2065,17 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_acl_profile_publish_exception(ctx, msg_vpn_name, acl_profile_name, topic_syntax, publish_exception_topic)
 Delete a Publish Topic Exception object.
 
-Delete a Publish Topic Exception object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Publish Topic Exception object.  A Publish Topic Exception is an exception to the default action to take when a client using the ACL Profile publishes to a topic in the Message VPN. Exceptions must be expressed as a topic.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
-  **topic_syntax** | **String**| The topicSyntax of the Publish Topic Exception. | 
-  **publish_exception_topic** | **String**| The publishExceptionTopic of the Publish Topic Exception. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
+  **topic_syntax** | **String**| The syntax of the topic for the exception to the default action taken. | 
+  **publish_exception_topic** | **String**| The topic for the exception to the default action taken. May include wildcard characters. | 
 
 ### Return type
 
@@ -2009,17 +2096,17 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_acl_profile_subscribe_exception(ctx, msg_vpn_name, acl_profile_name, topic_syntax, subscribe_exception_topic)
 Delete a Subscribe Topic Exception object.
 
-Delete a Subscribe Topic Exception object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Subscribe Topic Exception object.  A Subscribe Topic Exception is an exception to the default action to take when a client using the ACL Profile subscribes to a topic in the Message VPN. Exceptions must be expressed as a topic.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
-  **topic_syntax** | **String**| The topicSyntax of the Subscribe Topic Exception. | 
-  **subscribe_exception_topic** | **String**| The subscribeExceptionTopic of the Subscribe Topic Exception. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
+  **topic_syntax** | **String**| The syntax of the topic for the exception to the default action taken. | 
+  **subscribe_exception_topic** | **String**| The topic for the exception to the default action taken. May include wildcard characters. | 
 
 ### Return type
 
@@ -2040,15 +2127,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_authorization_group(ctx, msg_vpn_name, authorization_group_name)
 Delete an LDAP Authorization Group object.
 
-Delete an LDAP Authorization Group object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete an LDAP Authorization Group object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **authorization_group_name** | **String**| The authorizationGroupName of the LDAP Authorization Group. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **authorization_group_name** | **String**| The name of the LDAP Authorization Group. | 
 
 ### Return type
 
@@ -2069,16 +2156,16 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_bridge(ctx, msg_vpn_name, bridge_name, bridge_virtual_router)
 Delete a Bridge object.
 
-Delete a Bridge object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Bridge object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
 
 ### Return type
 
@@ -2099,19 +2186,19 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_bridge_remote_msg_vpn(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, remote_msg_vpn_name, remote_msg_vpn_location, remote_msg_vpn_interface)
 Delete a Remote Message VPN object.
 
-Delete a Remote Message VPN object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Remote Message VPN object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
-  **remote_msg_vpn_name** | **String**| The remoteMsgVpnName of the Remote Message VPN. | 
-  **remote_msg_vpn_location** | **String**| The remoteMsgVpnLocation of the Remote Message VPN. | 
-  **remote_msg_vpn_interface** | **String**| The remoteMsgVpnInterface of the Remote Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+  **remote_msg_vpn_name** | **String**| The name of the remote Message VPN. | 
+  **remote_msg_vpn_location** | **String**| The location of the remote Message VPN as either an FQDN with port, IP address with port, or virtual router name (starting with \&quot;v:\&quot;). | 
+  **remote_msg_vpn_interface** | **String**| The physical interface on the local Message VPN host for connecting to the remote Message VPN. By default, an interface is chosen automatically (recommended), but if specified, &#x60;remoteMsgVpnLocation&#x60; must not be a virtual router name. | 
 
 ### Return type
 
@@ -2132,17 +2219,17 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_bridge_remote_subscription(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, remote_subscription_topic)
 Delete a Remote Subscription object.
 
-Delete a Remote Subscription object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Remote Subscription object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
-  **remote_subscription_topic** | **String**| The remoteSubscriptionTopic of the Remote Subscription. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+  **remote_subscription_topic** | **String**| The topic of the Bridge remote subscription. | 
 
 ### Return type
 
@@ -2163,17 +2250,17 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_bridge_tls_trusted_common_name(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, tls_trusted_common_name)
 Delete a Trusted Common Name object.
 
-Delete a Trusted Common Name object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Trusted Common Name object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
-  **tls_trusted_common_name** | **String**| The tlsTrustedCommonName of the Trusted Common Name. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+  **tls_trusted_common_name** | **String**| The expected trusted common name of the remote certificate. | 
 
 ### Return type
 
@@ -2194,15 +2281,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_client_profile(ctx, msg_vpn_name, client_profile_name)
 Delete a Client Profile object.
 
-Delete a Client Profile object.  A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Client Profile object.  Client Profiles are used to assign common configuration properties to clients that have been successfully authorized.  A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **client_profile_name** | **String**| The clientProfileName of the Client Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **client_profile_name** | **String**| The name of the Client Profile. | 
 
 ### Return type
 
@@ -2223,15 +2310,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_client_username(ctx, msg_vpn_name, client_username)
 Delete a Client Username object.
 
-Delete a Client Username object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Client Username object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **client_username** | **String**| The clientUsername of the Client Username. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **client_username** | **String**| The value of the Client Username. | 
 
 ### Return type
 
@@ -2252,15 +2339,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_distributed_cache(ctx, msg_vpn_name, cache_name)
 Delete a Distributed Cache object.
 
-Delete a Distributed Cache object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Delete a Distributed Cache object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
 
 ### Return type
 
@@ -2281,16 +2368,16 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_distributed_cache_cluster(ctx, msg_vpn_name, cache_name, cluster_name)
 Delete a Cache Cluster object.
 
-Delete a Cache Cluster object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Delete a Cache Cluster object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
 
 ### Return type
 
@@ -2311,17 +2398,17 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_distributed_cache_cluster_global_caching_home_cluster(ctx, msg_vpn_name, cache_name, cluster_name, home_cluster_name)
 Delete a Home Cache Cluster object.
 
-Delete a Home Cache Cluster object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Delete a Home Cache Cluster object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
-  **home_cluster_name** | **String**| The homeClusterName of the Home Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
+  **home_cluster_name** | **String**| The name of the remote Home Cache Cluster. | 
 
 ### Return type
 
@@ -2342,18 +2429,18 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_distributed_cache_cluster_global_caching_home_cluster_topic_prefix(ctx, msg_vpn_name, cache_name, cluster_name, home_cluster_name, topic_prefix)
 Delete a Topic Prefix object.
 
-Delete a Topic Prefix object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Delete a Topic Prefix object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
-  **home_cluster_name** | **String**| The homeClusterName of the Home Cache Cluster. | 
-  **topic_prefix** | **String**| The topicPrefix of the Topic Prefix. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
+  **home_cluster_name** | **String**| The name of the remote Home Cache Cluster. | 
+  **topic_prefix** | **String**| A topic prefix for global topics available from the remote Home Cache Cluster. A wildcard (/&gt;) is implied at the end of the prefix. | 
 
 ### Return type
 
@@ -2374,17 +2461,17 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_distributed_cache_cluster_instance(ctx, msg_vpn_name, cache_name, cluster_name, instance_name)
 Delete a Cache Instance object.
 
-Delete a Cache Instance object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Delete a Cache Instance object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
-  **instance_name** | **String**| The instanceName of the Cache Instance. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
+  **instance_name** | **String**| The name of the Cache Instance. | 
 
 ### Return type
 
@@ -2405,17 +2492,17 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_distributed_cache_cluster_topic(ctx, msg_vpn_name, cache_name, cluster_name, topic)
 Delete a Topic object.
 
-Delete a Topic object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Delete a Topic object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
-  **topic** | **String**| The topic of the Topic. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
+  **topic** | **String**| The value of the Topic in the form a/b/c. | 
 
 ### Return type
 
@@ -2436,15 +2523,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_dmr_bridge(ctx, msg_vpn_name, remote_node_name)
 Delete a DMR Bridge object.
 
-Delete a DMR Bridge object.  A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Delete a DMR Bridge object.  A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **remote_node_name** | **String**| The remoteNodeName of the DMR Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the DMR Bridge. | 
 
 ### Return type
 
@@ -2465,15 +2552,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_jndi_connection_factory(ctx, msg_vpn_name, connection_factory_name)
 Delete a JNDI Connection Factory object.
 
-Delete a JNDI Connection Factory object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.2.
+Delete a JNDI Connection Factory object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **connection_factory_name** | **String**| The connectionFactoryName of the JNDI Connection Factory. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **connection_factory_name** | **String**| The name of the JMS Connection Factory. | 
 
 ### Return type
 
@@ -2494,15 +2581,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_jndi_queue(ctx, msg_vpn_name, queue_name)
 Delete a JNDI Queue object.
 
-Delete a JNDI Queue object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.2.
+Delete a JNDI Queue object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **queue_name** | **String**| The queueName of the JNDI Queue. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **queue_name** | **String**| The JNDI name of the JMS Queue. | 
 
 ### Return type
 
@@ -2523,15 +2610,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_jndi_topic(ctx, msg_vpn_name, topic_name)
 Delete a JNDI Topic object.
 
-Delete a JNDI Topic object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.2.
+Delete a JNDI Topic object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **topic_name** | **String**| The topicName of the JNDI Topic. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **topic_name** | **String**| The JNDI name of the JMS Topic. | 
 
 ### Return type
 
@@ -2552,15 +2639,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_mqtt_retain_cache(ctx, msg_vpn_name, cache_name)
 Delete an MQTT Retain Cache object.
 
-Delete an MQTT Retain Cache object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Delete an MQTT Retain Cache object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the MQTT Retain Cache. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the MQTT Retain Cache. | 
 
 ### Return type
 
@@ -2581,16 +2668,16 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_mqtt_session(ctx, msg_vpn_name, mqtt_session_client_id, mqtt_session_virtual_router)
 Delete an MQTT Session object.
 
-Delete an MQTT Session object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.1.
+Delete an MQTT Session object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
-  **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+  **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
 
 ### Return type
 
@@ -2611,17 +2698,17 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_mqtt_session_subscription(ctx, msg_vpn_name, mqtt_session_client_id, mqtt_session_virtual_router, subscription_topic)
 Delete a Subscription object.
 
-Delete a Subscription object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.1.
+Delete a Subscription object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
-  **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
-  **subscription_topic** | **String**| The subscriptionTopic of the Subscription. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+  **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
+  **subscription_topic** | **String**| The MQTT subscription topic. | 
 
 ### Return type
 
@@ -2642,15 +2729,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_queue(ctx, msg_vpn_name, queue_name)
 Delete a Queue object.
 
-Delete a Queue object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Queue object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **queue_name** | **String**| The queueName of the Queue. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **queue_name** | **String**| The name of the Queue. | 
 
 ### Return type
 
@@ -2669,18 +2756,18 @@ Name | Type | Description  | Notes
 
 # **delete_msg_vpn_queue_subscription**
 > ::models::SempMetaOnlyResponse delete_msg_vpn_queue_subscription(ctx, msg_vpn_name, queue_name, subscription_topic)
-Delete a Subscription object.
+Delete a Queue Subscription object.
 
-Delete a Subscription object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Queue Subscription object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **queue_name** | **String**| The queueName of the Queue. | 
-  **subscription_topic** | **String**| The subscriptionTopic of the Subscription. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **queue_name** | **String**| The name of the Queue. | 
+  **subscription_topic** | **String**| The topic of the Subscription. | 
 
 ### Return type
 
@@ -2701,15 +2788,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_replay_log(ctx, msg_vpn_name, replay_log_name)
 Delete a Replay Log object.
 
-Delete a Replay Log object.  A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.10.
+Delete a Replay Log object.  A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.10.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **replay_log_name** | **String**| The replayLogName of the Replay Log. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **replay_log_name** | **String**| The name of the Replay Log. | 
 
 ### Return type
 
@@ -2730,15 +2817,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_replicated_topic(ctx, msg_vpn_name, replicated_topic)
 Delete a Replicated Topic object.
 
-Delete a Replicated Topic object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.9.
+Delete a Replicated Topic object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.9.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **replicated_topic** | **String**| The replicatedTopic of the Replicated Topic. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **replicated_topic** | **String**| The topic for applying replication. Published messages matching this topic will be replicated to the standby site. | 
 
 ### Return type
 
@@ -2759,15 +2846,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_rest_delivery_point(ctx, msg_vpn_name, rest_delivery_point_name)
 Delete a REST Delivery Point object.
 
-Delete a REST Delivery Point object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a REST Delivery Point object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
 
 ### Return type
 
@@ -2788,16 +2875,16 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_rest_delivery_point_queue_binding(ctx, msg_vpn_name, rest_delivery_point_name, queue_binding_name)
 Delete a Queue Binding object.
 
-Delete a Queue Binding object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Queue Binding object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
-  **queue_binding_name** | **String**| The queueBindingName of the Queue Binding. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+  **queue_binding_name** | **String**| The name of a queue in the Message VPN. | 
 
 ### Return type
 
@@ -2818,16 +2905,16 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_rest_delivery_point_rest_consumer(ctx, msg_vpn_name, rest_delivery_point_name, rest_consumer_name)
 Delete a REST Consumer object.
 
-Delete a REST Consumer object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a REST Consumer object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
-  **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+  **rest_consumer_name** | **String**| The name of the REST Consumer. | 
 
 ### Return type
 
@@ -2848,17 +2935,17 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_rest_delivery_point_rest_consumer_tls_trusted_common_name(ctx, msg_vpn_name, rest_delivery_point_name, rest_consumer_name, tls_trusted_common_name)
 Delete a Trusted Common Name object.
 
-Delete a Trusted Common Name object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Trusted Common Name object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
-  **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
-  **tls_trusted_common_name** | **String**| The tlsTrustedCommonName of the Trusted Common Name. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+  **rest_consumer_name** | **String**| The name of the REST Consumer. | 
+  **tls_trusted_common_name** | **String**| The expected trusted common name of the remote certificate. | 
 
 ### Return type
 
@@ -2879,15 +2966,15 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_sequenced_topic(ctx, msg_vpn_name, sequenced_topic)
 Delete a Sequenced Topic object.
 
-Delete a Sequenced Topic object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Delete a Sequenced Topic object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **sequenced_topic** | **String**| The sequencedTopic of the Sequenced Topic. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **sequenced_topic** | **String**| Topic for applying sequence numbers. | 
 
 ### Return type
 
@@ -2908,15 +2995,72 @@ Name | Type | Description  | Notes
 > ::models::SempMetaOnlyResponse delete_msg_vpn_topic_endpoint(ctx, msg_vpn_name, topic_endpoint_name)
 Delete a Topic Endpoint object.
 
-Delete a Topic Endpoint object.  A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.1.
+Delete a Topic Endpoint object.  A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **topic_endpoint_name** | **String**| The topicEndpointName of the Topic Endpoint. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **topic_endpoint_name** | **String**| The name of the Topic Endpoint. | 
+
+### Return type
+
+[**::models::SempMetaOnlyResponse**](SempMetaOnlyResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_username**
+> ::models::SempMetaOnlyResponse delete_username(ctx, user_name)
+Delete a Username object.
+
+Delete a Username object.  A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been available since 2.12.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **user_name** | **String**| Username. | 
+
+### Return type
+
+[**::models::SempMetaOnlyResponse**](SempMetaOnlyResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_username_msg_vpn_access_level_exception**
+> ::models::SempMetaOnlyResponse delete_username_msg_vpn_access_level_exception(ctx, user_name, msg_vpn_name)
+Delete a Message VPN Access Level Exception object.
+
+Delete a Message VPN Access Level Exception object.  A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.12.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **user_name** | **String**| Username. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN for which an access level exception may be configured. | 
 
 ### Return type
 
@@ -2944,7 +3088,7 @@ Get a User Message VPN object.   Attribute|Identifying|Write-Only|Deprecated :--
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the User Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -2952,7 +3096,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the User Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3012,14 +3156,14 @@ Name | Type | Description  | Notes
 > ::models::DmrClusterResponse get_dmr_cluster(ctx, dmr_cluster_name, optional)
 Get a Cluster object.
 
-Get a Cluster object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authenticationBasicPassword||x| authenticationClientCertContent||x| authenticationClientCertPassword||x| dmrClusterName|x||    A SEMP client authorized with a minimum access scope/level of \"global/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a Cluster object.  A Cluster is a provisioned object on a message broker that contains global DMR configuration parameters.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authenticationBasicPassword||x| authenticationClientCertContent||x| authenticationClientCertPassword||x| dmrClusterName|x||    A SEMP client authorized with a minimum access scope/level of \"global/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3027,7 +3171,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3049,15 +3193,15 @@ Name | Type | Description  | Notes
 > ::models::DmrClusterLinkResponse get_dmr_cluster_link(ctx, dmr_cluster_name, remote_node_name, optional)
 Get a Link object.
 
-Get a Link object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authenticationBasicPassword||x| dmrClusterName|x|| remoteNodeName|x||    A SEMP client authorized with a minimum access scope/level of \"global/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a Link object.  A Link connects nodes (either within a Cluster or between two different Clusters) and allows them to exchange topology information, subscriptions and data.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authenticationBasicPassword||x| dmrClusterName|x|| remoteNodeName|x||    A SEMP client authorized with a minimum access scope/level of \"global/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
-  **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3065,8 +3209,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
- **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
+ **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3088,16 +3232,16 @@ Name | Type | Description  | Notes
 > ::models::DmrClusterLinkRemoteAddressResponse get_dmr_cluster_link_remote_address(ctx, dmr_cluster_name, remote_node_name, remote_address, optional)
 Get a Remote Address object.
 
-Get a Remote Address object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: dmrClusterName|x|| remoteAddress|x|| remoteNodeName|x||    A SEMP client authorized with a minimum access scope/level of \"global/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a Remote Address object.  Each Remote Address, consisting of a FQDN or IP address and optional port, is used to connect to the remote node for this Link. Up to 4 addresses may be provided for each Link, and will be tried on a round-robin basis.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: dmrClusterName|x|| remoteAddress|x|| remoteNodeName|x||    A SEMP client authorized with a minimum access scope/level of \"global/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
-  **remote_node_name** | **String**| The remoteNodeName of the Link. | 
-  **remote_address** | **String**| The remoteAddress of the Remote Address. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
+  **remote_address** | **String**| The FQDN or IP address (and optional port) of the remote node. If a port is not provided, it will vary based on the transport encoding: 55555 (plain-text), 55443 (encrypted), or 55003 (compressed). | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3105,9 +3249,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
- **remote_node_name** | **String**| The remoteNodeName of the Link. | 
- **remote_address** | **String**| The remoteAddress of the Remote Address. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
+ **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
+ **remote_address** | **String**| The FQDN or IP address (and optional port) of the remote node. If a port is not provided, it will vary based on the transport encoding: 55555 (plain-text), 55443 (encrypted), or 55003 (compressed). | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3129,15 +3273,15 @@ Name | Type | Description  | Notes
 > ::models::DmrClusterLinkRemoteAddressesResponse get_dmr_cluster_link_remote_addresses(ctx, dmr_cluster_name, remote_node_name, optional)
 Get a list of Remote Address objects.
 
-Get a list of Remote Address objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: dmrClusterName|x|| remoteAddress|x|| remoteNodeName|x||    A SEMP client authorized with a minimum access scope/level of \"global/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a list of Remote Address objects.  Each Remote Address, consisting of a FQDN or IP address and optional port, is used to connect to the remote node for this Link. Up to 4 addresses may be provided for each Link, and will be tried on a round-robin basis.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: dmrClusterName|x|| remoteAddress|x|| remoteNodeName|x||    A SEMP client authorized with a minimum access scope/level of \"global/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
-  **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3145,8 +3289,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
- **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
+ **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -3169,16 +3313,16 @@ Name | Type | Description  | Notes
 > ::models::DmrClusterLinkTlsTrustedCommonNameResponse get_dmr_cluster_link_tls_trusted_common_name(ctx, dmr_cluster_name, remote_node_name, tls_trusted_common_name, optional)
 Get a Trusted Common Name object.
 
-Get a Trusted Common Name object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: dmrClusterName|x|| remoteNodeName|x|| tlsTrustedCommonName|x||    A SEMP client authorized with a minimum access scope/level of \"global/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a Trusted Common Name object.  The Trusted Common Names for the Link are used by encrypted transports to verify the name in the certificate presented by the remote node. They must include the common name of the remote node's server certificate or client certificate, depending upon the initiator of the connection.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: dmrClusterName|x|| remoteNodeName|x|| tlsTrustedCommonName|x||    A SEMP client authorized with a minimum access scope/level of \"global/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
-  **remote_node_name** | **String**| The remoteNodeName of the Link. | 
-  **tls_trusted_common_name** | **String**| The tlsTrustedCommonName of the Trusted Common Name. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
+  **tls_trusted_common_name** | **String**| The expected trusted common name of the remote certificate. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3186,9 +3330,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
- **remote_node_name** | **String**| The remoteNodeName of the Link. | 
- **tls_trusted_common_name** | **String**| The tlsTrustedCommonName of the Trusted Common Name. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
+ **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
+ **tls_trusted_common_name** | **String**| The expected trusted common name of the remote certificate. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3210,15 +3354,15 @@ Name | Type | Description  | Notes
 > ::models::DmrClusterLinkTlsTrustedCommonNamesResponse get_dmr_cluster_link_tls_trusted_common_names(ctx, dmr_cluster_name, remote_node_name, optional)
 Get a list of Trusted Common Name objects.
 
-Get a list of Trusted Common Name objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: dmrClusterName|x|| remoteNodeName|x|| tlsTrustedCommonName|x||    A SEMP client authorized with a minimum access scope/level of \"global/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a list of Trusted Common Name objects.  The Trusted Common Names for the Link are used by encrypted transports to verify the name in the certificate presented by the remote node. They must include the common name of the remote node's server certificate or client certificate, depending upon the initiator of the connection.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: dmrClusterName|x|| remoteNodeName|x|| tlsTrustedCommonName|x||    A SEMP client authorized with a minimum access scope/level of \"global/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
-  **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3226,8 +3370,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
- **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
+ **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -3250,14 +3394,14 @@ Name | Type | Description  | Notes
 > ::models::DmrClusterLinksResponse get_dmr_cluster_links(ctx, dmr_cluster_name, optional)
 Get a list of Link objects.
 
-Get a list of Link objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authenticationBasicPassword||x| dmrClusterName|x|| remoteNodeName|x||    A SEMP client authorized with a minimum access scope/level of \"global/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a list of Link objects.  A Link connects nodes (either within a Cluster or between two different Clusters) and allows them to exchange topology information, subscriptions and data.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authenticationBasicPassword||x| dmrClusterName|x|| remoteNodeName|x||    A SEMP client authorized with a minimum access scope/level of \"global/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3265,7 +3409,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -3290,14 +3434,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnResponse get_msg_vpn(ctx, msg_vpn_name, optional)
 Get a Message VPN object.
 
-Get a Message VPN object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| replicationBridgeAuthenticationBasicPassword||x| replicationBridgeAuthenticationClientCertContent||x| replicationBridgeAuthenticationClientCertPassword||x| replicationEnabledQueueBehavior||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Message VPN object.  Message VPNs (Virtual Private Networks) allow for the segregation of topic space and clients. They also group clients connecting to a network of message brokers, such that messages published within a particular group are only visible to that group's clients.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| replicationBridgeAuthenticationBasicPassword||x| replicationBridgeAuthenticationClientCertContent||x| replicationBridgeAuthenticationClientCertPassword||x| replicationEnabledQueueBehavior||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3305,7 +3449,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3327,15 +3471,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfileResponse get_msg_vpn_acl_profile(ctx, msg_vpn_name, acl_profile_name, optional)
 Get an ACL Profile object.
 
-Get an ACL Profile object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get an ACL Profile object.  An ACL Profile controls whether an authenticated client is permitted to establish a connection with the message broker or permitted to publish and subscribe to specific topics.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3343,8 +3487,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3366,16 +3510,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfileClientConnectExceptionResponse get_msg_vpn_acl_profile_client_connect_exception(ctx, msg_vpn_name, acl_profile_name, client_connect_exception_address, optional)
 Get a Client Connect Exception object.
 
-Get a Client Connect Exception object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| clientConnectExceptionAddress|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Client Connect Exception object.  A Client Connect Exception is an exception to the default action to take when a client using the ACL Profile connects to the Message VPN. Exceptions must be expressed as an IP address/netmask in CIDR form.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| clientConnectExceptionAddress|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
-  **client_connect_exception_address** | **String**| The clientConnectExceptionAddress of the Client Connect Exception. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
+  **client_connect_exception_address** | **String**| The IP address/netmask of the client connect exception in CIDR form. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3383,9 +3527,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
- **client_connect_exception_address** | **String**| The clientConnectExceptionAddress of the Client Connect Exception. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **acl_profile_name** | **String**| The name of the ACL Profile. | 
+ **client_connect_exception_address** | **String**| The IP address/netmask of the client connect exception in CIDR form. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3407,15 +3551,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfileClientConnectExceptionsResponse get_msg_vpn_acl_profile_client_connect_exceptions(ctx, msg_vpn_name, acl_profile_name, optional)
 Get a list of Client Connect Exception objects.
 
-Get a list of Client Connect Exception objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| clientConnectExceptionAddress|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a list of Client Connect Exception objects.  A Client Connect Exception is an exception to the default action to take when a client using the ACL Profile connects to the Message VPN. Exceptions must be expressed as an IP address/netmask in CIDR form.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| clientConnectExceptionAddress|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3423,8 +3567,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -3449,17 +3593,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfilePublishExceptionResponse get_msg_vpn_acl_profile_publish_exception(ctx, msg_vpn_name, acl_profile_name, topic_syntax, publish_exception_topic, optional)
 Get a Publish Topic Exception object.
 
-Get a Publish Topic Exception object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| msgVpnName|x|| publishExceptionTopic|x|| topicSyntax|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Publish Topic Exception object.  A Publish Topic Exception is an exception to the default action to take when a client using the ACL Profile publishes to a topic in the Message VPN. Exceptions must be expressed as a topic.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| msgVpnName|x|| publishExceptionTopic|x|| topicSyntax|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
-  **topic_syntax** | **String**| The topicSyntax of the Publish Topic Exception. | 
-  **publish_exception_topic** | **String**| The publishExceptionTopic of the Publish Topic Exception. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
+  **topic_syntax** | **String**| The syntax of the topic for the exception to the default action taken. | 
+  **publish_exception_topic** | **String**| The topic for the exception to the default action taken. May include wildcard characters. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3467,10 +3611,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
- **topic_syntax** | **String**| The topicSyntax of the Publish Topic Exception. | 
- **publish_exception_topic** | **String**| The publishExceptionTopic of the Publish Topic Exception. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **acl_profile_name** | **String**| The name of the ACL Profile. | 
+ **topic_syntax** | **String**| The syntax of the topic for the exception to the default action taken. | 
+ **publish_exception_topic** | **String**| The topic for the exception to the default action taken. May include wildcard characters. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3492,15 +3636,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfilePublishExceptionsResponse get_msg_vpn_acl_profile_publish_exceptions(ctx, msg_vpn_name, acl_profile_name, optional)
 Get a list of Publish Topic Exception objects.
 
-Get a list of Publish Topic Exception objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| msgVpnName|x|| publishExceptionTopic|x|| topicSyntax|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a list of Publish Topic Exception objects.  A Publish Topic Exception is an exception to the default action to take when a client using the ACL Profile publishes to a topic in the Message VPN. Exceptions must be expressed as a topic.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| msgVpnName|x|| publishExceptionTopic|x|| topicSyntax|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3508,8 +3652,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -3534,17 +3678,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfileSubscribeExceptionResponse get_msg_vpn_acl_profile_subscribe_exception(ctx, msg_vpn_name, acl_profile_name, topic_syntax, subscribe_exception_topic, optional)
 Get a Subscribe Topic Exception object.
 
-Get a Subscribe Topic Exception object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| msgVpnName|x|| subscribeExceptionTopic|x|| topicSyntax|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Subscribe Topic Exception object.  A Subscribe Topic Exception is an exception to the default action to take when a client using the ACL Profile subscribes to a topic in the Message VPN. Exceptions must be expressed as a topic.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| msgVpnName|x|| subscribeExceptionTopic|x|| topicSyntax|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
-  **topic_syntax** | **String**| The topicSyntax of the Subscribe Topic Exception. | 
-  **subscribe_exception_topic** | **String**| The subscribeExceptionTopic of the Subscribe Topic Exception. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
+  **topic_syntax** | **String**| The syntax of the topic for the exception to the default action taken. | 
+  **subscribe_exception_topic** | **String**| The topic for the exception to the default action taken. May include wildcard characters. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3552,10 +3696,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
- **topic_syntax** | **String**| The topicSyntax of the Subscribe Topic Exception. | 
- **subscribe_exception_topic** | **String**| The subscribeExceptionTopic of the Subscribe Topic Exception. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **acl_profile_name** | **String**| The name of the ACL Profile. | 
+ **topic_syntax** | **String**| The syntax of the topic for the exception to the default action taken. | 
+ **subscribe_exception_topic** | **String**| The topic for the exception to the default action taken. May include wildcard characters. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3577,15 +3721,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfileSubscribeExceptionsResponse get_msg_vpn_acl_profile_subscribe_exceptions(ctx, msg_vpn_name, acl_profile_name, optional)
 Get a list of Subscribe Topic Exception objects.
 
-Get a list of Subscribe Topic Exception objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| msgVpnName|x|| subscribeExceptionTopic|x|| topicSyntax|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a list of Subscribe Topic Exception objects.  A Subscribe Topic Exception is an exception to the default action to take when a client using the ACL Profile subscribes to a topic in the Message VPN. Exceptions must be expressed as a topic.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: aclProfileName|x|| msgVpnName|x|| subscribeExceptionTopic|x|| topicSyntax|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3593,8 +3737,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -3619,15 +3763,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAuthorizationGroupResponse get_msg_vpn_authorization_group(ctx, msg_vpn_name, authorization_group_name, optional)
 Get an LDAP Authorization Group object.
 
-Get an LDAP Authorization Group object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authorizationGroupName|x|| msgVpnName|x|| orderAfterAuthorizationGroupName||x| orderBeforeAuthorizationGroupName||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get an LDAP Authorization Group object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authorizationGroupName|x|| msgVpnName|x|| orderAfterAuthorizationGroupName||x| orderBeforeAuthorizationGroupName||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **authorization_group_name** | **String**| The authorizationGroupName of the LDAP Authorization Group. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **authorization_group_name** | **String**| The name of the LDAP Authorization Group. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3635,8 +3779,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **authorization_group_name** | **String**| The authorizationGroupName of the LDAP Authorization Group. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **authorization_group_name** | **String**| The name of the LDAP Authorization Group. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3658,16 +3802,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeResponse get_msg_vpn_bridge(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, optional)
 Get a Bridge object.
 
-Get a Bridge object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| remoteAuthenticationBasicPassword||x| remoteAuthenticationClientCertContent||x| remoteAuthenticationClientCertPassword||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Bridge object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| remoteAuthenticationBasicPassword||x| remoteAuthenticationClientCertContent||x| remoteAuthenticationClientCertPassword||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3675,9 +3819,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3699,19 +3843,19 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeRemoteMsgVpnResponse get_msg_vpn_bridge_remote_msg_vpn(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, remote_msg_vpn_name, remote_msg_vpn_location, remote_msg_vpn_interface, optional)
 Get a Remote Message VPN object.
 
-Get a Remote Message VPN object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| password||x| remoteMsgVpnInterface|x|| remoteMsgVpnLocation|x|| remoteMsgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Remote Message VPN object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| password||x| remoteMsgVpnInterface|x|| remoteMsgVpnLocation|x|| remoteMsgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
-  **remote_msg_vpn_name** | **String**| The remoteMsgVpnName of the Remote Message VPN. | 
-  **remote_msg_vpn_location** | **String**| The remoteMsgVpnLocation of the Remote Message VPN. | 
-  **remote_msg_vpn_interface** | **String**| The remoteMsgVpnInterface of the Remote Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+  **remote_msg_vpn_name** | **String**| The name of the remote Message VPN. | 
+  **remote_msg_vpn_location** | **String**| The location of the remote Message VPN as either an FQDN with port, IP address with port, or virtual router name (starting with \&quot;v:\&quot;). | 
+  **remote_msg_vpn_interface** | **String**| The physical interface on the local Message VPN host for connecting to the remote Message VPN. By default, an interface is chosen automatically (recommended), but if specified, &#x60;remoteMsgVpnLocation&#x60; must not be a virtual router name. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3719,12 +3863,12 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
- **remote_msg_vpn_name** | **String**| The remoteMsgVpnName of the Remote Message VPN. | 
- **remote_msg_vpn_location** | **String**| The remoteMsgVpnLocation of the Remote Message VPN. | 
- **remote_msg_vpn_interface** | **String**| The remoteMsgVpnInterface of the Remote Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+ **remote_msg_vpn_name** | **String**| The name of the remote Message VPN. | 
+ **remote_msg_vpn_location** | **String**| The location of the remote Message VPN as either an FQDN with port, IP address with port, or virtual router name (starting with \&quot;v:\&quot;). | 
+ **remote_msg_vpn_interface** | **String**| The physical interface on the local Message VPN host for connecting to the remote Message VPN. By default, an interface is chosen automatically (recommended), but if specified, &#x60;remoteMsgVpnLocation&#x60; must not be a virtual router name. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3746,16 +3890,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeRemoteMsgVpnsResponse get_msg_vpn_bridge_remote_msg_vpns(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, optional)
 Get a list of Remote Message VPN objects.
 
-Get a list of Remote Message VPN objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| password||x| remoteMsgVpnInterface|x|| remoteMsgVpnLocation|x|| remoteMsgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a list of Remote Message VPN objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| password||x| remoteMsgVpnInterface|x|| remoteMsgVpnLocation|x|| remoteMsgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3763,9 +3907,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -3788,17 +3932,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeRemoteSubscriptionResponse get_msg_vpn_bridge_remote_subscription(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, remote_subscription_topic, optional)
 Get a Remote Subscription object.
 
-Get a Remote Subscription object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| remoteSubscriptionTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Remote Subscription object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| remoteSubscriptionTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
-  **remote_subscription_topic** | **String**| The remoteSubscriptionTopic of the Remote Subscription. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+  **remote_subscription_topic** | **String**| The topic of the Bridge remote subscription. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3806,10 +3950,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
- **remote_subscription_topic** | **String**| The remoteSubscriptionTopic of the Remote Subscription. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+ **remote_subscription_topic** | **String**| The topic of the Bridge remote subscription. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3831,16 +3975,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeRemoteSubscriptionsResponse get_msg_vpn_bridge_remote_subscriptions(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, optional)
 Get a list of Remote Subscription objects.
 
-Get a list of Remote Subscription objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| remoteSubscriptionTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a list of Remote Subscription objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| remoteSubscriptionTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3848,9 +3992,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -3875,17 +4019,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeTlsTrustedCommonNameResponse get_msg_vpn_bridge_tls_trusted_common_name(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, tls_trusted_common_name, optional)
 Get a Trusted Common Name object.
 
-Get a Trusted Common Name object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| tlsTrustedCommonName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Trusted Common Name object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| tlsTrustedCommonName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
-  **tls_trusted_common_name** | **String**| The tlsTrustedCommonName of the Trusted Common Name. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+  **tls_trusted_common_name** | **String**| The expected trusted common name of the remote certificate. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3893,10 +4037,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
- **tls_trusted_common_name** | **String**| The tlsTrustedCommonName of the Trusted Common Name. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+ **tls_trusted_common_name** | **String**| The expected trusted common name of the remote certificate. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3918,16 +4062,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeTlsTrustedCommonNamesResponse get_msg_vpn_bridge_tls_trusted_common_names(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, optional)
 Get a list of Trusted Common Name objects.
 
-Get a list of Trusted Common Name objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| tlsTrustedCommonName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a list of Trusted Common Name objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: bridgeName|x|| bridgeVirtualRouter|x|| msgVpnName|x|| tlsTrustedCommonName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3935,9 +4079,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -3960,15 +4104,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnClientProfileResponse get_msg_vpn_client_profile(ctx, msg_vpn_name, client_profile_name, optional)
 Get a Client Profile object.
 
-Get a Client Profile object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: clientProfileName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Client Profile object.  Client Profiles are used to assign common configuration properties to clients that have been successfully authorized.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: clientProfileName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **client_profile_name** | **String**| The clientProfileName of the Client Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **client_profile_name** | **String**| The name of the Client Profile. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -3976,8 +4120,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **client_profile_name** | **String**| The clientProfileName of the Client Profile. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **client_profile_name** | **String**| The name of the Client Profile. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -3999,15 +4143,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnClientUsernameResponse get_msg_vpn_client_username(ctx, msg_vpn_name, client_username, optional)
 Get a Client Username object.
 
-Get a Client Username object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: clientUsername|x|| msgVpnName|x|| password||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Client Username object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: clientUsername|x|| msgVpnName|x|| password||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **client_username** | **String**| The clientUsername of the Client Username. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **client_username** | **String**| The value of the Client Username. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4015,8 +4159,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **client_username** | **String**| The clientUsername of the Client Username. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **client_username** | **String**| The value of the Client Username. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4038,15 +4182,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheResponse get_msg_vpn_distributed_cache(ctx, msg_vpn_name, cache_name, optional)
 Get a Distributed Cache object.
 
-Get a Distributed Cache object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a Distributed Cache object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4054,8 +4198,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4077,16 +4221,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterResponse get_msg_vpn_distributed_cache_cluster(ctx, msg_vpn_name, cache_name, cluster_name, optional)
 Get a Cache Cluster object.
 
-Get a Cache Cluster object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a Cache Cluster object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4094,9 +4238,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4118,17 +4262,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterGlobalCachingHomeClusterResponse get_msg_vpn_distributed_cache_cluster_global_caching_home_cluster(ctx, msg_vpn_name, cache_name, cluster_name, home_cluster_name, optional)
 Get a Home Cache Cluster object.
 
-Get a Home Cache Cluster object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| homeClusterName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a Home Cache Cluster object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| homeClusterName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
-  **home_cluster_name** | **String**| The homeClusterName of the Home Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
+  **home_cluster_name** | **String**| The name of the remote Home Cache Cluster. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4136,10 +4280,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
- **home_cluster_name** | **String**| The homeClusterName of the Home Cache Cluster. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
+ **home_cluster_name** | **String**| The name of the remote Home Cache Cluster. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4161,18 +4305,18 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterGlobalCachingHomeClusterTopicPrefixResponse get_msg_vpn_distributed_cache_cluster_global_caching_home_cluster_topic_prefix(ctx, msg_vpn_name, cache_name, cluster_name, home_cluster_name, topic_prefix, optional)
 Get a Topic Prefix object.
 
-Get a Topic Prefix object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| homeClusterName|x|| msgVpnName|x|| topicPrefix|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a Topic Prefix object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| homeClusterName|x|| msgVpnName|x|| topicPrefix|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
-  **home_cluster_name** | **String**| The homeClusterName of the Home Cache Cluster. | 
-  **topic_prefix** | **String**| The topicPrefix of the Topic Prefix. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
+  **home_cluster_name** | **String**| The name of the remote Home Cache Cluster. | 
+  **topic_prefix** | **String**| A topic prefix for global topics available from the remote Home Cache Cluster. A wildcard (/&gt;) is implied at the end of the prefix. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4180,11 +4324,11 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
- **home_cluster_name** | **String**| The homeClusterName of the Home Cache Cluster. | 
- **topic_prefix** | **String**| The topicPrefix of the Topic Prefix. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
+ **home_cluster_name** | **String**| The name of the remote Home Cache Cluster. | 
+ **topic_prefix** | **String**| A topic prefix for global topics available from the remote Home Cache Cluster. A wildcard (/&gt;) is implied at the end of the prefix. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4206,17 +4350,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterGlobalCachingHomeClusterTopicPrefixesResponse get_msg_vpn_distributed_cache_cluster_global_caching_home_cluster_topic_prefixes(ctx, msg_vpn_name, cache_name, cluster_name, home_cluster_name, optional)
 Get a list of Topic Prefix objects.
 
-Get a list of Topic Prefix objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| homeClusterName|x|| msgVpnName|x|| topicPrefix|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a list of Topic Prefix objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| homeClusterName|x|| msgVpnName|x|| topicPrefix|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
-  **home_cluster_name** | **String**| The homeClusterName of the Home Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
+  **home_cluster_name** | **String**| The name of the remote Home Cache Cluster. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4224,10 +4368,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
- **home_cluster_name** | **String**| The homeClusterName of the Home Cache Cluster. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
+ **home_cluster_name** | **String**| The name of the remote Home Cache Cluster. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -4252,16 +4396,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterGlobalCachingHomeClustersResponse get_msg_vpn_distributed_cache_cluster_global_caching_home_clusters(ctx, msg_vpn_name, cache_name, cluster_name, optional)
 Get a list of Home Cache Cluster objects.
 
-Get a list of Home Cache Cluster objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| homeClusterName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a list of Home Cache Cluster objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| homeClusterName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4269,9 +4413,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -4296,17 +4440,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterInstanceResponse get_msg_vpn_distributed_cache_cluster_instance(ctx, msg_vpn_name, cache_name, cluster_name, instance_name, optional)
 Get a Cache Instance object.
 
-Get a Cache Instance object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| instanceName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a Cache Instance object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| instanceName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
-  **instance_name** | **String**| The instanceName of the Cache Instance. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
+  **instance_name** | **String**| The name of the Cache Instance. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4314,10 +4458,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
- **instance_name** | **String**| The instanceName of the Cache Instance. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
+ **instance_name** | **String**| The name of the Cache Instance. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4339,16 +4483,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterInstancesResponse get_msg_vpn_distributed_cache_cluster_instances(ctx, msg_vpn_name, cache_name, cluster_name, optional)
 Get a list of Cache Instance objects.
 
-Get a list of Cache Instance objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| instanceName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a list of Cache Instance objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| instanceName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4356,9 +4500,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -4383,17 +4527,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterTopicResponse get_msg_vpn_distributed_cache_cluster_topic(ctx, msg_vpn_name, cache_name, cluster_name, topic, optional)
 Get a Topic object.
 
-Get a Topic object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| msgVpnName|x|| topic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a Topic object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| msgVpnName|x|| topic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
-  **topic** | **String**| The topic of the Topic. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
+  **topic** | **String**| The value of the Topic in the form a/b/c. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4401,10 +4545,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
- **topic** | **String**| The topic of the Topic. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
+ **topic** | **String**| The value of the Topic in the form a/b/c. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4426,16 +4570,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterTopicsResponse get_msg_vpn_distributed_cache_cluster_topics(ctx, msg_vpn_name, cache_name, cluster_name, optional)
 Get a list of Topic objects.
 
-Get a list of Topic objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| msgVpnName|x|| topic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a list of Topic objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| msgVpnName|x|| topic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4443,9 +4587,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -4470,15 +4614,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClustersResponse get_msg_vpn_distributed_cache_clusters(ctx, msg_vpn_name, cache_name, optional)
 Get a list of Cache Cluster objects.
 
-Get a list of Cache Cluster objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a list of Cache Cluster objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| clusterName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4486,8 +4630,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -4512,15 +4656,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDmrBridgeResponse get_msg_vpn_dmr_bridge(ctx, msg_vpn_name, remote_node_name, optional)
 Get a DMR Bridge object.
 
-Get a DMR Bridge object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| remoteNodeName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a DMR Bridge object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| remoteNodeName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **remote_node_name** | **String**| The remoteNodeName of the DMR Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the DMR Bridge. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4528,8 +4672,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **remote_node_name** | **String**| The remoteNodeName of the DMR Bridge. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **remote_node_name** | **String**| The name of the node at the remote end of the DMR Bridge. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4551,15 +4695,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnJndiConnectionFactoryResponse get_msg_vpn_jndi_connection_factory(ctx, msg_vpn_name, connection_factory_name, optional)
 Get a JNDI Connection Factory object.
 
-Get a JNDI Connection Factory object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: connectionFactoryName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.2.
+Get a JNDI Connection Factory object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: connectionFactoryName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **connection_factory_name** | **String**| The connectionFactoryName of the JNDI Connection Factory. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **connection_factory_name** | **String**| The name of the JMS Connection Factory. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4567,8 +4711,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **connection_factory_name** | **String**| The connectionFactoryName of the JNDI Connection Factory. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **connection_factory_name** | **String**| The name of the JMS Connection Factory. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4590,15 +4734,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnJndiQueueResponse get_msg_vpn_jndi_queue(ctx, msg_vpn_name, queue_name, optional)
 Get a JNDI Queue object.
 
-Get a JNDI Queue object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| queueName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.2.
+Get a JNDI Queue object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| queueName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **queue_name** | **String**| The queueName of the JNDI Queue. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **queue_name** | **String**| The JNDI name of the JMS Queue. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4606,8 +4750,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **queue_name** | **String**| The queueName of the JNDI Queue. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **queue_name** | **String**| The JNDI name of the JMS Queue. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4629,15 +4773,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnJndiTopicResponse get_msg_vpn_jndi_topic(ctx, msg_vpn_name, topic_name, optional)
 Get a JNDI Topic object.
 
-Get a JNDI Topic object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| topicName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.2.
+Get a JNDI Topic object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| topicName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **topic_name** | **String**| The topicName of the JNDI Topic. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **topic_name** | **String**| The JNDI name of the JMS Topic. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4645,8 +4789,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **topic_name** | **String**| The topicName of the JNDI Topic. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **topic_name** | **String**| The JNDI name of the JMS Topic. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4668,15 +4812,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttRetainCacheResponse get_msg_vpn_mqtt_retain_cache(ctx, msg_vpn_name, cache_name, optional)
 Get an MQTT Retain Cache object.
 
-Get an MQTT Retain Cache object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get an MQTT Retain Cache object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the MQTT Retain Cache. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the MQTT Retain Cache. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4684,8 +4828,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the MQTT Retain Cache. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the MQTT Retain Cache. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4707,16 +4851,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttSessionResponse get_msg_vpn_mqtt_session(ctx, msg_vpn_name, mqtt_session_client_id, mqtt_session_virtual_router, optional)
 Get an MQTT Session object.
 
-Get an MQTT Session object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: mqttSessionClientId|x|| mqttSessionVirtualRouter|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.1.
+Get an MQTT Session object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: mqttSessionClientId|x|| mqttSessionVirtualRouter|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
-  **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+  **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4724,9 +4868,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
- **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+ **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4748,17 +4892,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttSessionSubscriptionResponse get_msg_vpn_mqtt_session_subscription(ctx, msg_vpn_name, mqtt_session_client_id, mqtt_session_virtual_router, subscription_topic, optional)
 Get a Subscription object.
 
-Get a Subscription object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: mqttSessionClientId|x|| mqttSessionVirtualRouter|x|| msgVpnName|x|| subscriptionTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.1.
+Get a Subscription object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: mqttSessionClientId|x|| mqttSessionVirtualRouter|x|| msgVpnName|x|| subscriptionTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
-  **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
-  **subscription_topic** | **String**| The subscriptionTopic of the Subscription. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+  **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
+  **subscription_topic** | **String**| The MQTT subscription topic. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4766,10 +4910,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
- **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
- **subscription_topic** | **String**| The subscriptionTopic of the Subscription. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+ **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
+ **subscription_topic** | **String**| The MQTT subscription topic. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4791,16 +4935,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttSessionSubscriptionsResponse get_msg_vpn_mqtt_session_subscriptions(ctx, msg_vpn_name, mqtt_session_client_id, mqtt_session_virtual_router, optional)
 Get a list of Subscription objects.
 
-Get a list of Subscription objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: mqttSessionClientId|x|| mqttSessionVirtualRouter|x|| msgVpnName|x|| subscriptionTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.1.
+Get a list of Subscription objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: mqttSessionClientId|x|| mqttSessionVirtualRouter|x|| msgVpnName|x|| subscriptionTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
-  **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+  **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4808,9 +4952,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
- **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+ **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -4835,15 +4979,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnQueueResponse get_msg_vpn_queue(ctx, msg_vpn_name, queue_name, optional)
 Get a Queue object.
 
-Get a Queue object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| queueName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Queue object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| queueName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **queue_name** | **String**| The queueName of the Queue. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **queue_name** | **String**| The name of the Queue. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4851,8 +4995,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **queue_name** | **String**| The queueName of the Queue. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **queue_name** | **String**| The name of the Queue. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4872,18 +5016,18 @@ Name | Type | Description  | Notes
 
 # **get_msg_vpn_queue_subscription**
 > ::models::MsgVpnQueueSubscriptionResponse get_msg_vpn_queue_subscription(ctx, msg_vpn_name, queue_name, subscription_topic, optional)
-Get a Subscription object.
+Get a Queue Subscription object.
 
-Get a Subscription object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| queueName|x|| subscriptionTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Queue Subscription object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| queueName|x|| subscriptionTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **queue_name** | **String**| The queueName of the Queue. | 
-  **subscription_topic** | **String**| The subscriptionTopic of the Subscription. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **queue_name** | **String**| The name of the Queue. | 
+  **subscription_topic** | **String**| The topic of the Subscription. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4891,9 +5035,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **queue_name** | **String**| The queueName of the Queue. | 
- **subscription_topic** | **String**| The subscriptionTopic of the Subscription. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **queue_name** | **String**| The name of the Queue. | 
+ **subscription_topic** | **String**| The topic of the Subscription. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4913,17 +5057,17 @@ Name | Type | Description  | Notes
 
 # **get_msg_vpn_queue_subscriptions**
 > ::models::MsgVpnQueueSubscriptionsResponse get_msg_vpn_queue_subscriptions(ctx, msg_vpn_name, queue_name, optional)
-Get a list of Subscription objects.
+Get a list of Queue Subscription objects.
 
-Get a list of Subscription objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| queueName|x|| subscriptionTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a list of Queue Subscription objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| queueName|x|| subscriptionTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **queue_name** | **String**| The queueName of the Queue. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **queue_name** | **String**| The name of the Queue. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4931,8 +5075,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **queue_name** | **String**| The queueName of the Queue. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **queue_name** | **String**| The name of the Queue. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -4957,15 +5101,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnReplayLogResponse get_msg_vpn_replay_log(ctx, msg_vpn_name, replay_log_name, optional)
 Get a Replay Log object.
 
-Get a Replay Log object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| replayLogName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.10.
+Get a Replay Log object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| replayLogName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.10.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **replay_log_name** | **String**| The replayLogName of the Replay Log. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **replay_log_name** | **String**| The name of the Replay Log. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -4973,8 +5117,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **replay_log_name** | **String**| The replayLogName of the Replay Log. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **replay_log_name** | **String**| The name of the Replay Log. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -4996,15 +5140,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnReplicatedTopicResponse get_msg_vpn_replicated_topic(ctx, msg_vpn_name, replicated_topic, optional)
 Get a Replicated Topic object.
 
-Get a Replicated Topic object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| replicatedTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.9.
+Get a Replicated Topic object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| replicatedTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.9.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **replicated_topic** | **String**| The replicatedTopic of the Replicated Topic. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **replicated_topic** | **String**| The topic for applying replication. Published messages matching this topic will be replicated to the standby site. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -5012,8 +5156,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **replicated_topic** | **String**| The replicatedTopic of the Replicated Topic. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **replicated_topic** | **String**| The topic for applying replication. Published messages matching this topic will be replicated to the standby site. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -5035,15 +5179,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointResponse get_msg_vpn_rest_delivery_point(ctx, msg_vpn_name, rest_delivery_point_name, optional)
 Get a REST Delivery Point object.
 
-Get a REST Delivery Point object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| restDeliveryPointName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a REST Delivery Point object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| restDeliveryPointName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -5051,8 +5195,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -5074,16 +5218,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointQueueBindingResponse get_msg_vpn_rest_delivery_point_queue_binding(ctx, msg_vpn_name, rest_delivery_point_name, queue_binding_name, optional)
 Get a Queue Binding object.
 
-Get a Queue Binding object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| queueBindingName|x|| restDeliveryPointName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Queue Binding object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| queueBindingName|x|| restDeliveryPointName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
-  **queue_binding_name** | **String**| The queueBindingName of the Queue Binding. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+  **queue_binding_name** | **String**| The name of a queue in the Message VPN. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -5091,9 +5235,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
- **queue_binding_name** | **String**| The queueBindingName of the Queue Binding. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+ **queue_binding_name** | **String**| The name of a queue in the Message VPN. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -5115,15 +5259,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointQueueBindingsResponse get_msg_vpn_rest_delivery_point_queue_bindings(ctx, msg_vpn_name, rest_delivery_point_name, optional)
 Get a list of Queue Binding objects.
 
-Get a list of Queue Binding objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| queueBindingName|x|| restDeliveryPointName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a list of Queue Binding objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| queueBindingName|x|| restDeliveryPointName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -5131,8 +5275,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -5157,16 +5301,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointRestConsumerResponse get_msg_vpn_rest_delivery_point_rest_consumer(ctx, msg_vpn_name, rest_delivery_point_name, rest_consumer_name, optional)
 Get a REST Consumer object.
 
-Get a REST Consumer object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authenticationClientCertContent||x| authenticationClientCertPassword||x| authenticationHttpBasicPassword||x| msgVpnName|x|| restConsumerName|x|| restDeliveryPointName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a REST Consumer object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authenticationClientCertContent||x| authenticationClientCertPassword||x| authenticationHttpBasicPassword||x| msgVpnName|x|| restConsumerName|x|| restDeliveryPointName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
-  **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+  **rest_consumer_name** | **String**| The name of the REST Consumer. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -5174,9 +5318,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
- **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+ **rest_consumer_name** | **String**| The name of the REST Consumer. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -5198,17 +5342,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointRestConsumerTlsTrustedCommonNameResponse get_msg_vpn_rest_delivery_point_rest_consumer_tls_trusted_common_name(ctx, msg_vpn_name, rest_delivery_point_name, rest_consumer_name, tls_trusted_common_name, optional)
 Get a Trusted Common Name object.
 
-Get a Trusted Common Name object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| restConsumerName|x|| restDeliveryPointName|x|| tlsTrustedCommonName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Trusted Common Name object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| restConsumerName|x|| restDeliveryPointName|x|| tlsTrustedCommonName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
-  **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
-  **tls_trusted_common_name** | **String**| The tlsTrustedCommonName of the Trusted Common Name. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+  **rest_consumer_name** | **String**| The name of the REST Consumer. | 
+  **tls_trusted_common_name** | **String**| The expected trusted common name of the remote certificate. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -5216,10 +5360,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
- **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
- **tls_trusted_common_name** | **String**| The tlsTrustedCommonName of the Trusted Common Name. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+ **rest_consumer_name** | **String**| The name of the REST Consumer. | 
+ **tls_trusted_common_name** | **String**| The expected trusted common name of the remote certificate. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -5241,16 +5385,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointRestConsumerTlsTrustedCommonNamesResponse get_msg_vpn_rest_delivery_point_rest_consumer_tls_trusted_common_names(ctx, msg_vpn_name, rest_delivery_point_name, rest_consumer_name, optional)
 Get a list of Trusted Common Name objects.
 
-Get a list of Trusted Common Name objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| restConsumerName|x|| restDeliveryPointName|x|| tlsTrustedCommonName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a list of Trusted Common Name objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| restConsumerName|x|| restDeliveryPointName|x|| tlsTrustedCommonName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
-  **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+  **rest_consumer_name** | **String**| The name of the REST Consumer. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -5258,9 +5402,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
- **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+ **rest_consumer_name** | **String**| The name of the REST Consumer. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5283,15 +5427,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointRestConsumersResponse get_msg_vpn_rest_delivery_point_rest_consumers(ctx, msg_vpn_name, rest_delivery_point_name, optional)
 Get a list of REST Consumer objects.
 
-Get a list of REST Consumer objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authenticationClientCertContent||x| authenticationClientCertPassword||x| authenticationHttpBasicPassword||x| msgVpnName|x|| restConsumerName|x|| restDeliveryPointName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a list of REST Consumer objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authenticationClientCertContent||x| authenticationClientCertPassword||x| authenticationHttpBasicPassword||x| msgVpnName|x|| restConsumerName|x|| restDeliveryPointName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -5299,8 +5443,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -5325,15 +5469,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnSequencedTopicResponse get_msg_vpn_sequenced_topic(ctx, msg_vpn_name, sequenced_topic, optional)
 Get a Sequenced Topic object.
 
-Get a Sequenced Topic object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| sequencedTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a Sequenced Topic object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| sequencedTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **sequenced_topic** | **String**| The sequencedTopic of the Sequenced Topic. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **sequenced_topic** | **String**| Topic for applying sequence numbers. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -5341,8 +5485,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **sequenced_topic** | **String**| The sequencedTopic of the Sequenced Topic. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **sequenced_topic** | **String**| Topic for applying sequence numbers. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -5364,14 +5508,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnSequencedTopicsResponse get_msg_vpn_sequenced_topics(ctx, msg_vpn_name, optional)
 Get a list of Sequenced Topic objects.
 
-Get a list of Sequenced Topic objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| sequencedTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.0.
+Get a list of Sequenced Topic objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| sequencedTopic|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -5379,7 +5523,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
  **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
  **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
@@ -5404,15 +5548,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnTopicEndpointResponse get_msg_vpn_topic_endpoint(ctx, msg_vpn_name, topic_endpoint_name, optional)
 Get a Topic Endpoint object.
 
-Get a Topic Endpoint object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| topicEndpointName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readonly\" is required to perform this operation.  This has been available since 2.1.
+Get a Topic Endpoint object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| topicEndpointName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **topic_endpoint_name** | **String**| The topicEndpointName of the Topic Endpoint. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **topic_endpoint_name** | **String**| The name of the Topic Endpoint. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -5420,8 +5564,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **topic_endpoint_name** | **String**| The topicEndpointName of the Topic Endpoint. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **topic_endpoint_name** | **String**| The name of the Topic Endpoint. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
@@ -5439,18 +5583,134 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **replace_dmr_cluster**
-> ::models::DmrClusterResponse replace_dmr_cluster(ctx, dmr_cluster_name, body, optional)
-Replace a Cluster object.
+# **get_username**
+> ::models::UsernameResponse get_username(ctx, user_name, optional)
+Get a Username object.
 
-Replace a Cluster object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationBasicPassword|||x|x| authenticationClientCertContent|||x|x| authenticationClientCertPassword|||x|x| directOnlyEnabled||x||| dmrClusterName|x|x||| nodeName||x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- DmrCluster|authenticationClientCertPassword|authenticationClientCertContent|    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Get a Username object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: password||x| userName|x||    A SEMP client authorized with a minimum access scope/level of \"global/read-only\" is required to perform this operation.  This has been available since 2.12.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
+  **user_name** | **String**| Username. | 
+ **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a map[string]interface{}.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_name** | **String**| Username. | 
+ **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
+
+### Return type
+
+[**::models::UsernameResponse**](UsernameResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_username_msg_vpn_access_level_exception**
+> ::models::UsernameMsgVpnAccessLevelExceptionResponse get_username_msg_vpn_access_level_exception(ctx, user_name, msg_vpn_name, optional)
+Get a Message VPN Access Level Exception object.
+
+Get a Message VPN Access Level Exception object.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| userName|x||    A SEMP client authorized with a minimum access scope/level of \"global/read-only\" is required to perform this operation.  This has been available since 2.12.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **user_name** | **String**| Username. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN for which an access level exception may be configured. | 
+ **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a map[string]interface{}.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_name** | **String**| Username. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN for which an access level exception may be configured. | 
+ **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
+
+### Return type
+
+[**::models::UsernameMsgVpnAccessLevelExceptionResponse**](UsernameMsgVpnAccessLevelExceptionResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_username_msg_vpn_access_level_exceptions**
+> ::models::UsernameMsgVpnAccessLevelExceptionsResponse get_username_msg_vpn_access_level_exceptions(ctx, user_name, optional)
+Get a list of Message VPN Access Level Exception objects.
+
+Get a list of Message VPN Access Level Exception objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: msgVpnName|x|| userName|x||    A SEMP client authorized with a minimum access scope/level of \"global/read-only\" is required to perform this operation.  This has been available since 2.12.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **user_name** | **String**| Username. | 
+ **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a map[string]interface{}.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_name** | **String**| Username. | 
+ **count** | **i32**| Limit the count of objects in the response. See the documentation for the &#x60;count&#x60; parameter. | [default to 10]
+ **cursor** | **String**| The cursor, or position, for the next page of objects. See the documentation for the &#x60;cursor&#x60; parameter. | 
+ **_where** | [**Vec&lt;String&gt;**](String.md)| Include in the response only objects where certain conditions are true. See the the documentation for the &#x60;where&#x60; parameter. | 
+ **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
+
+### Return type
+
+[**::models::UsernameMsgVpnAccessLevelExceptionsResponse**](UsernameMsgVpnAccessLevelExceptionsResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **replace_dmr_cluster**
+> ::models::DmrClusterResponse replace_dmr_cluster(ctx, dmr_cluster_name, body, optional)
+Replace a Cluster object.
+
+Replace a Cluster object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.  A Cluster is a provisioned object on a message broker that contains global DMR configuration parameters.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationBasicPassword|||x|x| authenticationClientCertContent|||x|x| authenticationClientCertPassword|||x|x| directOnlyEnabled||x||| dmrClusterName|x|x||| nodeName||x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- DmrCluster|authenticationClientCertPassword|authenticationClientCertContent|    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
   **body** | [**DmrCluster**](DmrCluster.md)| The Cluster object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5459,7 +5719,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
  **body** | [**DmrCluster**](DmrCluster.md)| The Cluster object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5482,15 +5742,15 @@ Name | Type | Description  | Notes
 > ::models::DmrClusterLinkResponse replace_dmr_cluster_link(ctx, dmr_cluster_name, remote_node_name, body, optional)
 Replace a Link object.
 
-Replace a Link object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationBasicPassword|||x|x| authenticationScheme||||x| dmrClusterName|x|x||| egressFlowWindowSize||||x| initiator||||x| remoteNodeName|x|x||| span||||x| transportCompressedEnabled||||x| transportTlsEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Replace a Link object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.  A Link connects nodes (either within a Cluster or between two different Clusters) and allows them to exchange topology information, subscriptions and data.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationBasicPassword|||x|x| authenticationScheme||||x| dmrClusterName|x|x||| egressFlowWindowSize||||x| initiator||||x| remoteNodeName|x|x||| span||||x| transportCompressedEnabled||||x| transportTlsEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
-  **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
   **body** | [**DmrClusterLink**](DmrClusterLink.md)| The Link object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5499,8 +5759,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
- **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
+ **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
  **body** | [**DmrClusterLink**](DmrClusterLink.md)| The Link object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5523,14 +5783,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnResponse replace_msg_vpn(ctx, msg_vpn_name, body, optional)
 Replace a Message VPN object.
 
-Replace a Message VPN object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replicationBridgeAuthenticationBasicPassword|||x|| replicationBridgeAuthenticationClientCertContent|||x|| replicationBridgeAuthenticationClientCertPassword|||x|| replicationEnabledQueueBehavior|||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent EventThresholdByValue|clearValue|setValue| EventThresholdByValue|setValue|clearValue| MsgVpn|authenticationBasicProfileName|authenticationBasicType| MsgVpn|authorizationProfileName|authorizationType| MsgVpn|eventPublishTopicFormatMqttEnabled|eventPublishTopicFormatSmfEnabled| MsgVpn|eventPublishTopicFormatSmfEnabled|eventPublishTopicFormatMqttEnabled| MsgVpn|replicationBridgeAuthenticationBasicClientUsername|replicationBridgeAuthenticationBasicPassword| MsgVpn|replicationBridgeAuthenticationBasicPassword|replicationBridgeAuthenticationBasicClientUsername| MsgVpn|replicationBridgeAuthenticationClientCertPassword|replicationBridgeAuthenticationClientCertContent| MsgVpn|replicationEnabledQueueBehavior|replicationEnabled|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation. Requests which include the following attributes require greater access scope/level:   Attribute|Access Scope/Level :---|:---: authenticationBasicEnabled|global/readwrite authenticationBasicProfileName|global/readwrite authenticationBasicRadiusDomain|global/readwrite authenticationBasicType|global/readwrite authenticationClientCertAllowApiProvidedUsernameEnabled|global/readwrite authenticationClientCertEnabled|global/readwrite authenticationClientCertMaxChainDepth|global/readwrite authenticationClientCertRevocationCheckMode|global/readwrite authenticationClientCertUsernameSource|global/readwrite authenticationClientCertValidateDateEnabled|global/readwrite authenticationKerberosAllowApiProvidedUsernameEnabled|global/readwrite authenticationKerberosEnabled|global/readwrite bridgingTlsServerCertEnforceTrustedCommonNameEnabled|global/readwrite bridgingTlsServerCertMaxChainDepth|global/readwrite bridgingTlsServerCertValidateDateEnabled|global/readwrite dmrEnabled|global/readwrite exportSubscriptionsEnabled|global/readwrite maxConnectionCount|global/readwrite maxEgressFlowCount|global/readwrite maxEndpointCount|global/readwrite maxIngressFlowCount|global/readwrite maxMsgSpoolUsage|global/readwrite maxSubscriptionCount|global/readwrite maxTransactedSessionCount|global/readwrite maxTransactionCount|global/readwrite mqttRetainMaxMemory|global/readwrite replicationBridgeAuthenticationBasicClientUsername|global/readwrite replicationBridgeAuthenticationBasicPassword|global/readwrite replicationBridgeAuthenticationClientCertContent|global/readwrite replicationBridgeAuthenticationClientCertPassword|global/readwrite replicationBridgeAuthenticationScheme|global/readwrite replicationBridgeCompressedDataEnabled|global/readwrite replicationBridgeEgressFlowWindowSize|global/readwrite replicationBridgeRetryDelay|global/readwrite replicationBridgeTlsEnabled|global/readwrite replicationBridgeUnidirectionalClientProfileName|global/readwrite replicationEnabled|global/readwrite replicationEnabledQueueBehavior|global/readwrite replicationQueueMaxMsgSpoolUsage|global/readwrite replicationRole|global/readwrite restTlsServerCertEnforceTrustedCommonNameEnabled|global/readwrite restTlsServerCertMaxChainDepth|global/readwrite restTlsServerCertValidateDateEnabled|global/readwrite sempOverMsgBusAdminClientEnabled|global/readwrite sempOverMsgBusAdminDistributedCacheEnabled|global/readwrite sempOverMsgBusAdminEnabled|global/readwrite sempOverMsgBusEnabled|global/readwrite sempOverMsgBusLegacyShowClearEnabled|global/readwrite sempOverMsgBusShowEnabled|global/readwrite serviceAmqpMaxConnectionCount|global/readwrite serviceMqttMaxConnectionCount|global/readwrite serviceRestIncomingMaxConnectionCount|global/readwrite serviceRestIncomingPlainTextListenPort|global/readwrite serviceRestIncomingTlsListenPort|global/readwrite serviceRestOutgoingMaxConnectionCount|global/readwrite serviceSmfMaxConnectionCount|global/readwrite serviceWebMaxConnectionCount|global/readwrite    This has been available since 2.0.
+Replace a Message VPN object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.  Message VPNs (Virtual Private Networks) allow for the segregation of topic space and clients. They also group clients connecting to a network of message brokers, such that messages published within a particular group are only visible to that group's clients.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replicationBridgeAuthenticationBasicPassword|||x|| replicationBridgeAuthenticationClientCertContent|||x|| replicationBridgeAuthenticationClientCertPassword|||x|| replicationEnabledQueueBehavior|||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent EventThresholdByValue|clearValue|setValue| EventThresholdByValue|setValue|clearValue| MsgVpn|authenticationBasicProfileName|authenticationBasicType| MsgVpn|authorizationProfileName|authorizationType| MsgVpn|eventPublishTopicFormatMqttEnabled|eventPublishTopicFormatSmfEnabled| MsgVpn|eventPublishTopicFormatSmfEnabled|eventPublishTopicFormatMqttEnabled| MsgVpn|replicationBridgeAuthenticationBasicClientUsername|replicationBridgeAuthenticationBasicPassword| MsgVpn|replicationBridgeAuthenticationBasicPassword|replicationBridgeAuthenticationBasicClientUsername| MsgVpn|replicationBridgeAuthenticationClientCertPassword|replicationBridgeAuthenticationClientCertContent| MsgVpn|replicationEnabledQueueBehavior|replicationEnabled|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation. Requests which include the following attributes require greater access scope/level:   Attribute|Access Scope/Level :---|:---: authenticationBasicEnabled|global/read-write authenticationBasicProfileName|global/read-write authenticationBasicRadiusDomain|global/read-write authenticationBasicType|global/read-write authenticationClientCertAllowApiProvidedUsernameEnabled|global/read-write authenticationClientCertEnabled|global/read-write authenticationClientCertMaxChainDepth|global/read-write authenticationClientCertRevocationCheckMode|global/read-write authenticationClientCertUsernameSource|global/read-write authenticationClientCertValidateDateEnabled|global/read-write authenticationKerberosAllowApiProvidedUsernameEnabled|global/read-write authenticationKerberosEnabled|global/read-write bridgingTlsServerCertEnforceTrustedCommonNameEnabled|global/read-write bridgingTlsServerCertMaxChainDepth|global/read-write bridgingTlsServerCertValidateDateEnabled|global/read-write dmrEnabled|global/read-write exportSubscriptionsEnabled|global/read-write maxConnectionCount|global/read-write maxEgressFlowCount|global/read-write maxEndpointCount|global/read-write maxIngressFlowCount|global/read-write maxMsgSpoolUsage|global/read-write maxSubscriptionCount|global/read-write maxTransactedSessionCount|global/read-write maxTransactionCount|global/read-write mqttRetainMaxMemory|global/read-write replicationBridgeAuthenticationBasicClientUsername|global/read-write replicationBridgeAuthenticationBasicPassword|global/read-write replicationBridgeAuthenticationClientCertContent|global/read-write replicationBridgeAuthenticationClientCertPassword|global/read-write replicationBridgeAuthenticationScheme|global/read-write replicationBridgeCompressedDataEnabled|global/read-write replicationBridgeEgressFlowWindowSize|global/read-write replicationBridgeRetryDelay|global/read-write replicationBridgeTlsEnabled|global/read-write replicationBridgeUnidirectionalClientProfileName|global/read-write replicationEnabled|global/read-write replicationEnabledQueueBehavior|global/read-write replicationQueueMaxMsgSpoolUsage|global/read-write replicationRole|global/read-write restTlsServerCertEnforceTrustedCommonNameEnabled|global/read-write restTlsServerCertMaxChainDepth|global/read-write restTlsServerCertValidateDateEnabled|global/read-write sempOverMsgBusAdminClientEnabled|global/read-write sempOverMsgBusAdminDistributedCacheEnabled|global/read-write sempOverMsgBusAdminEnabled|global/read-write sempOverMsgBusEnabled|global/read-write sempOverMsgBusLegacyShowClearEnabled|global/read-write sempOverMsgBusShowEnabled|global/read-write serviceAmqpMaxConnectionCount|global/read-write serviceMqttMaxConnectionCount|global/read-write serviceRestIncomingMaxConnectionCount|global/read-write serviceRestIncomingPlainTextListenPort|global/read-write serviceRestIncomingTlsListenPort|global/read-write serviceRestOutgoingMaxConnectionCount|global/read-write serviceSmfMaxConnectionCount|global/read-write serviceWebMaxConnectionCount|global/read-write    This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpn**](MsgVpn.md)| The Message VPN object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5539,7 +5799,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpn**](MsgVpn.md)| The Message VPN object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5562,15 +5822,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfileResponse replace_msg_vpn_acl_profile(ctx, msg_vpn_name, acl_profile_name, body, optional)
 Replace an ACL Profile object.
 
-Replace an ACL Profile object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Replace an ACL Profile object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.  An ACL Profile controls whether an authenticated client is permitted to establish a connection with the message broker or permitted to publish and subscribe to specific topics.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
   **body** | [**MsgVpnAclProfile**](MsgVpnAclProfile.md)| The ACL Profile object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5579,8 +5839,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **body** | [**MsgVpnAclProfile**](MsgVpnAclProfile.md)| The ACL Profile object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5603,15 +5863,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAuthorizationGroupResponse replace_msg_vpn_authorization_group(ctx, msg_vpn_name, authorization_group_name, body, optional)
 Replace an LDAP Authorization Group object.
 
-Replace an LDAP Authorization Group object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName||||x| authorizationGroupName|x|x||| clientProfileName||||x| msgVpnName|x|x||| orderAfterAuthorizationGroupName|||x|| orderBeforeAuthorizationGroupName|||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnAuthorizationGroup|orderAfterAuthorizationGroupName||orderBeforeAuthorizationGroupName MsgVpnAuthorizationGroup|orderBeforeAuthorizationGroupName||orderAfterAuthorizationGroupName    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Replace an LDAP Authorization Group object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName||||x| authorizationGroupName|x|x||| clientProfileName||||x| msgVpnName|x|x||| orderAfterAuthorizationGroupName|||x|| orderBeforeAuthorizationGroupName|||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnAuthorizationGroup|orderAfterAuthorizationGroupName||orderBeforeAuthorizationGroupName MsgVpnAuthorizationGroup|orderBeforeAuthorizationGroupName||orderAfterAuthorizationGroupName    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **authorization_group_name** | **String**| The authorizationGroupName of the LDAP Authorization Group. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **authorization_group_name** | **String**| The name of the LDAP Authorization Group. | 
   **body** | [**MsgVpnAuthorizationGroup**](MsgVpnAuthorizationGroup.md)| The LDAP Authorization Group object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5620,8 +5880,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **authorization_group_name** | **String**| The authorizationGroupName of the LDAP Authorization Group. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **authorization_group_name** | **String**| The name of the LDAP Authorization Group. | 
  **body** | [**MsgVpnAuthorizationGroup**](MsgVpnAuthorizationGroup.md)| The LDAP Authorization Group object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5644,16 +5904,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeResponse replace_msg_vpn_bridge(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, body, optional)
 Replace a Bridge object.
 
-Replace a Bridge object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x|x||| bridgeVirtualRouter|x|x||| maxTtl||||x| msgVpnName|x|x||| remoteAuthenticationBasicClientUsername||||x| remoteAuthenticationBasicPassword|||x|x| remoteAuthenticationClientCertContent|||x|x| remoteAuthenticationClientCertPassword|||x|x| remoteAuthenticationScheme||||x| remoteDeliverToOnePriority||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnBridge|remoteAuthenticationBasicClientUsername|remoteAuthenticationBasicPassword| MsgVpnBridge|remoteAuthenticationBasicPassword|remoteAuthenticationBasicClientUsername| MsgVpnBridge|remoteAuthenticationClientCertPassword|remoteAuthenticationClientCertContent|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Replace a Bridge object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x|x||| bridgeVirtualRouter|x|x||| maxTtl||||x| msgVpnName|x|x||| remoteAuthenticationBasicClientUsername||||x| remoteAuthenticationBasicPassword|||x|x| remoteAuthenticationClientCertContent|||x|x| remoteAuthenticationClientCertPassword|||x|x| remoteAuthenticationScheme||||x| remoteDeliverToOnePriority||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnBridge|remoteAuthenticationBasicClientUsername|remoteAuthenticationBasicPassword| MsgVpnBridge|remoteAuthenticationBasicPassword|remoteAuthenticationBasicClientUsername| MsgVpnBridge|remoteAuthenticationClientCertPassword|remoteAuthenticationClientCertContent|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
   **body** | [**MsgVpnBridge**](MsgVpnBridge.md)| The Bridge object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5662,9 +5922,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **body** | [**MsgVpnBridge**](MsgVpnBridge.md)| The Bridge object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5687,19 +5947,19 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeRemoteMsgVpnResponse replace_msg_vpn_bridge_remote_msg_vpn(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, remote_msg_vpn_name, remote_msg_vpn_location, remote_msg_vpn_interface, body, optional)
 Replace a Remote Message VPN object.
 
-Replace a Remote Message VPN object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x|x||| bridgeVirtualRouter|x|x||| clientUsername||||x| compressedDataEnabled||||x| egressFlowWindowSize||||x| msgVpnName|x|x||| password|||x|x| remoteMsgVpnInterface|x|x||| remoteMsgVpnLocation|x|x||| remoteMsgVpnName|x|x||| tlsEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnBridgeRemoteMsgVpn|clientUsername|password| MsgVpnBridgeRemoteMsgVpn|password|clientUsername|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Replace a Remote Message VPN object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x|x||| bridgeVirtualRouter|x|x||| clientUsername||||x| compressedDataEnabled||||x| egressFlowWindowSize||||x| msgVpnName|x|x||| password|||x|x| remoteMsgVpnInterface|x|x||| remoteMsgVpnLocation|x|x||| remoteMsgVpnName|x|x||| tlsEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnBridgeRemoteMsgVpn|clientUsername|password| MsgVpnBridgeRemoteMsgVpn|password|clientUsername|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
-  **remote_msg_vpn_name** | **String**| The remoteMsgVpnName of the Remote Message VPN. | 
-  **remote_msg_vpn_location** | **String**| The remoteMsgVpnLocation of the Remote Message VPN. | 
-  **remote_msg_vpn_interface** | **String**| The remoteMsgVpnInterface of the Remote Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+  **remote_msg_vpn_name** | **String**| The name of the remote Message VPN. | 
+  **remote_msg_vpn_location** | **String**| The location of the remote Message VPN as either an FQDN with port, IP address with port, or virtual router name (starting with \&quot;v:\&quot;). | 
+  **remote_msg_vpn_interface** | **String**| The physical interface on the local Message VPN host for connecting to the remote Message VPN. By default, an interface is chosen automatically (recommended), but if specified, &#x60;remoteMsgVpnLocation&#x60; must not be a virtual router name. | 
   **body** | [**MsgVpnBridgeRemoteMsgVpn**](MsgVpnBridgeRemoteMsgVpn.md)| The Remote Message VPN object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5708,12 +5968,12 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
- **remote_msg_vpn_name** | **String**| The remoteMsgVpnName of the Remote Message VPN. | 
- **remote_msg_vpn_location** | **String**| The remoteMsgVpnLocation of the Remote Message VPN. | 
- **remote_msg_vpn_interface** | **String**| The remoteMsgVpnInterface of the Remote Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+ **remote_msg_vpn_name** | **String**| The name of the remote Message VPN. | 
+ **remote_msg_vpn_location** | **String**| The location of the remote Message VPN as either an FQDN with port, IP address with port, or virtual router name (starting with \&quot;v:\&quot;). | 
+ **remote_msg_vpn_interface** | **String**| The physical interface on the local Message VPN host for connecting to the remote Message VPN. By default, an interface is chosen automatically (recommended), but if specified, &#x60;remoteMsgVpnLocation&#x60; must not be a virtual router name. | 
  **body** | [**MsgVpnBridgeRemoteMsgVpn**](MsgVpnBridgeRemoteMsgVpn.md)| The Remote Message VPN object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5736,15 +5996,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnClientProfileResponse replace_msg_vpn_client_profile(ctx, msg_vpn_name, client_profile_name, body, optional)
 Replace a Client Profile object.
 
-Replace a Client Profile object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: clientProfileName|x|x||| msgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent EventThresholdByPercent|clearPercent|setPercent| EventThresholdByPercent|setPercent|clearPercent|    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Replace a Client Profile object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.  Client Profiles are used to assign common configuration properties to clients that have been successfully authorized.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: clientProfileName|x|x||| msgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent EventThresholdByPercent|clearPercent|setPercent| EventThresholdByPercent|setPercent|clearPercent|    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **client_profile_name** | **String**| The clientProfileName of the Client Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **client_profile_name** | **String**| The name of the Client Profile. | 
   **body** | [**MsgVpnClientProfile**](MsgVpnClientProfile.md)| The Client Profile object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5753,8 +6013,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **client_profile_name** | **String**| The clientProfileName of the Client Profile. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **client_profile_name** | **String**| The name of the Client Profile. | 
  **body** | [**MsgVpnClientProfile**](MsgVpnClientProfile.md)| The Client Profile object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5777,15 +6037,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnClientUsernameResponse replace_msg_vpn_client_username(ctx, msg_vpn_name, client_username, body, optional)
 Replace a Client Username object.
 
-Replace a Client Username object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName||||x| clientProfileName||||x| clientUsername|x|x||| msgVpnName|x|x||| password|||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Replace a Client Username object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName||||x| clientProfileName||||x| clientUsername|x|x||| msgVpnName|x|x||| password|||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **client_username** | **String**| The clientUsername of the Client Username. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **client_username** | **String**| The value of the Client Username. | 
   **body** | [**MsgVpnClientUsername**](MsgVpnClientUsername.md)| The Client Username object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5794,8 +6054,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **client_username** | **String**| The clientUsername of the Client Username. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **client_username** | **String**| The value of the Client Username. | 
  **body** | [**MsgVpnClientUsername**](MsgVpnClientUsername.md)| The Client Username object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5818,15 +6078,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheResponse replace_msg_vpn_distributed_cache(ctx, msg_vpn_name, cache_name, body, optional)
 Replace a Distributed Cache object.
 
-Replace a Distributed Cache object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| msgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnDistributedCache|scheduledDeleteMsgDayList|scheduledDeleteMsgTimeList| MsgVpnDistributedCache|scheduledDeleteMsgTimeList|scheduledDeleteMsgDayList|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Replace a Distributed Cache object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| msgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnDistributedCache|scheduledDeleteMsgDayList|scheduledDeleteMsgTimeList| MsgVpnDistributedCache|scheduledDeleteMsgTimeList|scheduledDeleteMsgDayList|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
   **body** | [**MsgVpnDistributedCache**](MsgVpnDistributedCache.md)| The Distributed Cache object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5835,8 +6095,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
  **body** | [**MsgVpnDistributedCache**](MsgVpnDistributedCache.md)| The Distributed Cache object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5859,16 +6119,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterResponse replace_msg_vpn_distributed_cache_cluster(ctx, msg_vpn_name, cache_name, cluster_name, body, optional)
 Replace a Cache Cluster object.
 
-Replace a Cache Cluster object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| clusterName|x|x||| msgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThresholdByPercent|clearPercent|setPercent| EventThresholdByPercent|setPercent|clearPercent| EventThresholdByValue|clearValue|setValue| EventThresholdByValue|setValue|clearValue|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Replace a Cache Cluster object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| clusterName|x|x||| msgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThresholdByPercent|clearPercent|setPercent| EventThresholdByPercent|setPercent|clearPercent| EventThresholdByValue|clearValue|setValue| EventThresholdByValue|setValue|clearValue|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
   **body** | [**MsgVpnDistributedCacheCluster**](MsgVpnDistributedCacheCluster.md)| The Cache Cluster object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5877,9 +6137,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
  **body** | [**MsgVpnDistributedCacheCluster**](MsgVpnDistributedCacheCluster.md)| The Cache Cluster object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5902,17 +6162,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterInstanceResponse replace_msg_vpn_distributed_cache_cluster_instance(ctx, msg_vpn_name, cache_name, cluster_name, instance_name, body, optional)
 Replace a Cache Instance object.
 
-Replace a Cache Instance object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| clusterName|x|x||| instanceName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Replace a Cache Instance object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| clusterName|x|x||| instanceName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
-  **instance_name** | **String**| The instanceName of the Cache Instance. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
+  **instance_name** | **String**| The name of the Cache Instance. | 
   **body** | [**MsgVpnDistributedCacheClusterInstance**](MsgVpnDistributedCacheClusterInstance.md)| The Cache Instance object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5921,10 +6181,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
- **instance_name** | **String**| The instanceName of the Cache Instance. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
+ **instance_name** | **String**| The name of the Cache Instance. | 
  **body** | [**MsgVpnDistributedCacheClusterInstance**](MsgVpnDistributedCacheClusterInstance.md)| The Cache Instance object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5947,15 +6207,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDmrBridgeResponse replace_msg_vpn_dmr_bridge(ctx, msg_vpn_name, remote_node_name, body, optional)
 Replace a DMR Bridge object.
 
-Replace a DMR Bridge object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| remoteNodeName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Replace a DMR Bridge object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| remoteNodeName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **remote_node_name** | **String**| The remoteNodeName of the DMR Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the DMR Bridge. | 
   **body** | [**MsgVpnDmrBridge**](MsgVpnDmrBridge.md)| The DMR Bridge object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -5964,8 +6224,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **remote_node_name** | **String**| The remoteNodeName of the DMR Bridge. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **remote_node_name** | **String**| The name of the node at the remote end of the DMR Bridge. | 
  **body** | [**MsgVpnDmrBridge**](MsgVpnDmrBridge.md)| The DMR Bridge object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -5988,15 +6248,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnJndiConnectionFactoryResponse replace_msg_vpn_jndi_connection_factory(ctx, msg_vpn_name, connection_factory_name, body, optional)
 Replace a JNDI Connection Factory object.
 
-Replace a JNDI Connection Factory object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: connectionFactoryName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.2.
+Replace a JNDI Connection Factory object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: connectionFactoryName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **connection_factory_name** | **String**| The connectionFactoryName of the JNDI Connection Factory. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **connection_factory_name** | **String**| The name of the JMS Connection Factory. | 
   **body** | [**MsgVpnJndiConnectionFactory**](MsgVpnJndiConnectionFactory.md)| The JNDI Connection Factory object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6005,8 +6265,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **connection_factory_name** | **String**| The connectionFactoryName of the JNDI Connection Factory. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **connection_factory_name** | **String**| The name of the JMS Connection Factory. | 
  **body** | [**MsgVpnJndiConnectionFactory**](MsgVpnJndiConnectionFactory.md)| The JNDI Connection Factory object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6029,15 +6289,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnJndiQueueResponse replace_msg_vpn_jndi_queue(ctx, msg_vpn_name, queue_name, body, optional)
 Replace a JNDI Queue object.
 
-Replace a JNDI Queue object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| queueName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.2.
+Replace a JNDI Queue object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| queueName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **queue_name** | **String**| The queueName of the JNDI Queue. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **queue_name** | **String**| The JNDI name of the JMS Queue. | 
   **body** | [**MsgVpnJndiQueue**](MsgVpnJndiQueue.md)| The JNDI Queue object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6046,8 +6306,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **queue_name** | **String**| The queueName of the JNDI Queue. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **queue_name** | **String**| The JNDI name of the JMS Queue. | 
  **body** | [**MsgVpnJndiQueue**](MsgVpnJndiQueue.md)| The JNDI Queue object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6070,15 +6330,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnJndiTopicResponse replace_msg_vpn_jndi_topic(ctx, msg_vpn_name, topic_name, body, optional)
 Replace a JNDI Topic object.
 
-Replace a JNDI Topic object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| topicName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.2.
+Replace a JNDI Topic object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| topicName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **topic_name** | **String**| The topicName of the JNDI Topic. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **topic_name** | **String**| The JNDI name of the JMS Topic. | 
   **body** | [**MsgVpnJndiTopic**](MsgVpnJndiTopic.md)| The JNDI Topic object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6087,8 +6347,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **topic_name** | **String**| The topicName of the JNDI Topic. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **topic_name** | **String**| The JNDI name of the JMS Topic. | 
  **body** | [**MsgVpnJndiTopic**](MsgVpnJndiTopic.md)| The JNDI Topic object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6111,15 +6371,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttRetainCacheResponse replace_msg_vpn_mqtt_retain_cache(ctx, msg_vpn_name, cache_name, body, optional)
 Replace an MQTT Retain Cache object.
 
-Replace an MQTT Retain Cache object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Replace an MQTT Retain Cache object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the MQTT Retain Cache. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the MQTT Retain Cache. | 
   **body** | [**MsgVpnMqttRetainCache**](MsgVpnMqttRetainCache.md)| The MQTT Retain Cache object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6128,8 +6388,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the MQTT Retain Cache. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the MQTT Retain Cache. | 
  **body** | [**MsgVpnMqttRetainCache**](MsgVpnMqttRetainCache.md)| The MQTT Retain Cache object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6152,16 +6412,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttSessionResponse replace_msg_vpn_mqtt_session(ctx, msg_vpn_name, mqtt_session_client_id, mqtt_session_virtual_router, body, optional)
 Replace an MQTT Session object.
 
-Replace an MQTT Session object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: mqttSessionClientId|x|x||| mqttSessionVirtualRouter|x|x||| msgVpnName|x|x||| owner||||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.1.
+Replace an MQTT Session object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: mqttSessionClientId|x|x||| mqttSessionVirtualRouter|x|x||| msgVpnName|x|x||| owner||||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
-  **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+  **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
   **body** | [**MsgVpnMqttSession**](MsgVpnMqttSession.md)| The MQTT Session object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6170,9 +6430,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
- **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+ **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
  **body** | [**MsgVpnMqttSession**](MsgVpnMqttSession.md)| The MQTT Session object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6195,17 +6455,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttSessionSubscriptionResponse replace_msg_vpn_mqtt_session_subscription(ctx, msg_vpn_name, mqtt_session_client_id, mqtt_session_virtual_router, subscription_topic, body, optional)
 Replace a Subscription object.
 
-Replace a Subscription object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: mqttSessionClientId|x|x||| mqttSessionVirtualRouter|x|x||| msgVpnName|x|x||| subscriptionTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.1.
+Replace a Subscription object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: mqttSessionClientId|x|x||| mqttSessionVirtualRouter|x|x||| msgVpnName|x|x||| subscriptionTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
-  **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
-  **subscription_topic** | **String**| The subscriptionTopic of the Subscription. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+  **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
+  **subscription_topic** | **String**| The MQTT subscription topic. | 
   **body** | [**MsgVpnMqttSessionSubscription**](MsgVpnMqttSessionSubscription.md)| The Subscription object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6214,10 +6474,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
- **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
- **subscription_topic** | **String**| The subscriptionTopic of the Subscription. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+ **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
+ **subscription_topic** | **String**| The MQTT subscription topic. | 
  **body** | [**MsgVpnMqttSessionSubscription**](MsgVpnMqttSessionSubscription.md)| The Subscription object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6240,15 +6500,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnQueueResponse replace_msg_vpn_queue(ctx, msg_vpn_name, queue_name, body, optional)
 Replace a Queue object.
 
-Replace a Queue object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: accessType||||x| msgVpnName|x|x||| owner||||x| permission||||x| queueName|x|x||| respectMsgPriorityEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Replace a Queue object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: accessType||||x| msgVpnName|x|x||| owner||||x| permission||||x| queueName|x|x||| respectMsgPriorityEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **queue_name** | **String**| The queueName of the Queue. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **queue_name** | **String**| The name of the Queue. | 
   **body** | [**MsgVpnQueue**](MsgVpnQueue.md)| The Queue object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6257,8 +6517,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **queue_name** | **String**| The queueName of the Queue. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **queue_name** | **String**| The name of the Queue. | 
  **body** | [**MsgVpnQueue**](MsgVpnQueue.md)| The Queue object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6281,15 +6541,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnReplayLogResponse replace_msg_vpn_replay_log(ctx, msg_vpn_name, replay_log_name, body, optional)
 Replace a Replay Log object.
 
-Replace a Replay Log object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replayLogName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.10.
+Replace a Replay Log object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replayLogName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.10.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **replay_log_name** | **String**| The replayLogName of the Replay Log. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **replay_log_name** | **String**| The name of the Replay Log. | 
   **body** | [**MsgVpnReplayLog**](MsgVpnReplayLog.md)| The Replay Log object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6298,8 +6558,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **replay_log_name** | **String**| The replayLogName of the Replay Log. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **replay_log_name** | **String**| The name of the Replay Log. | 
  **body** | [**MsgVpnReplayLog**](MsgVpnReplayLog.md)| The Replay Log object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6322,15 +6582,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnReplicatedTopicResponse replace_msg_vpn_replicated_topic(ctx, msg_vpn_name, replicated_topic, body, optional)
 Replace a Replicated Topic object.
 
-Replace a Replicated Topic object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replicatedTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.9.
+Replace a Replicated Topic object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replicatedTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.9.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **replicated_topic** | **String**| The replicatedTopic of the Replicated Topic. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **replicated_topic** | **String**| The topic for applying replication. Published messages matching this topic will be replicated to the standby site. | 
   **body** | [**MsgVpnReplicatedTopic**](MsgVpnReplicatedTopic.md)| The Replicated Topic object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6339,8 +6599,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **replicated_topic** | **String**| The replicatedTopic of the Replicated Topic. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **replicated_topic** | **String**| The topic for applying replication. Published messages matching this topic will be replicated to the standby site. | 
  **body** | [**MsgVpnReplicatedTopic**](MsgVpnReplicatedTopic.md)| The Replicated Topic object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6363,15 +6623,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointResponse replace_msg_vpn_rest_delivery_point(ctx, msg_vpn_name, rest_delivery_point_name, body, optional)
 Replace a REST Delivery Point object.
 
-Replace a REST Delivery Point object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: clientProfileName||||x| msgVpnName|x|x||| restDeliveryPointName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Replace a REST Delivery Point object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: clientProfileName||||x| msgVpnName|x|x||| restDeliveryPointName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
   **body** | [**MsgVpnRestDeliveryPoint**](MsgVpnRestDeliveryPoint.md)| The REST Delivery Point object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6380,8 +6640,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
  **body** | [**MsgVpnRestDeliveryPoint**](MsgVpnRestDeliveryPoint.md)| The REST Delivery Point object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6404,16 +6664,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointQueueBindingResponse replace_msg_vpn_rest_delivery_point_queue_binding(ctx, msg_vpn_name, rest_delivery_point_name, queue_binding_name, body, optional)
 Replace a Queue Binding object.
 
-Replace a Queue Binding object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| queueBindingName|x|x||| restDeliveryPointName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Replace a Queue Binding object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| queueBindingName|x|x||| restDeliveryPointName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
-  **queue_binding_name** | **String**| The queueBindingName of the Queue Binding. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+  **queue_binding_name** | **String**| The name of a queue in the Message VPN. | 
   **body** | [**MsgVpnRestDeliveryPointQueueBinding**](MsgVpnRestDeliveryPointQueueBinding.md)| The Queue Binding object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6422,9 +6682,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
- **queue_binding_name** | **String**| The queueBindingName of the Queue Binding. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+ **queue_binding_name** | **String**| The name of a queue in the Message VPN. | 
  **body** | [**MsgVpnRestDeliveryPointQueueBinding**](MsgVpnRestDeliveryPointQueueBinding.md)| The Queue Binding object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6447,16 +6707,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointRestConsumerResponse replace_msg_vpn_rest_delivery_point_rest_consumer(ctx, msg_vpn_name, rest_delivery_point_name, rest_consumer_name, body, optional)
 Replace a REST Consumer object.
 
-Replace a REST Consumer object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationClientCertContent|||x|x| authenticationClientCertPassword|||x|x| authenticationHttpBasicPassword|||x|x| authenticationHttpBasicUsername||||x| authenticationScheme||||x| msgVpnName|x|x||| outgoingConnectionCount||||x| remoteHost||||x| remotePort||||x| restConsumerName|x|x||| restDeliveryPointName|x|x||| tlsCipherSuiteList||||x| tlsEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnRestDeliveryPointRestConsumer|authenticationClientCertPassword|authenticationClientCertContent| MsgVpnRestDeliveryPointRestConsumer|authenticationHttpBasicPassword|authenticationHttpBasicUsername| MsgVpnRestDeliveryPointRestConsumer|authenticationHttpBasicUsername|authenticationHttpBasicPassword| MsgVpnRestDeliveryPointRestConsumer|remotePort|tlsEnabled| MsgVpnRestDeliveryPointRestConsumer|tlsEnabled|remotePort|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Replace a REST Consumer object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationClientCertContent|||x|x| authenticationClientCertPassword|||x|x| authenticationHttpBasicPassword|||x|x| authenticationHttpBasicUsername||||x| authenticationScheme||||x| msgVpnName|x|x||| outgoingConnectionCount||||x| remoteHost||||x| remotePort||||x| restConsumerName|x|x||| restDeliveryPointName|x|x||| tlsCipherSuiteList||||x| tlsEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnRestDeliveryPointRestConsumer|authenticationClientCertPassword|authenticationClientCertContent| MsgVpnRestDeliveryPointRestConsumer|authenticationHttpBasicPassword|authenticationHttpBasicUsername| MsgVpnRestDeliveryPointRestConsumer|authenticationHttpBasicUsername|authenticationHttpBasicPassword| MsgVpnRestDeliveryPointRestConsumer|remotePort|tlsEnabled| MsgVpnRestDeliveryPointRestConsumer|tlsEnabled|remotePort|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
-  **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+  **rest_consumer_name** | **String**| The name of the REST Consumer. | 
   **body** | [**MsgVpnRestDeliveryPointRestConsumer**](MsgVpnRestDeliveryPointRestConsumer.md)| The REST Consumer object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6465,9 +6725,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
- **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+ **rest_consumer_name** | **String**| The name of the REST Consumer. | 
  **body** | [**MsgVpnRestDeliveryPointRestConsumer**](MsgVpnRestDeliveryPointRestConsumer.md)| The REST Consumer object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6490,15 +6750,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnTopicEndpointResponse replace_msg_vpn_topic_endpoint(ctx, msg_vpn_name, topic_endpoint_name, body, optional)
 Replace a Topic Endpoint object.
 
-Replace a Topic Endpoint object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: accessType||||x| msgVpnName|x|x||| owner||||x| permission||||x| respectMsgPriorityEnabled||||x| topicEndpointName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.1.
+Replace a Topic Endpoint object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: accessType||||x| msgVpnName|x|x||| owner||||x| permission||||x| respectMsgPriorityEnabled||||x| topicEndpointName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **topic_endpoint_name** | **String**| The topicEndpointName of the Topic Endpoint. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **topic_endpoint_name** | **String**| The name of the Topic Endpoint. | 
   **body** | [**MsgVpnTopicEndpoint**](MsgVpnTopicEndpoint.md)| The Topic Endpoint object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6507,8 +6767,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **topic_endpoint_name** | **String**| The topicEndpointName of the Topic Endpoint. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **topic_endpoint_name** | **String**| The name of the Topic Endpoint. | 
  **body** | [**MsgVpnTopicEndpoint**](MsgVpnTopicEndpoint.md)| The Topic Endpoint object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6527,18 +6787,98 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_dmr_cluster**
-> ::models::DmrClusterResponse update_dmr_cluster(ctx, dmr_cluster_name, body, optional)
-Update a Cluster object.
+# **replace_username**
+> ::models::UsernameResponse replace_username(ctx, user_name, body, optional)
+Replace a Username object.
 
-Update a Cluster object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationBasicPassword|||x|x| authenticationClientCertContent|||x|x| authenticationClientCertPassword|||x|x| directOnlyEnabled||x||| dmrClusterName|x|x||| nodeName||x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- DmrCluster|authenticationClientCertPassword|authenticationClientCertContent|    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Replace a Username object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: password|||x|| userName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation. Requests which include the following attributes require greater access scope/level:   Attribute|Access Scope/Level :---|:---: globalAccessLevel|global/admin msgVpnDefaultAccessLevel|global/read-write    This has been available since 2.12.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
+  **user_name** | **String**| Username. | 
+  **body** | [**Username**](Username.md)| The Username object&#39;s attributes. | 
+ **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a map[string]interface{}.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_name** | **String**| Username. | 
+ **body** | [**Username**](Username.md)| The Username object&#39;s attributes. | 
+ **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
+
+### Return type
+
+[**::models::UsernameResponse**](UsernameResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **replace_username_msg_vpn_access_level_exception**
+> ::models::UsernameMsgVpnAccessLevelExceptionResponse replace_username_msg_vpn_access_level_exception(ctx, user_name, msg_vpn_name, body, optional)
+Replace a Message VPN Access Level Exception object.
+
+Replace a Message VPN Access Level Exception object. Any attribute missing from the request will be set to its default value, unless the user is not authorized to change its value in which case the missing attribute will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| userName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.12.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **user_name** | **String**| Username. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN for which an access level exception may be configured. | 
+  **body** | [**UsernameMsgVpnAccessLevelException**](UsernameMsgVpnAccessLevelException.md)| The Message VPN Access Level Exception object&#39;s attributes. | 
+ **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a map[string]interface{}.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_name** | **String**| Username. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN for which an access level exception may be configured. | 
+ **body** | [**UsernameMsgVpnAccessLevelException**](UsernameMsgVpnAccessLevelException.md)| The Message VPN Access Level Exception object&#39;s attributes. | 
+ **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
+
+### Return type
+
+[**::models::UsernameMsgVpnAccessLevelExceptionResponse**](UsernameMsgVpnAccessLevelExceptionResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_dmr_cluster**
+> ::models::DmrClusterResponse update_dmr_cluster(ctx, dmr_cluster_name, body, optional)
+Update a Cluster object.
+
+Update a Cluster object. Any attribute missing from the request will be left unchanged.  A Cluster is a provisioned object on a message broker that contains global DMR configuration parameters.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationBasicPassword|||x|x| authenticationClientCertContent|||x|x| authenticationClientCertPassword|||x|x| directOnlyEnabled||x||| dmrClusterName|x|x||| nodeName||x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- DmrCluster|authenticationClientCertPassword|authenticationClientCertContent|    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
   **body** | [**DmrCluster**](DmrCluster.md)| The Cluster object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6547,7 +6887,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
  **body** | [**DmrCluster**](DmrCluster.md)| The Cluster object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6570,15 +6910,15 @@ Name | Type | Description  | Notes
 > ::models::DmrClusterLinkResponse update_dmr_cluster_link(ctx, dmr_cluster_name, remote_node_name, body, optional)
 Update a Link object.
 
-Update a Link object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationBasicPassword|||x|x| authenticationScheme||||x| dmrClusterName|x|x||| egressFlowWindowSize||||x| initiator||||x| remoteNodeName|x|x||| span||||x| transportCompressedEnabled||||x| transportTlsEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Update a Link object. Any attribute missing from the request will be left unchanged.  A Link connects nodes (either within a Cluster or between two different Clusters) and allows them to exchange topology information, subscriptions and data.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationBasicPassword|||x|x| authenticationScheme||||x| dmrClusterName|x|x||| egressFlowWindowSize||||x| initiator||||x| remoteNodeName|x|x||| span||||x| transportCompressedEnabled||||x| transportTlsEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
-  **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+  **dmr_cluster_name** | **String**| The name of the Cluster. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
   **body** | [**DmrClusterLink**](DmrClusterLink.md)| The Link object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6587,8 +6927,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **dmr_cluster_name** | **String**| The dmrClusterName of the Cluster. | 
- **remote_node_name** | **String**| The remoteNodeName of the Link. | 
+ **dmr_cluster_name** | **String**| The name of the Cluster. | 
+ **remote_node_name** | **String**| The name of the node at the remote end of the Link. | 
  **body** | [**DmrClusterLink**](DmrClusterLink.md)| The Link object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6611,14 +6951,14 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnResponse update_msg_vpn(ctx, msg_vpn_name, body, optional)
 Update a Message VPN object.
 
-Update a Message VPN object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replicationBridgeAuthenticationBasicPassword|||x|| replicationBridgeAuthenticationClientCertContent|||x|| replicationBridgeAuthenticationClientCertPassword|||x|| replicationEnabledQueueBehavior|||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent EventThresholdByValue|clearValue|setValue| EventThresholdByValue|setValue|clearValue| MsgVpn|authenticationBasicProfileName|authenticationBasicType| MsgVpn|authorizationProfileName|authorizationType| MsgVpn|eventPublishTopicFormatMqttEnabled|eventPublishTopicFormatSmfEnabled| MsgVpn|eventPublishTopicFormatSmfEnabled|eventPublishTopicFormatMqttEnabled| MsgVpn|replicationBridgeAuthenticationBasicClientUsername|replicationBridgeAuthenticationBasicPassword| MsgVpn|replicationBridgeAuthenticationBasicPassword|replicationBridgeAuthenticationBasicClientUsername| MsgVpn|replicationBridgeAuthenticationClientCertPassword|replicationBridgeAuthenticationClientCertContent| MsgVpn|replicationEnabledQueueBehavior|replicationEnabled|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation. Requests which include the following attributes require greater access scope/level:   Attribute|Access Scope/Level :---|:---: authenticationBasicEnabled|global/readwrite authenticationBasicProfileName|global/readwrite authenticationBasicRadiusDomain|global/readwrite authenticationBasicType|global/readwrite authenticationClientCertAllowApiProvidedUsernameEnabled|global/readwrite authenticationClientCertEnabled|global/readwrite authenticationClientCertMaxChainDepth|global/readwrite authenticationClientCertRevocationCheckMode|global/readwrite authenticationClientCertUsernameSource|global/readwrite authenticationClientCertValidateDateEnabled|global/readwrite authenticationKerberosAllowApiProvidedUsernameEnabled|global/readwrite authenticationKerberosEnabled|global/readwrite bridgingTlsServerCertEnforceTrustedCommonNameEnabled|global/readwrite bridgingTlsServerCertMaxChainDepth|global/readwrite bridgingTlsServerCertValidateDateEnabled|global/readwrite dmrEnabled|global/readwrite exportSubscriptionsEnabled|global/readwrite maxConnectionCount|global/readwrite maxEgressFlowCount|global/readwrite maxEndpointCount|global/readwrite maxIngressFlowCount|global/readwrite maxMsgSpoolUsage|global/readwrite maxSubscriptionCount|global/readwrite maxTransactedSessionCount|global/readwrite maxTransactionCount|global/readwrite mqttRetainMaxMemory|global/readwrite replicationBridgeAuthenticationBasicClientUsername|global/readwrite replicationBridgeAuthenticationBasicPassword|global/readwrite replicationBridgeAuthenticationClientCertContent|global/readwrite replicationBridgeAuthenticationClientCertPassword|global/readwrite replicationBridgeAuthenticationScheme|global/readwrite replicationBridgeCompressedDataEnabled|global/readwrite replicationBridgeEgressFlowWindowSize|global/readwrite replicationBridgeRetryDelay|global/readwrite replicationBridgeTlsEnabled|global/readwrite replicationBridgeUnidirectionalClientProfileName|global/readwrite replicationEnabled|global/readwrite replicationEnabledQueueBehavior|global/readwrite replicationQueueMaxMsgSpoolUsage|global/readwrite replicationRole|global/readwrite restTlsServerCertEnforceTrustedCommonNameEnabled|global/readwrite restTlsServerCertMaxChainDepth|global/readwrite restTlsServerCertValidateDateEnabled|global/readwrite sempOverMsgBusAdminClientEnabled|global/readwrite sempOverMsgBusAdminDistributedCacheEnabled|global/readwrite sempOverMsgBusAdminEnabled|global/readwrite sempOverMsgBusEnabled|global/readwrite sempOverMsgBusLegacyShowClearEnabled|global/readwrite sempOverMsgBusShowEnabled|global/readwrite serviceAmqpMaxConnectionCount|global/readwrite serviceMqttMaxConnectionCount|global/readwrite serviceRestIncomingMaxConnectionCount|global/readwrite serviceRestIncomingPlainTextListenPort|global/readwrite serviceRestIncomingTlsListenPort|global/readwrite serviceRestOutgoingMaxConnectionCount|global/readwrite serviceSmfMaxConnectionCount|global/readwrite serviceWebMaxConnectionCount|global/readwrite    This has been available since 2.0.
+Update a Message VPN object. Any attribute missing from the request will be left unchanged.  Message VPNs (Virtual Private Networks) allow for the segregation of topic space and clients. They also group clients connecting to a network of message brokers, such that messages published within a particular group are only visible to that group's clients.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replicationBridgeAuthenticationBasicPassword|||x|| replicationBridgeAuthenticationClientCertContent|||x|| replicationBridgeAuthenticationClientCertPassword|||x|| replicationEnabledQueueBehavior|||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent EventThresholdByValue|clearValue|setValue| EventThresholdByValue|setValue|clearValue| MsgVpn|authenticationBasicProfileName|authenticationBasicType| MsgVpn|authorizationProfileName|authorizationType| MsgVpn|eventPublishTopicFormatMqttEnabled|eventPublishTopicFormatSmfEnabled| MsgVpn|eventPublishTopicFormatSmfEnabled|eventPublishTopicFormatMqttEnabled| MsgVpn|replicationBridgeAuthenticationBasicClientUsername|replicationBridgeAuthenticationBasicPassword| MsgVpn|replicationBridgeAuthenticationBasicPassword|replicationBridgeAuthenticationBasicClientUsername| MsgVpn|replicationBridgeAuthenticationClientCertPassword|replicationBridgeAuthenticationClientCertContent| MsgVpn|replicationEnabledQueueBehavior|replicationEnabled|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation. Requests which include the following attributes require greater access scope/level:   Attribute|Access Scope/Level :---|:---: authenticationBasicEnabled|global/read-write authenticationBasicProfileName|global/read-write authenticationBasicRadiusDomain|global/read-write authenticationBasicType|global/read-write authenticationClientCertAllowApiProvidedUsernameEnabled|global/read-write authenticationClientCertEnabled|global/read-write authenticationClientCertMaxChainDepth|global/read-write authenticationClientCertRevocationCheckMode|global/read-write authenticationClientCertUsernameSource|global/read-write authenticationClientCertValidateDateEnabled|global/read-write authenticationKerberosAllowApiProvidedUsernameEnabled|global/read-write authenticationKerberosEnabled|global/read-write bridgingTlsServerCertEnforceTrustedCommonNameEnabled|global/read-write bridgingTlsServerCertMaxChainDepth|global/read-write bridgingTlsServerCertValidateDateEnabled|global/read-write dmrEnabled|global/read-write exportSubscriptionsEnabled|global/read-write maxConnectionCount|global/read-write maxEgressFlowCount|global/read-write maxEndpointCount|global/read-write maxIngressFlowCount|global/read-write maxMsgSpoolUsage|global/read-write maxSubscriptionCount|global/read-write maxTransactedSessionCount|global/read-write maxTransactionCount|global/read-write mqttRetainMaxMemory|global/read-write replicationBridgeAuthenticationBasicClientUsername|global/read-write replicationBridgeAuthenticationBasicPassword|global/read-write replicationBridgeAuthenticationClientCertContent|global/read-write replicationBridgeAuthenticationClientCertPassword|global/read-write replicationBridgeAuthenticationScheme|global/read-write replicationBridgeCompressedDataEnabled|global/read-write replicationBridgeEgressFlowWindowSize|global/read-write replicationBridgeRetryDelay|global/read-write replicationBridgeTlsEnabled|global/read-write replicationBridgeUnidirectionalClientProfileName|global/read-write replicationEnabled|global/read-write replicationEnabledQueueBehavior|global/read-write replicationQueueMaxMsgSpoolUsage|global/read-write replicationRole|global/read-write restTlsServerCertEnforceTrustedCommonNameEnabled|global/read-write restTlsServerCertMaxChainDepth|global/read-write restTlsServerCertValidateDateEnabled|global/read-write sempOverMsgBusAdminClientEnabled|global/read-write sempOverMsgBusAdminDistributedCacheEnabled|global/read-write sempOverMsgBusAdminEnabled|global/read-write sempOverMsgBusEnabled|global/read-write sempOverMsgBusLegacyShowClearEnabled|global/read-write sempOverMsgBusShowEnabled|global/read-write serviceAmqpMaxConnectionCount|global/read-write serviceMqttMaxConnectionCount|global/read-write serviceRestIncomingMaxConnectionCount|global/read-write serviceRestIncomingPlainTextListenPort|global/read-write serviceRestIncomingTlsListenPort|global/read-write serviceRestOutgoingMaxConnectionCount|global/read-write serviceSmfMaxConnectionCount|global/read-write serviceWebMaxConnectionCount|global/read-write    This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
   **body** | [**MsgVpn**](MsgVpn.md)| The Message VPN object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6627,7 +6967,7 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
  **body** | [**MsgVpn**](MsgVpn.md)| The Message VPN object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6650,15 +6990,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAclProfileResponse update_msg_vpn_acl_profile(ctx, msg_vpn_name, acl_profile_name, body, optional)
 Update an ACL Profile object.
 
-Update an ACL Profile object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Update an ACL Profile object. Any attribute missing from the request will be left unchanged.  An ACL Profile controls whether an authenticated client is permitted to establish a connection with the message broker or permitted to publish and subscribe to specific topics.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **acl_profile_name** | **String**| The name of the ACL Profile. | 
   **body** | [**MsgVpnAclProfile**](MsgVpnAclProfile.md)| The ACL Profile object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6667,8 +7007,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **acl_profile_name** | **String**| The aclProfileName of the ACL Profile. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **acl_profile_name** | **String**| The name of the ACL Profile. | 
  **body** | [**MsgVpnAclProfile**](MsgVpnAclProfile.md)| The ACL Profile object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6691,15 +7031,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnAuthorizationGroupResponse update_msg_vpn_authorization_group(ctx, msg_vpn_name, authorization_group_name, body, optional)
 Update an LDAP Authorization Group object.
 
-Update an LDAP Authorization Group object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName||||x| authorizationGroupName|x|x||| clientProfileName||||x| msgVpnName|x|x||| orderAfterAuthorizationGroupName|||x|| orderBeforeAuthorizationGroupName|||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnAuthorizationGroup|orderAfterAuthorizationGroupName||orderBeforeAuthorizationGroupName MsgVpnAuthorizationGroup|orderBeforeAuthorizationGroupName||orderAfterAuthorizationGroupName    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Update an LDAP Authorization Group object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName||||x| authorizationGroupName|x|x||| clientProfileName||||x| msgVpnName|x|x||| orderAfterAuthorizationGroupName|||x|| orderBeforeAuthorizationGroupName|||x||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnAuthorizationGroup|orderAfterAuthorizationGroupName||orderBeforeAuthorizationGroupName MsgVpnAuthorizationGroup|orderBeforeAuthorizationGroupName||orderAfterAuthorizationGroupName    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **authorization_group_name** | **String**| The authorizationGroupName of the LDAP Authorization Group. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **authorization_group_name** | **String**| The name of the LDAP Authorization Group. | 
   **body** | [**MsgVpnAuthorizationGroup**](MsgVpnAuthorizationGroup.md)| The LDAP Authorization Group object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6708,8 +7048,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **authorization_group_name** | **String**| The authorizationGroupName of the LDAP Authorization Group. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **authorization_group_name** | **String**| The name of the LDAP Authorization Group. | 
  **body** | [**MsgVpnAuthorizationGroup**](MsgVpnAuthorizationGroup.md)| The LDAP Authorization Group object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6732,16 +7072,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeResponse update_msg_vpn_bridge(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, body, optional)
 Update a Bridge object.
 
-Update a Bridge object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x|x||| bridgeVirtualRouter|x|x||| maxTtl||||x| msgVpnName|x|x||| remoteAuthenticationBasicClientUsername||||x| remoteAuthenticationBasicPassword|||x|x| remoteAuthenticationClientCertContent|||x|x| remoteAuthenticationClientCertPassword|||x|x| remoteAuthenticationScheme||||x| remoteDeliverToOnePriority||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnBridge|remoteAuthenticationBasicClientUsername|remoteAuthenticationBasicPassword| MsgVpnBridge|remoteAuthenticationBasicPassword|remoteAuthenticationBasicClientUsername| MsgVpnBridge|remoteAuthenticationClientCertPassword|remoteAuthenticationClientCertContent|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Update a Bridge object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x|x||| bridgeVirtualRouter|x|x||| maxTtl||||x| msgVpnName|x|x||| remoteAuthenticationBasicClientUsername||||x| remoteAuthenticationBasicPassword|||x|x| remoteAuthenticationClientCertContent|||x|x| remoteAuthenticationClientCertPassword|||x|x| remoteAuthenticationScheme||||x| remoteDeliverToOnePriority||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnBridge|remoteAuthenticationBasicClientUsername|remoteAuthenticationBasicPassword| MsgVpnBridge|remoteAuthenticationBasicPassword|remoteAuthenticationBasicClientUsername| MsgVpnBridge|remoteAuthenticationClientCertPassword|remoteAuthenticationClientCertContent|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
   **body** | [**MsgVpnBridge**](MsgVpnBridge.md)| The Bridge object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6750,9 +7090,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
  **body** | [**MsgVpnBridge**](MsgVpnBridge.md)| The Bridge object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6775,19 +7115,19 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnBridgeRemoteMsgVpnResponse update_msg_vpn_bridge_remote_msg_vpn(ctx, msg_vpn_name, bridge_name, bridge_virtual_router, remote_msg_vpn_name, remote_msg_vpn_location, remote_msg_vpn_interface, body, optional)
 Update a Remote Message VPN object.
 
-Update a Remote Message VPN object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x|x||| bridgeVirtualRouter|x|x||| clientUsername||||x| compressedDataEnabled||||x| egressFlowWindowSize||||x| msgVpnName|x|x||| password|||x|x| remoteMsgVpnInterface|x|x||| remoteMsgVpnLocation|x|x||| remoteMsgVpnName|x|x||| tlsEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnBridgeRemoteMsgVpn|clientUsername|password| MsgVpnBridgeRemoteMsgVpn|password|clientUsername|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Update a Remote Message VPN object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: bridgeName|x|x||| bridgeVirtualRouter|x|x||| clientUsername||||x| compressedDataEnabled||||x| egressFlowWindowSize||||x| msgVpnName|x|x||| password|||x|x| remoteMsgVpnInterface|x|x||| remoteMsgVpnLocation|x|x||| remoteMsgVpnName|x|x||| tlsEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnBridgeRemoteMsgVpn|clientUsername|password| MsgVpnBridgeRemoteMsgVpn|password|clientUsername|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **bridge_name** | **String**| The bridgeName of the Bridge. | 
-  **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
-  **remote_msg_vpn_name** | **String**| The remoteMsgVpnName of the Remote Message VPN. | 
-  **remote_msg_vpn_location** | **String**| The remoteMsgVpnLocation of the Remote Message VPN. | 
-  **remote_msg_vpn_interface** | **String**| The remoteMsgVpnInterface of the Remote Message VPN. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **bridge_name** | **String**| The name of the Bridge. | 
+  **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+  **remote_msg_vpn_name** | **String**| The name of the remote Message VPN. | 
+  **remote_msg_vpn_location** | **String**| The location of the remote Message VPN as either an FQDN with port, IP address with port, or virtual router name (starting with \&quot;v:\&quot;). | 
+  **remote_msg_vpn_interface** | **String**| The physical interface on the local Message VPN host for connecting to the remote Message VPN. By default, an interface is chosen automatically (recommended), but if specified, &#x60;remoteMsgVpnLocation&#x60; must not be a virtual router name. | 
   **body** | [**MsgVpnBridgeRemoteMsgVpn**](MsgVpnBridgeRemoteMsgVpn.md)| The Remote Message VPN object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6796,12 +7136,12 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **bridge_name** | **String**| The bridgeName of the Bridge. | 
- **bridge_virtual_router** | **String**| The bridgeVirtualRouter of the Bridge. | 
- **remote_msg_vpn_name** | **String**| The remoteMsgVpnName of the Remote Message VPN. | 
- **remote_msg_vpn_location** | **String**| The remoteMsgVpnLocation of the Remote Message VPN. | 
- **remote_msg_vpn_interface** | **String**| The remoteMsgVpnInterface of the Remote Message VPN. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **bridge_name** | **String**| The name of the Bridge. | 
+ **bridge_virtual_router** | **String**| The virtual router of the Bridge. | 
+ **remote_msg_vpn_name** | **String**| The name of the remote Message VPN. | 
+ **remote_msg_vpn_location** | **String**| The location of the remote Message VPN as either an FQDN with port, IP address with port, or virtual router name (starting with \&quot;v:\&quot;). | 
+ **remote_msg_vpn_interface** | **String**| The physical interface on the local Message VPN host for connecting to the remote Message VPN. By default, an interface is chosen automatically (recommended), but if specified, &#x60;remoteMsgVpnLocation&#x60; must not be a virtual router name. | 
  **body** | [**MsgVpnBridgeRemoteMsgVpn**](MsgVpnBridgeRemoteMsgVpn.md)| The Remote Message VPN object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6824,15 +7164,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnClientProfileResponse update_msg_vpn_client_profile(ctx, msg_vpn_name, client_profile_name, body, optional)
 Update a Client Profile object.
 
-Update a Client Profile object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: clientProfileName|x|x||| msgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent EventThresholdByPercent|clearPercent|setPercent| EventThresholdByPercent|setPercent|clearPercent|    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Update a Client Profile object. Any attribute missing from the request will be left unchanged.  Client Profiles are used to assign common configuration properties to clients that have been successfully authorized.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: clientProfileName|x|x||| msgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent EventThresholdByPercent|clearPercent|setPercent| EventThresholdByPercent|setPercent|clearPercent|    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **client_profile_name** | **String**| The clientProfileName of the Client Profile. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **client_profile_name** | **String**| The name of the Client Profile. | 
   **body** | [**MsgVpnClientProfile**](MsgVpnClientProfile.md)| The Client Profile object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6841,8 +7181,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **client_profile_name** | **String**| The clientProfileName of the Client Profile. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **client_profile_name** | **String**| The name of the Client Profile. | 
  **body** | [**MsgVpnClientProfile**](MsgVpnClientProfile.md)| The Client Profile object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6865,15 +7205,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnClientUsernameResponse update_msg_vpn_client_username(ctx, msg_vpn_name, client_username, body, optional)
 Update a Client Username object.
 
-Update a Client Username object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName||||x| clientProfileName||||x| clientUsername|x|x||| msgVpnName|x|x||| password|||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Update a Client Username object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: aclProfileName||||x| clientProfileName||||x| clientUsername|x|x||| msgVpnName|x|x||| password|||x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **client_username** | **String**| The clientUsername of the Client Username. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **client_username** | **String**| The value of the Client Username. | 
   **body** | [**MsgVpnClientUsername**](MsgVpnClientUsername.md)| The Client Username object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6882,8 +7222,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **client_username** | **String**| The clientUsername of the Client Username. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **client_username** | **String**| The value of the Client Username. | 
  **body** | [**MsgVpnClientUsername**](MsgVpnClientUsername.md)| The Client Username object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6906,15 +7246,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheResponse update_msg_vpn_distributed_cache(ctx, msg_vpn_name, cache_name, body, optional)
 Update a Distributed Cache object.
 
-Update a Distributed Cache object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| msgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnDistributedCache|scheduledDeleteMsgDayList|scheduledDeleteMsgTimeList| MsgVpnDistributedCache|scheduledDeleteMsgTimeList|scheduledDeleteMsgDayList|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Update a Distributed Cache object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| msgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnDistributedCache|scheduledDeleteMsgDayList|scheduledDeleteMsgTimeList| MsgVpnDistributedCache|scheduledDeleteMsgTimeList|scheduledDeleteMsgDayList|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
   **body** | [**MsgVpnDistributedCache**](MsgVpnDistributedCache.md)| The Distributed Cache object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6923,8 +7263,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
  **body** | [**MsgVpnDistributedCache**](MsgVpnDistributedCache.md)| The Distributed Cache object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6947,16 +7287,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterResponse update_msg_vpn_distributed_cache_cluster(ctx, msg_vpn_name, cache_name, cluster_name, body, optional)
 Update a Cache Cluster object.
 
-Update a Cache Cluster object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| clusterName|x|x||| msgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThresholdByPercent|clearPercent|setPercent| EventThresholdByPercent|setPercent|clearPercent| EventThresholdByValue|clearValue|setValue| EventThresholdByValue|setValue|clearValue|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Update a Cache Cluster object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| clusterName|x|x||| msgVpnName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThresholdByPercent|clearPercent|setPercent| EventThresholdByPercent|setPercent|clearPercent| EventThresholdByValue|clearValue|setValue| EventThresholdByValue|setValue|clearValue|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
   **body** | [**MsgVpnDistributedCacheCluster**](MsgVpnDistributedCacheCluster.md)| The Cache Cluster object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -6965,9 +7305,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
  **body** | [**MsgVpnDistributedCacheCluster**](MsgVpnDistributedCacheCluster.md)| The Cache Cluster object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -6990,17 +7330,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDistributedCacheClusterInstanceResponse update_msg_vpn_distributed_cache_cluster_instance(ctx, msg_vpn_name, cache_name, cluster_name, instance_name, body, optional)
 Update a Cache Instance object.
 
-Update a Cache Instance object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| clusterName|x|x||| instanceName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Update a Cache Instance object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| clusterName|x|x||| instanceName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the Distributed Cache. | 
-  **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
-  **instance_name** | **String**| The instanceName of the Cache Instance. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the Distributed Cache. | 
+  **cluster_name** | **String**| The name of the Cache Cluster. | 
+  **instance_name** | **String**| The name of the Cache Instance. | 
   **body** | [**MsgVpnDistributedCacheClusterInstance**](MsgVpnDistributedCacheClusterInstance.md)| The Cache Instance object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7009,10 +7349,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the Distributed Cache. | 
- **cluster_name** | **String**| The clusterName of the Cache Cluster. | 
- **instance_name** | **String**| The instanceName of the Cache Instance. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the Distributed Cache. | 
+ **cluster_name** | **String**| The name of the Cache Cluster. | 
+ **instance_name** | **String**| The name of the Cache Instance. | 
  **body** | [**MsgVpnDistributedCacheClusterInstance**](MsgVpnDistributedCacheClusterInstance.md)| The Cache Instance object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7035,15 +7375,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnDmrBridgeResponse update_msg_vpn_dmr_bridge(ctx, msg_vpn_name, remote_node_name, body, optional)
 Update a DMR Bridge object.
 
-Update a DMR Bridge object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| remoteNodeName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Update a DMR Bridge object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| remoteNodeName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **remote_node_name** | **String**| The remoteNodeName of the DMR Bridge. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **remote_node_name** | **String**| The name of the node at the remote end of the DMR Bridge. | 
   **body** | [**MsgVpnDmrBridge**](MsgVpnDmrBridge.md)| The DMR Bridge object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7052,8 +7392,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **remote_node_name** | **String**| The remoteNodeName of the DMR Bridge. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **remote_node_name** | **String**| The name of the node at the remote end of the DMR Bridge. | 
  **body** | [**MsgVpnDmrBridge**](MsgVpnDmrBridge.md)| The DMR Bridge object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7076,15 +7416,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnJndiConnectionFactoryResponse update_msg_vpn_jndi_connection_factory(ctx, msg_vpn_name, connection_factory_name, body, optional)
 Update a JNDI Connection Factory object.
 
-Update a JNDI Connection Factory object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: connectionFactoryName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.2.
+Update a JNDI Connection Factory object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: connectionFactoryName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **connection_factory_name** | **String**| The connectionFactoryName of the JNDI Connection Factory. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **connection_factory_name** | **String**| The name of the JMS Connection Factory. | 
   **body** | [**MsgVpnJndiConnectionFactory**](MsgVpnJndiConnectionFactory.md)| The JNDI Connection Factory object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7093,8 +7433,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **connection_factory_name** | **String**| The connectionFactoryName of the JNDI Connection Factory. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **connection_factory_name** | **String**| The name of the JMS Connection Factory. | 
  **body** | [**MsgVpnJndiConnectionFactory**](MsgVpnJndiConnectionFactory.md)| The JNDI Connection Factory object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7117,15 +7457,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnJndiQueueResponse update_msg_vpn_jndi_queue(ctx, msg_vpn_name, queue_name, body, optional)
 Update a JNDI Queue object.
 
-Update a JNDI Queue object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| queueName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.2.
+Update a JNDI Queue object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| queueName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **queue_name** | **String**| The queueName of the JNDI Queue. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **queue_name** | **String**| The JNDI name of the JMS Queue. | 
   **body** | [**MsgVpnJndiQueue**](MsgVpnJndiQueue.md)| The JNDI Queue object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7134,8 +7474,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **queue_name** | **String**| The queueName of the JNDI Queue. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **queue_name** | **String**| The JNDI name of the JMS Queue. | 
  **body** | [**MsgVpnJndiQueue**](MsgVpnJndiQueue.md)| The JNDI Queue object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7158,15 +7498,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnJndiTopicResponse update_msg_vpn_jndi_topic(ctx, msg_vpn_name, topic_name, body, optional)
 Update a JNDI Topic object.
 
-Update a JNDI Topic object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| topicName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.2.
+Update a JNDI Topic object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| topicName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.2.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **topic_name** | **String**| The topicName of the JNDI Topic. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **topic_name** | **String**| The JNDI name of the JMS Topic. | 
   **body** | [**MsgVpnJndiTopic**](MsgVpnJndiTopic.md)| The JNDI Topic object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7175,8 +7515,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **topic_name** | **String**| The topicName of the JNDI Topic. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **topic_name** | **String**| The JNDI name of the JMS Topic. | 
  **body** | [**MsgVpnJndiTopic**](MsgVpnJndiTopic.md)| The JNDI Topic object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7199,15 +7539,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttRetainCacheResponse update_msg_vpn_mqtt_retain_cache(ctx, msg_vpn_name, cache_name, body, optional)
 Update an MQTT Retain Cache object.
 
-Update an MQTT Retain Cache object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.11.
+Update an MQTT Retain Cache object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: cacheName|x|x||| msgVpnName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **cache_name** | **String**| The cacheName of the MQTT Retain Cache. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **cache_name** | **String**| The name of the MQTT Retain Cache. | 
   **body** | [**MsgVpnMqttRetainCache**](MsgVpnMqttRetainCache.md)| The MQTT Retain Cache object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7216,8 +7556,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **cache_name** | **String**| The cacheName of the MQTT Retain Cache. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **cache_name** | **String**| The name of the MQTT Retain Cache. | 
  **body** | [**MsgVpnMqttRetainCache**](MsgVpnMqttRetainCache.md)| The MQTT Retain Cache object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7240,16 +7580,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttSessionResponse update_msg_vpn_mqtt_session(ctx, msg_vpn_name, mqtt_session_client_id, mqtt_session_virtual_router, body, optional)
 Update an MQTT Session object.
 
-Update an MQTT Session object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: mqttSessionClientId|x|x||| mqttSessionVirtualRouter|x|x||| msgVpnName|x|x||| owner||||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.1.
+Update an MQTT Session object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: mqttSessionClientId|x|x||| mqttSessionVirtualRouter|x|x||| msgVpnName|x|x||| owner||||x|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
-  **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+  **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
   **body** | [**MsgVpnMqttSession**](MsgVpnMqttSession.md)| The MQTT Session object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7258,9 +7598,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
- **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+ **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
  **body** | [**MsgVpnMqttSession**](MsgVpnMqttSession.md)| The MQTT Session object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7283,17 +7623,17 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnMqttSessionSubscriptionResponse update_msg_vpn_mqtt_session_subscription(ctx, msg_vpn_name, mqtt_session_client_id, mqtt_session_virtual_router, subscription_topic, body, optional)
 Update a Subscription object.
 
-Update a Subscription object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: mqttSessionClientId|x|x||| mqttSessionVirtualRouter|x|x||| msgVpnName|x|x||| subscriptionTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.1.
+Update a Subscription object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: mqttSessionClientId|x|x||| mqttSessionVirtualRouter|x|x||| msgVpnName|x|x||| subscriptionTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
-  **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
-  **subscription_topic** | **String**| The subscriptionTopic of the Subscription. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+  **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
+  **subscription_topic** | **String**| The MQTT subscription topic. | 
   **body** | [**MsgVpnMqttSessionSubscription**](MsgVpnMqttSessionSubscription.md)| The Subscription object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7302,10 +7642,10 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **mqtt_session_client_id** | **String**| The mqttSessionClientId of the MQTT Session. | 
- **mqtt_session_virtual_router** | **String**| The mqttSessionVirtualRouter of the MQTT Session. | 
- **subscription_topic** | **String**| The subscriptionTopic of the Subscription. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **mqtt_session_client_id** | **String**| The Client ID of the MQTT Session, which corresponds to the ClientId provided in the MQTT CONNECT packet. | 
+ **mqtt_session_virtual_router** | **String**| The virtual router of the MQTT Session. | 
+ **subscription_topic** | **String**| The MQTT subscription topic. | 
  **body** | [**MsgVpnMqttSessionSubscription**](MsgVpnMqttSessionSubscription.md)| The Subscription object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7328,15 +7668,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnQueueResponse update_msg_vpn_queue(ctx, msg_vpn_name, queue_name, body, optional)
 Update a Queue object.
 
-Update a Queue object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: accessType||||x| msgVpnName|x|x||| owner||||x| permission||||x| queueName|x|x||| respectMsgPriorityEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Update a Queue object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: accessType||||x| msgVpnName|x|x||| owner||||x| permission||||x| queueName|x|x||| respectMsgPriorityEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **queue_name** | **String**| The queueName of the Queue. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **queue_name** | **String**| The name of the Queue. | 
   **body** | [**MsgVpnQueue**](MsgVpnQueue.md)| The Queue object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7345,8 +7685,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **queue_name** | **String**| The queueName of the Queue. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **queue_name** | **String**| The name of the Queue. | 
  **body** | [**MsgVpnQueue**](MsgVpnQueue.md)| The Queue object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7369,15 +7709,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnReplayLogResponse update_msg_vpn_replay_log(ctx, msg_vpn_name, replay_log_name, body, optional)
 Update a Replay Log object.
 
-Update a Replay Log object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replayLogName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.10.
+Update a Replay Log object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replayLogName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.10.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **replay_log_name** | **String**| The replayLogName of the Replay Log. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **replay_log_name** | **String**| The name of the Replay Log. | 
   **body** | [**MsgVpnReplayLog**](MsgVpnReplayLog.md)| The Replay Log object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7386,8 +7726,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **replay_log_name** | **String**| The replayLogName of the Replay Log. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **replay_log_name** | **String**| The name of the Replay Log. | 
  **body** | [**MsgVpnReplayLog**](MsgVpnReplayLog.md)| The Replay Log object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7410,15 +7750,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnReplicatedTopicResponse update_msg_vpn_replicated_topic(ctx, msg_vpn_name, replicated_topic, body, optional)
 Update a Replicated Topic object.
 
-Update a Replicated Topic object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replicatedTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.9.
+Update a Replicated Topic object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| replicatedTopic|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.9.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **replicated_topic** | **String**| The replicatedTopic of the Replicated Topic. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **replicated_topic** | **String**| The topic for applying replication. Published messages matching this topic will be replicated to the standby site. | 
   **body** | [**MsgVpnReplicatedTopic**](MsgVpnReplicatedTopic.md)| The Replicated Topic object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7427,8 +7767,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **replicated_topic** | **String**| The replicatedTopic of the Replicated Topic. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **replicated_topic** | **String**| The topic for applying replication. Published messages matching this topic will be replicated to the standby site. | 
  **body** | [**MsgVpnReplicatedTopic**](MsgVpnReplicatedTopic.md)| The Replicated Topic object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7451,15 +7791,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointResponse update_msg_vpn_rest_delivery_point(ctx, msg_vpn_name, rest_delivery_point_name, body, optional)
 Update a REST Delivery Point object.
 
-Update a REST Delivery Point object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: clientProfileName||||x| msgVpnName|x|x||| restDeliveryPointName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Update a REST Delivery Point object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: clientProfileName||||x| msgVpnName|x|x||| restDeliveryPointName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
   **body** | [**MsgVpnRestDeliveryPoint**](MsgVpnRestDeliveryPoint.md)| The REST Delivery Point object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7468,8 +7808,8 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
  **body** | [**MsgVpnRestDeliveryPoint**](MsgVpnRestDeliveryPoint.md)| The REST Delivery Point object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7492,16 +7832,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointQueueBindingResponse update_msg_vpn_rest_delivery_point_queue_binding(ctx, msg_vpn_name, rest_delivery_point_name, queue_binding_name, body, optional)
 Update a Queue Binding object.
 
-Update a Queue Binding object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| queueBindingName|x|x||| restDeliveryPointName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Update a Queue Binding object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| queueBindingName|x|x||| restDeliveryPointName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
-  **queue_binding_name** | **String**| The queueBindingName of the Queue Binding. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+  **queue_binding_name** | **String**| The name of a queue in the Message VPN. | 
   **body** | [**MsgVpnRestDeliveryPointQueueBinding**](MsgVpnRestDeliveryPointQueueBinding.md)| The Queue Binding object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7510,9 +7850,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
- **queue_binding_name** | **String**| The queueBindingName of the Queue Binding. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+ **queue_binding_name** | **String**| The name of a queue in the Message VPN. | 
  **body** | [**MsgVpnRestDeliveryPointQueueBinding**](MsgVpnRestDeliveryPointQueueBinding.md)| The Queue Binding object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7535,16 +7875,16 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnRestDeliveryPointRestConsumerResponse update_msg_vpn_rest_delivery_point_rest_consumer(ctx, msg_vpn_name, rest_delivery_point_name, rest_consumer_name, body, optional)
 Update a REST Consumer object.
 
-Update a REST Consumer object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationClientCertContent|||x|x| authenticationClientCertPassword|||x|x| authenticationHttpBasicPassword|||x|x| authenticationHttpBasicUsername||||x| authenticationScheme||||x| msgVpnName|x|x||| outgoingConnectionCount||||x| remoteHost||||x| remotePort||||x| restConsumerName|x|x||| restDeliveryPointName|x|x||| tlsCipherSuiteList||||x| tlsEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnRestDeliveryPointRestConsumer|authenticationClientCertPassword|authenticationClientCertContent| MsgVpnRestDeliveryPointRestConsumer|authenticationHttpBasicPassword|authenticationHttpBasicUsername| MsgVpnRestDeliveryPointRestConsumer|authenticationHttpBasicUsername|authenticationHttpBasicPassword| MsgVpnRestDeliveryPointRestConsumer|remotePort|tlsEnabled| MsgVpnRestDeliveryPointRestConsumer|tlsEnabled|remotePort|    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.0.
+Update a REST Consumer object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: authenticationClientCertContent|||x|x| authenticationClientCertPassword|||x|x| authenticationHttpBasicPassword|||x|x| authenticationHttpBasicUsername||||x| authenticationScheme||||x| msgVpnName|x|x||| outgoingConnectionCount||||x| remoteHost||||x| remotePort||||x| restConsumerName|x|x||| restDeliveryPointName|x|x||| tlsCipherSuiteList||||x| tlsEnabled||||x|    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- MsgVpnRestDeliveryPointRestConsumer|authenticationClientCertPassword|authenticationClientCertContent| MsgVpnRestDeliveryPointRestConsumer|authenticationHttpBasicPassword|authenticationHttpBasicUsername| MsgVpnRestDeliveryPointRestConsumer|authenticationHttpBasicUsername|authenticationHttpBasicPassword| MsgVpnRestDeliveryPointRestConsumer|remotePort|tlsEnabled| MsgVpnRestDeliveryPointRestConsumer|tlsEnabled|remotePort|    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
-  **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+  **rest_consumer_name** | **String**| The name of the REST Consumer. | 
   **body** | [**MsgVpnRestDeliveryPointRestConsumer**](MsgVpnRestDeliveryPointRestConsumer.md)| The REST Consumer object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7553,9 +7893,9 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **rest_delivery_point_name** | **String**| The restDeliveryPointName of the REST Delivery Point. | 
- **rest_consumer_name** | **String**| The restConsumerName of the REST Consumer. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **rest_delivery_point_name** | **String**| The name of the REST Delivery Point. | 
+ **rest_consumer_name** | **String**| The name of the REST Consumer. | 
  **body** | [**MsgVpnRestDeliveryPointRestConsumer**](MsgVpnRestDeliveryPointRestConsumer.md)| The REST Consumer object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
@@ -7578,15 +7918,15 @@ Name | Type | Description  | Notes
 > ::models::MsgVpnTopicEndpointResponse update_msg_vpn_topic_endpoint(ctx, msg_vpn_name, topic_endpoint_name, body, optional)
 Update a Topic Endpoint object.
 
-Update a Topic Endpoint object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: accessType||||x| msgVpnName|x|x||| owner||||x| permission||||x| respectMsgPriorityEnabled||||x| topicEndpointName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"vpn/readwrite\" is required to perform this operation.  This has been available since 2.1.
+Update a Topic Endpoint object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: accessType||||x| msgVpnName|x|x||| owner||||x| permission||||x| respectMsgPriorityEnabled||||x| topicEndpointName|x|x|||    The following attributes in the request may only be provided in certain combinations with other attributes:   Class|Attribute|Requires|Conflicts :---|:---|:---|:--- EventThreshold|clearPercent|setPercent|clearValue, setValue EventThreshold|clearValue|setValue|clearPercent, setPercent EventThreshold|setPercent|clearPercent|clearValue, setValue EventThreshold|setValue|clearValue|clearPercent, setPercent    A SEMP client authorized with a minimum access scope/level of \"vpn/read-write\" is required to perform this operation.  This has been available since 2.1.
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context containing the authentication | nil if no authentication
-  **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
-  **topic_endpoint_name** | **String**| The topicEndpointName of the Topic Endpoint. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN. | 
+  **topic_endpoint_name** | **String**| The name of the Topic Endpoint. | 
   **body** | [**MsgVpnTopicEndpoint**](MsgVpnTopicEndpoint.md)| The Topic Endpoint object&#39;s attributes. | 
  **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
 
@@ -7595,14 +7935,94 @@ Optional parameters are passed through a map[string]interface{}.
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **msg_vpn_name** | **String**| The msgVpnName of the Message VPN. | 
- **topic_endpoint_name** | **String**| The topicEndpointName of the Topic Endpoint. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN. | 
+ **topic_endpoint_name** | **String**| The name of the Topic Endpoint. | 
  **body** | [**MsgVpnTopicEndpoint**](MsgVpnTopicEndpoint.md)| The Topic Endpoint object&#39;s attributes. | 
  **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
 
 ### Return type
 
 [**::models::MsgVpnTopicEndpointResponse**](MsgVpnTopicEndpointResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_username**
+> ::models::UsernameResponse update_username(ctx, user_name, body, optional)
+Update a Username object.
+
+Update a Username object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: password|||x|| userName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation. Requests which include the following attributes require greater access scope/level:   Attribute|Access Scope/Level :---|:---: globalAccessLevel|global/admin msgVpnDefaultAccessLevel|global/read-write    This has been available since 2.12.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **user_name** | **String**| Username. | 
+  **body** | [**Username**](Username.md)| The Username object&#39;s attributes. | 
+ **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a map[string]interface{}.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_name** | **String**| Username. | 
+ **body** | [**Username**](Username.md)| The Username object&#39;s attributes. | 
+ **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
+
+### Return type
+
+[**::models::UsernameResponse**](UsernameResponse.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_username_msg_vpn_access_level_exception**
+> ::models::UsernameMsgVpnAccessLevelExceptionResponse update_username_msg_vpn_access_level_exception(ctx, user_name, msg_vpn_name, body, optional)
+Update a Message VPN Access Level Exception object.
+
+Update a Message VPN Access Level Exception object. Any attribute missing from the request will be left unchanged.   Attribute|Identifying|Read-Only|Write-Only|Requires-Disable|Deprecated :---|:---:|:---:|:---:|:---:|:---: msgVpnName|x|x||| userName|x|x|||    A SEMP client authorized with a minimum access scope/level of \"global/read-write\" is required to perform this operation.  This has been available since 2.12.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context containing the authentication | nil if no authentication
+  **user_name** | **String**| Username. | 
+  **msg_vpn_name** | **String**| The name of the Message VPN for which an access level exception may be configured. | 
+  **body** | [**UsernameMsgVpnAccessLevelException**](UsernameMsgVpnAccessLevelException.md)| The Message VPN Access Level Exception object&#39;s attributes. | 
+ **optional** | **map[string]interface{}** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a map[string]interface{}.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_name** | **String**| Username. | 
+ **msg_vpn_name** | **String**| The name of the Message VPN for which an access level exception may be configured. | 
+ **body** | [**UsernameMsgVpnAccessLevelException**](UsernameMsgVpnAccessLevelException.md)| The Message VPN Access Level Exception object&#39;s attributes. | 
+ **select** | [**Vec&lt;String&gt;**](String.md)| Include in the response only selected attributes of the object, or exclude from the response selected attributes of the object. See the documentation for the &#x60;select&#x60; parameter. | 
+
+### Return type
+
+[**::models::UsernameMsgVpnAccessLevelExceptionResponse**](UsernameMsgVpnAccessLevelExceptionResponse.md)
 
 ### Authorization
 

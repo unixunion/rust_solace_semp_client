@@ -90,6 +90,8 @@ mod system_information_api;
 pub use self::system_information_api::{ SystemInformationApi, SystemInformationApiClient };
 mod topic_endpoint_api;
 pub use self::topic_endpoint_api::{ TopicEndpointApi, TopicEndpointApiClient };
+mod username_api;
+pub use self::username_api::{ UsernameApi, UsernameApiClient };
 
 pub mod configuration;
 pub mod client;

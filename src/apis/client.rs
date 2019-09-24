@@ -25,6 +25,7 @@ pub struct APIClient<C: hyper::client::Connect> {
   rest_delivery_point_api: Box<::apis::RestDeliveryPointApi>,
   system_information_api: Box<::apis::SystemInformationApi>,
   topic_endpoint_api: Box<::apis::TopicEndpointApi>,
+  username_api: Box<::apis::UsernameApi>,
 }
 
 impl<C: hyper::client::Connect> APIClient<C> {
@@ -53,6 +54,7 @@ impl<C: hyper::client::Connect> APIClient<C> {
       rest_delivery_point_api: Box::new(::apis::RestDeliveryPointApiClient::new(rc.clone())),
       system_information_api: Box::new(::apis::SystemInformationApiClient::new(rc.clone())),
       topic_endpoint_api: Box::new(::apis::TopicEndpointApiClient::new(rc.clone())),
+      username_api: Box::new(::apis::UsernameApiClient::new(rc.clone())),
     }
   }
 
@@ -134,6 +136,10 @@ impl<C: hyper::client::Connect> APIClient<C> {
 
   pub fn topic_endpoint_api(&self) -> &::apis::TopicEndpointApi{
     self.topic_endpoint_api.as_ref()
+  }
+
+  pub fn username_api(&self) -> &::apis::UsernameApi{
+    self.username_api.as_ref()
   }
 
 

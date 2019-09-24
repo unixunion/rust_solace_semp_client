@@ -11,7 +11,7 @@ Method | HTTP request | Description
 > ::models::DmrClustersResponse get_dmr_clusters(ctx, optional)
 Get a list of Cluster objects.
 
-Get a list of Cluster objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authenticationBasicPassword||x| authenticationClientCertContent||x| authenticationClientCertPassword||x| dmrClusterName|x||    A SEMP client authorized with a minimum access scope/level of \"global/readonly\" is required to perform this operation.  This has been available since 2.11.
+Get a list of Cluster objects.  A Cluster is a provisioned object on a message broker that contains global DMR configuration parameters.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: authenticationBasicPassword||x| authenticationClientCertContent||x| authenticationClientCertPassword||x| dmrClusterName|x||    A SEMP client authorized with a minimum access scope/level of \"global/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 

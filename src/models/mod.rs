@@ -352,6 +352,22 @@ mod system_information_links;
 pub use self::system_information_links::SystemInformationLinks;
 mod system_information_response;
 pub use self::system_information_response::SystemInformationResponse;
+mod username;
+pub use self::username::Username;
+mod username_links;
+pub use self::username_links::UsernameLinks;
+mod username_msg_vpn_access_level_exception;
+pub use self::username_msg_vpn_access_level_exception::UsernameMsgVpnAccessLevelException;
+mod username_msg_vpn_access_level_exception_links;
+pub use self::username_msg_vpn_access_level_exception_links::UsernameMsgVpnAccessLevelExceptionLinks;
+mod username_msg_vpn_access_level_exception_response;
+pub use self::username_msg_vpn_access_level_exception_response::UsernameMsgVpnAccessLevelExceptionResponse;
+mod username_msg_vpn_access_level_exceptions_response;
+pub use self::username_msg_vpn_access_level_exceptions_response::UsernameMsgVpnAccessLevelExceptionsResponse;
+mod username_response;
+pub use self::username_response::UsernameResponse;
+mod usernames_response;
+pub use self::usernames_response::UsernamesResponse;
 
 // TODO(farcaller): sort out files
 pub struct File;
