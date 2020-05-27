@@ -11,7 +11,7 @@ Method | HTTP request | Description
 > ::models::MsgVpnClientProfilesResponse get_msg_vpn_client_profiles(ctx, msg_vpn_name, optional)
 Get a list of Client Profile objects.
 
-Get a list of Client Profile objects.  Client Profiles are used to assign common configuration properties to clients that have been successfully authorized.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: clientProfileName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
+Get a list of Client Profile objects.  Client Profiles are used to assign common configuration properties to clients that have been successfully authorized.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: apiQueueManagementCopyFromOnCreateName|||x apiTopicEndpointManagementCopyFromOnCreateName|||x clientProfileName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.0.
 
 ### Required Parameters
 

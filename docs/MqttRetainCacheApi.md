@@ -11,7 +11,7 @@ Method | HTTP request | Description
 > ::models::MsgVpnMqttRetainCachesResponse get_msg_vpn_mqtt_retain_caches(ctx, msg_vpn_name, optional)
 Get a list of MQTT Retain Cache objects.
 
-Get a list of MQTT Retain Cache objects.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
+Get a list of MQTT Retain Cache objects.  Using MQTT retained messages allows publishing MQTT clients to indicate that a message must be stored for later delivery to subscribing clients when those subscribing clients add subscriptions matching the retained message's topic. An MQTT Retain Cache processes all retained messages for a Message VPN.   Attribute|Identifying|Write-Only|Deprecated :---|:---:|:---:|:---: cacheName|x|| msgVpnName|x||    A SEMP client authorized with a minimum access scope/level of \"vpn/read-only\" is required to perform this operation.  This has been available since 2.11.
 
 ### Required Parameters
 

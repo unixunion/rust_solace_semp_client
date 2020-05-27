@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**authentication_basic_password** | **String** | The password used to authenticate with the remote node when using basic internal authentication. If this per-Link password is not configured, the Cluster&#39;s password is used instead. The default is to have no &#x60;authenticationBasicPassword&#x60;. | [optional] [default to null]
+**authentication_basic_password** | **String** | The password used to authenticate with the remote node when using basic internal authentication. If this per-Link password is not configured, the Cluster&#39;s password is used instead. This attribute is absent from a GET and not updated when absent in a PUT. The default is to have no &#x60;authenticationBasicPassword&#x60;. | [optional] [default to null]
 **authentication_scheme** | **String** | The authentication scheme to be used by the Link which initiates connections to the remote node. The default value is &#x60;\&quot;basic\&quot;&#x60;. The allowed values and their meaning are:  &lt;pre&gt; \&quot;basic\&quot; - Basic Authentication Scheme (via username and password). \&quot;client-certificate\&quot; - Client Certificate Authentication Scheme (via certificate file or content). &lt;/pre&gt;  | [optional] [default to null]
 **client_profile_queue_control1_max_depth** | **i32** | The maximum depth of the \&quot;Control 1\&quot; (C-1) priority queue, in work units. Each work unit is 2048 bytes of message data. The default value is &#x60;20000&#x60;. | [optional] [default to null]
 **client_profile_queue_control1_min_msg_burst** | **i32** | The number of messages that are always allowed entry into the \&quot;Control 1\&quot; (C-1) priority queue, regardless of the &#x60;clientProfileQueueControl1MaxDepth&#x60; value. The default value is &#x60;4&#x60;. | [optional] [default to null]
@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **initiator** | **String** | The initiator of the Link&#39;s TCP connections. The default value is &#x60;\&quot;lexical\&quot;&#x60;. The allowed values and their meaning are:  &lt;pre&gt; \&quot;lexical\&quot; - The \&quot;higher\&quot; node-name initiates. \&quot;local\&quot; - The local node initiates. \&quot;remote\&quot; - The remote node initiates. &lt;/pre&gt;  | [optional] [default to null]
 **queue_dead_msg_queue** | **String** | The name of the Dead Message Queue (DMQ) used by the Queue for discarded messages. The default value is &#x60;\&quot;#DEAD_MSG_QUEUE\&quot;&#x60;. | [optional] [default to null]
 **queue_event_spool_usage_threshold** | [***::models::EventThreshold**](EventThreshold.md) |  | [optional] [default to null]
-**queue_max_delivered_unacked_msgs_per_flow** | **i64** | The maximum number of messages delivered but not acknowledged per flow for the Queue. The default is the max value supported by the platform. | [optional] [default to null]
+**queue_max_delivered_unacked_msgs_per_flow** | **i64** | The maximum number of messages delivered but not acknowledged per flow for the Queue. The default value is &#x60;1000000&#x60;. | [optional] [default to null]
 **queue_max_msg_spool_usage** | **i64** | The maximum message spool usage by the Queue (quota), in megabytes (MB). The default varies by platform. | [optional] [default to null]
 **queue_max_redelivery_count** | **i64** | The maximum number of times the Queue will attempt redelivery of a message prior to it being discarded or moved to the DMQ. A value of 0 means to retry forever. The default value is &#x60;0&#x60;. | [optional] [default to null]
 **queue_max_ttl** | **i64** | The maximum time in seconds a message can stay in the Queue when &#x60;queueRespectTtlEnabled&#x60; is &#x60;true&#x60;. A message expires when the lesser of the sender assigned time-to-live (TTL) in the message and the &#x60;queueMaxTtl&#x60; configured for the Queue, is exceeded. A value of 0 disables expiry. The default value is &#x60;0&#x60;. | [optional] [default to null]
@@ -36,7 +36,7 @@ Name | Type | Description | Notes
 **remote_node_name** | **String** | The name of the node at the remote end of the Link. | [optional] [default to null]
 **span** | **String** | The span of the Link, either internal or external. Internal Links connect nodes within the same Cluster. External Links connect nodes within different Clusters. The default value is &#x60;\&quot;external\&quot;&#x60;. The allowed values and their meaning are:  &lt;pre&gt; \&quot;internal\&quot; - Link to same cluster. \&quot;external\&quot; - Link to other cluster. &lt;/pre&gt;  | [optional] [default to null]
 **transport_compressed_enabled** | **bool** | Enable or disable compression on the Link. The default value is &#x60;false&#x60;. | [optional] [default to null]
-**transport_tls_enabled** | **bool** | Enable or disable encryption on the Link. The default value is &#x60;false&#x60;. | [optional] [default to null]
+**transport_tls_enabled** | **bool** | Enable or disable encryption (TLS) on the Link. The default value is &#x60;false&#x60;. | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

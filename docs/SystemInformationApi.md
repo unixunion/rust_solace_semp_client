@@ -11,7 +11,7 @@ Method | HTTP request | Description
 > ::models::SystemInformationResponse get_system_information(ctx, )
 Get a System Information object.
 
-Get a System Information object.  A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been available since 2.1.0.  This has been deprecated since 2.2.0.
+Get a System Information object.  A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been deprecated since 2.4.
 
 ### Required Parameters
 This endpoint does not need any parameter.
