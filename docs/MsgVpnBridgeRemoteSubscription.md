@@ -4,10 +4,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bridge_name** | **String** | The name of the Bridge. | [optional] [default to null]
-**bridge_virtual_router** | **String** | Specify whether the Bridge is configured for the primary or backup Virtual Router or auto configured. The allowed values and their meaning are:  &lt;pre&gt; \&quot;primary\&quot; - The Bridge is used for the primary Virtual Router. \&quot;backup\&quot; - The Bridge is used for the backup Virtual Router. \&quot;auto\&quot; - The Bridge is automatically assigned a Router. &lt;/pre&gt;  | [optional] [default to null]
-**deliver_always_enabled** | **bool** | Flag the Subscription Topic as deliver always instead of with the deliver-to-one remote priority value for the Bridge given by \&quot;remoteDeliverToOnePriority\&quot;. A given topic may be deliver-to-one or deliver always but not both. | [optional] [default to null]
+**bridge_virtual_router** | **String** | The virtual router of the Bridge. The allowed values and their meaning are:  &lt;pre&gt; \&quot;primary\&quot; - The Bridge is used for the primary virtual router. \&quot;backup\&quot; - The Bridge is used for the backup virtual router. \&quot;auto\&quot; - The Bridge is automatically assigned a virtual router at creation, depending on the broker&#39;s active-standby role. &lt;/pre&gt;  | [optional] [default to null]
+**deliver_always_enabled** | **bool** | Enable or disable deliver-always for the Bridge remote subscription topic instead of a deliver-to-one remote priority. A given topic for the Bridge may be deliver-to-one or deliver-always but not both. | [optional] [default to null]
 **msg_vpn_name** | **String** | The name of the Message VPN. | [optional] [default to null]
-**remote_subscription_topic** | **String** | The Topic of the Remote Subscription. | [optional] [default to null]
+**remote_subscription_topic** | **String** | The topic of the Bridge remote subscription. | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

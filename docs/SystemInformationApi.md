@@ -4,14 +4,14 @@ All URIs are relative to *http://www.solace.com/SEMP/v2/config*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_system_information**](SystemInformationApi.md#get_system_information) | **Get** /systemInformation | Gets SEMP API version and platform information.
+[**get_system_information**](SystemInformationApi.md#get_system_information) | **Get** /systemInformation | Get a System Information object.
 
 
 # **get_system_information**
 > ::models::SystemInformationResponse get_system_information(ctx, )
-Gets SEMP API version and platform information.
+Get a System Information object.
 
-Gets SEMP API version and platform information.  A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been available since 2.1.0.  This has been deprecated since 2.2.0.
+Get a System Information object.  A SEMP client authorized with a minimum access scope/level of \"global/none\" is required to perform this operation.  This has been deprecated since 2.4.
 
 ### Required Parameters
 This endpoint does not need any parameter.

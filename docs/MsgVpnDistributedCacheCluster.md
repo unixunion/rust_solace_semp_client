@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **max_msgs_per_topic** | **i64** | The maximum number of messages per topic for each Cache Instance in the Cache Cluster. When at the maximum, old messages are removed as new messages arrive. The default value is &#x60;1&#x60;. | [optional] [default to null]
 **max_request_queue_depth** | **i64** | The maximum queue depth for cache requests received by the Cache Cluster. The default value is &#x60;100000&#x60;. | [optional] [default to null]
 **max_topic_count** | **i64** | The maximum number of topics for each Cache Instance in the Cache Cluster. The default value is &#x60;2000000&#x60;. | [optional] [default to null]
-**msg_lifetime** | **i64** | The message lifetime, in seconds. If a message remains cached for the duration of its lifetime, the Cache Instance will remove the message. A lifetime of 0 results in the message being retained indefinitely. The default is to have no &#x60;msgLifetime&#x60;. | [optional] [default to null]
+**msg_lifetime** | **i64** | The message lifetime, in seconds. If a message remains cached for the duration of its lifetime, the Cache Instance will remove the message. A lifetime of 0 results in the message being retained indefinitely. The default value is &#x60;0&#x60;. | [optional] [default to null]
 **msg_vpn_name** | **String** | The name of the Message VPN. | [optional] [default to null]
 **new_topic_advertisement_enabled** | **bool** | Enable or disable the advertising, onto the message bus, of new topics learned by each Cache Instance in the Cache Cluster. The default value is &#x60;false&#x60;. | [optional] [default to null]
 

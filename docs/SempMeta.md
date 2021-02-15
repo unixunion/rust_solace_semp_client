@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**count** | **i64** | The total number of objects requested, irrespective of page size. This may be a count of all objects in a collection or a filtered subset. It represents a snapshot in time and may change when paging through results. | [optional] [default to null]
 **error** | [***::models::SempError**](SempError.md) |  | [optional] [default to null]
 **paging** | [***::models::SempPaging**](SempPaging.md) |  | [optional] [default to null]
 **request** | [***::models::SempRequest**](SempRequest.md) |  | [default to null]
